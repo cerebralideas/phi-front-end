@@ -1,0 +1,146 @@
+<?
+    $controller = Zend_Controller_Front::getInstance()->getRequest()->getControllerName();
+    $action = Zend_Controller_Front::getInstance()->getRequest()->getActionName();
+?>
+
+<!doctype html>
+
+<!-- Use for application cache for better performance
+<html manifest="/config.appcache">
+-->
+
+<html ng-app="PAS"> <!-- This activates the global app -->
+
+    <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+    <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+    <!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+    <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>educationalPAS</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <meta name="viewport" content="width=device-width">
+
+        <link href="/css/grunt-style.css" media="screen" type="text/css" rel="stylesheet" />
+        <link href="/css/grunt-print.css" media="print"  type="text/css" rel="stylesheet" />
+
+        <!-- Provides CSS prefix management (this could be loaded at anytime) -->
+        <script type="text/javascript" src="/js/plugins-thirdparty/prefixfree-1.0.6.js"></script>
+
+        <!-- Step 1: Get AngularJS from Google CDN
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+         -->
+
+        <!-- For debugging purposes only -->
+        <script type="text/javascript" src="/js/libs/angular/angular-1.0.2.dev.js"></script>
+
+        <!-- Step 2: Now that AngularJS is loaded, declare the global PAS object and
+             it's properties and methods (requires AngularJS above -->
+        <script type="text/javascript" src="/js/main.js"></script>
+
+        <script type="text/javascript">
+
+            // This will be the global DATA object for passing data to the client
+            // from the server for initial binding.
+            DATA = {};
+
+            // This is the sign and submit object.
+            DATA.sns = {
+
+                "profId": null,
+                "eSig": null,
+                "comment": null,
+                "subType": null,
+                "uniqueId": null,
+                "badSig": false
+            };
+
+            // Capture user data
+            <?php $userService = new Service_User(); ?>
+            DATA.user = <?php echo $userService->getUserJson(); ?>
+
+            // Capture professors from DB
+            <?php $providerService = new Service_Provider(); ?>
+            DATA.profs = <?php echo $providerService->getProvidersJson(); ?>;
+        </script>
+
+        <!-- Step 3: Now, provides global services (requires global object above) -->
+        <script type="text/javascript" src="/js/services/serv-global.js"></script>
+
+        <!-- Step 4: Now, provides global services (requires global object above) -->
+        <script type="text/javascript" src="/js/directives/dir-global.js"></script>
+
+        <!-- Step 5: Provides global controllers (requires global services above -->
+        <script type="text/javascript" src="/js/controllers/ctrlr-global.js"></script>
+
+        <!-- Step 6A: Now, download Modernizr for asynchronous script management
+             I'd like to use this for all scripts, but it will be crazy hard -->
+        <script type="text/javascript" src="/js/libs/modernizr/modernizr-2.6.1.min.js"></script>
+
+        <!-- Step 6B: This provides Modernizr's loader which asynchronously loads all the remaining scripts
+             (it requires Moderizr to be loaded first) -->
+        <script type="text/javascript" src="/js/loader.js"></script>
+
+        <!--[if lte IE 8]>
+            <script type="text/javascript">
+                document.createElement('ng-include');
+                document.createElement('ng-pluralize');
+                document.createElement('ng-view');
+                document.createElement('warning-blocks');
+                document.createElement('date-input');
+                document.createElement('phone-number');
+            </script>
+        <![endif]-->
+
+    </head>
+
+    <body ng-controller="PAS.ctrlr.global" class="globalCtrlr"> <!-- This activates the global form controller -->
+
+            <!--[if lte IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+            <!-- Import user controls for logout and settings changes -->
+            <?= $this->userControls(); ?>
+
+            <nav class="tabControls applicationPanel" id="sectionNav" role="navigation">
+
+                <ul class="nav nav-tabs">
+
+                    <?= (strcasecmp($controller, 'activity') == '0') ? '<li class="active" ng-show="betaOne">' : '<li ng-show="betaOne">'; ?><a rel="all-activity" href="/activity"><span class="icon-dashboard icon-large"></span> All Activity</a></li>
+
+                    <?= (strcasecmp($controller, 'calendar') == '0') ? '<li class="active" ng-show="betaTwo">' : '<li ng-show="betaTwo">'; ?><a rel="all-activity" href="/calendar"><span class="icon-calendar icon-large"></span> Calendar</a></li>
+
+                    <?= (strcasecmp($controller, 'patients') == '0') ? '<li class="active" ng-show="betaOne">' : '<li ng-show="betaOne">'; ?><a rel="patients" href="/patients"><span class="icon-users icon-large"></span> Patients</a></li>
+                </ul>
+            </nav>
+
+            <!-- Include content for application -->
+            <?= $this->layout()->content; ?>
+
+        <?= $this->saveStatus(); ?>
+
+        <?= $this->statusUpdates(); ?>
+
+        <!-- For testing performance against synchronous loading
+            <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+            <script type="text/javascript" src="/js/plugins/layout-0.3.js"></script>
+            <script type="text/javascript" src="/js/plugins/uniform-1.5.js"></script>
+            <script type="text/javascript" src="/js/plugins.js"></script>
+            <script type="text/javascript" src="/js/plugins/bind-events-0.3.js"></script>
+            <script type="text/javascript" src="/js/script.js"></script>
+        -->
+
+        <!-- Google Analytics: Removed for now.
+            <script>
+                var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+                (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+                    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+                    s.parentNode.insertBefore(g,s)}(document,'script'));
+            </script>
+        -->
+    </body>
+</html>

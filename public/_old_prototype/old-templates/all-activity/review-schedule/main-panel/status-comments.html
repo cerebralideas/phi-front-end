@@ -1,0 +1,66 @@
+<form id="statusAndComments" class="form-stacked inline"> 
+	<fieldset class="oneThird multiSelect">
+		<legend>Submission Details</legend>
+		<div class="clearfix">
+            <label for="instructor">Instructors:</label>
+            <div class="selectInstructor">
+	            <select name="insructor1">
+	                <option value="" selected="selected">Select Instructor</option>
+	                <option value="Married">Professor Neehra</option>
+	                <option value="Divorced">Professor Smith</option>
+	            </select>
+	            <a href="#" class="btn small danger remove"><span class="icon">-</span></a>
+	            <select name="insructor2">
+	                <option value="" selected="selected">Select Instructor</option>
+	                <option value="Married">Professor Neehra</option>
+	                <option value="Divorced">Professor Smith</option>
+	            </select>
+	            <a href="#" class="btn small success add"><span class="icon">+</span></a>
+            </div>
+        </div>
+        <div class="clearfix selectStudent">
+            <label for="studentOrGroup">Student or Group:</label>
+            <select name="studentOrGroup">
+                <option value="" selected="selected">Select Student or Group</option>
+                <option value="Married">Susan Smith</option>
+                <option value="Divorced">Group A</option>
+            </select>
+        </div>
+        <div class="clearfix">
+            <label for="statusHistory">Status History:</label>
+            <p>Submitted on 8/24/2011</p>
+            <p>Reviewed on 8/23/2011</p>
+            <p>Unaccepted on 8/22/2011</p>
+            <p>Submitted on 8/21/2011</p>
+        </div>
+	</fieldset>
+	<fieldset class="twoThirds">
+		<legend>Comments</legend>
+		<div class="instructorComment">
+			<div class="author">
+				<span class="icon">U</span>
+				<p>Prof. Neehra</p>
+			</div>
+			<div class="message">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<div class="time">
+					<p>At 0830 on 8/26/2011, this message was posted.</p>
+					<p>Status at time of post: Unaccepted</p>
+				</div>
+			</div>
+		</div>
+		<div class="studentComment">
+			<div class="author">
+				<span class="icon">U</span>
+				<p>Author <br>S. Smith</p>
+			</div>
+			<div class="message">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<div class="time">
+					<p>At 0835 on 8/25/2011, this message was posted.</p>
+					<p>Status at time of post: Unaccepted</p>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</form>

@@ -1,0 +1,76 @@
+<?php
+    // Construct new Pt Service Object
+    $ptService = new Service_Pt();
+?>
+
+<script type="text/javascript">
+
+    // Load the data into the PAS.data object
+    DATA.reg = <?php echo $ptService->getJson($this->patientId); ?>;
+    DATA.query = '<?= $this->searchTerms; ?>';
+    DATA.searchTerms = '<?= $this->searchTerms; ?>';
+</script type="text/javascript">
+
+<!-- AngularJS services for patient file -->
+<script type="text/javascript" src="/js/services/serv-patient.js"></script>
+
+<!-- AngularJS controllers for patient file -->
+<script type="text/javascript" src="/js/controllers/ctrlr-patient.js"></script>
+
+<div id="sectionContent" class="row-fluid tabContainer" role="main" ng-controller="PAS.ctrlr.patient">
+
+    <!-- Imports from views > helpers PtsActionsNav.php -->
+    <!-- This handles the actions nav and what nav-element has class "active" -->
+    <?= $this->ptsActionsNav(); ?>
+
+    <!-- Imports from views > helpers PtsSidebar.php -->
+    <!-- This handles what sidebar to use -->
+    <?= $this->ptsSidebar(); ?>
+
+    <section id="mainPanel" class="<?= $this->mainPanelWidth; ?> parent">
+
+        <!-- Imports from views > helpers PtsHeader.php -->
+        <!-- This imports the header, patient file navigation and the alert elements -->
+        <?= $this->ptsHeader(); ?>
+
+            <section class="tabContainer">
+
+                <form name="patientInfo">
+
+                    <warning-required form-check="patientInfo"></warning-required>
+                    <warning-pattern form-check="patientInfo"></warning-pattern>
+
+                    <!-- Import the registration form -->
+                    <?php echo $this->partial('/partials/global/patient-registration.html'); ?>
+
+                    <div class="form-actions <?= $this->mainPanelWidth; ?>">
+
+                        <button class="btn btn-large btn-cancel" data-toggle="modal" href="#confirmLossModal">
+                            <span class="icon-x icon-large"></span> <i>Cancel</i>
+                        </button>
+                        <button class="btn btn-success btn-large" data-toggle="modal" ng-click="save('reg',
+                                'patientInfo')" ng-disabled="patientInfo.$invalid" href="#saveStatusModal">
+                            <span class="icon-install icon-large"></span> <i>Save</i>
+                        </button>
+                        <button class="btn btn-large btn-inverse" data-toggle="modal" ng-disabled="patientInfo.$invalid" href="#signSubmitModal">
+                            <span class="icon-drawer icon-large"></span> <i>Submit</i>
+                        </button>
+                    </div>
+
+                </form>
+
+            </section><!-- .tabContainer -->
+        </div> <!-- .content: it was opened in PtsHeader.php -->
+    </section> <!-- #mainPanel -->
+
+    <div id="signSubmitModal" class="modal hide fade">
+
+        <?php echo $this->partial('/partials/global/modal_submission.html'); ?>
+
+        <div class="modal-footer">
+
+            <a class="btn btn-cancel" data-dismiss="modal">Cancel</a>
+            <a id="patientSignSubmit" ng-click="submit('reg', 'patientInfo', 'submitForm')" ng-disabled="submitForm.$invalid" class="btn btn-success">Submit</a>
+        </div>
+    </div>
+</div><!-- end of #sectionContent -->

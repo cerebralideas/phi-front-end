@@ -1,0 +1,44 @@
+{
+
+    "ptInfo": {
+        "uniqueId": 5,
+        "newPt": "established",
+        "currentIns": "true",
+        "aptNum": null
+    },
+
+    "clinic": {
+
+        "serviceLocation": "General Medicine",
+        "md": "NP Two"
+    },
+
+    "aptDetails": {
+
+        "startDate": "10/05/2012",
+        "startTime": "1130",
+        "length": "30",
+        "aptType": "Mental Health",
+        "reason": "Evaluation for Depression",
+        "aptId": null
+    },
+
+    "status": {
+
+        "ptStatus": null,
+        "checkInDate": null,
+        "checkInTime": null,
+        "checkOutDate": null,
+        "checkOutTime": null,
+        "statusNotes": null
+    },
+
+    "notes": {
+
+        "authorization": null,
+        "reminderNotes": null,
+        "equipment": null,
+        "facility": null,
+        "staff": null
+    }
+}

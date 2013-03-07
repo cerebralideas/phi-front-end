@@ -1,0 +1,57 @@
+    <div id="submittedClaims">
+        <header class="supportPanelHeader">
+            <h2>New Group</h2>
+            <nav class="tabControls supportPanel" id="supportNav" role="navigation">
+                <ul class="tabs">
+                    <li><a>&nbsp;</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="supportContent" class="tabContainer">
+            <form class="form-stacked">
+	            <p>Use the fields below to create a group.</p>
+                <p class="required">Mandatory Fields</p>
+	            <fieldset>
+	                <div class="clearfix required">
+	                    <label for="teamName">Team Name</label>
+	                    <div class="input">
+	                        <input id="teamName" type="text">
+	                    </div>
+	                </div>
+	                <div class="clearfix">
+			            <label for="groupMembers">Group Members:</label>
+			            <div class="groupMembers">
+				            <select name="groupMember1">
+				                <option value="" selected="selected">Select Group Member</option>
+				                <option value="groupMember1A">Billy Joel</option>
+				                <option value="groupMember1B">Lilly Cole</option>
+				            </select>
+				            <a href="#" class="btn small danger remove"><span class="icon">-</span></a>
+				            <select name="groupMember2">
+				                <option value="" selected="selected">Select Group Member</option>
+				                <option value="groupMember2A">Billy Joel</option>
+				                <option value="groupMember2B">Lilly Cole</option>
+				            </select>
+				            <a href="#" class="btn small success add"><span class="icon">+</span></a>
+			            </div>
+			        </div>
+			        <div class="clearfix">
+			            <label for="submitGroupItemsTo">Submit Group Items to:</label>
+			            <div class="groupMembers">
+				            <select name="submitGroupItemsTo1">
+				                <option value="" selected="selected">Select</option>
+				                <option value="submitGroupItemsTo1A">Billy Joel</option>
+				                <option value="submitGroupItemsTo1B">Lilly Cole</option>
+				            </select>
+				            <a href="#" class="btn small danger remove"><span class="icon">-</span></a>
+				            <a href="#" class="btn small success add"><span class="icon">+</span></a>
+			            </div>
+			        </div>
+	            </fieldset>
+	        </form>
+        </div>
+    </div>
+    <div class="actionsbar">
+    <button type="submit" class="btn small cancel">Cancel</button>
+    <button type="submit" class="btn small success">Save</button>
+</div>

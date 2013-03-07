@@ -1,0 +1,33 @@
+DROP TABLE IF EXISTS `adm`;
+
+CREATE TABLE `adm` (
+`admDetailsAdmId` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+`ptInfoUniqueId` INT UNSIGNED NOT NULL, 
+`ptInfoConfidential` VARCHAR( 255 ) NOT NULL, 
+`ptInfoCurrentIns` VARCHAR( 255 ) NOT NULL, 
+`ptInfoDiagnosis` VARCHAR( 255 ) NOT NULL, 
+`ptInfoAdmNum` VARCHAR( 255 ) NOT NULL, 
+`admDetailsAdmType` VARCHAR( 255 ) NOT NULL, 
+`admDetailsDate` VARCHAR( 255 ) NOT NULL, 
+`admDetailsTime` VARCHAR( 255 ) NOT NULL, 
+`admDetailsLength` VARCHAR( 255 ) NOT NULL, 
+`mdAdmitting` VARCHAR( 255 ) NOT NULL, 
+`mdAttending` VARCHAR( 255 ) NOT NULL, 
+`mdSurgical` VARCHAR( 255 ) NOT NULL, 
+`mdPrimary` VARCHAR( 255 ) NOT NULL, 
+`locationSpecialty` VARCHAR( 255 ) NOT NULL, 
+`locationWard` VARCHAR( 255 ) NOT NULL, 
+`locationRoomNumber` VARCHAR( 255 ) NOT NULL, 
+`locationBedNumber` VARCHAR( 255 ) NOT NULL, 
+`statusPtStatus` VARCHAR( 255 ) NOT NULL, 
+`statusAdmDate` VARCHAR( 255 ) NOT NULL, 
+`statusAdmTime` VARCHAR( 255 ) NOT NULL, 
+`statusDcDate` VARCHAR( 255 ) NOT NULL, 
+`statusDcTime` VARCHAR( 255 ) NOT NULL, 
+`statusDcNotes` VARCHAR( 255 ) NOT NULL, 
+`notesAuthorization` VARCHAR( 255 ) NOT NULL, 
+`notesReminderNotes` VARCHAR( 255 ) NOT NULL, 
+`notesEquipment` VARCHAR( 255 ) NOT NULL, 
+`notesFacility` VARCHAR( 255 ) NOT NULL, 
+`notesStaff` VARCHAR( 255 ) NOT NULL
+);

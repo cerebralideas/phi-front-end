@@ -1,0 +1,101 @@
+<header class="supportPanelHeader">
+    <h2>New Appointment</h2>
+    <nav class="tabControls supportPanel" id="supportNav" role="navigation">
+        <ul class="tabs">
+            <li class="active"><a href="/template-parts/patients/support-panel/Appointments/new-appointment-details.html">Details</a></li>
+            <li><a href="/template-parts/patients/support-panel/Appointments/new-appointment-status.html">Status</a></li>
+            <li><a href="/template-parts/patients/support-panel/Appointments/new-appointment-notes.html">Notes</a></li>
+        </ul>
+    </nav>
+</header>
+<div id="supportContent" class="tabContainer">
+    <form id="details" class="form-stacked inline">
+        <p class="required">Mandatory Fields</p>
+        <fieldset>
+            <div class="clearfix required">
+                <div class="input">
+                    <input type="radio" name="patientType" value="newPt" id="newPt" /><label for="newPt">New Patient</label><br/>
+                    <input type="radio" name="patientType" value="establishedPt" id="establishedPt" /><label for="establishedPt">Established Patient</label>
+                </div>
+            </div>
+            <div class="clearfix required">
+                <label for="patient">Patient Name</label>
+                <div class="input">
+                    <input type="text" value="John Smith" id="patient" disabled="disabled">
+                </div>
+            </div>
+            <div class="clearfix required">
+                <div class="input">
+                    <input type="checkbox" name="currentInsurance" value="currentInsurance" id="currentInsurance" /><label for="currentInsurance">Is Insurance Coverage Current?</label>
+                </div>
+            </div>
+            <div class="clearfix required">
+                <label for="locationOfAppointment">Location</label>
+                <select id="locationOfAppointment" name="locationOfAppointment">
+                    <option value="" selected="selected">Select a Location</option>
+                    <option value="loc1">Location 1</option>
+                    <option value="loc2">Location 2</option>
+                </select>
+            </div>
+            <div class="clearfix required">
+                <label for="provider">Provider</label>
+                <select id="provider" name="provider">
+                    <option value="" selected="selected">Select Provider</option>
+                    <option value="loc1">Provider 1</option>
+                    <option value="loc2">Provider 2</option>
+                </select>
+            </div>
+            <div class="clearfix twoInputs required">
+                <label for="startDateTime">Start Date/Time</label>
+                <div class="input-append" id="startDateTime">
+                    <input type="date" id="startDate">
+                    <span class="add-on">d</span>
+                </div>
+                <div class="input-append">
+                    <input type="time" id="startTime">
+                    <span class="add-on">c</span>
+                </div>
+            </div>
+            <div class="clearfix required">
+                <label for="lengthOfAppointment">Length of Appointment</label>
+                <select id="lengthOfAppointment" name="lengthOfAppointment">
+                    <option value="" selected="selected">Select Length</option>
+                    <option value="15">15 min</option>
+                    <option value="30">30 min</option>
+                    <option value="45">45 min</option>
+                    <option value="60">60 min</option>
+                    <option value="90">90 min</option>
+                </select>
+            </div>
+            <div class="clearfix required">
+                <label for="typeOfAppointment">Type of Appointment</label>
+                <select id="typeOfAppointment" name="typeOfAppointment">
+                    <option value="" selected="selected">Select Type</option>
+                    <option value="physical-exam">Physical Exam</option>
+                    <option value="well-child">Well Child</option>
+                    <option value="gyn2">GYN</option>
+                    <option value="prenatal">Prenatal</option>
+                    <option value="mental-health">Mental Health</option>
+                    <option value="med-check">Med Check</option>
+                    <option value="vaccine">Vaccine</option>
+                    <option value="acute-care">Acute Care</option>
+                    <option value="chronic-care">Chronic Care</option>
+                    <option value="lab-diagnostics">Lab/Diagnostics</option>
+                    <option value="walk-in">Walk In</option>
+                    <option value="urgent-care">Urgent Care</option>
+                </select>
+            </div>
+            <div class="clearfix oneHalf required">
+                <label for="reasonForVisit">Reason for Visit</label>
+                <div class="input">
+                    <textarea type="text" id="reasonForVisit"></textarea>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<div class="actions">
+    <a class="icon btn tooltip cancel" data-original-title="Cancel" data-controls-modal="confirmLossModal">*</a>
+    <a class="icon btn tooltip" data-original-title="Save">S</a>
+    <a class="icon btn success modalTrigger tooltip" data-original-title="Sign & Submit" data-controls-modal="signSubmitModal">i</a>
+</div>

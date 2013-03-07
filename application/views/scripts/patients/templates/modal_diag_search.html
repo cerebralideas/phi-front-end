@@ -1,0 +1,62 @@
+<div id="diagSearchModal" class="modal hide fade">
+
+    <div class="modal-header">
+        <a data-dismiss="modal" class="close">&#x2612;</a>
+        <h2>Diagnosis Code Search</h2>
+    </div>
+
+    <div class="modal-body">
+
+        <form class="row-fluid" name="diagCodeSearchForm">
+
+            <p class="formInstructions span12">
+
+                Please use 5 or more characters in your search and select ICD9 or ICD10 to find a diagnosis.
+            </p>
+
+            <div class="span12">
+
+                <label for="searchDiag">Search</label>
+
+                <div class="inlineEls">
+
+                    <input class="min-padding" id="searchDiag" type="text" name="searchDiag" ng-minlength="3"
+                            ng-model="diagKeys">
+
+                    <select id="icdType" name="icd type"
+                            ng-model="icdType" ng-options="type for type in icdTypes" required>
+                    </select>
+
+                    <button id="patientDiagButton" ng-disabled="diagCodeSearchForm.$invalid"
+                            ng-click='$emit("searchCodes", diagKeys, "diag", icdType)'
+                            class="btn btn-small btn-success">New Search</button>
+                </div>
+            </div>
+
+            <fieldset class="row-fluid add-padding no-border">
+
+                <table id="patientSearchResults">
+                    <thead>
+                        <tr>
+                            <th>Number</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr ng-repeat="diag in diagList">
+
+                            <td>
+                                <a ng-click="selectCode('diag')">{{diag.name}}</a>
+                            </td>
+                            <td>
+                                <a ng-click="selectCode('diag')">{{diag.description}}</a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+</div>

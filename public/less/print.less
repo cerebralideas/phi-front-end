@@ -1,0 +1,191 @@
+/**********************************************************/
+/* To find modified LESS files, search for $$Customized$$ */
+
+// So far, I've modified the following files:
+// variables.less
+// scaffolding.less
+
+/**********************************************************/
+
+@import "bootstrap/bootstrap.less";
+// @import "bootstrap/responsive.less";
+// @import "login.less";
+
+
+/***************************************************/
+/*                Grid Setting Vars                */
+/***************************************************/
+
+@fluidGridColumnWidth:    7.33%;
+@fluidGridGutterWidth:    0;
+@fluidGridPadding:        10px;
+
+/***************************************************/
+/*                IMPORT FONTS                     */
+/***************************************************/
+
+@import url('http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,700,400italic|Inconsolata');
+
+
+/***************************************************/
+/*                HIDE UI                     */
+/***************************************************/
+
+.userControls, #supportPanel, #activityActionsNav, #sectionNav, #commentBox,
+#patientNav, .review-actions {
+  display: none !important;
+}
+#mainPanel, .tabContainer, .content, .tab-content,
+#subItem, fieldset, form, .row-fluid, .row,
+{
+  padding: none !important;
+  margin: none !important;
+}
+fieldset, form {
+  border: none !important;
+}
+.mainPanelHeader {
+  padding: (@fluidGridPadding * 3) !important;
+}
+.content {
+  height: inherit !important;
+  position: static;
+  overflow: visible;
+  border: none;
+  background: none;
+  width: 100%;
+}
+.printButton {
+  display: none !important;
+}
+#statusComments {
+  display: block !important;
+}
+
+/* Patients > Claims */
+
+.claim-form {
+  margin: 0 auto;
+  padding: 20px;
+  overflow-x: auto;
+
+  h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.25em;
+    color: darkred;
+    font-family: sans-serif;
+    text-transform: uppercase;
+  }
+  .row {
+    display: table;
+    table-layout:fixed;
+    width: 100%;
+    border-collapse: collapse;
+    max-width: 1200px;
+    min-width: 850px;
+  }
+  & > .row {
+    border-top: 1px solid darkred;
+  }
+  & > .row:last-child {
+    border-bottom: 1px solid darkred;
+  }
+  .oneSeamlessColumn,
+  .oneSeamlessColumns,
+  .twoSeamlessColumns,
+  .threeSeamlessColumns,
+  .fourSeamlessColumns,
+  .fiveSeamlessColumns,
+  .sixSeamlessColumns,
+  .sevenSeamlessColumns,
+  .eightSeamlessColumns,
+  .nineSeamlessColumns,
+  .tenSeamlessColumns,
+  .elevenSeamlessColumns,
+  .twelveSeamlessColumns,
+  .thirteenSeamlessColumns,
+  .fourteenSeamlessColumns {
+    display: table-cell;
+    padding: 0.5em;
+    border: 1px solid darkred;
+    border-top: none;
+    border-bottom: none;
+    overflow-x: hidden;
+  }
+  .oneSeamlessColumn,
+  .oneSeamlessColumns {
+    width: 8.333333333%;
+  }
+  .twoSeamlessColumns {
+    width: 16.66666667%;
+  }
+  .threeSeamlessColumns {
+    width: 25%;
+  }
+  .fourSeamlessColumns {
+    width: 33.33333333%;
+  }
+  .fiveSeamlessColumns {
+    width: 41.66666667%;
+  }
+  .sixSeamlessColumns {
+    width: 50%;
+  }
+  .sevenSeamlessColumns {
+    width: 58.33333333%;
+  }
+  .eightSeamlessColumns {
+    width: 66.66666666%;
+  }
+  .nineSeamlessColumns {
+    width: 74.99999999%;
+  }
+  .tenSeamlessColumns {
+    width: 83.33333332%;
+  }
+  .elevenSeamlessColumns {
+    width: 91.66666665%;
+  }
+  .twelveSeamlessColumns {
+    width: 100%;
+  }
+  .rowHeader {
+    font-size: 0.7em;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: darkred;
+    background: pink;
+    vertical-align: middle;
+  }
+  .innerRow > *, .innerRow > *:before {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  .hasLabel:before {
+    content: attr(title);
+    display: block;
+    font-size: 0.5em;
+    color: darkred;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    margin-bottom: 0.7em;
+    font-weight: normal;
+    text-align: left;
+  }
+  .collapse {
+    height: 0;
+    padding: 0;
+  }
+  .notUsed {
+    background: lightgray;
+  }
+}
+
+/* Table Styling (and Associated elements) */
+
+.row-fluid .newButton, .row-fluid .printButton {
+  text-align: right;
+  padding-right: @fluidGridPadding;
+}

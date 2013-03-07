@@ -1,0 +1,184 @@
+{
+
+		"pt": {
+
+			"uniqueId": null,
+			"firstName": "Rebecca",
+			"lastName": "Khan",
+			"middleName": "Catherine",
+            "medRecNum": "100000571",
+		    "suffix": "",
+		    "dateOfBirth": "04/01/1996",
+			"age": "16 years",
+			"sex": "F",
+			"aliases": null,
+			"maritalStatus": "Never Married",
+			"nationality": "Caucasian",
+			"streetAddress": "887 Sunnyside Drive",
+			"apptNum": null,
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68030",
+			"homePhone": "675-555-0812",
+			"workPhone": null,
+			"cellPhone": "548-555-8724",
+			"email": "Becky4sure@myemail.com",
+			"occupation": "Student",
+			"employer": null,
+			"employerPhone": null,
+			"comment": "Goes by 'Becky'.",
+			"eContact": {
+
+				"uniqueId": null,
+				"firstName": "Jackson",
+				"lastName": "Khan",
+				"suffix": null,
+				"phoneNumber": "654-555-0052",
+				"address": "877 Sunnyside Dr."
+			}
+		},
+
+		"pg": {
+
+			"p1": {
+
+				"uniqueId": null,
+				"firstName": "Wendy",
+				"lastName": "Khan",
+				"suffix": null,
+				"relationship": "Mother",
+				"streetAddress": "887 Sunnyside Drive",
+				"apptNum": null,
+				"city":"Anytown",
+				"state": "NP",
+				"zip": null
+			},
+
+			"p2": {
+
+                "uniqueId": null,
+                "firstName": "Jackson",
+                "lastName": "Khan",
+                "suffix": null,
+                "relationship": "Father",
+                "streetAddress": "887 Sunnyside Dr.",
+                "apptNum": null,
+                "city":"Anytown",
+                "state": "NP",
+                "zip": null
+			}
+		},
+
+		"md": {
+
+	    	"primary": "Dr. Three",
+			"referring":null,
+			"rendering": null,
+			"serviceLocation": "General Medicine Clinic",
+			"providerSocSec": null
+		},
+
+		"gr": {
+
+			"relationship": "Father",
+			"uniqueId": null,
+			"firstName": "Jackson",
+			"lastName": "Khan",
+			"suffix": null,
+			"streetAddress": "887 Sunnyside Drive",
+			"apptNum": null,
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68030"
+		},
+
+		"ins": {
+
+	    	"primary": {
+
+				"comp": "UnitedHealthcare Choice Plus",
+				"relationship": "Daughter",
+				"groupNumber": "HM78956",
+				"policyNumber": "764CR74X90",
+				"planName": "United Group Plan",
+				"effectiveDate": "09/01/2008",
+				"effYearDeviation": "-4",
+				"expirationDate": "08/31/2013",
+				"expYearDeviation": "+1",
+
+				"active": "icon-checkmark",
+				"verified": "icon-checkmark",
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"secondary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"expirationDate": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"tertiary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"expirationDate": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			}
+		}
+	}

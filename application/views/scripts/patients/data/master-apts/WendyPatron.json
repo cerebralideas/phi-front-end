@@ -1,0 +1,44 @@
+{
+
+    "ptInfo": {
+        "uniqueId": 11,
+        "newPt": "established",
+        "currentIns": "true",
+        "aptNum": null
+    },
+
+    "clinic": {
+
+        "serviceLocation": "General Medicine",
+        "md": "NP One"
+    },
+
+    "aptDetails": {
+
+        "startDate": "10/01/2012",
+        "startTime": "0930",
+        "length": "30",
+        "aptType": "GYN",
+        "reason": "Pap",
+        "aptId": null
+    },
+
+    "status": {
+
+        "ptStatus": null,
+        "checkInDate": null,
+        "checkInTime": null,
+        "checkOutDate": null,
+        "checkOutTime": null,
+        "statusNotes": null
+    },
+
+    "notes": {
+
+        "authorization": null,
+        "reminderNotes": null,
+        "equipment": null,
+        "facility": null,
+        "staff": null
+    }
+}

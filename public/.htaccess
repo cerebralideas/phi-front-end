@@ -1,0 +1,22 @@
+<FilesMatch "\.(html|htm|js|css)$">
+FileETag None
+<IfModule mod_headers.c>
+Header unset ETag
+Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+Header set Pragma "no-cache"
+Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+</IfModule>
+</FilesMatch>
+
+#Add file type for appcache
+AddType text/cache-manifest .appcache
+
+# Rewrite rules for Zend Framework
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/xmlrpc/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* index.php
+
+# Security: Don't allow browsing of directories
+#Options -Indexes

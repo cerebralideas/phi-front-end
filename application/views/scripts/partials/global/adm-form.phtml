@@ -1,0 +1,205 @@
+<fieldset id="details" class="tab-pane active row-fluid fix-space no-border">
+
+    <legend ng-show="onReport">Details</legend>
+
+    <p class="required span12">Mandatory Fields</p>
+
+    <?php $dir = $_SERVER['REQUEST_URI'];
+
+        if (strrpos($dir, '/patients') === 0) { ?>
+
+        <div class="ng-class:eventFormInputWidth;">
+            <label for="ptFullName">Patient Name</label>
+            <input type="text" id="ptFullName" value="{{pt.firstName}} {{pt.lastName}}" disabled="disabled">
+        </div>
+
+        <?php } elseif (strrpos($dir, '/calendar') === 0) { ?>
+
+        <div class="ng-class:eventFormInputWidth;">
+            <label>Patient Name</label>
+            <div class="input-prepend">
+
+                <span class="icon-search add-on"></span><div id="ptFullName" class="uneditable-input" data-toggle="modal" href="#ptSearchModal">{{fullName}}</div>
+            </div>
+        </div>
+
+        <?php } elseif (strrpos($dir, '/activity') === 0) { ?>
+
+            <div class="ng-class:eventFormInputWidth;">
+                <label for="ptFullName">Patient Name</label>
+                <input type="text" id="ptFullName" ng-model="ptFullName" disabled="disabled">
+            </div>
+
+        <?php } ?>
+
+    <div class="ng-class:eventFormInputWidth;">
+        <label for="confidentialRecord">
+            <input ng-disabled="disable" type="checkbox" id="confidentialRecord" ng-true-value="icon-checkmark" ng-false-value="null" value="confidentialRecord" ng-model="ptInfo.confidential">
+            Confidential Record
+        </label>
+    </div>
+
+    <div class="ng-class:eventFormInputWidth;">
+        <div class="input">
+            <label for="currentInsurance">
+                <input ng-disabled="disable" type="checkbox" name="currentInsurance" ng-true-value="icon-checkmark" ng-false-value="null" value="currentInsurance" id="currentInsurance" ng-model="ptInfo.currentIns">
+                Is Insurance Coverage Current?
+            </label>
+        </div>
+    </div>
+    <div class="ng-class:eventFormInputWidth; required">
+        <label for="typeOfAdmission">Type of Admission</label>
+        <select ng-disabled="disable" id="typeOfAdmission" name="typeOfAdmission" ng-model="admDetails.admType" ng-options="admType for admType in admTypes" required>
+            <option value="" selected="selected">Select Admission Type</option>
+        </select>
+    </div>
+    <div class="ng-class:eventFormInputWidth; required">
+        <label for="startDateTime">Scheduled Date/Time</label>
+        <div class="twoInputs">
+
+            <date-input
+                model="admDetails.date" id="schDate" name="Scheduled Date" disable="disable"
+                required="required">
+            </date-input><time-input
+                model="admDetails.time" id="schTime" name="Scheduled Time" disable="disable"
+                required="required">
+            </time-input>
+        </div>
+    </div>
+
+
+    <div class="ng-class:eventFormInputWidth; required">
+        <label for="estLengthOfStay">Estimated Length of Stay</label>
+        <input ng-disabled="disable" type="text" id="estLengthOfStay" ng-model="admDetails.length"
+                placeholder="e.g. 4 days" required>
+    </div>
+
+    <div class="ng-class:eventFormInputWidth; required">
+        <label for="admittingProvider">Admitting Provider</label>
+        <select ng-disabled="disable" id="admittingProvider" name="provider" ng-model="md.admitting"
+                ng-options="md for md in mds" required>
+            <option value="" selected="selected">Select Provider</option>
+        </select>
+    </div>
+
+    <div class="ng-class:eventFormInputWidth; required">
+        <label for="attendingProvider">Attending Provider</label>
+        <select ng-disabled="disable" id="attendingProvider" name="provider" ng-model="md.attending" ng-options="md for md in mds" required>
+            <option value="" selected="selected">Select Provider</option>
+        </select>
+    </div>
+    <div class="ng-class:eventFormInputWidth;">
+        <label for="surgicalProceduralProvider">Surgical/Procedural Provider</label>
+        <select ng-disabled="disable" id="surgicalProceduralProvider" name="provider" ng-model="md.surgical" ng-options="md for md in mds">
+            <option value="" selected="selected">Select Provider</option>
+        </select>
+    </div>
+
+    <div class="ng-class:eventFormInputWidth;">
+        <label for="referringProvider">Referring Provider & ID Number</label>
+        <div class="twoInputs">
+            <div class="input">
+                <input type="text" id="referringProvider" name="Referring Provider" ng-model="md.referring"
+                        ng-disabled="disable">
+            </div><div class="input">
+                <input type="text" id="referringProviderId" name="Referring Provider ID" ng-model="md.referringId"
+                    ng-disabled="disable">
+            </div>
+        </div>
+    </div>
+
+    <div class="ng-class:eventFormInputWidth; required">
+        <label for="diagnosis">Admitting Diagnosis</label>
+        <div class="input">
+            <input ng-disabled="disable" type="text" id="diagnosis" ng-model="ptInfo.diagnosis" required>
+        </div>
+    </div>
+    <div class="ng-class:eventFormInputWidth; required">
+        <label for="treatingSpecialty">Treating Specialty</label>
+        <select ng-disabled="disable" id="treatingSpecialty" name="treatingSpecialty" ng-model="location.specialty" ng-options="trtSpecialty for trtSpecialty in trtSpecialties" required>
+            <option value="" selected="selected">Select Specialty</option>
+        </select>
+    </div>
+    <div class="ng-class:eventFormInputWidth; required">
+        <label for="ward">Ward</label>
+        <select ng-disabled="disable" id="ward" name="ward" ng-model="location.ward" ng-options="ward for ward in wards" required>
+            <option value="" selected="selected">Select Ward</option>
+        </select>
+    </div>
+    <div class="ng-class:eventFormInputWidth;">
+        <label for="roomNumber">Room Number/Bed</label>
+        <div class="twoInputs">
+            <div class="input">
+                <input ng-disabled="disable" type="text" id="roomNumber" ng-model="location.roomNumber">
+            </div><div class="input">
+            <input ng-disabled="disable" type="text" id="roomBed" ng-model="location.bedNumber">
+        </div>
+        </div>
+    </div>
+</fieldset>
+
+<fieldset class="tab-pane no-border" id="status">
+
+    <legend ng-show="onReport">Status</legend>
+
+    <div class="ng-class:eventFormInputWidth;">
+        <label for="patientStatus">Admission Status</label>
+        <select ng-disabled="disable" id="patientStatus" name="patientStatus" ng-model="status.ptStatus"
+                 ng-options="admStatus for admStatus in admStatuses">
+        </select>
+    </div>
+    <div class="ng-class:eventFormInputWidth;">
+        <label for="admDate">Admission Date/Time</label>
+        <div class="twoInputs">
+
+            <date-input
+                model="status.admDate" id="admDate" name="Admission Date" disable="disable">
+            </date-input><time-input
+                model="status.admTime" id="admTime" name="Admission Time" disable="disable">
+            </time-input>
+        </div>
+    </div>
+    <div class="ng-class:eventFormInputWidth;">
+        <label for="dcDate">Discharge Date/Time</label>
+        <div class="twoInputs">
+            <date-input
+                model="status.dcDate" id="dcDate" name="Discharge Date" disable="disable">
+            </date-input><time-input
+                model="status.dcTime" id="dcTime" name="Discharge Time" disable="disable">
+            </time-input>
+        </div>
+    </div>
+    <div class="ng-class:eventFormTextareaWidth;">
+        <label for="notes">Notes</label>
+        <div class="input">
+            <textarea ng-disabled="disable" type="text" id="status-notes" ng-model="status.dcNotes"></textarea>
+        </div>
+    </div>
+</fieldset>
+
+<fieldset class="tab-pane no-border" id="notes">
+
+    <legend ng-show="onReport">Notes</legend>
+
+    <div class="ng-class:eventFormTextareaWidth;">
+        <label for="authNotes">Authorization</label>
+        <textarea ng-disabled="disable" type="text" id="authNotes" ng-model="notes.authorization"></textarea>
+
+    </div>
+    <div class="ng-class:eventFormTextareaWidth;">
+        <label for="reminderNotes">Reminder Notes</label>
+        <textarea ng-disabled="disable" type="text" id="reminderNotes" ng-model="notes.reminderNotes"></textarea>
+    </div>
+    <div class="ng-class:eventFormTextareaWidth;">
+        <label for="equipNotes">Equipment</label>
+        <textarea ng-disabled="disable" type="text" id="equipNotes" ng-model="notes.equipment"></textarea>
+    </div>
+    <div class="ng-class:eventFormTextareaWidth;">
+        <label for="facNotes">Facility</label>
+        <textarea ng-disabled="disable" type="text" id="facNotes" ng-model="notes.facility"></textarea>
+    </div>
+    <div class="ng-class:eventFormTextareaWidth;">
+        <label for="staffNotes">Staff</label>
+        <textarea ng-disabled="disable" type="text" id="staffNotes" ng-model="notes.staff"></textarea>
+    </div>
+</fieldset>

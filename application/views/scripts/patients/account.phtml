@@ -1,0 +1,115 @@
+<?php
+// Construct new Pt Service Object
+$ptService = new Service_Pt();
+// Construct new Acc Service Object
+// $aptService = new Service_Acc();
+?>
+
+<script type="text/javascript">
+
+    // Load the data into the PAS.data object
+    DATA.reg = <?php echo $ptService->getJson($this->patientId); ?>;
+    DATA.newPost = {};
+    DATA.accList = [];
+    DATA.accItem = {};
+    DATA.query = '<?= $this->searchTerms; ?>';
+    DATA.searchTerms = '<?= $this->searchTerms; ?>';
+</script>
+
+<!-- AngularJS services for patient file -->
+<script type="text/javascript" src="/js/services/serv-patient.js"></script>
+
+<!-- AngularJS controllers for patient file -->
+<script type="text/javascript" src="/js/controllers/ctrlr-patient.js"></script>
+
+<div id="sectionContent" class="row-fluid tabContainer" role="main" ng-controller="PAS.ctrlr.patient">
+
+    <?= $this->ptsActionsNav(); ?>
+
+    <!-- Imports from views > helpers PtsSidebar.php -->
+    <!-- This handles what sidebar to use -->
+    <?= $this->ptsSidebar(); ?>
+
+    <section id="mainPanel" class="<?= $this->mainPanelWidth; ?> parent">
+
+        <!-- This imports the header, patient file navigation and the alert elements -->
+        <?= $this->ptsHeader(); ?>
+
+        <section class="tabContainer">
+
+            <form name="aptsListForm">
+
+                <fieldset class="row-fluid">
+
+                    <legend>Patient Ledger—Balance: ${{accountTotal}}</legend>
+
+                    <p class="formInstructions span9">
+                        To view further details and associated claim, click on the item below.
+                    </p><!-- Remove whitespace
+
+                 --><a href="<?= $this->urlAccItemNew; ?>" class="newButton span3 no-padding">
+                        <span class="icon-calendar icon-large"></span>
+                        Post to Account
+                    </a>
+
+                    <div class="span12 tableContainer">
+                        <table id="scheduled" class="well data-list">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Date</th>
+                                    <th>Claim #</th>
+                                    <th>To/From</th>
+                                    <th>Charge</th>
+                                    <th>Adjustment</th>
+                                    <th>Credit</th>
+                                    <th>Balance</th>
+                                    <th>Comment</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr class="availItem"
+                                    ng-repeat="items in accItems">
+
+                                    <td>
+                                        <a href="<?= $this->urlAccItemEdit; ?>">{{item.accType}}</a>
+                                    </td>
+                                    <td>
+                                        <a href="<?= $this->urlAccItemEdit; ?>">{{item.date}}</a>
+                                    </td>
+                                    <td>
+                                        <a href="<?= $this->urlAccItemEdit; ?>">{{item.claimNum}}</a>
+                                    </td>
+                                    <td>
+                                        <a href="<?= $this->urlAccItemEdit; ?>">{{item.toFrom}}</a>
+                                    </td>
+                                    <td>
+                                        <a href="<?= $this->urlAccItemEdit; ?>" >{{item.charge}}</a>
+                                    </td>
+                                    <td>
+                                        <a href="<?= $this->urlAccItemEdit; ?>">{{item.adj}}</a>
+                                    </td>
+                                    <td>
+                                        <a href="<?= $this->urlAccItemEdit; ?>">{{item.credit}}</a>
+                                    </td>
+                                    <td>
+                                        <a href="<?= $this->urlAccItemEdit; ?>">{{item.balance}}</a>
+                                    </td>
+                                    <td>
+                                        <a href="<?= $this->urlAccItemEdit; ?>">{{item.comment}}</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </fieldset>
+            </form>
+
+        </section><!-- .tabContainer -->
+</div> <!-- .content: it was opened in ActHeader.php -->
+</section> <!-- #mainPanel -->
+
+<?php echo $this->partial('/partials/global/modal_claim_search.html'); ?>
+
+</div><!-- end of #sectionContent -->

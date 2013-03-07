@@ -1,0 +1,35 @@
+<?
+$locationModel = new Model_Location();
+$locationOptions = $locationModel->getLocations();
+
+$label = $this->label;
+$prefix = $this->prefix;
+$selectedValue = $this->selectedValue;
+if (!isset($this->disabled))
+    $disabled = 'false';
+?>
+<? if (strcasecmp($disabled, 'false') == 0) : ?>
+<div class="clearfix">
+    <label for="<?= $prefix; ?>Location"><?= $this->label; ?></label>
+    <select id="<?= $prefix; ?>Location" name="<?= $prefix; ?>Location">
+        <option value="0" <?= ($selectedValue == "0" || $selectedValue == "") ? 'selected="selected"' : '' ?>>Select a Location</option>
+        <? foreach ($locationOptions as $locationOption): ?>
+        <option value="<?= $locationOption['location_id']; ?>"<?= ($selectedValue == $locationOption['location_id']) ? 'selected="selected"' : '' ?>><?= $locationOption['location_desc']; ?></option>
+        <? endforeach; ?>
+    </select>
+</div>
+<? else : ?>
+<div class="clearfix">
+    <label for="<?= $prefix; ?>Location"><?= $this->label; ?></label>
+    <div class="input">
+        <?
+    if (!count($locationOptions))
+    echo '<input disabled="disabled" type="text" id="'.$prefix.'Location" name="'.$prefix.'Location" value=" " />';
+    foreach ($locationOptions as $locationOption)
+    if (strcasecmp($locationOption['location_id'], $selectedValue) == 0 )
+    echo '<input disabled="disabled" type="text" id="'.$prefix.'Location" name="'.$prefix.'Location" value="'.$locationOption['location_desc'].'" />';
+    ?>
+
+    </div>
+</div>
+<? endif; ?>

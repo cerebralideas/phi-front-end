@@ -1,0 +1,65 @@
+<div id="ptSearchModal" class="modal hide fade">
+
+    <div class="modal-header">
+        <a data-dismiss="modal" class="close">&#x2612;</a>
+        <h2>Patient Search</h2>
+    </div>
+
+    <div class="modal-body">
+
+        <form class="row-fluid">
+            <p class="formInstructions span12">
+
+                Find a patient with the field below by first or last name, or SS#.
+            </p>
+
+            <div class="span12">
+
+                <label for="searchName">Search</label>
+
+                <div class="input-append">
+
+                    <input class="span6 min-padding" id="searchName" type="text" name="searchName" ng-model="searchTerms"><button id="patientSearchButton" ng-click='$emit("submitQuery")' class="btn btn-small btn-success">New Search</button>
+                </div>
+            </div>
+
+            <fieldset class="row-fluid add-padding no-border">
+
+                <table id="patientSearchResults">
+                    <thead>
+                    <tr>
+                        <th>Last Name</th>
+                        <th>First Name</th>
+                        <th>DOB</th>
+                        <th>SSN</th>
+                        <th>Created by</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    <tr ng-repeat="pt in list | filter:query">
+
+                        <td>
+                            <a ng-click="selectPatient()">{{pt.lastName}}</a>
+                        </td>
+                        <td>
+                            <a ng-click="selectPatient()">{{pt.firstName}}</a>
+                        </td>
+                        <td>
+                            <a ng-click="selectPatient()">{{pt.dateOfBirth}}</a>
+                        </td>
+                        <td>
+                            <a ng-click="selectPatient()">{{pt.socialSecurity}}</a>
+                        </td>
+                        <td>
+                            <a ng-click="selectPatient()">{{pt.author}}</a>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+</div>

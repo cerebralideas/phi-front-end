@@ -1,0 +1,5 @@
+# IDE specific stuff
+.idea
+
+# Subversion specific stuff
+.svn

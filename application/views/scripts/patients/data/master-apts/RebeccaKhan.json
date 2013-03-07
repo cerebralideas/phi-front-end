@@ -1,0 +1,44 @@
+{
+
+    "ptInfo": {
+        "uniqueId": 5,
+        "newPt": "established",
+        "currentIns": "true",
+        "aptNum": null
+    },
+
+    "clinic": {
+
+        "serviceLocation": "General Medicine",
+        "md": "Dr. One"
+    },
+
+    "aptDetails": {
+
+        "startDate": "10/01/2012",
+        "startTime": "1530",
+        "length": "15",
+        "aptType": "Chronic Care",
+        "reason": "Diabetes check",
+        "aptId": null
+    },
+
+    "status": {
+
+        "ptStatus": null,
+        "checkInDate": null,
+        "checkInTime": null,
+        "checkOutDate": null,
+        "checkOutTime": null,
+        "statusNotes": null
+    },
+
+    "notes": {
+
+        "authorization": null,
+        "reminderNotes": null,
+        "equipment": null,
+        "facility": null,
+        "staff": null
+    }
+}

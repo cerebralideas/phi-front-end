@@ -1,0 +1,86 @@
+<nav id="adminNav" class="pills actionControls" role="navigation">
+    <ul class="nav">
+        <li class="listTitle">Actions:</li>
+        <li class="active"><a data-support="facility/support-panel/index.html" data-main="admin-blank.html" href="/template-parts/administration/">Facility</a></li>
+        <li><a data-support="provider/support-panel/index.html" data-main="admin-blank.html" href="/template-parts/administration/">Provider</a></li>
+        <li><a data-support="insurance/support-panel/index.html" data-main="admin-blank.html" href="/template-parts/administration/">Insurance</a></li>
+        <li><a data-support="charge-codes/support-panel/index.html" data-main="admin-blank.html" href="/template-parts/administration/">Charge Codes</a></li>
+    </ul>
+</nav>
+<section id="supportPanel" class="parent">
+    <div id="facilitySearch">
+        <header class="supportPanelHeader">
+            <h2>Facility Search</h2>
+            <nav class="tabControls" id="supportNav" role="navigation">
+                <ul class="tabs">
+                    <li class="active"><a href="/template-parts/administration/facility/support-panel/search-facility.html">Search Facility</a></li>
+                    <li><a href="/template-parts/administration/facility/support-panel/new-facility.html">New Facility</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="supportContent" class="tabContainer">
+            <form class="form-stacked inline">
+                <p class="formInstructions">
+                    Use any fields below to find a facility.
+                </p>
+                <fieldset>
+                    <div class="clearfix complexSearch">
+                        <label for="searchLastName">Service Name</label>
+                        <div class="input">
+                            <div class="input-prepend">
+                                <span class="add-on">F</span>
+                                <input id="searchLastName" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix complexSearch">
+                        <label for="searchFirstName">Code</label>
+                        <div class="input">
+                            <div class="input-prepend">
+                                <span class="add-on">F</span>
+                                <input type="text" id="searchFirstName">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix complexSearch">
+                        <label for="searchSSN">Type</label>
+                        <div class="input">
+                            <div class="input-prepend">
+                                <span class="add-on">F</span>
+                                <input type="text" id="searchSSN">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="searchActions">
+                        <a class="btn success" href="/template-parts/administration/facility/main-panel/facility-search.html">Search</a>
+                        <a class="btn cancel" href="/template-parts/administration/facility/main-panel/facility-search.html">Return to Results <span class="icon cancel"> 2</span></a>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</section><!-- Removes whitespace with inline-block
+     --><section id="mainPanel" class="parent">
+    <header class="mainPanelHeader">
+        <h1>&nbsp;</h1>
+    </header>
+    <nav class="tabControls mainPanel" id="adminNav">
+        <ul class="tabs">
+            <li><a>&nbsp;</a></li>
+        </ul>
+    </nav>
+    <div id="adminContent" class="content container_16">
+        <div class="alert-message error" data-alert="alert">
+            <a class="hideAlert" href="#">×</a>
+            <p><strong>Oh snap!</strong> It seems there was some kind of error.</p>
+        </div>
+        <section class="tabContainer">
+            <form class="noSelection">
+                <div>
+                    <span class="icon">t</span>
+                    <p>To create a new facility<br>or to find an existing one,<br>use the panel to the left.</p>
+                </div>
+            </form>
+        </section>
+    </div>
+</section>

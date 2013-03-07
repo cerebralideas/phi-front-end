@@ -1,0 +1,42 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Designer/Front-End Developer: Justin Lowery (cerebralideas.com)
+  Back-End Developer: Shad Neese
+  Site: neehrperfect.com
+
+/* THANKS */
+  Names (& URL): jQuery team, HTML5 Boilerplate team, Twitter Bootstrap Team, Lea Verou
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery, Twitter Bootstrap, Uniform, Prefix-Free
+  Software: phpStorm, CodeKit, Google Chrome Canary,
+
+
+
+                               -o/-
+                               +oo//-
+                              :ooo+//:
+                             -ooooo///-
+                             /oooooo//:
+                            :ooooooo+//-
+                           -+oooooooo///-
+           -://////////////+oooooooooo++////////////::
+            :+ooooooooooooooooooooooooooooooooooooo+:::-
+              -/+ooooooooooooooooooooooooooooooo+/::////:-
+                -:+oooooooooooooooooooooooooooo/::///////:-
+                  --/+ooooooooooooooooooooo+::://////:-
+                     -:+ooooooooooooooooo+:://////:--
+                       /ooooooooooooooooo+//////:-
+                      -ooooooooooooooooooo////-
+                      /ooooooooo+oooooooooo//:
+                     :ooooooo+/::/+oooooooo+//-
+                    -oooooo/::///////+oooooo///-
+                    /ooo+::://////:---:/+oooo//:
+                   -o+/::///////:-      -:/+o+//-
+                   :-:///////:-            -:/://
+                     -////:-                 --//:
+                       --                       -:

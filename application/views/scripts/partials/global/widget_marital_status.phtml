@@ -1,0 +1,35 @@
+<?
+$maritalStatusModel = new Model_MaritalStatus();
+$maritalStatusModel->select()->query();
+$maritalStatusOptions = $maritalStatusModel->fetchAll();
+
+$prefix = $this->prefix;
+$selectedValue = $this->selectedValue;
+if (!isset($this->disabled))
+    $disabled = 'false';
+?>
+<? if (strcasecmp($disabled, 'false') == 0) : ?>
+<div class="clearfix required select-radio">
+    <label for="<?= $prefix; ?>MaritalStatus">Marital Status</label>
+    <select id="<?= $prefix; ?>MaritalStatus" name="<?= $prefix; ?>MaritalStatus">
+        <option value="0" <?= ($selectedValue == "0" || $selectedValue == "") ? 'selected="selected"' : '' ?>>Select Status</option>
+        <? foreach ($maritalStatusOptions as $maritalStatusOption): ?>
+        <option value="<?= $maritalStatusOption['marital_status_id']; ?>"<?= ($selectedValue == $maritalStatusOption['marital_status_id']) ? 'selected="selected"' : '' ?>><?= $maritalStatusOption['marital_status_desc']; ?></option>
+        <? endforeach; ?>
+    </select>
+</div>
+<? else : ?>
+<div class="clearfix">
+    <label for="<?= $prefix; ?>MaritalStatus">Marital Status</label>
+    <div class="input">
+        <?
+    if (!count($maritalStatusOptions))
+        echo '<input disabled="disabled" type="text" id="'.$prefix.'MaritalStatus" name="'.$prefix.'MaritalStatus" value=" " />';
+    foreach ($maritalStatusOptions as $maritalStatusOption)
+        if (strcasecmp($maritalStatusOption['marital_status_id'], $selectedValue) == 0 )
+            echo '<input disabled="disabled" type="text" id="'.$prefix.'MaritalStatus" name="'.$prefix.'MaritalStatus" value="'.$maritalStatusOption['marital_status_desc'].'" />';
+    ?>
+
+    </div>
+</div>
+<? endif; ?>

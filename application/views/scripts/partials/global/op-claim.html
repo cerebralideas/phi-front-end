@@ -1,0 +1,161 @@
+<fieldset class="row-fluid fix-space">
+
+    <legend class="span12"><strong>Step 1 of 3:</strong> Choose Superbill for Claim</legend>
+
+    <div class="span12">
+
+        <p class="formInstructions">
+            To begin, choose an existing superbill to create a new claim.
+        </p>
+
+        <div class="span well">
+            <a class="btn btn-warning" data-toggle="modal" ng-click="getNonClSbs(pt.uniqueId)"
+                    href="#sbSearchModal">
+                Select Superbill
+            </a>
+        </div>
+
+        <h3>Review Appointment Details</h3>
+
+        <ul class="summary well">
+            <li>Date: <span class="value">{{aptDetails.startDate}}</span></li>
+            <li>Time: <span class="value">{{aptDetails.startTime}}</span></li>
+            <li>Length: <span class="value">{{aptDetails.length}}</span></li>
+            <li>Visit #: <span class="value">{{ptInfo.aptNum}}</span></li>
+            <li>Visit Type: <span class="value">{{aptDetails.aptType}}</span></li>
+            <li>Location: <span class="value">{{aptDetails.serviceLocation}}</span></li>
+            <li>Rendering Provider: <span class="value">{{md.clinic}}</span></li>
+            <li>Referring Provider: <span class="value">{{md.referring}} - {{md.referringId}}</span></li>
+            <li>Visit Related to: <span class="value">{{ptInfo.condRelatedTo}}</span></li>
+        </ul>
+
+        <h3>Review Superbill Details</h3>
+
+        <ul class="summary well">
+            <li>Date of Initial Sx, Acc or LMP: <span class="value">{{opSb.opSbDetails.dateOfInitial}}</span></li>
+            <li>Memo: <span class="value">{{opSb.opSbDetails.memo}}</span></li>
+            <li>Prior Authorization Number: <span class="value">{{opSb.opSbDetails.priorAuthNumber}}</span></li>
+            <li class="fullWidth">Authorization Notes: <p class="value">{{opSb.opSbDetails.authNotes}}</p></li>
+            <li class="fullWidth">Medical Notes: <p class="value">{{opSb.opSbDetails.medNotes}}</p></li>
+            <li class="fullWidth">Business Notes: <p class="value">{{opSb.opSbDetails.busNotes}}</p></li>
+        </ul>
+
+    </div>
+
+</fieldset>
+
+<fieldset class="row-fluid fix-space">
+
+    <legend class="span12"><strong>Step 2 of 3:</strong> Bill Information</legend>
+
+    <p class="required span12">Mandatory Fields</p>
+
+    <div class="span4">
+        <label for="billTo">Bill to:</label>
+
+        <div class="input">
+            <select ng-disabled="disable" ng-model="opCl.opClDetails.payors" name="Bill to"
+                    ng-options="payor for payor in payors" id="billTo">
+                <option value="">Select Payer</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="span4">
+        <label for="referenceNumber">Reference Number</label>
+
+        <div class="input">
+            <input ng-disabled="disable" type="text" id="referenceNumber" ng-model="opCl.opClDetails.refNum">
+        </div>
+    </div>
+
+    <div class="span4">
+        <label for="resubCode">Resub. Code</label>
+        <div class="input">
+            <input type="text" id="resubCode" name="Resubmission Code" ng-model="opCl.opClDetails.resubCode"
+                    ng-disabled="disable">
+        </div>
+    </div>
+
+    <div class="span4">
+        <label for="origRefNum">Original Ref. #</label>
+        <div class="input">
+            <input type="text" id="origRefNum" name="Original Ref. Number" ng-model="opCl.opClDetails.origRefNum"
+                    ng-disabled="disable">
+        </div>
+    </div>
+</fieldset>
+
+<fieldset class="row-fluid">
+    <legend class="span12"><strong>Step 3 of 3:</strong> Billing Details</legend>
+
+    <p class="span12">Assign the necessary data to each procedure code below.</p>
+
+    <div class="span12">
+        <label>Assigned Procedure Codes</label>
+        <table id="procedureCodes" class="well data-list">
+            <thead>
+                <tr>
+                    <th>CPT</th>
+                    <th>Charge</th>
+                    <th>Qty</th>
+                    <th>Modifier</th>
+                    <th>1° ICD</th>
+                    <th>2° ICD</th>
+                    <th>3° ICD</th>
+                    <th>4° ICD</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr ng-repeat="proc in opCl.procCodes">
+                    <td>{{proc.name}}</td>
+                    <td class="input">
+                        <input disabled ng-model="proc.charge" type="text" class="charge input-mini">
+                    </td>
+                    <td class="input">
+                        <input disabled ng-model="proc.qty" type="text" class="qty input-mini">
+                    </td>
+                    <td class="input">
+                        <div id="modifier" class="uneditable-input ng-binding icon-search input-small"
+                                ng-click="initAndLinkMod($index)"
+                                data-toggle="modal" href="#modSearchModal">{{proc.modifier}}</div>
+                    </td>
+                    <td class="input">
+                        <select ng-disabled="disable" id="primaryIcd" name="Primary ICD"
+                                ng-model="proc.primaryIcd"
+                                ng-options="diag.name as diag.name for diag in opCl.diagCodes" required>
+                            <option value="" selected="selected">ICD</option>
+                        </select>
+                    </td>
+                    <td class="input">
+                        <select ng-disabled="disable" id="secondaryIcd" name="Secondary ICD"
+                                ng-model="proc.secondaryIcd"
+                                ng-options="diag.name as diag.name for diag in opCl.diagCodes">
+                            <option value="" selected="selected">N/A</option>
+                        </select>
+                    </td>
+                    <td class="input">
+                        <select ng-disabled="disable" id="tertiaryIcd" name="Tertiary ICD"
+                                ng-model="proc.tertiaryIcd"
+                                ng-options="diag.name as diag.name for diag in opCl.diagCodes">
+                            <option value="" selected="selected">N/A</option>
+                        </select>
+                    </td>
+                    <td class="input">
+                        <select ng-disabled="disable" id="quaternaryIcd" name="Quaternary ICD"
+                                ng-model="proc.quaternaryIcd"
+                                ng-options="diag.name as diag.name for diag in opCl.diagCodes">
+                            <option value="" selected="selected">N/A</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</fieldset>
+
+<?php echo $this->partial('/patients/templates/modal_diag_search.html'); ?>
+<?php echo $this->partial('/patients/templates/modal_proc_search.html'); ?>
+<?php echo $this->partial('/patients/templates/modal_mod_search.html'); ?>
+

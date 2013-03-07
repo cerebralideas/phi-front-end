@@ -1,0 +1,187 @@
+{
+
+		"pt": {
+
+			"uniqueId": null,
+			"firstName": "John",
+			"lastName": "Sheppard",
+			"middleName": "James",
+            "medRecNum": "100000564",
+		    "suffix": "",
+		    "dateOfBirth": "03/13/1948",
+			"age": "64 years",
+			"sex": "M",
+			"aliases": null,
+			"maritalStatus": "Married",
+			"nationality": "Caucasian",
+			"streetAddress": "718 Twig Street",
+			"apptNum": null,
+			"city": "Richfield",
+			"state": "MI",
+			"zip": "48028",
+			"homePhone": "248-555-8962",
+			"workPhone": null,
+			"cellPhone": "248-555-2676",
+			"email": null,
+			"occupation": "Retired",
+			"employer": null,
+			"employerPhone": null,
+			"comment": "John has been coming to clinic for many years",
+			"eContact": {
+
+				"uniqueId": null,
+				"firstName": "John",
+				"lastName": "Sheppard",
+				"suffix": "Jr.",
+				"phoneNumber": "248-555-9752",
+				"address": "2798 East Mulberry Road"
+			}
+		},
+
+		"pg": {
+
+			"p1": {
+
+				"uniqueId": null,
+				"firstName": null,
+				"lastName": null,
+				"suffix": null,
+				"relationship": null,
+				"streetAddress": null,
+				"apptNum": null,
+				"city":null,
+				"state": null,
+				"zip": null
+			},
+
+			"p2": {
+
+				"uniqueId": null,
+				"firstName": null,
+				"lastName": null,
+				"suffix": null,
+				"relationship": null,
+				"streetAddress": null,
+				"apptNum": null,
+				"city":null,
+				"state": null,
+				"zip": null,
+			}
+		},
+
+		"md": {
+
+	    	"primary": "Dr. One",
+			"referring":null,
+			"rendering": null,
+			"serviceLocation": "General Medicine Clinic",
+			"providerSocSec": null
+		},
+
+		"gr": {
+
+			"relationship": "Self",
+			"uniqueId": null,
+			"firstName": "John",
+			"lastName": "Sheppard",
+			"suffix": null,
+			"streetAddress": "718 Twig Street",
+			"apptNum": null,
+			"city": "Richfield",
+			"state": "MI",
+			"zip": "48028"
+		},
+
+		"ins": {
+
+	    	"primary": {
+
+				"comp": "Blue Cross Blue Shield",
+				"relationship": "Self",
+				"groupNumber": "TQ570-A0",
+				"policyNumber": "XLAXH9878923",
+				"planName": "BlueCross BlueShield of America",
+				"effectiveDate": "11/01/2011",
+				"effYearDeviation": "-1",
+				"expirationDate": null,
+				"expYearDeviation": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"secondary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"effYearDeviation": null,
+				"expirationDate": null,
+				"expYearDeviation": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"tertiary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"effYearDeviation": null,
+				"expirationDate": null,
+				"expYearDeviation": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			}
+		}
+	}

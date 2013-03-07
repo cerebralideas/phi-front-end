@@ -1,0 +1,36 @@
+<?
+$providerModel = new Model_Provider();
+$providerOptions = $providerModel->getProviders();
+
+$class = (isset($this->class)) ? $this->class : 'clearfix';
+$label = $this->label;
+$prefix = $this->prefix;
+$selectedValue = $this->selectedValue;
+if (!isset($this->disabled))
+    $disabled = 'false';
+?>
+<? if (strcasecmp($disabled, 'false') == 0) : ?>
+<div class="<?= $class; ?>">
+    <label for="<?= $prefix; ?>Provider"><?= $this->label; ?></label>
+    <select id="<?= $prefix; ?>Provider" name="<?= $prefix; ?>Provider">
+        <option value="0" <?= ($selectedValue == "0" || $selectedValue == "") ? 'selected="selected"' : '' ?>>Select a Provider</option>
+        <? foreach ($providerOptions as $providerOption): ?>
+        <option value="<?= $providerOption['id']; ?>"<?= ($selectedValue == $providerOption['id']) ? 'selected="selected"' : '' ?>><?= $providerOption['firstname'].' '.$providerOption['lastname']; ?></option>
+        <? endforeach; ?>
+    </select>
+</div>
+<? else : ?>
+<div class="clearfix">
+    <label for="<?= $prefix; ?>Provider"><?= $this->label; ?></label>
+    <div class="input">
+        <?
+    if (!count($providerOptions))
+    echo '<input disabled="disabled" type="text" id="'.$prefix.'Provider" name="'.$prefix.'Provider" value=" " />';
+    foreach ($providerOptions as $providerOption)
+    if (strcasecmp($providerOption['id'], $selectedValue) == 0 )
+    echo '<input disabled="disabled" type="text" id="'.$prefix.'Provider" name="'.$prefix.'Provider" value="'.$providerOption['firstname'].' '.$providerOption['lastname'].'" />';
+    ?>
+
+    </div>
+</div>
+<? endif; ?>

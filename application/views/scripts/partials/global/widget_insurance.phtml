@@ -1,0 +1,35 @@
+<?
+$insuranceModel = new Model_Insurance();
+$insuranceOptions = $insuranceModel->getCompanies();
+
+$label = $this->label;
+$prefix = $this->prefix;
+$selectedValue = $this->selectedValue;
+if (!isset($this->disabled))
+    $disabled = 'false';
+?>
+<? if (strcasecmp($disabled, 'false') == 0) : ?>
+<div class="clearfix select-radio">
+    <label for="<?= $prefix; ?>Insurance"><?= $this->label; ?></label>
+    <select id="<?= $prefix; ?>Insurance" name="<?= $prefix; ?>Insurance">
+        <option value="0" <?= ($selectedValue == "0" || $selectedValue == "") ? 'selected="selected"' : '' ?>>Select a Company</option>
+        <? foreach ($insuranceOptions as $insuranceOption): ?>
+        <option value="<?= $insuranceOption['insurance_id']; ?>"<?= ($selectedValue == $insuranceOption['insurance_id']) ? 'selected="selected"' : '' ?>><?= $insuranceOption['insurance_name']; ?></option>
+        <? endforeach; ?>
+    </select>
+</div>
+<? else : ?>
+<div class="clearfix">
+    <label for="<?= $prefix; ?>Insurance"><?= $this->label; ?></label>
+    <div class="input">
+        <?
+        if (!count($insuranceOptions))
+            echo '<input disabled="disabled" type="text" id="'.$prefix.'Insurance" name="'.$prefix.'Insurance" value=" " />';
+        foreach ($insuranceOptions as $insuranceOption)
+            if (strcasecmp($insuranceOption['insurance_id'], $selectedValue) == 0 )
+                echo '<input disabled="disabled" type="text" id="'.$prefix.'Insurance" name="'.$prefix.'Insurance" value="'.$insuranceOption['insurance_name'].'" />';
+        ?>
+
+    </div>
+</div>
+<? endif; ?>

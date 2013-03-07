@@ -1,0 +1,14 @@
+// New Grid System for inline-block space removed in markup
+#gridSystem > .fluid(@fluidGridColumnWidth, @fluidGridGutterWidth);
+
+// New Grid System with inline-block space accommodtion
+#gridSystem > .fluidWithSpace(@fluidGridColumnWidth, @fluidGridGutterWidth);
+
+.row-fluid .no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+.row-fluid .min-padding {
+    padding-left: @fluidGridPadding / 2;
+    padding-right: @fluidGridPadding / 2;
+}

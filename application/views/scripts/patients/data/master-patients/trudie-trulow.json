@@ -1,0 +1,184 @@
+{
+
+		"pt": {
+
+			"uniqueId": null,
+			"firstName": "Trudie",
+			"lastName": "Trulow",
+			"middleName": "Erica",
+            "medRecNum": "100000581",
+		    "suffix": "",
+		    "dateOfBirth": "02/26/1965",
+			"age": "47 years",
+			"sex": "F",
+			"aliases": null,
+			"maritalStatus": "Divorced",
+			"nationality": null,
+			"streetAddress": "862 Holton",
+			"apptNum": null,
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68030",
+			"homePhone": "675-555-2411",
+			"workPhone": "800-555-2000 ext 4634",
+			"cellPhone": "548-555-9673",
+			"email": null,
+			"occupation": "Executive Assistant",
+			"employer": "Hoover Mills",
+			"employerPhone": "800-555-1323",
+			"comment": "Adding boyfriend and mother-in-law to clinic",
+			"eContact": {
+
+				"uniqueId": null,
+				"firstName": null,
+				"lastName": null,
+				"suffix": null,
+				"phoneNumber": null,
+				"address": null
+			}
+		},
+
+		"pg": {
+
+			"p1": {
+
+				"uniqueId": null,
+				"firstName": null,
+				"lastName": null,
+				"suffix": null,
+				"relationship": null,
+				"streetAddress": null,
+				"apptNum": null,
+				"city":null,
+				"state": null,
+				"zip": null
+			},
+
+			"p2": {
+
+				"uniqueId": null,
+				"firstName": null,
+				"lastName": null,
+				"suffix": null,
+				"relationship": null,
+				"streetAddress": null,
+				"apptNum": null,
+				"city":null,
+				"state": null,
+				"zip": null,
+			}
+		},
+
+		"md": {
+
+	    	"primary": "Dr. Two",
+			"referring":null,
+			"rendering": null,
+			"serviceLocation": "General Medicine Clinic",
+			"providerSocSec": null
+		},
+
+		"gr": {
+
+			"relationship": "Self",
+			"uniqueId": null,
+			"firstName": "Trudie",
+			"lastName": "Erica Trulow",
+			"suffix": null,
+			"streetAddress": "862 Holton",
+			"apptNum": null,
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68030"
+		},
+
+		"ins": {
+
+	    	"primary": {
+
+				"comp": "BlueCross Blue Shield of Anytown",
+				"relationship": "Self",
+				"groupNumber": "HM78956",
+				"policyNumber": "7MBG938574631",
+				"planName": null,
+				"effectiveDate": "11/01/2008",
+				"effYearDeviation": "-4",
+				"expirationDate": "12/31/2013",
+				"expYearDeviation": "+1",
+
+				"active": "icon-checkmark",
+				"verified": "icon-checkmark",
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"secondary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"expirationDate": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"tertiary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"expirationDate": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			}
+		}
+	}

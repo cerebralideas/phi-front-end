@@ -1,0 +1,184 @@
+{
+
+		"pt": {
+
+			"uniqueId": null,
+			"firstName": "Ralph",
+			"lastName": "Manywater",
+			"middleName": "None",
+            "medRecNum": "100000584",
+		    "suffix": "",
+		    "dateOfBirth": "01/24/1940",
+			"age": "72 years",
+			"sex": "M",
+			"aliases": null,
+			"maritalStatus": "Widowed",
+			"nationality": "Native American",
+			"streetAddress": "5808 Lancome Drive",
+			"apptNum": null,
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68030",
+			"homePhone": "675-555-0346",
+			"workPhone": null,
+			"cellPhone": null,
+			"email": "ralphmanyh20@comcast.net",
+			"occupation": "Retired",
+			"employer": null,
+			"employerPhone": null,
+			"comment": "Recently divorced and changed name from Khan to maiden name Patron",
+			"eContact": {
+
+				"uniqueId": null,
+				"firstName": "Devandra",
+				"lastName": "Blaine",
+				"suffix": null,
+				"phoneNumber": "654-555-4363",
+				"address": "9001 Walberry Lane"
+			}
+		},
+
+		"pg": {
+
+			"p1": {
+
+				"uniqueId": null,
+				"firstName": null,
+				"lastName": null,
+				"suffix": null,
+				"relationship": null,
+				"streetAddress": null,
+				"apptNum": null,
+				"city":null,
+				"state": null,
+				"zip": null
+			},
+
+			"p2": {
+
+				"uniqueId": null,
+				"firstName": null,
+				"lastName": null,
+				"suffix": null,
+				"relationship": null,
+				"streetAddress": null,
+				"apptNum": null,
+				"city":null,
+				"state": null,
+				"zip": null,
+			}
+		},
+
+		"md": {
+
+	    	"primary": "Dr. One",
+			"referring":null,
+			"rendering": null,
+			"serviceLocation": "General Medicine Clinic",
+			"providerSocSec": null
+		},
+
+		"gr": {
+
+			"relationship": "Self",
+			"uniqueId": null,
+			"firstName": "Ralph",
+			"lastName": "Manywater",
+			"suffix": null,
+			"streetAddress": "5808 Lancome Drive",
+			"apptNum": null,
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68030"
+		},
+
+		"ins": {
+
+	    	"primary": {
+
+				"comp": "Medicare",
+				"relationship": "Self",
+				"groupNumber": null,
+				"policyNumber": "567-33-4913-A",
+				"planName": null,
+				"effectiveDate": "03/01/2008",
+				"effYearDeviation": "-4",
+				"expirationDate": "09/31/2012",
+				"expYearDeviation": "+1",
+
+				"active": "icon-checkmark",
+				"verified": "icon-checkmark",
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"secondary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"expirationDate": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"tertiary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"expirationDate": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			}
+		}
+	}

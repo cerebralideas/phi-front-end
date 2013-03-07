@@ -1,0 +1,73 @@
+<div id="sbSearchModal" class="modal hide fade">
+
+    <div class="modal-header">
+        <a data-dismiss="modal" class="close">&#x2612;</a>
+        <h2>Superbill Search</h2>
+    </div>
+
+    <div class="modal-body">
+
+        <form class="row-fluid">
+            <p class="formInstructions span12">
+
+                Find a superbill with the search field below.
+            </p>
+
+            <div class="span12">
+
+                <label for="sbSearch">Search</label>
+
+                <div class="input-append">
+
+                    <input class="span6 min-padding" id="sbSearch" type="text" name="Superbill Search"
+                            ng-model="sbSearchTerms"><button id="sbSearchButton" ng-click='sbSearch(sbSearchTerms)'
+                            class="btn btn-small btn-success">New Search</button>
+                </div>
+            </div>
+
+            <fieldset class="row-fluid add-padding no-border">
+
+                <table id="scheduled" class="well data-list">
+                    <thead>
+                    <tr>
+                        <th>Date &amp; Time</th>
+                        <th>Length</th>
+                        <th>Location</th>
+                        <th>Provider</th>
+                        <th>Apt. Type</th>
+                        <th>Diag Codes</th>
+                        <th>Proc Codes</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr ng-repeat="opSb in sbs">
+
+                        <td>
+                            <a ng-click="selectSb()">{{opSb.date}} {{opSb.time}}</a>
+                        </td>
+                        <td>
+                            <a ng-click="selectSb()">{{opSb.length}}</a>
+                        </td>
+                        <td>
+                            <a ng-click="selectSb()">{{opSb.serviceLocation}}</a>
+                        </td>
+                        <td>
+                            <a ng-click="selectSb()">{{opSb.md}}</a>
+                        </td>
+                        <td>
+                            <a ng-click="selectSb()">{{opSb.aptType}}</a>
+                        </td>
+                        <td>
+                            <a ng-click="selectSb()">{{opSb.diagCount}}</a>
+                        </td>
+                        <td>
+                            <a ng-click="selectSb()">{{opSb.procCount}}</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+</div>

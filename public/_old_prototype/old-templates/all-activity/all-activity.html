@@ -1,0 +1,82 @@
+        <nav id="activityActionsNav" class="pills actionControls" role="navigation">
+            <ul class="nav">
+                <li class="listTitle">Actions:</li>
+                <li class="active"><a data-support="quickview-blank.html" data-main="dashboard/main-panel/instructor/db-main-panel.html" href="/template-parts/all-activity/">Dashboard</a></li>
+                <li><a data-support="review-registrations/support-panel/instructor/index.html" data-main="aa-blank.html" href="/template-parts/all-activity/">Review Registrations</a></li>
+                <li><a data-support="review-schedule/support-panel/instructor/index.html" data-main="aa-blank.html" href="/template-parts/all-activity/">Review Visits</a></li>
+                <li><a data-support="review-encounters/support-panel/instructor/index.html" data-main="aa-blank.html" href="/template-parts/all-activity/">Review Encounters</a></li>
+                <li><a data-support="review-claims/support-panel/instructor/index.html" data-main="aa-blank.html" href="/template-parts/all-activity/">Review Claims</a></li>
+            </ul>
+        </nav>
+        <section id="supportPanel" class="parent">
+            <div id="quickview">
+                <header class="supportPanelHeader">
+                    <h2>Quickview</h2>
+                    <nav class="tabControls supportPanel" id="supportNav" role="navigation">
+                        <ul class="tabs">
+                        </ul>
+                    </nav>
+                </header>
+                <div id="supportContent" class="tabContainer">
+                </div>
+            </div>
+        </section><!-- Removes whitespace with inline-block
+     --><section id="mainPanel" class="parent">
+            <header class="mainPanelHeader">
+                <h1>Dashboard</h1>
+            </header>
+            <nav class="tabControls mainPanel" id="dashboardNav">
+                <ul class="tabs">
+                    <li class="active"><a rel="unreviewed-items" href="/template-parts/all-activity/dashboard/main-panel/instructor/unreviewed-items.html">Unreviewed Items</a></li>
+                    <li><a rel="reviewed-items" href="/template-parts/all-activity/dashboard/main-panel/instructor/reviewed-items.html">Reviewed Items</a></li>
+                    <li><a rel="archived-items" href="/template-parts/all-activity/dashboard/main-panel/instructor/archived-items.html">Archived Items</a></li>
+                </ul>
+            </nav>
+            <div id="activityContent" class="content container_16">
+                <div class="alert-message error" data-alert="alert">
+                    <a class="hideAlert" href="#">×</a>
+                    <p><strong>Oh snap!</strong> It seems there was some kind of error.</p>
+                </div>
+                <section class="tabContainer">
+                    <form id="unreviewedItems" class="form-stacked inline">
+                        <fieldset>
+                            <legend>Bulk action</legend>
+                            <a href="#" class="btn small bulk-action">Archive Selected Items</a>
+                            <table class="well data-list">
+                                <thead>
+                                    <tr>
+                                        <th><input type="checkbox"></th>
+                                        <th>Student</th>
+                                        <th>Patient</th>
+                                        <th>Sub. Date</th>
+                                        <th>Recipient</th>
+                                        <th>Type</th>
+                                        <th>Latest Comment</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="availListItems">
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>S. Smith</td>
+                                        <td><a class="itemUrl" href="/template-parts/all-activity/dashboard/support-panel/d-encounter.html"/>Mathew Mathers</td>
+                                        <td>8/28/2011</td>
+                                        <td>Neehra</td>
+                                        <td>Encounter</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox"></td>
+                                        <td>J. Doe</td>
+                                        <td><a class="itemUrl" href="/template-parts/all-activity/dashboard/support-panel/d-encounter.html"/>Jane Smith</td>
+                                        <td>8/26/2011</td>
+                                        <td>Neehra</td>
+                                        <td>Encounter</td>
+                                        <td class="popup" data-original-title="Comment by: J. Doe" data-content="Lorem ipsum dolor sit amet, consectetur adipis icing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur." data-placement="left">Lorem ipsum dolor sit amet, consectetur adipis&hellip;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </fieldset>
+                    </form>
+                </section>
+            </div>
+        </section>

@@ -1,0 +1,288 @@
+<header class="mainPanelHeader">
+    <h1>
+        <span>John Doe</span>
+        <span>#9868A</span>
+        <span>North Clinic</span>
+    </h1>
+</header>
+<nav class="tabControls mainPanel" id="dashboardNav">
+    <ul class="tabs">
+        <li><a>&nbsp;</a></li>
+    </ul>
+</nav>
+<div id="adminContent" class="content container_16">
+    <div class="alert-message error" data-alert="alert">
+        <a class="hideAlert" href="#">×</a>
+        <p><strong>Oh snap!</strong> It seems there was some kind of error.</p>
+    </div>
+    <section class="tabContainer">
+        <form id="providerInfo" class="form-stacked inline">
+            <fieldset>
+            	<div class="clearfix activeCheckbox">
+                    <div class="input">
+                        <label for="inactive"><input type="checkbox" id="inactive" value="inactive">Inactive Provider</label>
+                    </div>
+                </div>
+                <legend>Provider Details</legend>
+                <p class="required">Mandatory Fields</p>
+                <div class="clearfix required">
+                    <label for="providerLastName">Last Name</label>
+                    <div class="input">
+                        <input type="text" id="providerLastName">
+                    </div>
+                </div>
+                <div class="clearfix required">
+                    <label for="providerFirstName">First Name</label>
+                    <div class="input">
+                        <input type="text" id="providerFirstName">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="providerCredentials">Credentials</label>
+                    <div class="input">
+                        <input type="text" id="providerCredentials">
+                    </div>
+                </div>
+                <div class="clearfix required">
+                    <label for="providerCode">Code</label>
+                    <div class="input">
+                        <input type="text" id="providerCode">
+                    </div>
+                </div>
+                <div class="clearfix required">
+                    <label for="providerFacility">Facility</label>
+                    <div class="input">
+                        <input type="text" id="providerFacility">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="providerTaxonomyId">Taxonomy ID</label>
+                    <div class="input">
+                        <input type="text" id="providerTaxonomyId">
+                    </div>
+                </div>
+                <div class="clearfix required">
+                    <label for="providerPseudoDob">Pseudo DOB</label>
+                    <div class="input">
+                        <input type="text" id="providerPseudoDob">
+                    </div>
+                </div>
+                <div class="clearfix required">
+                    <label for="providerPseudoSSN">Pseudo SSN</label>
+                    <div class="input">
+                        <input type="text" id="providerPseudoSSN">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="providerPseudoFedTaxId">Pseudo Fed. Tax ID</label>
+                    <div class="input">
+                        <input type="text" id="providerPseudoFedTaxId">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="providerStateLicense">State License</label>
+                    <div class="input">
+                        <input type="text" id="providerStateLicense">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="providerSpecialty">Specialty</label>
+                    <div class="input">
+                        <input type="text" id="providerSpecialty">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="providerDea">DEA Number</label>
+                    <div class="input">
+                        <input type="text" id="providerDea">
+                    </div>
+                </div>
+                <div class="clearfix twoThirds">
+                    <label for="providerStreetAddress">Street Address</label>
+                    <div class="input">
+                        <input type="text" id="providerStreetAddress">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="providerSuiteNum">Suite #</label>
+                    <div class="input">
+                        <input type="text" id="providerSuiteNum">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="providerCity">City</label>
+                    <div class="input">
+                        <input type="text" id="providerCity">
+                    </div>
+                </div>
+                <div class="clearfix select-radio">
+                    <label>State</label>
+                    <select name="providerState">
+                        <option value="" selected="selected">Select a State</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="DC">District Of Columbia</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                </div>
+                <div class="clearfix">
+                    <label for="providerZip">Zip</label>
+                    <div class="input">
+                        <input type="text" id="providerZip">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="providerPhone">Phone</label>
+                    <div class="input">
+                        <input type="text" id="providerPhone">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="providerFax">Fax</label>
+                    <div class="input">
+                        <input type="text" id="providerFax">
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Pseudo Individual IDs</legend>
+                <div class="clearfix">
+                    <label for="providerMedicare">Medicare</label>
+                    <div class="input">
+                        <input type="text" id="providerMedicare">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="providerMedicaid">Medicaid</label>
+                    <div class="input">
+                        <input type="text" id="providerMedicaid">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="providerBcbs">BCBS</label>
+                    <div class="input">
+                        <input type="text" id="providerBcbs">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="providerMedicare">Medicare</label>
+                    <div class="input">
+                        <input type="text" id="providerMedicare">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="providerRailRoad">Rail Road</label>
+                    <div class="input">
+                        <input type="text" id="providerRailRoad">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="providerNpi">NPI</label>
+                    <div class="input">
+                        <input type="text" id="providerNpi">
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Pseudo Group IDs</legend>
+                <div class="clearfix">
+                    <label for="providerMedicare">Medicare</label>
+                    <div class="input">
+                        <input type="text" id="providerMedicare">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="providerMedicaid">Medicaid</label>
+                    <div class="input">
+                        <input type="text" id="providerMedicaid">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="providerBcbs">BCBS</label>
+                    <div class="input">
+                        <input type="text" id="providerBcbs">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="providerMedicare">Medicare</label>
+                    <div class="input">
+                        <input type="text" id="providerMedicare">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="providerRailRoad">Rail Road</label>
+                    <div class="input">
+                        <input type="text" id="providerRailRoad">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="providerNpi">NPI</label>
+                    <div class="input">
+                        <input type="text" id="providerNpi">
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="inline">
+                <legend>Comments</legend>
+                <div class="clearfix full">
+                    <label for="providerComments">Add provider notes below:</label>
+                    <div class="input">
+                        <textarea id="providerComments"></textarea>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </section>
+    <div class="actions">
+        <button type="submit" class="btn large cancel" data-controls-modal="confirmLossModal"><span class="icon cancel">*</span> <i>Cancel</i></button>
+        <button type="submit" class="btn large success"><span class="icon">S</span> Save</button>
+        <button type="submit" class="btn large primary">Sync Providers with Neehr Perfect Users</button>
+    </div>
+</div>

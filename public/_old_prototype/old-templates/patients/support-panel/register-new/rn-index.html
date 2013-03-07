@@ -1,0 +1,56 @@
+<div id="registerNew">
+    <header class="supportPanelHeader">
+        <h2>Register New Patient</h2>
+        <nav id="supportNav" class="tabControls" role="navigation">
+            <ul class="tabs">
+            </ul>
+        </nav>
+    </header>
+    <div id="supportContent" class="tabContainer">
+        <form id="new-patient" class="form-stacked inline">
+            <p class="formInstructions">
+                Fill out the fields below to start a patient file.
+            </p>
+            <p class="required">Mandatory Fields</p>
+            <fieldset>
+                <div class="clearfix required">
+                    <label for="newLastName">Last Name</label>
+                    <div class="input">
+                        <div class="input">
+                            <input id="newLastName" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix required">
+                    <label for="newFirstName">First Name</label>
+                    <div class="input">
+                        <div class="input">
+                            <input type="text" id="newFirstName">
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix required">
+                    <label for="newDateOfBirth">Date of Birth</label>
+                    <div class="input-append">
+                        <div class="input">
+                            <input type="date" id="newDateOfBirth">
+                            <span class="add-on">d</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix required">
+                    <label for="sex">Sex</label>
+                    <select id="sex" name="Sex">
+                        <option value="" selected="selected">Select a Sex</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<div class="actions">
+	<a class="icon btn tooltip cancel" data-original-title="Cancel">*</button>
+	<a class="icon btn success marginBottom tooltip" data-original-title="Save">S</a>
+</div>

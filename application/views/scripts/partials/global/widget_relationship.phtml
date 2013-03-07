@@ -1,0 +1,36 @@
+<?
+$label = $this->label;
+$prefix = $this->prefix;
+$selectedValue = $this->selectedValue;
+$relationshipType = $this->relationshipType;
+
+$relationshipModel = new Model_Relationship();
+$relationshipOptions = $relationshipModel->getRelationshipsByType($relationshipType);
+if (!isset($this->disabled))
+    $disabled = 'false';
+?>
+<? if (strcasecmp($disabled, 'false') == 0) : ?>
+<div class="clearfix">
+    <label for="<?= $prefix; ?>Relationship"><?= $this->label; ?></label>
+    <select id="<?= $prefix; ?>Relationship" name="<?= $prefix; ?>Relationship">
+        <option value="0" <?= ($selectedValue == "0" || $selectedValue == "") ? 'selected="selected"' : '' ?>>Select a Provider</option>
+        <? foreach ($relationshipOptions as $relationshipOption): ?>
+        <option value="<?= $relationshipOption['relationship_id']; ?>"<?= ($selectedValue == $relationshipOption['relationship_id']) ? 'selected="selected"' : '' ?>><?= $relationshipOption['relationship_desc']; ?></option>
+        <? endforeach; ?>
+    </select>
+</div>
+<? else : ?>
+<div class="clearfix">
+    <label for="<?= $prefix; ?>Relationship"><?= $this->label; ?></label>
+    <div class="input">
+        <?
+    if (!count($relationshipOptions))
+    echo '<input disabled="disabled" type="text" id="'.$prefix.'Relationship" name="'.$prefix.'Relationship" value=" " />';
+    foreach ($relationshipOptions as $relationshipOption)
+    if (strcasecmp($relationshipOption['relationship_id'], $selectedValue) == 0 )
+    echo '<input disabled="disabled" type="text" id="'.$prefix.'Relationship" name="'.$prefix.'Relationship" value="'.$relationshipOption['relationship_desc'].'" />';
+    ?>
+
+    </div>
+</div>
+<? endif; ?>

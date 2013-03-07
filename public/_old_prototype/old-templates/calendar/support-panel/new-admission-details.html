@@ -1,0 +1,91 @@
+<form id="new-admission" class="form-stacked inline">
+            <fieldset>
+                <div class="clearfix required">
+                    <label for="patient">Patient</label>
+                    <div class="input-prepend">
+                        <span class="add-on">F</span>
+                        <input type="search" id="patient">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="input">
+                        <label for="confidentialRecord">Confidential Record<input type="checkbox" id="confidentialRecord" value="confidentialRecord"></label>
+                    </div>
+                </div>
+                <div class="clearfix required">
+                    <label for="admittingProvider">Admitting Provider</label>
+                    <div class="input-prepend">
+                        <span class="add-on">F</span>
+                        <input type="search" id="admittingProvider">
+                    </div>
+                </div>
+                <div class="clearfix required">
+                    <label for="attendingProvider">Attending Provider</label>
+                    <div class="input-prepend">
+                        <span class="add-on">F</span>
+                        <input type="search" id="attendingProvider">
+                    </div>
+                </div>
+                <div class="clearfix sidebar-details-btn">
+		            <a href="#" class="btn small success hiddenFieldsetTrigger" data-open="Click Here for Less Providers" data-collapsed="Click Here for More Providers" data-wrapper="fieldset">Click Here for More Providers</a>
+		        </div>
+		        <div class="hiddenFieldset">
+	                <div class="clearfix">
+	                    <label for="surgicalProceduralProvider">Surgical/Procedural Provider</label>
+	                    <div class="input-prepend">
+	                        <span class="add-on">F</span>
+	                        <input type="search" id="surgicalProceduralProvider">
+	                    </div>
+	                </div>
+	                <div class="clearfix">
+	                    <label for="primaryProvider">Primary Provider</label>
+	                    <div class="input-prepend">
+	                        <span class="add-on">F</span>
+	                        <input type="search" id="primaryProvider">
+	                    </div>
+	                </div>
+	            </div>
+                <div class="clearfix twoInputs required">
+                    <label for="scheduledDateTime">Scheduled Date/Time</label>
+                    <div class="input-append">
+                        <input type="date" id="scheduledDate">
+                        <span class="add-on">d</span>
+                    </div>
+                    <div class="input-append">
+                        <input type="time" id="scheduledTime">
+                        <span class="add-on">c</span>
+                    </div>
+                </div>
+                <div class="clearfix required">
+                    <label for="typeOfAdmission">Type of Admission</label>
+                    <select name="typeOfAdmission">
+                        <option value="" selected="selected">Select Admission Type</option>
+                        <option value="typeOfAdmission1">Admission Type 1</option>
+                        <option value="typeOfAdmission2">Admission Type 2</option>
+                    </select>
+                </div>
+                <div class="clearfix required">
+                    <label for="diagnosis">Diagnosis</label>
+                    <div class="input">
+                        <input type="search" id="diagnosis">
+                    </div>
+                </div>
+                <div class="clearfix required">
+                    <label for="ward">Ward</label>
+                    <select name="ward">
+                        <option value="" selected="selected">Select Ward</option>
+                        <option value="ward1">Ward 1</option>
+                        <option value="ward2">Ward 2</option>
+                    </select>
+                </div>
+                <div class="clearfix twoInputs">
+                    <label for="roomNumberBed">Room Number/Bed</label>
+                    <div class="input">
+                        <input type="text" id="roomNumber">
+                    </div>
+                    <div class="input">
+                        <input type="text" id="roomBed">
+                    </div>
+                </div>
+            </fieldset>
+        </form>

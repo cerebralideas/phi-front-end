@@ -1,0 +1,35 @@
+<section class="modal login">
+
+    <div class="modal-header">
+
+        <h2>educationalPAS Log In</h2>
+    </div>
+
+    <form class="form-login" method="post" action="<?= $this->baseUrl(); ?>/auth/login">
+        <div class="modal-body row-fluid">
+
+            <? if ($this->errorMessage != ''): ?>
+
+                <div class="alert alert-warning fade in">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>Error:</strong> <?= $this->errorMessage; ?>
+                </div>
+            <? endif; ?>
+
+            <div class="span9">
+                <label for="loginAccessCode">Access Code: </label>
+                <input id="loginAccessCode" type="text" name="uName" value="" />
+            </div>
+
+            <div class="span9">
+                <label for="loginVerifyCode">Verify Code</label>
+                <input id="loginVerifyCode" type="password" name="uPassword" value="" />
+            </div>
+        </div>
+
+        <div class="modal-footer">
+
+            <button type="submit" class="btn btn-primary">Log In</button>
+        </div>
+    </form>
+</section>

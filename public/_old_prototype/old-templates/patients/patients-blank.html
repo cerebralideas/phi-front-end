@@ -1,0 +1,76 @@
+<nav id="patientsActionsNav" class="pills actionControls" role="navigation">
+    <ul class="nav">
+        <li class="listTitle">Actions:</li>
+        <li class="active"><a data-support="support-panel/patient-search/ps-index.html" data-main="main-panel/blank-search.html" href="/template-parts/patients/">Patient Search</a></li>
+        <li><a data-support="support-panel/register-new/rn-index.html" data-main="main-panel/blank-register.html" href="/template-parts/patients/" >Register New</a></li>
+        <li><a data-support="support-panel/search-scheduling/ss-index.html" data-main="main-panel/blank-visits.html" href="/template-parts/patients/">Search Visits</a></li>
+        <li><a data-support="support-panel/create-encounters/ce-index.html" data-main="main-panel/blank-encounters.html" href="/template-parts/patients/">Create Encounters</a></li>
+        <li><a data-support="support-panel/generate-claims/gc-index.html" data-main="main-panel/blank-claims.html" href="/template-parts/patients/">Generate Claims</a></li>
+    </ul>
+</nav>
+<section id="supportPanel" class="parent">
+    <div id="patientSearch">
+        <header class="supportPanelHeader">
+            <h2>Patient Search</h2>
+            <nav class="tabControls supportPanel" id="supportNav" role="navigation">
+                <ul class="tabs">
+                </ul>
+            </nav>
+        </header>
+        <div id="supportContent" class="tabContainer">
+            <form class="form-stacked">
+                <p class="formInstructions">
+                    Use one (1) of the methods below to find a patient.
+                </p>
+                <fieldset>
+                    <div class="clearfix complexSearch">
+                        <label for="searchLastName">Patient Name</label>
+                        <div class="input">
+                            <div class="input-prepend">
+                                <span class="add-on">F</span>
+                                <input id="searchLastName" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix complexSearch">
+                        <label for="searchSSN">Social Security Number</label>
+                        <div class="input">
+                            <div class="input-prepend">
+                                <span class="add-on">F</span>
+                                <input type="text" id="searchSSN">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="searchActions">
+                        <a class="btn success" href="/template-parts/patients/main-panel/search-results.html">Search</a>
+                        <a class="btn cancel" href="/template-parts/patients/main-panel/search-results.html">Return to Results <span class="icon cancel"> 2</span></a>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</section><!-- Removes whitespace with inline-block
+--><section id="mainPanel" class="parent">
+    <header class="mainPanelHeader">
+        <h1>&nbsp;</h1>
+    </header>
+    <nav class="tabControls mainPanel" id="patientNav">
+        <ul class="tabs">
+            <li><a>&nbsp;</a></li>
+        </ul>
+    </nav>
+    <div id="patientContent" class="content container_16">
+        <div class="alert-message error" data-alert="alert">
+            <a class="hideAlert" href="#">×</a>
+            <p><strong>Oh snap!</strong> It seems there was some kind of error.</p>
+        </div>
+        <section class="tabContainer">
+            <form class="noSelection">
+                <div>
+                    <span class="icon">U</span>
+                    <p>Use the search to the left,<br>to find your desired patient.</p>
+                </div>
+            </form>
+        </section>
+    </div>
+</section>

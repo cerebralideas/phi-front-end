@@ -1,0 +1,30 @@
+<form class="form-stacked byDate">
+     <p class="formInstructions">
+        To search only one day, just use the start date. To set a range, choose a start AND end date.
+    </p>
+     <p class="required">Mandatory Fields</p>
+     <fieldset>
+     	<div class="clearfix complexSearch required">
+            <label for="startDate">Start Date</label>
+            <div class="input">
+                <div class="input-append">
+                    <input id="startDate" type="date">
+                    <span class="add-on">d</span>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix complexSearch">
+            <label for="endDate" class="required">End Date</label>
+            <div class="input">
+                <div class="input-append">
+                    <input id="endDate" type="date">
+                    <span class="add-on">d</span>
+                </div>
+            </div>
+        </div>
+         <div class="searchActions">
+             <a class="btn success" href="/template-parts/patients/main-panel/encounter-search-results.html">Search</a>
+             <a class="btn cancel" href="/template-parts/patients/main-panel/encounter-search-results.html">Return to Results <span class="icon cancel"> 2</span></a>
+         </div>
+     </fieldset>
+</form>

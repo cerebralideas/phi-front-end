@@ -1,0 +1,13 @@
+[
+    {
+        "aptId": 1,
+        "checkedIn": true,
+        "date": "07/18/2012",
+        "time": 0800,
+        "uniqueId": 3,
+        "patient": "John Sheppard",
+        "length": 15,
+        "serviceLocation": "Clinic",
+        "md": "Dr. Eight"
+    }
+]

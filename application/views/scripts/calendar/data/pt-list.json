@@ -1,0 +1,18 @@
+[
+    {
+        "uniqueId": 3,
+        "firstName": "John",
+        "lastName": "Sheppard",
+        "suffix": "jr",
+        "dateOfBirth": "2/24",
+        "socialSecurity": "0217-98-8712"
+    },
+    {
+        "uniqueId": 4,
+        "firstName": "Melissa",
+        "lastName": "Sheppard",
+        "suffix": null,
+        "dateOfBirth": "1/10",
+        "socialSecurity": null
+    }
+]

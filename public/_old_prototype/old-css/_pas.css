@@ -1,0 +1,2044 @@
+/***************************************************/
+/*                IMPORT FONTS                     */
+/***************************************************/
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,700,400italic);
+@font-face {
+    font-family: 'pictos';
+    src: url('/fonts/pictos/pictos-web.eot');
+    src: local('☺'),
+    url('/fonts/pictos/pictos-web.woff') format('woff'),
+    url('/fonts/pictos/pictos-web.ttf') format('truetype'),
+    url('/fonts/pictos/pictos-web.svg#webfontIyfZbseF') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IcoMoonRegular';
+    src: url('/fonts/icomoon/pas_icomoon-webfont.eot');
+    src: url('/fonts/icomoon/pas_icomoon-webfont.eot') format('embedded-opentype'),
+    url('/fonts/icomoon/pas_icomoon-webfont.woff') format('woff'),
+    url('/fonts/icomoon/pas_icomoon-webfont.ttf') format('truetype'),
+    url('/fonts/icomoon/pas_icomoon-webfont.svg#IcoMoonRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'droidsans';
+    src: url('/fonts/droid/DroidSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'droidsans-bold';
+    src: url('/fonts/droid/DroidSans-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'droidserif';
+    src: url('/fonts/droid/DroidSerif-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'droidserif-italic';
+    src: url('/fonts/droid/DroidSerif-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'droidserif-bold';
+    src: url('/fonts/droid/DroidSerif-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'droidserif-boldtalic';
+    src: url('/fonts/droid/DroidSerif-BoldItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('/fonts/Inconsolata/Inconsolata-webfont.eot');
+    src: url('/fonts/Inconsolata/Inconsolata-webfont.eot') format('embedded-opentype'),
+    url('/fonts/Inconsolata/Inconsolata-webfont.woff') format('woff'),
+    url('/fonts/Inconsolata/Inconsolata-webfont.ttf') format('truetype'),
+    url('/fonts/Inconsolata/Inconsolata-webfont.svg#InconsolataMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/***************************************************/
+/*              FRAMEWORK OVERRIDES                */
+/***************************************************/
+
+/* Twitter Bootsrap Overwrites */
+
+.container_12, .container_16 {
+    margin: 0;
+    width: 100%;
+}
+.topbar-inner a, .topbar-inner a:visited, #userNav a, #userNav a:visited {
+    color: #bfbfbf;
+}
+.topbar-inner a:hover {
+    color: #fff;
+}
+.nav {
+    float: none;
+}
+.tabs > li, .pills > li {
+    float: none;
+    display: inline-block;
+}
+.tabs, .pills {
+    margin: 0;
+}
+.btn {
+    vertical-align: top;
+}
+.row > [class*="span"] {
+    display: inline-block;
+    float: none;
+    margin-left: 20px;
+}
+#sectionContent {
+    margin: 0;
+}
+footer {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+table td {
+    border-top: 1px solid #bbb;
+}
+table tbody th {
+    border-top: 1px solid #bbb;
+}
+.popover .inner {
+    width: 350px;
+}
+.popover .title {
+    font-family: 'Droid Serif', 'droidserif', serif;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #eee;
+    margin: 0;
+    padding-top: 10px;
+}
+.popover .content {
+    background-color: #fff;
+    border-top: 1px solid #aaa;
+}
+
+/* Fluid 960GS Overwrites */
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12,
+.grid_13,
+.grid_14,
+.grid_15,
+.grid_16 {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    margin: 0 0.90%;
+}
+.grid_1 > *,
+.grid_2 > *,
+.grid_3 > *,
+.grid_4 > *,
+.grid_5 > *,
+.grid_6 > *,
+.grid_7 > *,
+.grid_8 > *,
+.grid_9 > *,
+.grid_10 > *,
+.grid_11 > *,
+.grid_12 > *,
+.grid_13 > *,
+.grid_14 > *,
+.grid_15 > *,
+.grid_16 > * {
+}
+
+/***************************************************/
+/*             TYPE & RHYTHM SETTINGS              */
+/***************************************************/
+
+body {
+    font: 400 13px/1.25em 'Droid Serif', 'droidserif', serif; /* All type is based off this measure */
+    background: #eee;
+}
+h1, h2, h3 {
+    font-family: 'Droid Sans', 'droidsans', sans-serif;
+    letter-spacing: -0.05em;
+}
+h1, h2, h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+h1 {
+    font-size: 26px;
+    margin: 35px 0 16px;
+}
+h2 {
+    font-size: 19.5px;
+    margin: 0 0 13px;
+    text-align: center;
+}
+h3 {
+    font-size: 15px;
+    margin: 26px 0;
+}
+p, ul, ol, blockquote {
+    font-family: 'Droid Sans', 'droidsans', sans-serif;
+}
+ul, ol {
+    margin-left: 1.5em;
+}
+li {
+    line-height: inherit;
+}
+nav a {
+    font-family: 'Droid Sans', 'droidsans', sans-serif;
+    padding: 0;
+}
+table {
+    font-family: 'Inconsolata', Monaco, monospace, sans-serif;
+}
+.calendar li {
+    font-family: 'Droid Sans', 'droidsans', sans-serif;
+    font-size: 12px;
+}
+label, input, select, textarea {
+    font-family: 'Droid Sans', 'droidsans', sans-serif;
+}
+
+/***************************************************/
+/*                CUSTOM STYLES                    */
+/***************************************************/
+
+/* Global CSS */
+
+html, body {
+    height: 100%;
+    min-width: 1000px;
+}
+body {
+    background: #F5F5F5 url('/img/100-100-3.png');
+    overflow: hidden;
+}
+.inline-list {
+    float: none;
+}
+.inline-list li {
+    display: inline-block;
+    vertical-align: top;
+    float: none;
+}
+th[colspan="2"] {
+    text-align: center;
+    background: #eee;
+    border: 2px solid #fff;
+}
+i {
+    font-style: normal;
+}
+.hidden{
+    display: none;
+}
+input[type='checkbox'] + label,
+input[type='radio'] + label {
+    display: inline;
+    padding-left: 8px;
+}
+
+/* Elements which use the !important property */
+
+input[type='checkbox'],
+input[type='radio'] {
+    display: inline;
+    margin-right: 5px;
+    width: inherit !important;
+}
+
+/* Form Styling */
+
+.noBg {
+    background: none;
+    border: none;
+}
+section {
+}
+form.noSelection {
+    margin-top: 25px;
+    width: 100%;
+}
+form.noSelection div {
+    text-align: center;
+}
+form.noSelection div .icon {
+    color: #d3d3d3;
+    display: inline-block;
+    font-size: 250px;
+    line-height: 250px;
+    text-shadow: 0 1px 1px hsla(0,0%,100%,1),
+    0 -1px 1px hsla(0,0%,0%,.5);
+}
+form.noSelection div p {
+    color: #b3b3b3;
+    font-family: 'Droid Serif', 'droidserif', serif;
+    font-size: 40px;
+    letter-spacing: -1px;
+    line-height: 60px;
+    text-shadow: 0 1px 1px hsla(0,0%,100%,1),
+    0 -1px 1px hsla(0,0%,0%,.5);
+}
+.tabContainer form {
+    margin-bottom: 150px;
+}
+#activityContent .tabContainer form,
+#calendarContent .tabContainer form {
+    margin-bottom: 260px;
+}
+form.form-stacked.inline fieldset {
+    position: relative;
+}
+.formInstructions:before {
+    content: "I";
+    padding-right: 0.25em;
+    font-family: IcoMoonRegular;
+    font-size: 19.5px;
+    color: #222;
+}
+fieldset {
+    margin: 40px 0 0;
+}
+fieldset:first-child {
+    margin: 11px 0 0;
+}
+#supportPanel fieldset {
+    margin: 11px 0 0;
+}
+.form-stacked.inline fieldset.inline {
+    display: inline-block;
+    width: 44.75%;
+    margin-right: 5%;
+    vertical-align: top;
+}
+.form-stacked.inline .clearfix {
+    display: inline-block;
+    width: 28%;
+    margin-right: 5%;
+    vertical-align: top;
+}
+.content .form-stacked fieldset.inline .clearfix .input-prepend .add-on {
+    width: 4%;
+}
+#supportContent .form-stacked.inline .clearfix {
+    width: 100%;
+    margin-right: 0;
+}
+#supportContent .form-stacked.inline .clearfix textarea {
+    width: 92%;
+}
+#supportContent .form-stacked.inline .input-prepend input,
+#supportContent .form-stacked.inline .input-append input {
+    width: 82%;
+}
+#supportContent .form-stacked.inline .twoInputs .input-append,
+#supportContent .form-stacked.inline .twoInputs .input-append {
+    display: inline-block;
+    width: 48%;
+}
+#supportContent .form-stacked .clearfix.twoInputs div + div {
+    margin-left: 0;
+}
+#supportContent .form-stacked.inline .twoInputs .input-prepend input,
+#supportContent .form-stacked.inline .twoInputs .input-append input {
+    width: 60%;
+}
+#supportContent .form-stacked.inline .twoInputs label + div span {
+    margin-right: 10px;
+}
+#supportContent .form-stacked.inline .clearfix div.selector {
+    width: 91.5%;
+}
+#supportContent .form-stacked.inline div.cpt-item.well {
+    width: 95%;
+}
+#supportContent .form-stacked.inline div.threeCheckboxes div {
+    display: inline-block;
+    width: 32%;
+}
+.form-stacked fieldset.inline .clearfix {
+    width: 100%;
+}
+.content .form-stacked fieldset.inline .clearfix .input-prepend input {
+    width: 83%;
+}
+.clearfix input, .clearfix textarea {
+    width: 100%;
+}
+.clearfix textarea {
+    resize: vertical;
+}
+.clearfix .btn-input {
+    width: 104.25%;
+}
+.clearfix a.btn.small + input {
+    width: 77%;
+}
+.form-stacked .clearfix.oneHalf {
+    width: 49%;
+}
+.form-stacked.inline .clearfix.half {
+    width: 44.5%;
+}
+.form-stacked .clearfix.twoThirds {
+    width: 61.25%;
+}
+.form-stacked .clearfix.full {
+    width: 99%;
+}
+.form-stacked.inline .clearfix.full {
+    width: 94%;
+}
+.form-stacked .clearfix.twoInputs div.input {
+    display: inline-block;
+    width: 47%;
+}
+.form-stacked .clearfix.twoInputs div + div {
+    margin-left: 1%;
+}
+.form-stacked .clearfix.twoInputs div.input input[type="checkbox"],
+.form-stacked .clearfix.twoInputs div.input input[type="radio"] {
+    margin-right: 5%;
+    width: auto;
+}
+label[for] {
+    cursor: pointer;
+}
+.required label {
+    color: #9D1913;
+    margin-top: -1px;
+}
+.required label:after {
+    content: '*';
+    font-weight: 400;
+    padding-left: 5px;
+    font-size: 15px;
+}
+p.required {
+    color: #9D1913;
+    padding-top: 3px;
+}
+p.required:before {
+    content: '*';
+    font-weight: 400;
+    padding-right: 5px;
+    font-size: 12px;
+}
+input, textarea {
+    border-color: #999;
+}
+input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] {
+    border: none;
+    border-bottom: 1px dashed #666;
+    background: none;
+    color: #000;
+    -webkit-text-fill-color: #000;
+    font-weight: 400;
+    box-shadow: none;
+    border-radius: 0;
+    font-family: "Droid Serif", Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+}
+textarea[disabled], textarea[readonly] {
+}
+textarea {
+    height: 100px;
+}
+.selector, .checker, .button, .radio, .uploader {
+    vertical-align: baseline;
+}
+div.selector {
+    width: 100%;
+    background-image: none;
+    background: #fff;
+    border: 1px solid #999;
+    border-radius: 3px;
+    background-image: linear-gradient(top, #fff, #eee);
+    font-family: 'Droid Sans', 'droidsans', sans-serif;
+}
+div.selector span {
+    width: 89%;
+    background-image: none;
+    font-size: 13px;
+}
+div.selector span:before {
+    content: '\25b2';
+    position: absolute;
+    right: 5px;
+    top: -5px;
+    font-size: 9px;
+}
+div.selector span:after {
+    content: '\25bc';
+    position: absolute;
+    right: 5px;
+    top: 6px;
+    font-size: 9px;
+}
+div.selector select {
+    width: 100%;
+    margin: 0 0 0 10px;
+}
+.selector.focus, a:focus, .btn:focus, input[type="checkbox"]:focus {
+    outline: 0;
+    border-color: rgba(82, 168, 236, 0.8);
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+#supportContent input {
+    width: 92%;
+}
+.actions .btn {
+    margin: 0 5px;
+}
+.btn.success {
+    background-color: #7CB01F;
+    background-image: none;
+    background-image: linear-gradient(top, #82B921, #77A81E);
+}
+.btn.success:hover {
+    background-color: #77A81E;
+}
+#supportContent .form-stacked.inline .clearfix.search {
+    text-align: right;
+    width: 95%;
+}
+#supportContent .form-stacked.inline .clearfix.search .btn {
+    margin-top: 20px;
+}
+.btn.cancel {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding-top: 6px;
+}
+.btn.cancel:active {
+    box-shadow: none;
+}
+.btn.cancel i {
+    text-decoration: underline;
+}
+.btn.cancel.icon {
+    text-decoration: none;
+    padding-top: 8px;
+}
+.btn.cancel i:hover {
+    text-decoration: none;
+}
+.simple {
+    background: none;
+    border: none;
+    box-shadow: none;
+    text-decoration: underline;
+    padding: 0;
+    margin: 0 0 20px;
+}
+.simple:hover {
+    text-decoration: none;
+    box-shadow: none;
+}
+.simple:active {
+
+}
+#signSubmit {
+    padding: 0;
+}
+#signSubmit a  {
+    padding: 9px 35px 9px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 17px;
+    color: #fff;
+}
+#supportPanel #signSubmit a {
+    padding: 6px 15px 7px;
+}
+#signSubmit a:hover {
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.1);
+}
+.input-append input {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+}
+.input-prepend .add-on, .input-append .add-on {
+    border-color: #999;
+    border-right: 2px ridge #ccc;
+    font-family: IcoMoonRegular;
+    font-size: 22px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    width: 8%;
+    min-width: 0;
+}
+.form-stacked.inline .clearfix.twoInputs {
+    width: 30%;
+    margin-right: 3%;
+}
+.twoInputs .input-prepend .add-on, .twoInputs .input-append .add-on {
+    width: 12%;
+}
+.input-append .add-on {
+    border-left: 2px groove #ccc;
+    margin-left: -0.2em;
+}
+.input-prepend .add-on {
+    margin-right: -0.2em;
+}
+#supportContent .input-prepend input, #supportContent .input-append input, .content .input-prepend input, .content .input-append input {
+    width: 79%;
+}
+#supportContent .twoInputs .input-prepend input, #supportContent .twoInputs .input-append input, .content .twoInputs .input-prepend input, .content .twoInputs .input-append input {
+    width: 68%;
+}
+.content .input-append , .content .input-prepend{
+    width: 108%;
+}
+.content .clearfix.twoInputs > div {
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+}
+#supportContent table.data-list {
+    width: 95%;
+}
+.searchActions, .registerActions {
+    text-align: center;
+    margin: 20px 0 0 -20px;
+    padding: 20px 0 0 10px;
+    border-top: 1px solid #C3C7CC;
+}
+.searchActions a.cancel {
+    margin-left: 20px;
+}
+ul.searchResults {
+    position: absolute;
+    background: #fff;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.45);
+    padding: 5px 0;
+    margin: 0 0 0 35px;
+    border-radius: 3px;
+    z-index: 20;
+    display: none;
+}
+.searchResults li a {
+    display: inline-block;
+    padding: 10px;
+    color: #333;
+    width: 180px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+.searchResults li a:hover {
+    background: #ffffe0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+div.tab-summary {
+    background: #5282C5;
+    border-bottom: 1px solid #666;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.45);
+    margin: -20px 0 18px -20px;
+    padding: 15px 20px 18px;
+}
+div.tab-summary ul.summary {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+div.tab-summary ul.summary li {
+    color: #ccd;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 30px;
+    margin: 0 18px;
+    padding: 0;
+}
+div.tab-summary ul.summary li span.value {
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+}
+div.tab-summary h2 {
+    color: #fff;
+    text-align: left;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, .25);
+}
+div.tab-summary p {
+    margin-bottom: 0;
+}
+div.tab-summary span.uneditable-input {
+    border: 1px solid #666;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin: 0 9px 18px 0;
+    min-width: 20px;
+    padding-left: 7px;
+    padding-right: 9px;
+    width: auto;
+}
+fieldset.tabless-summary ul.summary {
+    list-style: none;
+    margin: 0 0 -10px;
+    padding: 0 20px 18px 0;
+}
+fieldset.tabless-summary ul.summary li {
+    color: #404040;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 30px;
+    margin: 0 18px 0px 0;
+    padding: 0;
+}
+fieldset.tabless-summary ul.summary li span.value {
+    color: #606060;
+    font-size: 14px;
+    font-weight: normal;
+}
+div.clearfix a.btn.small {
+    font-family: 'Droid Sans', 'droidsans', sans-serif;
+    padding: 7px 9px 6px;
+}
+div.clearfix.details-btn {
+    position: relative;
+    top: 20px;
+}
+div.clearfix.sidebar-details-btn {
+    top: 0;
+    margin-top: 5px;
+}
+div.details div.clearfix.twoInputs div.input {
+    width: 47.45%;
+}
+div.details textarea {
+    resize: none;
+}
+div.details .clearfix.oneHalf {
+    width: 44.65%;
+}
+textarea.short {
+    height: 75px;
+    margin-bottom: -56px;
+}
+div.shiftDown {
+    position: relative;
+    top: 56px;
+}
+.form-stacked div.activeCheckbox {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+}
+.form-stacked div.activeCheckbox label {
+    text-align: right;
+}
+
+/* All Activity > Status & Comments */
+
+.multiSelect > div.clearfix {
+    margin-bottom: 25px;
+}
+.form-stacked.inline fieldset.oneThird {
+    display: inline-block;
+    width: 30%;
+    margin-right: 5%;
+    vertical-align: top;
+}
+.form-stacked.inline fieldset.twoThirds {
+    display: inline-block;
+    width: 55%;
+    margin-right: 0;
+    margin-top: 11px;
+    vertical-align: top;
+}
+#statusAndComments fieldset.twoThirds {
+    width: 64%;
+}
+.form-stacked.inline fieldset.oneThird .clearfix {
+    width: 100%;
+}
+.form-stacked.inline fieldset.oneThird .clearfix label {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.form-stacked.inline fieldset.oneThird .selectInstructor,
+.form-stacked.inline fieldset.oneThird .selectStudent {
+    padding-right: 40px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+div.groupMembers div.selector {
+    width: 78.5%;
+}
+.form-stacked.inline fieldset.oneThird .selectInstructor div.selector,
+div.groupMembers div.selector {
+    margin-bottom: 10px;
+}
+.form-stacked.inline fieldset.oneThird .selectInstructor .btn.small {
+    padding: 6px 9px 5px;
+}
+.form-stacked.inline fieldset.oneThird .selectInstructor span.icon {
+    color: #eee;
+    font-size: 14px;
+}
+div.groupMembers span.icon {
+    color: #eee;
+    font-size: 13px;
+}
+.form-stacked.inline fieldset.oneThird .selectInstructor .remove {
+    position: absolute;
+    right: -10px;
+    top: 38px;
+}
+div.groupMembers .remove {
+    margin-left: 5px;
+}
+div.groupMembers .add {
+    margin-right: 50px;
+}
+div.instructorComment,
+div.studentComment {
+    margin-bottom: 20px;
+    position: relative;
+}
+div.instructorComment .author,
+div.studentComment .author {
+    position: absolute;
+    text-align: center;
+    width: 80px;
+}
+div.instructorComment .author {
+    left: 0;
+}
+div.studentComment .author {
+    right: 0;
+}
+div.instructorComment .author .icon,
+div.studentComment .author .icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+div.instructorComment .message,
+div.studentComment .message {
+    padding: 0 100px;
+    position: relative;
+    box-sizing: border-box;
+}
+div.instructorComment .message:after,
+div.studentComment .message:after {
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    content: '';
+    height: 0;
+    position: absolute;
+    top: 30px;
+    width: 0;
+}
+div.instructorComment .message:after {
+    border-right: 10px solid #fff;
+    left: 90px;
+}
+div.studentComment .message:after {
+    border-left: 10px solid #fff;
+    right: 90px;
+}
+div.instructorComment .message p,
+div.studentComment .message p {
+    background: #fff;
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 0;
+    padding: 20px;
+}
+div.instructorComment .message .time,
+div.studentComment .message .time {
+    background: #fff;
+    border-radius: 0 0 4px 4px;
+    padding: 0 20px 20px;
+}
+div.instructorComment .message .time p,
+div.studentComment .message .time p {
+    color: #888;
+    margin: 0;
+    padding: 0;
+}
+
+/* Calendar */
+
+.calendarControls form.calendarFilters {
+    margin-bottom: 0;
+    padding-bottom: 3px;
+}
+.calendarControls form.calendarFilters .clearfix {
+    margin-right: 10px;
+    width: auto;
+}
+form.calendarFilters .calendarResults label,
+form.calendarFilters .calendarView label,
+form.calendarFilters .clearfix .selector {
+    display: inline-block;
+    margin-top: -5px;
+    width: auto;
+    vertical-align: middle;
+}
+form.calendarFilters .calendarResults label,
+form.calendarFilters .calendarView label {
+    margin-right: 10px;
+}
+form.calendarFilters .clearfix .selector {
+    margin-right: 30px;
+}
+form.calendarFilters .clearfix input {
+    margin-right: 10px;
+    width: auto;
+}
+
+/* Patients > Encounters */
+
+div.hiddenFieldset {
+    display: none;
+}
+
+/* Patients > Claims */
+
+div.cpt-item.well {
+    border: 1px solid #bbb;
+    margin-bottom: 18px;
+    padding: 18px 18px 9px;
+    width: 99%;
+    box-sizing: border-box;
+}
+div.cpt-item.well.collapsed {
+    padding-bottom: 0;
+}
+div.cpt-item.well .summary-bar {
+    background: #ececec;
+    border-bottom: 1px solid #bbb;
+    border-radius: 4px 4px 0 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    margin: -18px -18px 18px;
+    padding: 18px 18px 0;
+}
+div.cpt-item.well.collapsed .summary-bar {
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 0;
+}
+div.cpt-item.well .summary-bar a.btn.small.danger {
+    margin-right: 11px;
+    transition: none;
+}
+div.cpt-item.well .summary-bar a.btn.small.success {
+    margin-right: 27px;
+    transition: none;
+}
+div.cpt-item.well ul.summary {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+div.cpt-item.well ul.summary li {
+    display: inline-block;
+    font-weight: bold;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+}
+div.cpt-item.well ul.summary span.uneditable-input {
+    border: 1px solid #999;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin: 0 9px 18px 0;
+    min-width: 20px;
+    padding-left: 7px;
+    padding-right: 9px;
+    width: auto;
+}
+div.cpt-item div.extraInputs {
+    display: none;
+}
+
+/* Patients Metadata */
+
+footer {
+    border-top: 1px dotted #aaa;
+    margin-top: 25px;
+    margin-right: 20px;
+    padding-top: 25px;
+    text-align: center;
+}
+footer li {
+    display: inline;
+    padding-right: 20px;
+    font-family: "Droid Serif", Georgia, serif;
+    font-style: italic;
+}
+
+/* Table Styling (and Associated elements) */
+
+.newItem {
+    color: #888;
+    font-family: 'Droid Sans', 'droidsans', sans-serif;
+    font-size: 13px;
+    position: absolute;
+    text-align: right;
+    text-shadow: 0 1px 0 #fff;
+    top: -15px;
+    right: 25px;
+}
+.newItem:hover,
+.newItem:focus {
+    color: #666;
+    text-decoration: none;
+}
+.newItem span.icon {
+    font-size: 32px;
+    position: relative;
+    top: 3px;
+}
+.bulk-action {
+    font-family: 'Droid Sans', 'droidsans', sans-serif;
+    margin-bottom: 10px;
+}
+table.data-list {
+    font-family: 'Droid Sans', 'droidsans', sans-serif;
+    width: 98%;
+}
+fieldset.inline table.data-list {
+    width: 100%;
+}
+table.data-list.well {
+    background: #f6f6f6;
+    border: 1px solid #bbb;
+    border-radius: 0;
+}
+table.data-list tbody tr:hover {
+    background: #ffffe0;
+}
+table.data-list td {
+    vertical-align: middle;
+}
+table.data-list .action {
+    width: 10%;
+}
+table.data-list a.btn.small {
+    padding: 4px 8px;
+    font-size: 11px;
+    margin: 0;
+    position: relative;
+    top: -1px;
+}
+table.data-list td.input {
+    padding: 0;
+}
+table.data-list td.input input {
+    padding: 2px 4px;
+}
+table.data-list td input.modifier {
+    width: 60px;
+}
+table.data-list td input.qty {
+    width: 30px;
+}
+table.data-list tr,
+table.data-list td {
+    min-width: 8px;
+}
+.availListItems tr, .resultListItems tr {
+    cursor: pointer;
+}
+.resultListItems a {
+    color: #404040;
+}
+.resultListItems a:hover {
+    text-decoration: none;
+}
+
+/* Calendar */
+
+#mainPanel ul.calendarHead {
+    background: #d6d6d6 url('/img/100-100-3.png');
+    border-bottom: 1px solid #bbb;
+    border-top: 5px solid #5282C5;
+    box-shadow: inset 1px 1px 0 #eee;
+    list-style: none;
+    margin: 0 0 -5px;
+    padding: 0;
+    position: relative;
+    z-index: 10;
+}
+#mainPanel ul.calendarHead li {
+    border: none;
+    display: inline-block;
+    font: bold 14px/1.5 'Droid Sans', 'droidsans', sans-serif;
+    height: 20px;
+    margin: 0;
+    padding: 5px 0 3px;
+    text-align: center;
+    text-shadow: 0 1px 1px #fff;
+    width: 13.57142857%;
+    vertical-align: middle;
+}
+#mainPanel ul.calendarHead li:first-child {
+    width: 5%;
+}
+#mainPanel h4 {
+    background: #fff;
+    padding-left: 10px;
+}
+#mainPanel h4:first-child {
+    margin-top: -20px;
+}
+#mainPanel ul.calendar {
+    background: #ddd;
+    border-bottom: 1px solid #bbb;
+    font: 14px/1.5 'Droid Sans', 'droidsans', sans-serif;
+    list-style: none;
+    margin: 0 0 0 -1px;
+    padding: 0 0 24px 0;
+}
+#mainPanel ul.calendar.admissions {
+    padding: 0;
+}
+#mainPanel ul.calendar li,
+#mainPanel ul.calendar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#mainPanel ul.calendar > li {
+    display: inline-block;
+    width: 13.57142857%;
+    vertical-align: top;
+}
+#mainPanel ul.calendar > li.times {
+    width: 5%;
+}
+#mainPanel ul.calendar > li.times > ul > li {
+    background-color: #e6e6e6;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: right;
+    text-shadow: 0 1px 1px #fff;
+}
+#mainPanel ul.calendar > li > ul > li {
+    background-color: #f6f6f6;
+    border-left: 1px solid #bbb;
+    border-top: 1px solid #bbb;
+    box-shadow: inset 1px 1px 0 #fff;
+    height: 80px;
+    overflow: hidden;
+    padding: 10px 5px;
+}
+#mainPanel ul.calendar > li.day > ul > li:hover {
+    background-color: #eee;
+}
+#mainPanel ul.calendar > li > ul > li > ul li {
+    cursor: default;
+    line-height: 1.3;
+    text-transform: none;
+    white-space: nowrap;
+    cursor: pointer;
+}
+#mainPanel ul.calendar > li > ul > li > ul > li.poppedItem {
+    background: #ddd;
+}
+#mainPanel ul.calendar > li > ul > li > ul li:before {
+    content: 'C ';
+    color: #ddd;
+    font-family: IcoMoonRegular;
+    visibility: hidden;
+}
+#mainPanel ul.calendar > li > ul > li > ul > li > a {
+    color: #5282C5;
+    margin: 0;
+    padding: 0;
+    text-transform: none;
+}
+#mainPanel ul.calendar > li > ul > li > ul > li > a:hover,
+#mainPanel ul.calendar > li > ul > li > ul > li > a:focus {
+    background: inherit;
+    border: none;
+}
+#calendar div.popover .inner {
+    width: 350px;
+}
+#calendar div.popover h3 {
+    text-align: center;
+}
+#calendar div.popover a.exit {
+    color: #666;
+    font-size: 20px;
+    padding: 0 5px;
+    position: absolute;
+    right: 15px;
+    text-shadow: 0 1px 1px #fff;
+    top: 20px;
+}
+#calendar div.popover a.exit:hover,
+#calendar div.popover a.exit:focus {
+    text-decoration: none;
+    color: #c4453c;
+}
+#calendar div.popover dt {
+    display: inline-block;
+    font-weight: bold;
+    padding: 5px 0 0 0;
+    text-align: right;
+    width: 20%;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+#calendar div.popover dd {
+    display: inline-block;
+    padding: 5px 0 0;
+    text-align: left;
+    width: 76%;
+    vertical-align: top;
+}
+#calendar div.popover .popoverActions {
+    text-align: center;
+    padding: 14px 14px 3px;
+    position: relative;
+    margin: 0 -14px -14px;
+}
+#calendar .heddenPatientWrap {
+    display: none;
+}
+#mainPanel ul.calendar .moreItem {
+    height: 0.8em;
+    padding: 2px 0 0;
+    margin: 0;
+}
+#mainPanel ul.calendar > li > ul > li.showMore {
+    position: absolute;
+    height: inherit;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.75);
+}
+#mainPanel ul.calendar > li > ul > li > ul > li.moreItem:before {
+    content: '';
+    width: 75%;
+    height: 1px;
+    display: inline-block;
+    vertical-align: top;
+    background: #ddd;
+    margin: 3px 0 0;
+    visibility: visible;
+}
+#calendar .moreItem a.more {
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0.75em;
+    line-height: 0.85em;
+    width: 20%;
+    text-align: right;
+    text-decoration: none;
+}​
+
+/* Site Sections */
+
+#sectionContent {
+     padding: 0;
+     height: 100%;
+     margin: 0;
+ }
+#sectionContent > * {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+#supportPanel {
+    width: 25%;
+    background: #D3D7DC;
+    border-right: 1px solid #999;
+    margin-left: -1px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.45);
+    position: relative;
+}
+#supportContent {
+    padding: 20px 0 0;
+    position: relative;
+    border-top: 5px solid #777;
+    overflow: auto;
+}
+#mainPanel {
+    min-height: 100%;
+    width: 74.99999%;
+    min-width: 712px;
+    position: relative;
+}
+.content {
+    position: relative;
+    padding-top: 20px;
+    background: #ddd;
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    border-top: 5px solid #5282C5;
+    overflow: auto;
+}
+.actions,
+.popoverActions {
+    position: fixed;
+    bottom: 0;
+    min-height: 40px;
+    margin-bottom: 0;
+    box-shadow: 0 -2px 2px -1px rgba(0, 0, 0, 0.25);
+    border-top: 1px solid #666;
+    background-image: linear-gradient(top, #f5f5f5, #eee);
+    z-index: 10;
+}
+#mainPanel .actions {
+    right: 0;
+    width: 74.99999%;
+    padding: 12px 0 12px;
+    text-align: right;
+}
+#mainPanel .actions > *:last-child {
+    margin-right: 4%;
+}
+#supportPanel .newSupportButton {
+    text-align: center;
+    margin: 0 0 20px -20px;
+}
+#supportPanel .actions {
+    left: -1px;
+    width: 25%;
+    margin: 0;
+    padding: 13px 0 11px;
+    text-align: center;
+}
+#supportPanel .actions .btn {
+    min-height: 22px;
+    line-height: 24px;
+}
+#supportPanel #signSubmit a {
+    padding: 9px 15px;
+}
+#activityContent form.report {
+    background: #fff;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    border: 1px dotted #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+#activityContent .actions {
+    height: 150px;
+}
+#activityContent .report label {
+    color: #999;
+}
+#activityContent .actions .clearfix label {
+    display: block;
+    margin-left: 20px;
+    text-align: left;
+    width: 100%;
+}
+#activityContent .actions .clearfix textarea {
+    display: block;
+    margin-left: 20px;
+    resize: none;
+    width: 80%;
+}
+#activityContent button {
+    position: relative;
+    top: -40px;
+}
+.modal form {
+    padding-right: 20px;
+}
+.modal .close {
+    font-family: IcoMoonRegular;
+    font-size: 26px;
+    color: #666;
+    opacity: 1;
+}
+.modal .cancel.close {
+    margin: 0 5px;
+    color: #333;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: normal;
+    text-shadow: 0 1px 1px rgba(255, 255, 255);
+    opacity: 1;
+    font-family: 'Droid Serif', 'droidserif', serif;
+}
+.closeForm {
+    font-size: 1em;
+    opacity: 1;
+}
+.closeForm:hover {
+    opacity: 1;
+}
+
+/* Navigation Styles */
+
+#userControls {
+    background: rgba(50, 50, 50, 0.9);
+    color: white;
+    box-shadow: 0 -2px 5px #000;
+    height: 1.9em;
+    text-align: right;
+    font-size: 12px;
+    padding: 0 20px 0 0;
+}
+#userControls li a {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #eee;
+}
+#userControls li:first-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    padding: 0;
+    margin:0;
+}
+#userControls li a:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+.btn.large {
+    padding: 9px 35px;
+}
+.tabs > li > a {
+    color: #333;
+}
+#sectionNav {
+    margin: 10px 0 0;
+}
+#sectionNav ul {
+    padding: 0 20px;
+}
+#sectionNav li {
+    display: inline-block;
+    float: none;
+    font-weight: 400;
+    font-size: 15px;
+}
+#sectionNav a {
+    padding: 5px 35px 4px;
+    margin: 0;
+}
+#sectionNav .tabs > li > a {
+    margin-right: 2px;
+    line-height: 34px;
+    border: 1px solid transparent;
+    border-radius: 5px 5px 0 0;
+    border-bottom: none;
+}
+#sectionNav .tabs > li > a:hover {
+    background: #ddd;
+    border-top-color: #bbb;
+    border-left-color: #bbb;
+    border-right-color: #fff;
+}
+#sectionNav .tabs .active > a {
+    background: #444;
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    border-left: 1px solid rgba(255, 255, 255, 0.75);
+    border-right: 1px solid rgba(0, 0, 0, 0.6);
+    border-bottom: none;
+    background: url('/img/100-100-4.png'), linear-gradient(top, #555, #444);
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.25);
+    font-weight: 700;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.45);
+}
+#sectionNav .tabs .active > a:hover {
+    background: url('/img/100-100-4.png'), linear-gradient(top, #555, #444);
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    border-left: 1px solid rgba(255, 255, 255, 0.75);
+    border-right: 1px solid rgba(0, 0, 0, 0.6);
+}
+#sectionContent .actionControls {
+    float: none;
+    position: relative;
+    display: block;
+    padding: 5px 0 4px 20px;
+    margin-bottom: 1px;
+    background: #444 url('/img/100-90-5.png');
+    border-bottom: 2px groove #000;
+    background: url('/img/100-100-4.png'), linear-gradient(top, #444, #2F2F2F);
+}
+.actionControls > ul > li {
+    font-weight: 700;
+    float: none;
+    display: inline-block;
+    color: #eee;
+}
+.actionControls a {
+    color: #eee;
+}
+.pills a {
+    text-shadow: -1px -1px 1px #222;
+    border: 2px groove transparent;
+}
+.pills a:hover {
+    background-color: #222;
+    border-color: #333;
+}
+.pills .active a {
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #222;
+    background-color: #5282C5;
+    border-color: #395278;
+}
+#supportNav {
+    padding-top: 19px;
+    background: #bbb;
+}
+#supportNav ul {
+    text-align: center;
+    border: none;
+    min-height: 34px;
+}
+#supportNav .tabs a {
+    border-bottom: none;
+}
+#supportNav .tabs a:hover {
+    background: #ccc;
+    border: 1px solid #999;
+    border-top-color: #999;
+    border-left-color: #999;
+    border-right-color: #eee;
+    border-bottom: none;
+}
+#supportNav .tabs .active > a {
+    background: #888;
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, 0.75);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+    border-bottom: none;
+    background-image: linear-gradient(top, #888, #777);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+.mainPanel.tabControls {
+    text-transform: uppercase;
+}
+.mainPanel.tabControls ul {
+    padding-left: 10px;
+    width: 100%;
+}
+.mainPanel.tabControls a {
+    border-bottom: none;
+    padding: 0 12px;
+}
+.mainPanel.tabControls a:hover {
+    border: 1px solid #bbb;
+    border-top-color: #bbb;
+    border-left-color: #bbb;
+    border-right-color: #fff;
+    border-bottom: none;
+    background: #ddd;
+}
+.mainPanel.tabControls  .tabs .active > a {
+    background: #5282C5;
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    border-left: 1px solid rgba(255, 255, 255, 0.75);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: none;
+    color: #fff;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+/* Icons */
+
+.icon {
+    font-family: IcoMoonRegular;
+    font-size: 22px;
+}
+.newItem span.icon.big {
+    font-size: 40px;
+    vertical-align: -5px;
+}
+.icon:hover {
+    text-decoration: none;
+}
+#sectionNav .active .icon {
+    color: #888;
+}
+#signSubmit a:last-child {
+    border-left: 2px groove #89C322;
+    padding: 10px 14px 10px;
+}
+.tabs .icon {
+    padding: 0 5px 0 0;
+    font-size: 28px;
+    vertical-align: bottom;
+}
+.small.icon {
+    font-size: 13px;
+    font-weight: 400;
+    color: #9B4AAA;
+}
+
+/* Special Headers */
+
+.supportPanelHeader {
+}
+.supportPanelHeader h2 {
+    background: #bbb;
+    background: linear-gradient(top, #ccc, #bbb);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    border-bottom: 2px groove #ddd;
+    padding: 22px 0 8px;
+    margin: 0;
+}
+.mainPanelHeader {
+    background: #ddd;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.45);
+    padding: 20px 0 10px 20px;
+    margin: 0 0 20px;
+    width: 100%;
+}
+.mainPanelHeader h1 {
+    margin-left: 20px;
+    width: 100%;
+    margin: 0;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+}
+.mainPanelHeader h1.weekSelect {
+    text-align: center;
+}
+.mainPanelHeader h1.weekSelect span.icon {
+    margin: 0 10px;
+    position: relative;
+    font-size: 30px;
+    line-height: 1em;
+}
+.mainPanelHeader h1 span {
+    display: inline-block;
+    margin: 0 2% 0 0;
+}
+.listTitle {
+    margin: 0 10px 0 0;
+}
+.modal-header {
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    border-radius: 6px 6px 0 0;
+    box-shadow: inset 0 1px 0 #ffffff;
+    zoom: 1;
+    margin-bottom: 0;
+}
+.modal-header h2 {
+    margin: 10px 0;
+}
+.calenderAdmitted .icon {
+    vertical-align: top;
+}
+
+/* Scrollable Outputs */
+
+.output {
+    max-width: 100%;
+    overflow-x: scroll;
+}
+
+/* Multiselect Function Styling */
+
+.ms2side__header {
+    font-size: 1.125em; /* 18 / 16 */
+    line-height: 1.333333333333333em; /* 24 / 18 */
+}
+.ms2side__div > div {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+}
+.ms2side__div > .ms2side__options {
+    width: 5%;
+    text-align: center;
+    margin: 0.5em 0 0;
+}
+.ms2side__options p {
+    cursor: pointer;
+    font-size: 1.2em;
+    line-height: 1em;
+    background: #eee;
+    border-radius: 3px;
+    width: 70%;
+    margin: 1em auto;
+}
+.ms2side__options p:hover {
+    background: #ddd;
+}
+.ms2side__div select {
+    width: 100%;
+}
+
+/* Javascript Class Styles */
+
+.showBlock {
+    z-index: 1;
+}
+.hideBlock {
+    z-index: -1;
+}
+.twipsy {
+    font-size: 13px;
+    font-family: 'Droid Sans', 'droidsans', sans-serif;
+    width: 100px;
+}
+
+/* AJAX stuff */
+
+.alert-message {
+    display: none;
+    margin: 0 5% 40px;
+}
+
+/* Alert Messages */
+
+.hideAlert {
+    float: right;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 13.5px;
+    text-shadow: 0 1px 0 white;
+    filter: alpha(opacity=25);
+    -khtml-opacity: 0.25;
+    -moz-opacity: 0.25;
+    opacity: 0.25;
+    margin-top: 2px;
+}
+.hideAlert:hover {
+    text-decoration: none;
+}
+
+/* Popover Styling */
+
+.actions.event {
+    position: static;
+    min-height: 40px;
+    margin: 0;
+    width: 100%;
+    box-shadow: 0 -2px 2px -1px rgba(0, 0, 0, 0.25);
+    border-top: 1px solid #666;
+    background-image: linear-gradient(top, #f5f5f5, #eee);
+    padding: 12px 0;
+    text-align: center;
+}
+
+/* jQuery UI Styling */
+
+#ui-datepicker-div {
+    background: white;
+    z-index: 99 !important;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+#ui-datepicker-div table.ui-datepicker-calendar {
+    margin-bottom: 0;
+}
+.ui-datepicker-title {
+    font-size: 15px;
+    font-family: "droid sans", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin-top: -22px;
+    padding-bottom: 10px;
+}
+.ui-datepicker-next, .ui-datepicker-prev {
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+}
+.ui-datepicker-next {
+    float: right;
+}
+#ui-datepicker-div tbody td {
+    cursor: pointer;
+}
+#ui-datepicker-div tbody td:hover {
+    background: #5282C5;
+}
+#ui-datepicker-div tbody td:hover a {
+    color: white;
+    text-decoration: none;
+}
+#ui-datepicker-div tbody td.ui-datepicker-unselectable:hover {
+    background: #fff;
+    cursor: default;
+}
+.datePickerButton {
+    position: absolute;
+    vertical-align: top;
+    background: transparent;
+    height: 30px;
+    width: 35px;
+    z-index: 10;
+    margin: -10px 0 0;
+}
+
+/* Help Tab */
+
+.helpContent .row {
+    margin-bottom: 0.5em;
+}
+.helpScreenshot	{
+    width: 36%;
+    min-height: 100px;
+    background: #777;
+}
+.helpContent p, .helpScreenshot {
+    display: inline-block;
+    vertical-align: top;
+}
+.helpText {
+    width: 60%;
+}
+.helpNav, .helpTip {
+    margin-left: 20px;
+}
+.helpNav {
+    list-style-type: none;
+}
+.helpNav h3 {
+    display: inline;
+}
+.helpNav li	{
+    margin: 0.2em 0;
+}
+.helpNav .icon {
+    font-size: 80%;
+    margin-right: 0.3em;
+    vertical-align: middle;
+}
+.helpSubNav {
+    margin: 0 0 1em 2.3em;
+}
+
+/* Media Queries */
+
+@media (min-width: 600px) {
+    .content .input-prepend input {
+        width: 76%;
+    }
+    /* .content .input-append {
+        width: 105%;
+    } */
+    .content .twoInputs .input-append input {
+        width: 60%;
+    }
+    #drgCode {
+        width: 66%;
+    }
+    #activityContent .actions .clearfix textarea {
+        width: 69%;
+    }
+    /* #statusAndComments fieldset.twoThirds {
+        width: 54%;
+    } */
+    div.groupMembers div.selector {
+        width: 72%;
+    }
+    #supportContent .form-stacked.inline .input-prepend input,
+    #supportContent .form-stacked.inline .input-append input {
+        width: 79%;
+    }
+    #supportContent .form-stacked.inline .twoInputs .input-prepend input,
+    #supportContent .form-stacked.inline .twoInputs .input-append input {
+        width: 59%;
+    }
+    #supportNav .tabs a {
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+    table.calendarHead th:first-child {
+        width: 7%;
+    }
+    form.calendarFilters .calendarResults label,
+    form.calendarFilters .calendarView label {
+        margin-right: 5px;
+    }
+    form.calendarFilters .clearfix .selector {
+        margin-right: -5px;
+    }
+}
+@media (min-width: 1000px) {
+    .content .input-prepend input {
+        width: 79%;
+    }
+    /* .content .input-append {
+        width: 108%;
+    }
+    .content .twoInputs .input-append input {
+        width: 32%;
+    } */
+    #drgCode {
+        width: 66%;
+    }
+    #activityContent .actions .clearfix textarea {
+        width: 71%;
+    }
+    /* #statusAndComments fieldset.twoThirds {
+        width: 55%;
+    } */
+    div.groupMembers div.selector {
+        width: 74%;
+    }
+    #supportContent .form-stacked.inline .input-prepend input,
+    #supportContent .form-stacked.inline .input-append input {
+        width: 79.25%;
+    }
+    #supportContent .form-stacked.inline .twoInputs .input-prepend input,
+    #supportContent .form-stacked.inline .twoInputs .input-append input {
+        width: 59%;
+    }
+    #supportNav .tabs a {
+        padding-left: 11px;
+        padding-right: 11px;
+    }
+    table.calendarHead th:first-child {
+        width: 6%;
+    }
+    form.calendarFilters .calendarResults label,
+    form.calendarFilters .calendarView label {
+        margin-right: 5px;
+    }
+    form.calendarFilters .clearfix .selector {
+        margin-right: -5px;
+    }
+}
+@media (min-width: 1200px) {
+    .content .input-prepend input {
+        width: 81%;
+    }
+    /* .content .input-append {
+        width: 109%;
+    }
+    .content .twoInputs .input-append input {
+        width: 33%;
+    } */
+    #drgCode {
+        width: 71%;
+    }
+    #activityContent .actions .clearfix textarea {
+        width: 75%;
+    }
+    /* #statusAndComments fieldset.twoThirds {
+        width: 57%;
+    } */
+    div.groupMembers div.selector {
+        width: 76%;
+    }
+    #supportContent .form-stacked.inline .input-prepend input,
+    #supportContent .form-stacked.inline .input-append input {
+        width: 79.75%;
+    }
+    #supportContent .form-stacked.inline .twoInputs .input-prepend input,
+    #supportContent .form-stacked.inline .twoInputs .input-append input {
+        width: 63%;
+    }
+    #supportNav .tabs a {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+    table.calendarHead th:first-child {
+        width: 5%;
+    }
+    form.calendarFilters .clearfix .selector {
+        margin-right: 20px;
+    }
+}
+@media (min-width: 1400px) {
+    .content .input-prepend input {
+        width: 83%;
+    }
+    /* .content .input-append {
+        width: 111%;
+    }
+    .content .twoInputs .input-append input {
+        width: 35%;
+    } */
+    #drgCode {
+        width: 75%;
+    }
+    #activityContent .actions .clearfix textarea {
+        width: 78%;
+    }
+    /* #statusAndComments fieldset.twoThirds {
+        width: 58%;
+    } */
+    div.groupMembers div.selector {
+        width: 78.5%;
+    }
+    #supportContent .form-stacked.inline .input-prepend input,
+    #supportContent .form-stacked.inline .input-append input {
+        width: 81.25%;
+    }
+    #supportContent .form-stacked.inline .twoInputs .input-prepend input,
+    #supportContent .form-stacked.inline .twoInputs .input-append input {
+        width: 67.5%;
+    }
+    #supportNav .tabs a {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    table.calendarHead th:first-child {
+        width: 4%;
+    }
+    form.calendarFilters .clearfix .selector {
+        margin-right: 30px;
+    }
+}
+@media (min-width: 1500px) {
+    /* .content .input-prepend input {
+        width: 88.25%;
+    } */
+    #drgCode {
+        width: 77%;
+    }
+    /* #statusAndComments fieldset.twoThirds {
+        width: 59%;
+    } */
+}
+@media (max-width: 1100px) {
+    .content .form-stacked fieldset.inline .clearfix .input-prepend input {
+        width: 80%;
+    }
+}

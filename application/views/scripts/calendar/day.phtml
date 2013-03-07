@@ -1,0 +1,221 @@
+<?php
+// Construct new Pt Service Object
+$ptService = new Service_Pt();
+
+// Construct new Apt Service Object
+$aptService = new Service_Apt();
+
+// Construct new Adm Service Object
+$admService = new Service_Adm();
+?>
+
+<script type="text/javascript">
+
+    DATA.list = <?php echo $ptService->getPtListJson(); ?>;
+    DATA.ptName = <?php echo $ptService->getNameComponentsJson($this->patientId); ?>;
+    DATA.newApt = {
+
+        "ptInfo": {
+
+            "uniqueId": null,
+            "newPt": null,
+            "currentIns": null,
+            "aptNum": null
+        },
+
+        "md": {
+
+            "clinic": null,
+            "referring": null,
+            "referringId": null
+        },
+
+        "aptDetails": {
+
+            "serviceLocation": null,
+            "startDate": null,
+            "startTime": null,
+            "length": null,
+            "aptType": null,
+            "reason": null,
+            "aptId": null
+        },
+
+        "status": {
+
+            "ptStatus": "Scheduled",
+            "checkInDate": null,
+            "checkInTime": null,
+            "checkOutDate": null,
+            "checkOutTime": null,
+            "statusNotes": null
+        },
+
+        "notes": {
+
+            "authorization": null,
+            "reminderNotes": null,
+            "equipment": null,
+            "facility": null,
+            "staff": null
+        }
+    };
+    DATA.newAdm = {
+
+        "ptInfo": {
+
+            "uniqueId": null,
+            "confidential": null,
+            "currentIns": null,
+            "diagnosis": null,
+            "admNum": null
+        },
+
+        "admDetails": {
+
+            "admType": null,
+            "date": null,
+            "time": null,
+            "length": null,
+            "admId": null
+        },
+
+        "md": {
+
+            "admitting": null,
+            "attending": null,
+            "surgical": null,
+            "primary": null
+        },
+
+        "location": {
+
+            "specialty": null,
+            "ward": null,
+            "roomNumber": null,
+            "bedNumber": null
+        },
+
+        "status": {
+
+            "ptStatus": "Scheduled",
+            "admDate": null,
+            "admTime": null,
+            "dcDate": null,
+            "dcTime": null,
+            "dcNotes": null
+        },
+
+        "notes": {
+
+            "authorization": null,
+            "reminderNotes": null,
+            "equipment": null,
+            "facility": null,
+            "staff": null
+        }
+    };
+    DATA.adm = <?php echo $admService->getJson($this->admId); ?>;
+    DATA.apt = <?php echo $aptService->getJson($this->aptId); ?>;
+    DATA.aptList = <?php echo $aptService->getAptListForDateJson($this->startDate, $this->endDate); ?>;
+    DATA.admList = <?php echo $admService->getAdmListForDateJson($this->startDate, $this->endDate); ?>;
+    DATA.query = '<?= $this->searchTerms; ?>';
+    DATA.searchTerms = '<?= $this->searchTerms; ?>';
+    DATA.startDate = '<?= $this->startDate; ?>';
+    DATA.endDate = '<?= $this->endDate; ?>';
+</script>
+
+<!-- Load calendar services -->
+<script type="text/javascript" src="/js/services/serv-calendar.js"></script>
+
+<!-- Load calendar controllers -->
+<script type="text/javascript" src="/js/controllers/ctrlr-calendar.js"></script>
+
+<!-- AngularJS controllers for patient file -->
+<script type="text/javascript" src="/js/controllers/ctrlr-scheduler.js"></script>
+
+<div id="sectionContent" class="row-fluid tabContainer" role="main" ng-controller="PAS.ctrlr.calendar">
+
+    <?= $this->calActionsNav(); ?>
+
+    <!-- Imports from views > helpers PtsSidebar.php -->
+    <!-- This handles what sidebar to use -->
+    <?= $this->calSidebar(); ?>
+
+    <section id="mainPanel" class="<?= $this->mainPanelWidth; ?> parent">
+
+        <!-- This imports the header, patient file navigation and the alert elements -->
+        <?= $this->calHeader(); ?>
+
+        <section class="tabContainer">
+
+            <form id="events" class="row-fluid">
+
+                <fieldset>
+
+                    <legend>Appointments</legend>
+
+                    <p class="formInstructions span9">
+                        To edit or view an appointment, click item below.
+                    </p><!-- Remove whitespace
+
+                     --><a href="<?= $this->urlNewApt; ?>" class="newButton span3 no-padding">
+                    <span class="icon-calendar icon-large"></span>
+                    New Appointment
+                </a>
+
+                    <div class="span12 tableContainer">
+                        <table class="well data-list">
+                            <thead>
+                            <tr>
+                                <td>Chkd-In</td>
+                                <td>New</td>
+                                <td ng-hide="currentStartDate == currentEndDate">Date</td>
+                                <td>Time</td>
+                                <td>Length</td>
+                                <td>Patient</td>
+                                <td>Location</td>
+                                <td>Provider</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="apt in apts | filter:query">
+                                <td>
+                                    <a href="<?= $this->urlEditApt; ?>" class="{{apt.checkedIn}}"></a>
+                                </td>
+                                <td>
+                                    <a href="<?= $this->urlEditApt; ?>" class="{{apt.newPt}}"></a>
+                                </td>
+                                <td ng-hide="currentStartDate == currentEndDate">
+                                    <a href="<?= $this->urlEditAdm; ?>">{{apt.date}}</a>
+                                </td>
+                                <td>
+                                    <a href="<?= $this->urlEditApt; ?>">{{apt.time}}</a>
+                                </td>
+                                <td>
+                                    <a href="<?= $this->urlEditApt; ?>">{{apt.length}}</a>
+                                </td>
+                                <td>
+                                    <a href="<?= $this->urlEditApt; ?>">{{apt.patient}}</a>
+                                </td>
+                                <td>
+                                    <a href="<?= $this->urlEditApt; ?>">{{apt.serviceLocation}}</a>
+                                </td>
+                                <td>
+                                    <a href="<?= $this->urlEditApt; ?>">{{apt.md}}</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </fieldset>
+            </form>
+
+        </section><!-- .tabContainer -->
+</div> <!-- .content: it was opened in CalHeader.php -->
+</section> <!-- #mainPanel -->
+
+<?php echo $this->partial('/partials/global/modal_pt_search.html'); ?>
+
+<ng-include src="'/templates/includes/scheduler.html'" ng-controller="PAS.ctrlr.scheduler"></ng-include>
+</div><!-- end of #sectionContent -->

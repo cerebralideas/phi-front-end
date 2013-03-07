@@ -1,0 +1,40 @@
+        <form id="status" class="form-stacked inline">
+            <fieldset>
+                <div class="clearfix">
+                    <label for="patientStatus">Patient Status</label>
+                    <select name="patientStatus">
+                        <option value="" selected="selected">Select Patient Status</option>
+                        <option value="patientStatus1">Patient Status 1</option>
+                        <option value="patientStatus2">Patient Status 2</option>
+                    </select>
+                </div>
+                <div class="clearfix twoInputs">
+                    <label for="admissionDateTime">Admission Date/Time</label>
+                    <div class="input-append">
+                        <input type="date" id="admissionDate">
+                        <span class="add-on">d</span>
+                    </div>
+                    <div class="input-append">
+                        <input type="time" id="admissionTime">
+                        <span class="add-on">c</span>
+                    </div>
+                </div>
+                <div class="clearfix twoInputs">
+                    <label for="dischargeDateTime">Discharge Date/Time</label>
+                    <div class="input-append">
+                        <input type="date" id="dischargeDate">
+                        <span class="add-on">d</span>
+                    </div>
+                    <div class="input-append">
+                        <input type="time" id="dischargeTime">
+                        <span class="add-on">c</span>
+                    </div>
+                </div>
+                <div class="clearfix oneHalf">
+                    <label for="notes">Notes</label>
+                    <div class="input">
+                        <textarea type="text" id="notes"></textarea>
+                    </div>
+                </div>
+            </fieldset>
+        </form>

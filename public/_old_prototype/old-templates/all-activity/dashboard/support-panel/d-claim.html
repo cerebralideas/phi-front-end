@@ -1,0 +1,58 @@
+<header class="supportPanelHeader">
+    <h2>Quickview: Claim</h2>
+    <nav class="tabControls supportPanel" id="supportNav" role="navigation">
+        <ul class="tabs">
+            <li class="active"><a href="/template-parts/all-activity/dashboard/support-panel/d-claim-details.html">Details</a></li>
+            <li><a href="/template-parts/all-activity/dashboard/support-panel/d-claim-cpt-codes.html">CPT Codes</a></li>
+        </ul>
+    </nav>
+</header>
+<div id="supportContent" class="tabContainer">
+		<form id="claim" class="form-stacked inline">
+            <fieldset class="tabless-summary">
+                <legend>Encounter Information</legend>
+                <ul class="summary">
+                    <li>Check In/Out: <span class="value">8/25/2011 1200 - 8/26/2011 0800</span></li>
+                    <li>Visit #: <span class="value">021</span></li>
+                    <li>Encounter #: <span class="value">100010</span></li>
+                    <li>Patient Type: <span class="value">Inpatient</span></li>
+                    <li>Primary Provider: <span class="value">Dr. Smith</span></li>
+                    <li>Source of Admission: <span class="value">N/A</span></li>
+                    <li>Status: <span class="value">Discharged/Home</span></li>
+                    <li>Bill #: <span class="value">100010.8</span></li>
+                    <li>Bill Date: <span class="value">9/19/2011</span></li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Bill Information</legend>
+                <div class="clearfix">
+                    <label for="typeOfBill">Type of Bill</label>
+                    <div class="input">
+                        <input type="text" id="typeOfBill" class="disabled" disabled="">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="revenueCode">Revenue Code</label>
+                    <div class="input">
+                        <input type="text" id="revenueCode" class="disabled" disabled="">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="revenueCodeDescription">Revenue Code Description</label>
+                    <div class="input">
+                        <input type="text" id="revenueCodeDescription" class="disabled" disabled="">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="statementCoveragePeriod">Statement Coverage Period</label>
+                    <div class="input">
+                        <input type="text" id="statementCoveragePerio" class="disabled" disabled="">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+</div>
+<div class="actions">
+    <button type="submit" class="btn cancel">See in Pt. File</button>
+    <button type="submit" class="btn success">View Item</button>
+</div>

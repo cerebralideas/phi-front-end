@@ -1,0 +1,184 @@
+{
+
+		"pt": {
+
+			"uniqueId": null,
+			"firstName": "Alec",
+			"lastName": "Allard",
+			"middleName": "Dwayne",
+            "medRecNum": "100000574",
+		    "suffix": "",
+		    "dateOfBirth": "09/06/1934",
+			"age": "78 years",
+			"sex": "M",
+			"aliases": null,
+			"maritalStatus": "Never Married",
+			"nationality": "Caucasian",
+			"streetAddress": "17 N. 46th St",
+			"apptNum": "12A",
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68030",
+			"homePhone": "675-555-3366",
+			"workPhone": null,
+			"cellPhone": "548-555-0092",
+			"email": null,
+			"occupation": "Retired",
+			"employer": null,
+			"employerPhone": null,
+			"comment": "Recently divorced and changed name from Khan to maiden name Patron",
+			"eContact": {
+
+				"uniqueId": null,
+				"firstName": "Ivan",
+				"lastName": "Bartelson",
+				"suffix": null,
+				"phoneNumber": "654-555-2221",
+				"address": "22 Princeton Lane, Apt 54C"
+			}
+		},
+
+		"pg": {
+
+			"p1": {
+
+				"uniqueId": null,
+				"firstName": null,
+				"lastName": null,
+				"suffix": null,
+				"relationship": null,
+				"streetAddress": null,
+				"apptNum": null,
+				"city":null,
+				"state": null,
+				"zip": null
+			},
+
+			"p2": {
+
+				"uniqueId": null,
+				"firstName": null,
+				"lastName": null,
+				"suffix": null,
+				"relationship": null,
+				"streetAddress": null,
+				"apptNum": null,
+				"city":null,
+				"state": null,
+				"zip": null,
+			}
+		},
+
+		"md": {
+
+	    	"primary": "Dr. Two",
+			"referring":null,
+			"rendering": null,
+			"serviceLocation": "General Medicine Clinic",
+			"providerSocSec": null
+		},
+
+		"gr": {
+
+			"relationship": "Self",
+			"uniqueId": null,
+			"firstName": "Alex",
+			"lastName": "Dwayne Allard",
+			"suffix": null,
+			"streetAddress": "17 N. 46th St",
+			"apptNum": "12A",
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68030"
+		},
+
+		"ins": {
+
+	    	"primary": {
+
+				"comp": "Medicare",
+				"relationship": "Self",
+				"groupNumber": null,
+				"policyNumber": "068-33-4943-B",
+				"planName": null,
+				"effectiveDate": "12/01/2011",
+				"effYearDeviation": "-1",
+				"expirationDate": "09/31/2013",
+				"expYearDeviation": "+1",
+
+				"active": "icon-checkmark",
+				"verified": "icon-checkmark",
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"secondary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"expirationDate": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"tertiary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"expirationDate": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			}
+		}
+	}

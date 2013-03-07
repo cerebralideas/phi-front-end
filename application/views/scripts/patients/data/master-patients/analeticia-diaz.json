@@ -1,0 +1,181 @@
+{
+
+		"pt": {
+
+			"uniqueId": null,
+			"firstName": "AnaLeticia",
+			"lastName": "Diaz",
+			"middleName": "Pasha",
+            "medRecNum": "100000577",
+		    "suffix": "",
+		    "dateOfBirth": "02/23/1988",
+			"age": "21 years",
+			"sex": "F",
+			"aliases": null,
+			"maritalStatus": "Married",
+			"nationality": "Hispanic",
+			"streetAddress": "4608 Twin Cedars",
+			"apptNum": 1,
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68028",
+			"homePhone": "248-555-3113",
+			"workPhone": null,
+			"cellPhone": "248-555-1244",
+			"email": "alpdiaz@gmail.com",
+			"occupation": "Stay-at-home mom",
+			"employer": null,
+			"employerPhone": null,
+			"comment": null,
+			"eContact": {
+
+				"uniqueId": null,
+				"firstName": "Angel",
+				"lastName": "Diaz",
+				"suffix": null,
+				"phoneNumber": "248-555-245",
+				"address": "4608 Twin Cedars"
+			}
+		},
+
+		"pg": {
+
+			"p1": {
+
+				"uniqueId": null,
+				"firstName": null,
+				"lastName": null,
+				"suffix": null,
+				"relationship": null,
+				"streetAddress": null,
+				"apptNum": null,
+				"city":null,
+				"state": null,
+				"zip": null
+			},
+
+			"p2": {
+
+				"uniqueId": null,
+				"firstName": null,
+				"lastName": null,
+				"suffix": null,
+				"relationship": null,
+				"streetAddress": null,
+				"apptNum": null,
+				"city":null,
+				"state": null,
+				"zip": null,
+			}
+		},
+
+		"md": {
+
+	    	"primary": "Dr. One",
+			"referring":null,
+			"rendering": null,
+			"serviceLocation": "General Medicine Clinic",
+			"providerSocSec": null
+		},
+
+		"gr": {
+
+			"relationship": "Self",
+			"uniqueId": null,
+			"firstName": "AnaLeticia",
+			"lastName": "Pasha Diaz",
+			"suffix": null,
+			"streetAddress": "4608 Twin Cedars",
+			"apptNum": 1,
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68028"
+		},
+
+		"ins": {
+
+	    	"primary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"expirationDate": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"secondary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"expirationDate": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"tertiary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"expirationDate": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			}
+		}
+	}

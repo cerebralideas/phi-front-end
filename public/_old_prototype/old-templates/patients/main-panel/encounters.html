@@ -1,0 +1,80 @@
+<form id="encounters" class="form-stacked inline">
+    <fieldset>
+        <legend>Available Visits</legend>
+        <table id="scheduled" class="well data-list">
+            <thead>
+            <tr>
+                <th>Date & Time</th>
+                <th>Length</th>
+                <th>In/Out</th>
+                <th>Location</th>
+                <th>Provider</th>
+                <th>New/Est.</th>
+                <th>Visit Type</th>
+                <th class="action">Encounter</th>
+            </tr>
+            </thead>
+            <tbody class="availListItems">
+            <tr>
+                <td><a class="itemUrl" href="/template-parts/patients/support-panel/Appointments/edit-appointment.html" />10/5/2011 1400</td>
+                <td>30 min</td>
+                <td>Inpatient</td>
+                <td>North Clinic</td>
+                <td>Dr. Smith</td>
+                <td>Est.</td>
+                <td>Physical Exam</td>
+                <td class="action"><a href="#" class="btn small edit">Create</a></td>
+            </tr>
+            <tr>
+                <td><a class="itemUrl" href="/template-parts/patients/support-panel/Appointments/edit-appointment.html"/>06/6/2012 0800</td>
+                <td>15 min</td>
+                <td>Inpatient</td>
+                <td>North Clinic</td>
+                <td>Dr. Smith</td>
+                <td>Est.</td>
+                <td>Physical Exam</td>
+                <td class="action"><a href="#" class="btn small edit">Create</a></td>
+            </tr>
+            <tr>
+                <td>8/25/2011 0800</td>
+                <td>3 days</td>
+                <td>Outpatient</td>
+                <td>Surgery Center</td>
+                <td>Dr. Smith</td>
+                <td>New</td>
+                <td>Surgery</td>
+                <td class="action"><a href="#" class="btn small edit">Create</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>Existing Encounters</legend>
+        <table id="existingEncounters" class="well data-list">
+            <thead>
+            <tr>
+                <th>Admit/Discharge</th>
+                <th>Length of Stay</th>
+                <th>Visit Type</th>
+                <th>Provider</th>
+                <th>SI No.</th>
+                <th>Visit #</th>
+                <th>Notes</th>
+                <th class="action">Sign & Submit</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>7/15 - 7/20, 2011</td>
+                <td>5 days</td>
+                <td>DKA</td>
+                <td>Dr. Doe</td>
+                <td>25667</td>
+                <td>001</td>
+                <td>Patient admitted for DKA and pneumonia</td>
+                <td class="action"><a class="icon btn success modalTrigger" data-controls-modal="signSubmitModal"><span class="icon">i</span></a></td>
+            </tr>
+            </tbody>
+        </table>
+    </fieldset>
+</form>

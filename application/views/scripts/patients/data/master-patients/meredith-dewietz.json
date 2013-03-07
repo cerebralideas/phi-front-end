@@ -1,0 +1,184 @@
+{
+
+		"pt": {
+
+			"uniqueId": null,
+			"firstName": "Meredith",
+			"lastName": "Dewietz",
+			"middleName": "Cooper",
+            "medRecNum": "100000579",
+		    "suffix": "",
+		    "dateOfBirth": "01/03/1931",
+			"age": "81 years",
+			"sex": "F",
+			"aliases": "Meredith Joann Cooper",
+			"maritalStatus": "Widowed",
+			"nationality": "Caucasian",
+			"streetAddress": "314 Oak Drive",
+			"apptNum": null,
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68030",
+			"homePhone": "675-555-3535",
+			"workPhone": null,
+			"cellPhone": "548-555-1477",
+			"email": null,
+			"occupation": "Retired",
+			"employer": null,
+			"employerPhone": null,
+			"comment": "Moving in with daughter, Jennie White. Daughter has Power of Attorney",
+			"eContact": {
+
+				"uniqueId": null,
+				"firstName": "Jennie",
+				"lastName": "White",
+				"suffix": null,
+				"phoneNumber": "548-555-1211",
+				"address": "10789 Louisiana Ave"
+			}
+		},
+
+		"pg": {
+
+			"p1": {
+
+				"uniqueId": null,
+				"firstName": null,
+				"lastName": null,
+				"suffix": null,
+				"relationship": null,
+				"streetAddress": null,
+				"apptNum": null,
+				"city":null,
+				"state": null,
+				"zip": null
+			},
+
+			"p2": {
+
+				"uniqueId": null,
+				"firstName": null,
+				"lastName": null,
+				"suffix": null,
+				"relationship": null,
+				"streetAddress": null,
+				"apptNum": null,
+				"city":null,
+				"state": null,
+				"zip": null,
+			}
+		},
+
+		"md": {
+
+	    	"primary": "Dr. One",
+			"referring":null,
+			"rendering": null,
+			"serviceLocation": "General Medicine Clinic",
+			"providerSocSec": null
+		},
+
+		"gr": {
+
+			"relationship": "Self",
+			"uniqueId": null,
+			"firstName": "Meredith",
+			"lastName": "Cooper Dewietz",
+			"suffix": null,
+			"streetAddress": "314 Oak Drive",
+			"apptNum": null,
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68030"
+		},
+
+		"ins": {
+
+	    	"primary": {
+
+				"comp": "HealthPartners",
+				"relationship": "Self",
+				"groupNumber": "983751",
+				"policyNumber": "980274916",
+				"planName": null,
+				"effectiveDate": "01/01/2011",
+				"effYearDeviation": "-1",
+				"expirationDate": "12/31/2013",
+				"expYearDeviation": "+1",
+
+				"active": "icon-checkmark",
+				"verified": "icon-checkmark",
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"secondary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"expirationDate": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"tertiary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"expirationDate": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			}
+		}
+	}

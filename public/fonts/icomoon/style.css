@@ -1,0 +1,228 @@
+@font-face {
+	font-family: 'icomoon';
+	src: url('fonts/icomoon.eot');
+	src: url('fonts/icomoon.eot') format('embedded-opentype'),
+		url('fonts/icomoon.svg#icomoon') format('svg'),
+		url('fonts/icomoon.woff') format('woff'),
+		url('fonts/icomoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	font-family: 'icomoon';
+	font-style: normal;
+	speak: none;
+}
+.icon-home:before {
+	content: "\2617";
+}
+.icon-folder:before {
+	content: "\2b13";
+}
+.icon-support:before {
+	content: "\2706";
+}
+.icon-tag:before {
+	content: "\275a";
+}
+.icon-play:before {
+	content: "\25b8";
+}
+.icon-drawer:before {
+	content: "\2b12";
+}
+.icon-search:before {
+	content: "\26b2";
+}
+.icon-dashboard:before {
+	content: "\2687";
+}
+.icon-equalizer:before {
+	content: "\2692";
+}
+.icon-key:before {
+	content: "\6c";
+}
+.icon-remove:before {
+	content: "\2326";
+}
+.icon-eye:before {
+	content: "\25c9";
+}
+.icon-flag:before {
+	content: "\61";
+}
+.icon-info:before {
+	content: "\69";
+}
+.icon-help:before {
+	content: "\2370";
+}
+.icon-file-pdf:before {
+	content: "\70";
+}
+.icon-grid-view:before {
+	content: "\268f";
+}
+.icon-cog:before {
+	content: "\2638";
+}
+.icon-paper:before {
+	content: "\25a2";
+}
+.icon-user:before {
+	content: "\265f";
+}
+.icon-users:before {
+	content: "\2659";
+}
+.icon-warning:before {
+	content: "\26a0";
+}
+.icon-loading:before {
+	content: "\293e";
+}
+.icon-clipboard:before {
+	content: "\2630";
+}
+.icon-printer:before {
+	content: "\50";
+}
+.icon-dots-three:before {
+	content: "\268b";
+}
+.icon-record:before {
+	content: "\25cf";
+}
+.icon-clock:before {
+	content: "\2686";
+}
+.icon-flag-2:before {
+	content: "\2691";
+}
+.icon-calendar:before {
+	content: "\2631";
+}
+.icon-install:before {
+	content: "\2913";
+}
+.icon-chat:before {
+	content: "\51";
+}
+.icon-comment:before {
+	content: "\71";
+}
+.icon-card:before {
+	content: "\25a4";
+}
+.icon-export:before {
+	content: "\2348";
+}
+.icon-email:before {
+	content: "\2709";
+}
+.icon-write:before {
+	content: "\270e";
+}
+.icon-reply:before {
+	content: "\27f2";
+}
+.icon-forward:before {
+	content: "\27f3";
+}
+.icon-none:before {
+	content: "\6e";
+}
+.icon-move-horizontal:before {
+	content: "\27f7";
+}
+.icon-fullscreen-exit-alt:before {
+	content: "\25fe";
+}
+.icon-fullscreen-alt:before {
+	content: "\25fc";
+}
+.icon-arrow:before {
+	content: "\2190";
+}
+.icon-arrow-2:before {
+	content: "\2193";
+}
+.icon-arrow-3:before {
+	content: "\2191";
+}
+.icon-arrow-4:before {
+	content: "\2192";
+}
+.icon-arrow-left-alt1:before {
+	content: "\2b05";
+}
+.icon-arrow-right-alt1:before {
+	content: "\27a1";
+}
+.icon-arrow-up-alt1:before {
+	content: "\2b06";
+}
+.icon-arrow-down-alt1:before {
+	content: "\2b07";
+}
+.icon-arrow-5:before {
+	content: "\2195";
+}
+.icon-checkmark:before {
+	content: "\2713";
+}
+.icon-check-alt:before {
+	content: "\2611";
+}
+.icon-x:before {
+	content: "\2715";
+}
+.icon-x-altx-alt:before {
+	content: "\2612";
+}
+.icon-denied:before {
+	content: "\2349";
+}
+.icon-plus:before {
+	content: "\2b";
+}
+.icon-plus-alt:before {
+	content: "\271a";
+}
+.icon-minus:before {
+	content: "\2d";
+}
+.icon-minus-alt:before {
+	content: "\25ac";
+}
+.icon-move-alt2:before {
+	content: "\271b";
+}
+.icon-document:before {
+	content: "\268c";
+}
+.icon-document-2:before {
+	content: "\2395";
+}
+.icon-documents:before {
+	content: "\274f";
+}
+.icon-landscape:before {
+	content: "\25ad";
+}
+.icon-fast-forward:before {
+	content: "\21a0";
+}
+.icon-fast-backward:before {
+	content: "\219e";
+}

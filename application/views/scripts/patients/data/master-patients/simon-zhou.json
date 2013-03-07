@@ -1,0 +1,181 @@
+{
+
+		"pt": {
+
+			"uniqueId": null,
+			"firstName": "Simon",
+			"lastName": "Zhou",
+			"middleName": "Binh",
+            "medRecNum": "100000575",
+		    "suffix": "",
+		    "dateOfBirth": "07/14/1986",
+			"age": "26 years",
+			"sex": "M",
+			"aliases": "Huy Binh Zhou",
+			"maritalStatus": "Never Married",
+			"nationality": "Vietnamese",
+			"streetAddress": "6752 West Sumac Street",
+			"apptNum": "B",
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68028",
+			"homePhone": null,
+			"workPhone": null,
+			"cellPhone": "548-555-8362",
+			"email": "sbzhou451@myemail.com",
+			"occupation": "Unknown",
+			"employer": null,
+			"employerPhone": null,
+			"comment": null,
+			"eContact": {
+
+				"uniqueId": null,
+				"firstName": "Binh",
+				"lastName": "Zhou",
+				"suffix": null,
+				"phoneNumber": "654-555-9752",
+				"address": "82798 Axelton Avenue"
+			}
+		},
+
+		"pg": {
+
+			"p1": {
+
+				"uniqueId": null,
+				"firstName": null,
+				"lastName": null,
+				"suffix": null,
+				"relationship": null,
+				"streetAddress": null,
+				"apptNum": null,
+				"city":null,
+				"state": null,
+				"zip": null
+			},
+
+			"p2": {
+
+				"uniqueId": null,
+				"firstName": null,
+				"lastName": null,
+				"suffix": null,
+				"relationship": null,
+				"streetAddress": null,
+				"apptNum": null,
+				"city":null,
+				"state": null,
+				"zip": null,
+			}
+		},
+
+		"md": {
+
+	    	"primary": "Dr. Two",
+			"referring":null,
+			"rendering": null,
+			"serviceLocation": "General Medicine Clinic",
+			"providerSocSec": null
+		},
+
+		"gr": {
+
+			"relationship": "Self",
+			"uniqueId": null,
+			"firstName": "Simon",
+			"lastName": "Binh Zhou",
+			"suffix": null,
+			"streetAddress": "6752 West Sumac Street",
+			"apptNum": "B",
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68028"
+		},
+
+		"ins": {
+
+	    	"primary": {
+
+				"comp": "No Insurance",
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"expirationDate": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"secondary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"expirationDate": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"tertiary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"expirationDate": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			}
+		}
+	}

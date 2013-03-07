@@ -1,0 +1,108 @@
+		<nav id="calendarActionsNav" class="pills actionControls" role="navigation">
+			<ul class="nav">
+				<li class="listTitle">Actions:</li>
+                <li class="active"><a href="/template-parts/calendar/support-panel/search-calendar.html">Search Calendar</a></li>
+                <li><a href="/template-parts/calendar/support-panel/new-appointment.html">New Appointment</a></li>
+                <li><a href="/template-parts/calendar/support-panel/new-admission.html">New Admission</a></li>
+			</ul>
+		</nav>
+		<section id="supportPanel" class="parent">
+			<div id="quickview">
+                <header class="supportPanelHeader">
+                    <h2>Search Calendar</h2>
+                    <nav class="tabControls supportPanel" id="supportNav" role="navigation">
+                        <ul class="tabs">
+                            <li class="active"><a href="/template-parts/calendar/support-panel/search-calendar-by-patient.html">by Patient</a></li>
+                            <li><a href="/template-parts/calendar/support-panel/search-calendar-by-date.html">by Date</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <div id="supportContent" class="tabContainer">
+                    <form id="search-calendar" class="form-stacked inline">
+                        <p class="formInstructions">Use any of the fields below to find your desired patient.</p>
+                        <fieldset>
+                            <div class="clearfix">
+                                <label for="lastName">Last Name</label>
+                                <div class="input-prepend">
+                                    <span class="add-on">F</span>
+                                    <input type="search" id="lastName">
+                                </div>
+                            </div>
+                            <div class="clearfix">
+                                <label for="firstName">First Name</label>
+                                <div class="input-prepend">
+                                    <span class="add-on">F</span>
+                                    <input type="search" id="firstName">
+                                </div>
+                            </div>
+                            <div class="clearfix">
+                                <label for="socialSecurityNumber">Social Security #</label>
+                                <div class="input-prepend">
+                                    <span class="add-on">F</span>
+                                    <input type="search" id="socialSecurityNumber">
+                                </div>
+                            </div>
+                            <div class="searchActions">
+                                <a class="btn success" href="/template-parts/patients/main-panel/search-results.html">Search</a>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+			</div>
+		</section><!-- Removes whitespace with inline-block
+	 --><section id="mainPanel" class="parent">
+			<header class="mainPanelHeader">
+				<h1 class="weekSelect"><a href="#"><span class="icon"><</span></a> Feb 9th - Feb 15th, 2011 <a href="#"><span class="icon">></span></a></h1>
+			</header>
+			<nav class="tabControls mainPanel calendarControls" id="dashboardNav">
+				<form class="form-stacked inline calendarFilters">
+					<div class="clearfix calendarResults">
+						<label>Providers:</label>
+						<select name="calendarResultsFor">
+							<option value="" selected="selected">All Providers</option>
+							<option value="calendarResultsFor1">R. Smith</option>
+							<option value="calendarResultsFor2">L. Lamar</option>
+						</select>
+					</div>
+					<div class="clearfix calendarView">
+						<label>Location:</label>
+						<select name="view">
+							<option value="" selected="selected">All Locations</option>
+							<option value="view1">North Clinic</option>
+							<option value="view2">Endoscopy</option>
+						</select>
+					</div>
+					<div class="clearfix calenderAdmitted">
+                        <div class="input">
+                            <label><span class="icon">C</span> = Checked-Out or Discharged</label>
+                        </div>
+                    </div>
+			   </form>
+			</nav>
+            <ul class="calendarHead">
+                <li></li><li>Mon 9th</li><li>Tue 10th</li><li>Wed 11th</li><li>Thu 12th</li><li>Fri 13th</li><li>Sat 14th</li><li>Sun 15th</li>
+            </ul>
+			<div id="calendarContent" class="content container_16">
+				<div class="alert-message error" data-alert="alert">
+					<a class="hideAlert" href="#">×</a>
+					<p><strong>Oh snap!</strong> It seems there was some kind of error.</p>
+				</div>
+
+			</div>
+		</section>
+        <div id="eventDetailTemplate" style="display:none;">
+            <dl>
+                <dt>Patient:</dt>
+                    <dd class="name"></dd>
+                <dt>Provider:</dt>
+                    <dd class="provider"></dd>
+                <dt>Type:</dt>
+                    <dd class="type"></dd>
+                <dt>Reason:</dt>
+                    <dd class="reason"></dd>
+            </dl>
+            <div class="popoverActions event">
+                <a class="btn cancel" href="#">Edit Appt.</a>
+                <a class="btn success checkIn" href="#">Check Pt. In</a>
+            </div>
+        </div>

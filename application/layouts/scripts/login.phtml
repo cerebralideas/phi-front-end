@@ -1,0 +1,72 @@
+<!doctype html>
+
+<!-- Use for application cache for better performance
+<html manifest="/config.appcache">
+-->
+
+<html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>educationalPAS</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta name="viewport" content="width=device-width">
+
+    <link href="/css/style.css" media="screen" type="text/css" rel="stylesheet" />
+    <link href="/css/print.css" media="print"  type="text/css" rel="stylesheet" />
+
+    <!-- Provides CSS prefix management (this could be loaded at anytime) -->
+    <script type="text/javascript" src="/js/plugins/prefixfree-1.0.6.js"></script>
+
+    <!-- Step 1A: Get AngularJS from Google CDN -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+
+    <!-- Step 2A: Now that AngularJS is loaded, declare the global PAS object and
+it's properties and methods (requires AngularJS above -->
+    <script type="text/javascript" src="/js/globals.js"></script>
+
+    <!-- Step 3A: Now, provides global services (requires global object above) -->
+    <script type="text/javascript" src="/js/services/serv-global.js"></script>
+
+    <!-- Step 4A: Provides global controllers (requires global services above -->
+    <script type="text/javascript" src="/js/controllers/ctrlr-global.js"></script>
+
+    <!-- Step 1B: Now, download Modernizr for asynchronous script management
+    I'd like to use this for all scripts, but it will be crazy hard -->
+    <script type="text/javascript" src="/js/libs/modernizr/modernizr-2.6.1.min.js"></script>
+
+    <!-- Step 2B: This provides Modernizr's loader which asynchronously loads all the remaining scripts
+    (it requires Moderizr to be loaded first) -->
+    <script type="text/javascript" src="/js/loader.js"></script>
+
+</head>
+
+<body class="parent" ng-app="PAS"> <!-- This activates the global app -->
+
+    <div ng-controller="PAS.ctrlr.global" class="pasLogin row-fluid center"> <!-- This activates the global form controller
+    -->
+
+       <!--[if lte IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+        <a class="span12" href="<?= $this->baseUrl(); ?>/">
+            <img id="logo" src="<?= $this->baseUrl(); ?>/img/neehr-perfect-logo.png" alt="logo"/>
+        </a>
+
+        <!-- start content wrapper -->
+        <?= $this->layout()->content ?>
+        <!-- end content wrapper -->
+
+
+        <footer class="span12">
+            <p>Neehr Perfect: Copyright <?= date("Y");?></p>
+        </footer>
+    </div>
+</body>

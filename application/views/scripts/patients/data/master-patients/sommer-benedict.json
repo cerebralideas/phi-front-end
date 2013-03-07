@@ -1,0 +1,181 @@
+{
+
+		"pt": {
+
+			"uniqueId": null,
+			"firstName": "Sommer",
+			"lastName": "Benedict",
+			"middleName": "June",
+            "medRecNum": "100000580",
+		    "suffix": "",
+		    "dateOfBirth": "07/27/1993",
+			"age": "19 years",
+			"sex": "F",
+			"aliases": null,
+			"maritalStatus": "Never Married",
+			"nationality": "Caucasian",
+			"streetAddress": "3330 Bloomington Ave S",
+			"apptNum": null,
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68028",
+			"homePhone": null,
+			"workPhone": null,
+			"cellPhone": "548-555-8908",
+			"email": "sommersday727@hotmail.com",
+			"occupation": "Student",
+			"employer": null,
+			"employerPhone": null,
+			"comment": "Sommer is moving out of her parents house into a new apartment.",
+			"eContact": {
+
+				"uniqueId": null,
+				"firstName": "Mary",
+				"lastName": "Benedict",
+				"suffix": null,
+				"phoneNumber": "548-555-7373",
+				"address": "3330 Bloomington Ave S"
+			}
+		},
+
+		"pg": {
+
+			"p1": {
+
+				"uniqueId": null,
+				"firstName": null,
+				"lastName": null,
+				"suffix": null,
+				"relationship": null,
+				"streetAddress": null,
+				"apptNum": null,
+				"city":null,
+				"state": null,
+				"zip": null
+			},
+
+			"p2": {
+
+				"uniqueId": null,
+				"firstName": null,
+				"lastName": null,
+				"suffix": null,
+				"relationship": null,
+				"streetAddress": null,
+				"apptNum": null,
+				"city":null,
+				"state": null,
+				"zip": null
+			}
+		},
+
+		"md": {
+
+	    	"primary": "Dr. Two",
+			"referring":null,
+			"rendering": null,
+			"serviceLocation": "General Medicine Clinic",
+			"providerSocSec": null
+		},
+
+		"gr": {
+
+			"relationship": "Mother",
+			"uniqueId": null,
+			"firstName": "Mary",
+			"lastName": "Jane Benedict",
+			"suffix": null,
+			"streetAddress": "3330 Bloomington Ave S",
+			"apptNum": null,
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68028"
+		},
+
+		"ins": {
+
+	    	"primary": {
+
+				"comp": "Aetna",
+				"relationship": "Child",
+				"groupNumber": "54373",
+				"policyNumber": "LXN2873123",
+				"planName": null,
+				"effectiveDate": "12/31/2010",
+				"expirationDate": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": "Mary Jane",
+					"lastName": "Benedict",
+					"sex": "F",
+					"dateOfBirth": "07/30/57",
+					"socialSecNumb": null,
+					"homePhone": "548-555-7373",
+					"streetAddress": "3330 Bloomington Ave S",
+					"apptNumber": null,
+					"city": "Anytown",
+					"state": "NP",
+					"zip": "68028"
+				}
+			},
+
+			"secondary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"expirationDate": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"tertiary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"expirationDate": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			}
+		}
+	}

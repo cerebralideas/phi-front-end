@@ -1,0 +1,22 @@
+[
+    {
+        "admId": 4,
+        "admitted": true,
+        "date": "07/18/2012",
+        "time": 1400,
+        "patient": "John Sheppard",
+        "length": "3 Days",
+        "serviceLocation": "Orthopedics",
+        "md": "Dr. Eight"
+    },
+    {
+        "admId": 5,
+        "admitted": true,
+        "date": "07/17/2012",
+        "time": 1200,
+        "patient": "John Doe",
+        "length": "5 Days",
+        "serviceLocation": "Orthopedics",
+        "md": "Dr. Two"
+    }
+]

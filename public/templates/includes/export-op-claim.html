@@ -1,0 +1,282 @@
+<div class="claim-form">
+	<h3>Outpatient Claim Form</h3>
+	<div class="row">
+		<div class="eightSeamlessColumns hasLabel" title="1. Type of Coverage" id="1">
+			{{ins.primary.typeOfCoverage}}
+		</div>
+		<div class="fourSeamlessColumns hasLabel" title="1a. Insured's ID Number" id="1a">
+			{{ins.primary.memberId}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="fourSeamlessColumns hasLabel" title="2. Patient's (PT) Name (Last, First Middle)" id="2">
+			{{pt.lastName}}, {{pt.firstName}} {{pt.middleName}}
+		</div>
+		<div class="twoSeamlessColumns hasLabel" title="3. PT Birthdate" id="3">
+			{{pt.dateOfBirth}}
+		</div>
+		<div class="twoSeamlessColumns hasLabel" title="3a. PT Sex" id="3a">
+			{{pt.sex}}
+		</div>
+		<div class="fourSeamlessColumns hasLabel" title="4. Insured's Name (Last, First Middle)" id="4">
+			{{ins.primary.notSelf.lastName}}, {{ins.primary.notSelf.firstName}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="fourSeamlessColumns hasLabel" title="5. PT Address (No. & Street)" id="5">
+			{{pt.streetAddress}}
+		</div>
+		<div class="fourSeamlessColumns hasLabel" title="6. Relationship to Insured" id="6">
+			{{ins.primary.relationship}}
+		</div>
+		<div class="fourSeamlessColumns hasLabel" title="7. Insured's Address (No. & Street)" id="7">
+			{{ins.primary.notSelf.streetAddress}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="threeSeamlessColumns hasLabel" title="5a. City" id="5a">
+			{{pt.city}}
+		</div>
+		<div class="oneSeamlessColumns hasLabel" title="5b. State" id="5b">
+			{{pt.state}}
+		</div>
+		<div class="fourSeamlessColumns hasLabel" title="8a. PT Marital Status" id="8a">
+			{{pt.maritalStatus}}
+		</div>
+		<div class="threeSeamlessColumns hasLabel" title="7a. City" id="7a">
+			{{ins.primary.notSelf.city}}
+		</div>
+		<div class="oneSeamlessColumns hasLabel" title="7b. State" id="7b">
+			{{ins.primary.notSelf.state}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="twoSeamlessColumns hasLabel" title="5c. Zip Code" id="5c">
+			{{pt.zip}}
+		</div>
+		<div class="twoSeamlessColumns hasLabel" title="5d. Phone #" id="5d">
+			{{pt.homePhone}}
+		</div>
+		<div class="fourSeamlessColumns hasLabel" title="8b. PT Employment Status" id="8b">
+			{{pt.employmentStatus}}
+		</div>
+		<div class="twoSeamlessColumns hasLabel" title="7c. Zip Code" id="7c">
+			{{ins.primary.notSelf.city}}
+		</div>
+		<div class="twoSeamlessColumns hasLabel" title="7d. Employee Phone #" id="7d">
+			{{ins.primary.notSelf.employerPhone}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="fourSeamlessColumns hasLabel" title="9. Other Insured's Name (Last, First Middle)" id="9">
+			{{ins.secondary.notSelf.lastName}}, {{ins.secondary.notSelf.firstName}}
+		</div>
+		<div class="fourSeamlessColumns hasLabel" title="10. Is PT Cond. Related to Employment?" id="10">
+			No
+		</div>
+		<div class="fourSeamlessColumns hasLabel" title="11. Insured's Policy Group or FECA #" id="11">
+			{{ins.primary.groupNumber}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="fourSeamlessColumns hasLabel" title="9a. Other Insured's Policy Group or FECA #" id="9a">
+			{{ins.secondary.groupNumber}}
+		</div>
+		<div class="twoSeamlessColumns hasLabel" title="10a. Auto Accident Related?" id="10a">
+			No
+		</div>
+		<div class="twoSeamlessColumns hasLabel" title="10b. If yes, what state?" id="10b">
+			{{apt.ptInfo.autoAccState}}
+		</div>
+		<div class="twoSeamlessColumns hasLabel" title="11a. Insured's Birthdate" id="11a">
+			{{ins.primary.notSelf.dateOfBirth}}
+		</div>
+		<div class="twoSeamlessColumns hasLabel" title="11b. Insured's Sex" id="11b">
+			{{ins.primary.notSelf.sex}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="twoSeamlessColumns hasLabel" title="9b. Other Insured's Birthdate" id="9b">
+			{{ins.secondary.notSelf.dateOfBirth}}
+		</div>
+		<div class="twoSeamlessColumns hasLabel" title="9c. Other Insured's Sex" id="9c">
+			{{ins.secondary.notSelf.sex}}
+		</div>
+		<div class="fourSeamlessColumns hasLabel" title="10c. Or, Other Accident Related?" id="10c">
+			No
+		</div>
+		<div class="fourSeamlessColumns hasLabel" title="11c. Employer or School Name" id="11c">
+			{{ins.primary.notSelf.employer}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="eightSeamlessColumns hasLabel" title="9d. Other Insured's Employer or School Name" id="9d">
+			{{ins.secondary.notSelf.employer}}
+		</div>
+		<div class="fourSeamlessColumns hasLabel" title="11d. Insurance Plan or Program Name" id="11d">
+			{{ins.primary.planName}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="eightSeamlessColumns hasLabel" title="9e. Other Insured's Plan or Program Name" id="9e">
+			{{ins.secondary.planName}}
+		</div>
+		<div class="fourSeamlessColumns hasLabel" title="11e. Is There Another Health Benefit Plan?" id="11e">
+			{{hasSecondary}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="eightSeamlessColumns hasLabel" title="12. Patient's or Authorized Person's Signature" id="12">
+			Signature on File
+		</div>
+		<div class="fourSeamlessColumns hasLabel" title="13. Insured's or Authorized Person's Signature" id="13">
+			Signature on File
+		</div>
+	</div>
+	<div class="row">
+		<div class="twelveSeamlessColumns collapse"></div>
+	</div>
+	<div class="row">
+		<div class="fourSeamlessColumns hasLabel" title="14. Date of Initial Sx, Acc or LMP" id="14">
+			{{opSb.opSbDetails.dateOfInitial}}
+		</div>
+		<div class="fourSeamlessColumns hasLabel notUsed" title="15. Not Used" id="15"></div>
+		<div class="fourSeamlessColumns hasLabel notUsed" title="16. Not Used" id="16"></div>
+	</div>
+	<div class="row">
+		<div class="fourSeamlessColumns hasLabel" title="17. Name of Referring Physician" id="17">
+			{{md.referring}}
+		</div>
+		<div class="fourSeamlessColumns hasLabel" title="17a. ID of Referring Physician" id="17a">
+			{{md.referringId}}
+		</div>
+		<div class="fourSeamlessColumns hasLabel notUsed" title="18. Not Used" id="18"></div>
+	</div>
+	<div class="row">
+		<div class="eightSeamlessColumns hasLabel notUsed" title="19. Not Used" id="19"></div>
+		<div class="fourSeamlessColumns hasLabel notUsed" title="20. Not Used" id="20"></div>
+	</div>
+	<div class="row">
+		<div class="fourSeamlessColumns hasLabel" title="21. _1_ Diagnostic Code" id="21">
+			{{opSb.diagCodes[0].name}}
+		</div>
+		<div class="fourSeamlessColumns hasLabel" title="21a. _2_ Diagnostic Code" id="21a">
+			{{opSb.diagCodes[1].name}}
+		</div>
+		<div class="twoSeamlessColumns hasLabel notUsed" title="22. Not Used" id="22"></div>
+		<div class="twoSeamlessColumns hasLabel notUsed" title="22a. Not Used" id="22a"></div>
+	</div>
+	<div class="row">
+		<div class="fourSeamlessColumns hasLabel" title="21b. _3_ Diagnostic Code" id="21b">
+			{{opSb.diagCodes[2].name}}
+		</div>
+		<div class="fourSeamlessColumns hasLabel" title="21c. _4_ Diagnostic Code" id="21c">
+			{{opSb.diagCodes[3].name}}
+		</div>
+		<div class="fourSeamlessColumns hasLabel" title="23. Prior Authorization #" id="23">
+            {{opSb.opSbDetails.priorAuthNumber}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="fourSeamlessColumns rowHeader hasLabel" title="24." id="">
+			Dates of Service
+			<div class="row innerRow">
+				<div class="sixSeamlessColumns hasLabel" title="From:"></div>
+				<div class="sixSeamlessColumns hasLabel" title="To:"></div>
+			</div>
+		</div>
+		<div class="twoSeamlessColumns rowHeader hasLabel" title="24A." id="">
+			Place of Service
+		</div>
+		<div class="oneSeamlessColumns rowHeader hasLabel" title="24B." id="">
+			CPT / HCPCS
+		</div>
+		<div class="oneSeamlessColumns rowHeader hasLabel" title="24C." id="">
+			Modifier
+		</div>
+		<div class="oneSeamlessColumns rowHeader hasLabel" title="24D." id="">
+			Diagnosis Codes
+		</div>
+		<div class="oneSeamlessColumns rowHeader hasLabel" title="24E." id="">
+			Charges
+		</div>
+		<div class="oneSeamlessColumns rowHeader hasLabel" title="24F." id="">
+			Units
+		</div>
+		<div class="oneSeamlessColumns rowHeader hasLabel" title="24G." id="">
+			Subtotal
+		</div>
+	</div>
+	<div class="row"  ng-repeat="proc in opCl.procCodes">
+		<div class="twoSeamlessColumns" title="" id="">
+			{{aptDetails.startDate}}
+		</div>
+		<div class="twoSeamlessColumns" title="" id="">
+			{{aptDetails.startDate}}
+		</div>
+		<div class="twoSeamlessColumns" title="" id="">
+			{{aptDetails.serviceLocation}}
+		</div>
+		<div class="oneSeamlessColumns" title="" id="">
+			{{proc.name}}
+		</div>
+		<div class="oneSeamlessColumns" title="" id="">
+			{{proc.modifier}}
+		</div>
+		<div class="oneSeamlessColumns" title="" id="">
+			{{proc.primaryIcd}} {{proc.secondaryIcd}} {{proc.tertiaryIcd}} {{proc.quaternaryIcd}}
+		</div>
+		<div class="oneSeamlessColumns" title="" id="">
+			{{proc.charge}}
+		</div>
+		<div class="oneSeamlessColumns" title="" id="">
+			{{proc.qty}}
+		</div>
+		<div class="oneSeamlessColumns" title="" id="">
+			{{proc.charge * proc.qty}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="fourSeamlessColumns hasLabel" title="25. Federal Tax ID #" id="25">
+			84698751136
+		</div>
+		<div class="fourSeamlessColumns hasLabel" title="26. PT Account #" id="26">
+			{{pt.medRecNum}}
+		</div>
+		<div class="oneSeamlessColumns hasLabel notUsed" title="27. Not Used" id="27"></div>
+		<div class="oneSeamlessColumns hasLabel" title="28. Total" id="28">
+			N/A
+		</div>
+		<div class="oneSeamlessColumns hasLabel" title="29. Paid" id="29">
+			N/A
+		</div>
+		<div class="oneSeamlessColumns hasLabel" title="30. Balance" id="30">
+			N/A
+		</div>
+	</div>
+	<div class="row">
+		<div class="twelveSeamlessColumns collapse"></div>
+	</div>
+	<div class="row">
+		<div class="threeSeamlessColumns hasLabel" title="31. Signature of Physician or Supplier with Credentials" id="31">
+
+		</div>
+		<div class="oneSeamlessColumns hasLabel" title="31a. Date" id="31a">
+
+		</div>
+		<div class="threeSeamlessColumns hasLabel" title="32. Name & Address of Faculty Where Services Rendered" id="32">
+			Richard Family Clinic<br/>
+			555 East Main.<br/>
+			New York, NY 15624
+		</div>
+		<div class="threeSeamlessColumns hasLabel" title="33. Physician's, Supplier's Billing Name, Address & Phone" id="33">
+
+		</div>
+		<div class="oneSeamlessColumns hasLabel" title="33a. PIN #" id="33a">
+
+		</div>
+		<div class="oneSeamlessColumns hasLabel" title="31b. GRP #" id="31b">
+
+		</div>
+	</div>
+</div>

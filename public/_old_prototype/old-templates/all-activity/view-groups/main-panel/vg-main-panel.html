@@ -1,0 +1,45 @@
+<header class="mainPanelHeader">
+	<h1>Student Groups</h1>
+</header>
+<nav class="tabControls mainPanel" id="dashboardNav">
+    <ul class="tabs">
+        <li class="active"><a rel="current-groups" href="/template-parts/all-activity/view-groups/main-panel/current-groups.html">Current Groups</a></li>
+        <li><a rel="archived-groups" href="/template-parts/all-activity/view-groups/main-panel/archived-groups.html">Archived Groups</a></li>
+    </ul>
+</nav>
+<div id="activityContent" class="content container_16">
+    <div class="alert-message error" data-alert="alert">
+        <a class="hideAlert" href="#">×</a>
+        <p><strong>Oh snap!</strong> It seems there was some kind of error.</p>
+    </div>
+    <section class="tabContainer">
+        <form id="currentGroups" class="form-stacked inline">
+            <fieldset>
+                <a href="#" class="newItem"><span class="icon big">G</span> New Group</a>
+                <legend>Bulk action</legend>
+                <a href="#" class="btn small bulk-action">Archive Selected Items</a>
+                <table class="well data-list">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>Group Name</th>
+                            <th>Students</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Super Awesomers</td>
+                            <td>Bobby Joes, Susan Smith, John Doe, Frederick Johanson</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>The Evals!!!!</td>
+                            <td>Missy Eliott, Super Awesome, Tony Clinise</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+    </section>
+</div>

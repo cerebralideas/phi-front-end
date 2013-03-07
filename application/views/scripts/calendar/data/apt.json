@@ -1,0 +1,45 @@
+{
+    "ptInfo": {
+
+        "uniqueId": 3,
+        "fullName": "John Sheppard",
+        "newPt": null,
+        "currentIns": null,
+        "aptNum": 1
+    },
+
+    "clinic": {
+
+        "serviceLocation": "General Medicine",
+        "md": "Dr. Eight"
+    },
+
+    "aptDetails": {
+
+        "startDate": "Tuesday",
+        "startTime": 1000,
+        "length": 30,
+        "aptType": null,
+        "reason": null,
+        "aptId": 1
+    },
+
+    "status": {
+
+        "ptStatus": null,
+        "checkInDate": null,
+        "checkInTime": null,
+        "checkOutDate": null,
+        "checkOutTime": null,
+        "statusNotes": "I am a note"
+    },
+
+    "notes": {
+
+        "authorization": null,
+        "reminderNotes": null,
+        "equipment": null,
+        "facility": null,
+        "staff": null
+    }
+}

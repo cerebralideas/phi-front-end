@@ -1,0 +1,51 @@
+<header class="mainPanelHeader">
+    <h1>
+        <span>Diagnosis code: 893495A</span>
+    </h1>
+</header>
+<nav class="tabControls mainPanel" id="dashboardNav">
+    <ul class="tabs">
+        <li><a>&nbsp;</a></li>
+    </ul>
+</nav>
+<div id="adminContent" class="content container_16">
+    <div class="alert-message error" data-alert="alert">
+        <a class="hideAlert" href="#">×</a>
+        <p><strong>Oh snap!</strong> It seems there was some kind of error.</p>
+    </div>
+    <section class="tabContainer">
+        <form id="diagnosisInfo" class="form-stacked inline">
+            <fieldset>
+            	<div class="clearfix activeCheckbox">
+                    <div class="input">
+                        <label for="inactive"><input type="checkbox" id="inactive" value="inactive">Inactive ICD</label>
+                    </div>
+                </div>
+                <legend>ICD Details</legend>
+                <p class="required">Mandatory Fields</p>
+                <div class="clearfix required">
+                    <label for="diagnosisCode">Diagnosis Code</label>
+                    <div class="input">
+                        <input type="text" id="diagnosisCode">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="diagnosisSpecialty">Specialty</label>
+                    <div class="input">
+                        <input type="text" id="diagnosisSpecialty">
+                    </div>
+                </div>
+                <div class="clearfix twoThirds required">
+                    <label for="diagnosisDescription">Description:</label>
+                    <div class="input">
+                        <textarea id="diagnosisDescription"></textarea>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </section>
+    <div class="actions">
+        <button type="submit" class="btn large cancel" data-controls-modal="confirmLossModal"><span class="icon cancel">*</span> <i>Cancel</i></button>
+        <button type="submit" class="btn large success"><span class="icon">S</span> Save</button>
+    </div>
+</div>

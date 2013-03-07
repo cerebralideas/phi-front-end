@@ -1,0 +1,34 @@
+
+<!-- AngularJS for templating and binding -->
+<script src="/js/controllers/calendar/calendar.js"></script>
+
+<div id="sectionContent" class="row-fluid tabContainer" role="main">
+
+    <script>
+
+        // Todo: Will be replaced with a php variable
+        // that will load the data from the DB.
+        PAS.data = <?php // echo $this->partial('/calendar/data/appointments.json'); ?>
+    </script>
+
+    <?= $this->calendarActionsNav(); ?>
+
+    <section id="supportPanel" class="span3 parent">
+
+        <?php echo $this->partial('/calendar/partials/search-sidebar.phtml'); ?>
+
+    </section><!-- Removes whitespace with inline-block
+ --><section id="mainPanel" class="span9 parent" ng-controller="">
+
+    <!-- This imports the header, patient file navigation and the alert elements -->
+    <?php echo $this->partial('/calendar/partials/calendar-header.phtml'); ?>
+
+    <section id="calendarContainer" class="tabContainer">
+
+        <!-- Import the form -->
+        <?php echo $this->partial('/calendar/templates/calendar.html'); ?>
+
+    </section>
+</div> <!-- #patientContent -->
+</section> <!-- #mainPanel -->
+</div><!-- end of #secti

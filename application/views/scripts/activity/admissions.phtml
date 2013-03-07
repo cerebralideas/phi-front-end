@@ -1,0 +1,96 @@
+<?php
+    $activityService = new Service_Activity();
+?>
+<script type="text/javascript">
+
+    // Load the data into the PAS.data object
+    DATA.item = {
+
+        "subData": {
+
+            "student": {},
+            "instructor": {},
+            "comments": [],
+            "history": []
+        },
+        "reg": {}
+
+    };
+    DATA.itemList = <?php echo $activityService->getListByType('adm'); ?>;
+</script>
+
+<!-- AngularJS services for patient file -->
+<script type="text/javascript" src="/js/services/serv-activity.js"></script>
+
+<!-- AngularJS controllers for patient file -->
+<script type="text/javascript" src="/js/controllers/ctrlr-activity.js"></script>
+
+<div id="sectionContent" class="row-fluid tabContainer" role="main" ng-controller="PAS.ctrlr.activity">
+
+    <!-- Imports from views > helpers ActActionsNav.php -->
+    <!-- This handles the actions nav and what nav-element has class "active" -->
+    <?= $this->actActionsNav(); ?>
+
+    <!-- Imports from views > helpers ActSidebar.php -->
+    <!-- This handles what sidebar to use -->
+    <?= $this->actSidebar(); ?>
+
+    <section id="mainPanel" class="<?= $this->mainPanelWidth; ?> parent">
+
+        <!-- Imports from views > helpers ActHeader.php -->
+        <!-- This imports the header, patient file navigation and the alert elements -->
+        <?= $this->actHeader(); ?>
+
+        <section class="tabContainer">
+
+            <div ng-view class="tab-content"></div>
+
+            <div ng-show="subFaculty" class="form-actions review-actions <?= $this->mainPanelWidth; ?>">
+
+                <div class="span9">
+
+                    <label for="comment">Comment (optional)</label>
+                    <textarea ng-model="subComment" id="comment"></textarea>
+
+                </div><div ng-show="faculty || admin" class="span3">
+
+                <button ng-click="reviewItem(subComment)" id="reviewButton" class="btn btn-success btn-large">
+                    <span class="icon-checkmark icon-large"></span> <i>Reviewed</i>
+                </button>
+
+            </div><div ng-show="student" class="span3">
+
+                <button ng-click="reviewItem(subComment)" id="commentButton" class="btn btn-success btn-large">
+                    <span class="icon-comment icon-large"></span> <i>Send Comment</i>
+                </button>
+            </div>
+            </div>
+
+        </section><!-- .tabContainer -->
+</div> <!-- .content: it was opened in ActHeader.php -->
+</section> <!-- #mainPanel -->
+</div><!-- end of #sectionContent -->
+
+<div id="index" ng-hide="true">
+    <form class="noSelection">
+        <div>
+            <p>Please select an item to <br>the left to view.</p>
+        </div>
+    </form>
+</div>
+
+<div id="report"  ng-hide="true">
+    <form id="subItem" name="patientInfo" class="report tab-pane active">
+
+        <!-- Import the registration form -->
+        <?php echo $this->partial('/partials/global/adm-form.phtml'); ?>
+
+    </form>
+
+    <form id="statusComments" class="tab-pane">
+
+        <!-- Import the registration form -->
+        <?php echo $this->partial('/activity/templates/status-comments.html'); ?>
+
+    </form>
+</div>

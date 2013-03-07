@@ -1,0 +1,132 @@
+<fieldset id="details" class="tab-pane active row-fluid fix-space no-border">
+
+    <legend ng-show="onReport">Details</legend>
+
+    <p class="required span12">Mandatory Fields</p>
+
+    <div class="ng-class:eventFormInputWidth;">
+        <label for="ptFullName">Patient</label>
+        <input type="text" id="ptFullName" value="{{pt.firstName}} {{pt.lastName}}" disabled="disabled">
+    </div>
+
+    <div class="ng-class:eventFormInputWidth; required">
+        <label for="postDate">Post Date</label>
+        <date-input
+                model="accItem.postDate" id="postDate" name="Post Date" disable="disable" required="required">
+        </date-input>
+    </div>
+
+    <div class="ng-class:eventFormInputWidth; required">
+        <label for="postType">Post Type</label>
+        <select ng-disabled="disable" id="postType" name="post type"
+                ng-model="accItem.postType" ng-options="type for type in postTypes" required>
+            <option value="" selected="selected">Select a Type</option>
+        </select>
+    </div>
+
+    <div ng-show="accItem.postType == 'Bill'">
+
+        <div class="ng-class:eventFormInputWidth; required">
+            <label for="billPayor">Choose a Claim to Post</label>
+            <div class="input">
+                <a class="btn btn-warning" data-toggle="modal" ng-click="getPtClaims(pt.uniqueId)"
+                        href="#claimSearchModal">
+                    Claim Search
+                </a>
+            </div>
+        </div>
+
+        <div class="ng-class:eventFormInputWidth; required">
+            <label for="claimNum">Claim Number</label>
+            <input type="text" id="claimNum" name="Claim Number" value="{{accItem.claimNum}}" disabled="disabled">
+        </div>
+
+        <div class="ng-class:eventFormInputWidth; required">
+            <label for="billPayor">Billed to</label>
+            <input type="text" id="billPayor" name="payor" value="{{accItem.payor}}" disabled="disabled">
+        </div>
+
+        <div class="ng-class:eventFormInputWidth; required">
+            <label for="totalProcedures">Total Procedures</label>
+            <input type="text" id="totalProcedures" name="Total Procedures" value="{{accItem.totalProcedures}}"
+                    disabled="disabled">
+        </div>
+
+        <div class="ng-class:eventFormInputWidth; required">
+            <label for="totalCharges">Total Charges</label>
+            <input type="text" id="totalCharges" name="Total Charges" value="{{accItem.debit}}"
+                   disabled="disabled">
+        </div>
+    </div>
+
+    <div ng-show="accItem.postType == 'Payment'">
+
+        <div class="ng-class:eventFormInputWidth; required">
+            <label for="paymentPayor">Payment from</label>
+            <select ng-disabled="disable" id="paymentPayor" name="Payment from" ng-model="accItem.payor"
+                    ng-options="payor for payor in payors">
+                <option value="" selected="selected">Select a Payor</option>
+            </select>
+        </div>
+
+        <div class="ng-class:eventFormInputWidth; required">
+            <label for="paymentAmount">Payment Amount</label>
+            <input type="number" id="paymentAmount" name="Payment Amount" ng-model="accItem.credit">
+        </div>
+
+        <div class="ng-class:eventFormInputWidth; required">
+            <label for="paymentType">Payment Type</label>
+            <select ng-disabled="disable" id="paymentType" name="Payment Type" ng-model="accItem.paymentType"
+                    ng-options="type for type in payMethods">
+                <option value="" selected="selected">Select a Type</option>
+            </select>
+        </div>
+
+        <div class="ng-class:eventFormInputWidth; required">
+            <label for="referenceNumber">Reference Number</label>
+            <input type="number" id="referenceNumber" name="Reference Number" ng-model="accItem.referenceNumber">
+        </div>
+    </div>
+
+    <div ng-show="accItem.postType == 'Adjustment'">
+
+        <div class="ng-class:eventFormInputWidth; required">
+            <label for="adjustmentAmount">Adjustment Amount</label>
+            <input type="number" id="adjustmentAmount" name="Refund Amount" ng-model="accItem.adjustment">
+        </div>
+
+        <div class="ng-class:eventFormInputWidth; required">
+            <label for="adjustmentType">Adjustment Type</label>
+            <select ng-disabled="disable" id="adjustmentType" name="Adjustment Type" ng-model="accItem.adjustmentType"
+                    ng-options="type for type in adjustmentTypes">
+                <option value="" selected="selected">Select a Type</option>
+            </select>
+        </div>
+    </div>
+
+    <div ng-show="accItem.postType == 'Refund'">
+
+        <div class="ng-class:eventFormInputWidth; required">
+            <label for="refundAmount">Refund Amount</label>
+            <input type="number" id="refundAmount" name="Refund Amount" ng-model="accItem.credit">
+        </div>
+
+        <div class="ng-class:eventFormInputWidth; required">
+            <label for="refundType">Refund Type</label>
+            <select ng-disabled="disable" id="refundType" name="Refund Type" ng-model="accItem.refundType"
+                    ng-options="type for type in paymentTypes">
+                <option value="" selected="selected">Select a Type</option>
+            </select>
+        </div>
+
+        <div class="ng-class:eventFormInputWidth; required">
+            <label for="refundRefNumber">Reference Number</label>
+            <input type="number" id="refundRefNumber" name="Reference Number" ng-model="accItem.referenceNumber">
+        </div>
+    </div>
+
+    <div class="ng-class:eventFormInputWidth; required">
+        <label for="postComment">Post Comment</label>
+        <textarea id="postComment" name="Post Comment" value="{{accItem.postComment}}"></textarea>
+    </div>
+</fieldset>

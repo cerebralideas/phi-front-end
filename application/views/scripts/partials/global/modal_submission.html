@@ -1,0 +1,47 @@
+<div class="modal-header">
+    <a data-dismiss="modal" class="close">&#x2612;</a>
+    <h2>Sign & Submit to Instructor</h2>
+</div>
+
+<div class="modal-body">
+
+    <form name="submitForm" class="row-fluid">
+
+        <div ng-show="submitForm.$invalid" class="alert fade in">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>Required fields:</strong> You have required fields that are still empty.
+        </div>
+
+        <div ng-show="badSig" class="alert alert-error fade in">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>Incorrect eSignature:</strong> Please retype your eSignature.
+        </div>
+
+        <div class="span6 required">
+            <label>Submit work to</label>
+            <select ng-model="sns.profId" ng-options="prof.id as prof.name for prof in profs" required>
+                <option value="">Select Professor</option>
+            </select>
+        </div>
+
+        <div class="span6 required">
+            <label for="signSubmitSig">Provide your eSignature</label>
+            <div class="input">
+                <input type="password" id="signSubmitSig" ng-model="sns.eSig" required>
+            </div>
+        </div>
+
+        <div class="span12">
+            <label for="signSubmitComments">Comments</label>
+            <div class="input">
+                <textarea id="signSubmitComments" ng-model="sns.comment"></textarea>
+            </div>
+        </div>
+
+        <p class="span12 formInstructions">
+            Clicking "Submit" below will send this item to your instructor. Any changes to
+            this item thereafter will not update the originally submitted item, but will submit an additional,
+            separate version.
+        </p>
+    </form>
+</div>

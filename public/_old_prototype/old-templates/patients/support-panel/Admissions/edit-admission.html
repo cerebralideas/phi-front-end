@@ -1,0 +1,166 @@
+<header class="supportPanelHeader">
+    <h2>Edit Admission</h2>
+    <nav class="tabControls supportPanel" id="supportNav" role="navigation">
+        <ul class="tabs">
+            <li class="active"><a href="/template-parts/patients/support-panel/admissions/edit-admission-details.html">Details</a></li>
+            <li><a href="/template-parts/patients/support-panel/admissions/edit-admission-status.html">Status</a></li>
+            <li><a href="/template-parts/patients/support-panel/admissions/edit-admission-notes.html">Notes</a></li>
+        </ul>
+    </nav>
+</header>
+<div id="supportContent" class="tabContainer">
+    <form id="details" class="form-stacked inline">
+        <fieldset>
+            <div class="clearfix required">
+                <label for="patient">Patient Name</label>
+                <div class="input">
+                    <input type="text" value="John Smith" id="patient" disabled="disabled">
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="input">
+                    <input type="checkbox" id="confidentialRecord" value="confidentialRecord"><label for="confidentialRecord">Confidential Record</label>
+                </div>
+            </div>
+            <div class="clearfix required">
+                <div class="input">
+                    <input type="checkbox" name="currentInsurance" value="currentInsurance" id="currentInsurance" /><label for="currentInsurance">Is Insurance Coverage Current?</label>
+                </div>
+            </div>
+            <div class="clearfix required">
+                <label for="typeOfAdmission">Type of Admission</label>
+                <select id="typeOfAdmission" name="typeOfAdmission">
+                    <option value="" selected="selected">Select Admission Type</option>
+                    <option value="inpatient-scheduled">Inpatient Scheduled</option>
+                    <option value="inpatient-direct">Inpatient Direct</option>
+                    <option value="inpatient-transfer">Inpatient Transfer</option>
+                    <option value="emergency">Emergency</option>
+                    <option value="outpatient-surgery-procedure">Outpatient Surgery/Procedure</option>
+                    <option value="observation">Observation</option>
+                    <option value="extended-stay">Extended Stay</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="clearfix twoInputs required">
+                <label for="scheduledDateTime">Scheduled Date/Time</label>
+                <div id="scheduledDateTime" class="input-append">
+                    <input type="date" id="scheduledDate">
+                    <span class="add-on">d</span>
+                </div>
+                <div class="input-append">
+                    <input type="time" id="scheduledTime">
+                    <span class="add-on">c</span>
+                </div>
+            </div>
+            <div class="clearfix required">
+                <label for="admittingProvider">Admitting Provider</label>
+                <select id="admittingProvider" name="provider">
+                    <option value="" selected="selected">Select Provider</option>
+                    <option value="loc1">Provider 1</option>
+                    <option value="loc2">Provider 2</option>
+                </select>
+            </div>
+            <div class="clearfix required">
+                <label for="attendingProvider">Attending Provider</label>
+                <select id="attendingProvider" name="provider">
+                    <option value="" selected="selected">Select Provider</option>
+                    <option value="loc1">Provider 1</option>
+                    <option value="loc2">Provider 2</option>
+                </select>
+            </div>
+            <div class="clearfix">
+                <label for="surgicalProceduralProvider">Surgical/Procedural Provider</label>
+                <select id="surgicalProceduralProvider" name="provider">
+                    <option value="" selected="selected">Select Provider</option>
+                    <option value="loc1">Provider 1</option>
+                    <option value="loc2">Provider 2</option>
+                </select>
+            </div>
+            <div class="clearfix">
+                <label for="primaryProvider">Primary Provider</label>
+                <select id="primaryProvider" name="provider">
+                    <option value="" selected="selected">Select Provider</option>
+                    <option value="loc1">Provider 1</option>
+                    <option value="loc2">Provider 2</option>
+                </select>
+            </div>
+            <div class="clearfix required">
+                <label for="diagnosis">Diagnosis</label>
+                <div class="input">
+                    <input type="text" id="diagnosis">
+                </div>
+            </div>
+            <div class="clearfix required">
+                <label for="treatingSpecialty">Treating Specialty</label>
+                <select id="treatingSpecialty" name="treatingSpecialty">
+                    <option value="" selected="selected">Select Specialty</option>
+                    <option value="birthing">Birthing</option>
+                    <option value="cardiac-surgery">Cardiac Surgery</option>
+                    <option value="cardiology">Cardiology</option>
+                    <option value="critical-care">Critical Care</option>
+                    <option value="gastroenterology">Gastroenterology</option>
+                    <option value="general-surgery">General Surgery</option>
+                    <option value="gerentology">Gerontology</option>
+                    <option value="hematology-oncology">Hematology/Oncology</option>
+                    <option value="hospice">Hospice</option>
+                    <option value="long-stay-dementia-care">Long Stay Dementia Care</option>
+                    <option value="long-stay-skilled-nursing">Long Stay Skilled Nursing</option>
+                    <option value="medical-observation">Medical Observation</option>
+                    <option value="neurology">Neurology</option>
+                    <option value="neuroloty-observation">Neurology Observation</option>
+                    <option value="neurosurgery">Neurosurgery</option>
+                    <option value="ob-gyn">OB/GYN</option>
+                    <option value="orthopedic">Orthopedics</option>
+                    <option value="pediatrics">Pediatrics</option>
+                    <option value="psychiatry">Psychiatry</option>
+                    <option value="pulmonary">Pulmonary</option>
+                    <option value="rehabilitation">Rehabilitation</option>
+                    <option value="substance-abuse">Substance Abuse</option>
+                    <option value="surgical-observation">Surgical Observation</option>
+                    <option value="telemetry">Telemetry</option>
+                    <option value="transplantion">Transplantion</option>
+                    <option value="urology">Urology</option>
+                </select>
+            </div>
+            <div class="clearfix required">
+                <label for="ward">Ward</label>
+                <select id="ward" name="ward">
+                    <option value="" selected="selected">Select Ward</option>
+                    <option value="cardiac">Cardiac</option>
+                    <option value="emergency">Emergency</option>
+                    <option value="icu">ICU</option>
+                    <option value="inpatient-unit">Inpatient Unit</option>
+                    <option value="long-term-care">Long Term Care</option>
+                    <option value="med-surg">Med-Surg</option>
+                    <option value="neuro">Neuro</option>
+                    <option value="nicu">NICU</option>
+                    <option value="ob-gyn">OB/GYN</option>
+                    <option value="oncology">Oncology</option>
+                    <option value="orthopedic">Orthopedic</option>
+                    <option value="palliative-care">Palliative Care</option>
+                    <option value="pediatric">Pediatric</option>
+                    <option value="portfolio-inpt">Portfolio INPT</option>
+                    <option value="psychiatric">Psychiatric</option>
+                    <option value="rehab">Rehab</option>
+                    <option value="restricted-inpt">Restricted INPT</option>
+                    <option value="sandbox-inpt">Sandbox INPT</option>
+                    <option value="zzzicu">ZZZICU</option>
+                </select>
+            </div>
+            <div class="clearfix twoInputs">
+                <label for="roomNumberBed">Room Number/Bed</label>
+                <div id="roomNumberBed" class="input">
+                    <input type="text" id="roomNumber">
+                </div>
+                <div class="input">
+                    <input type="text" id="roomBed">
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<div class="actions">
+    <a class="icon btn tooltip cancel" data-original-title="Cancel" data-controls-modal="confirmLossModal">*</a>
+    <a class="icon btn tooltip" data-original-title="Save">S</a>
+    <a class="icon btn success modalTrigger tooltip" data-original-title="Sign & Submit" data-controls-modal="signSubmitModal">i</a>
+</div>

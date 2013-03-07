@@ -1,0 +1,67 @@
+<header class="supportPanelHeader">
+    <h2>Quickview: Appointment</h2>
+    <nav class="tabControls supportPanel" id="supportNav" role="navigation">
+        <ul class="tabs">
+            <li class="active"><a href="/template-parts/all-activity/dashboard/support-panel/d-appointment-details.html">Details</a></li>
+            <li><a href="/template-parts/all-activity/dashboard/support-panel/d-appointment-status.html">Status</a></li>
+            <li><a href="/template-parts/all-activity/dashboard/support-panel/d-appointment-notes.html">Notes</a></li>
+        </ul>
+    </nav>
+</header>
+<div id="supportContent" class="tabContainer">
+		<form id="appointment" class="form-stacked inline">
+            <fieldset>
+                <div class="clearfix">
+                    <label for="patient">Patient</label>
+                    <div class="input-prepend">
+                        <span class="add-on">F</span>
+                        <input type="search" id="patient" class="disabled" disabled="">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="provider">Provider</label>
+                    <div class="input-prepend">
+                        <span class="add-on">F</span>
+                        <input type="search" id="provider" class="disabled" disabled="">
+                    </div>
+                </div>
+                <div class="clearfix twoInputs">
+                        <label for="startDateTime">Start Date/Time</label>
+                        <div class="input-append">
+                            <input type="date" id="startDate" class="disabled" disabled="">
+                            <span class="add-on">d</span>
+                        </div>
+                        <div class="input-append">
+                            <input type="time" id="startTime" class="disabled" disabled="">
+                            <span class="add-on">c</span>
+                        </div>
+                    </div>
+                <div class="clearfix">
+                    <label for="lengthOfAppointment">Length of Appointment</label>
+                    <select name="lengthOfAppointment" class="disabled" disabled>
+                        <option value="" selected="selected">Select Appointment Length</option>
+                        <option value="lengthOfAppointment1">Length of Appointment 1</option>
+                        <option value="lengthOfAppointment2">Length of Appointment 2</option>
+                    </select>
+                </div>
+                <div class="clearfix">
+                    <label for="typeOfAppointment">Type of Appointment</label>
+                    <select name="typeOfAppointment" class="disabled" disabled>
+                        <option value="" selected="selected">Select Appointment Type</option>
+                        <option value="typeOfAppointment1">Type of Appointment 1</option>
+                        <option value="typeOfAppointment2">Type of Appointment 2</option>
+                    </select>
+                </div>
+                <div class="clearfix oneHalf">
+                    <label for="reasonForVisit">Reason for Visit</label>
+                    <div class="input">
+                        <textarea type="text" id="reasonForVisit" class="disabled" disabled=""></textarea>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+</div>
+<div class="actions">
+    <button type="submit" class="btn cancel">See in Pt. File</button>
+    <button type="submit" class="btn success">View Item</button>
+</div>

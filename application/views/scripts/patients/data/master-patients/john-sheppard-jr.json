@@ -1,0 +1,187 @@
+{
+
+		"pt": {
+
+			"uniqueId": null,
+			"firstName": "John",
+			"lastName": "Sheppard",
+			"middleName": "James",
+            "medRecNum": "100000565",
+		    "suffix": "",
+		    "dateOfBirth": "02/24/1975",
+			"age": "37 years",
+			"sex": "M",
+			"aliases": "JJ or John Jr.",
+			"maritalStatus": "Married",
+			"nationality": "Caucasian",
+			"streetAddress": "2798 East Mulberry Road",
+			"apptNum": null,
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68029",
+			"homePhone": "248-555-9752",
+			"workPhone": "742-555-2400",
+			"cellPhone": "251-555-4774",
+			"email": "john.sheppard@myemail.com",
+			"occupation": "Computer Programmer",
+			"employer": "Self Employed",
+			"employerPhone": null,
+			"comment": "Johns father John James Sheppard Sr is also a patient.  Their files are frequently mixed.",
+			"eContact": {
+
+				"uniqueId": null,
+				"firstName": "Melissa",
+				"lastName": "Sheppard",
+				"suffix": null,
+				"phoneNumber": "248-555-9752",
+				"address": "2798 East Mulberry Road"
+			}
+		},
+
+		"pg": {
+
+			"p1": {
+
+				"uniqueId": null,
+				"firstName": null,
+				"lastName": null,
+				"suffix": null,
+				"relationship": null,
+				"streetAddress": null,
+				"apptNum": null,
+				"city":null,
+				"state": null,
+				"zip": null
+			},
+
+			"p2": {
+
+				"uniqueId": null,
+				"firstName": null,
+				"lastName": null,
+				"suffix": null,
+				"relationship": null,
+				"streetAddress": null,
+				"apptNum": null,
+				"city":null,
+				"state": null,
+				"zip": null,
+			}
+		},
+
+		"md": {
+
+	    	"primary": "Dr. One",
+			"referring":null,
+			"rendering": null,
+			"serviceLocation": "General Medicine Clinic",
+			"providerSocSec": null
+		},
+
+		"gr": {
+
+			"relationship": "Self",
+			"uniqueId": null,
+			"firstName": "John",
+			"lastName": "Sheppard",
+			"suffix": null,
+			"streetAddress": "2798 East Mulberry Road",
+			"apptNum": null,
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68028"
+		},
+
+		"ins": {
+
+	    	"primary": {
+
+				"comp": "TriWest Health Alliance",
+				"relationship": "Self",
+				"groupNumber": null,
+				"policyNumber": "0217-98-8712",
+				"planName": "TRICARE Standard",
+				"effectiveDate": "04/01/1996",
+				"effYearDeviation": "-18",
+				"expirationDate": null,
+				"expYearDeviation": null,
+				"active": "icon-checkmark",
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"secondary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"effYearDeviation": null,
+				"expirationDate": null,
+				"expYearDeviation": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"tertiary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"effYearDeviation": null,
+				"expirationDate": null,
+				"expYearDeviation": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			}
+		}
+	}

@@ -1,0 +1,44 @@
+{
+
+    "ptInfo": {
+        "uniqueId": 5,
+        "newPt": "established",
+        "currentIns": "true",
+        "aptNum": null
+    },
+
+    "clinic": {
+
+        "serviceLocation": "General Medicine",
+        "md": "Dr. Two"
+    },
+
+    "aptDetails": {
+
+        "startDate": "10/04/2012",
+        "startTime": "1300",
+        "length": "15",
+        "aptType": "Med Check",
+        "reason": "New bladder control med",
+        "aptId": null
+    },
+
+    "status": {
+
+        "ptStatus": null,
+        "checkInDate": null,
+        "checkInTime": null,
+        "checkOutDate": null,
+        "checkOutTime": null,
+        "statusNotes": null
+    },
+
+    "notes": {
+
+        "authorization": null,
+        "reminderNotes": null,
+        "equipment": null,
+        "facility": null,
+        "staff": null
+    }
+}

@@ -1,0 +1,301 @@
+<div id="scheduler" class="modal hide fade">
+
+    <div class="scheduler-header">
+
+        <a data-dismiss="modal" class="close">&#x2612;</a>
+        <h1>
+            <a class="icon" ng-click="oneDown('day')">&#x2b05;</a>
+                  {{curViewedDay}}
+            <a class="icon" ng-click="oneUp('day')">&#x27a1;</a>
+        </h1>
+    </div>
+
+    <div class="modal-body">
+        <p class="formInstructions">
+            Select a time slot below and click save. Note: you can always
+            change this later.
+        </p>
+        <div class="alert" ng-hide="selectedClinic">
+            <strong>Oops:</strong> Clinic was not selected. Please close this dialog box and select a location from the appointment form.
+        </div>
+        <table class="table-bordered" ng-show="selectedClinic">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th ng-repeat="md in clinicHours[0].mds">{{md.md}}</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tbody class="clinicHours" dg-click="selectTime(md)">
+            <!--0800-->
+            <tr>
+                <td>{{clinicHours[0].time}}</td>
+                <td ng-repeat="md in clinicHours[0].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--0815-->
+            <tr>
+                <td>{{clinicHours[1].time}}</td>
+                <td ng-repeat="md in clinicHours[1].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--0830-->
+            <tr>
+                <td>{{clinicHours[2].time}}</td>
+                <td ng-repeat="md in clinicHours[2].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--0845-->
+            <tr>
+                <td>{{clinicHours[3].time}}</td>
+                <td ng-repeat="md in clinicHours[3].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--0900-->
+            <tr>
+                <td>{{clinicHours[4].time}}</td>
+                <td ng-repeat="md in clinicHours[4].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--0915-->
+            <tr>
+                <td>{{clinicHours[5].time}}</td>
+                <td ng-repeat="md in clinicHours[5].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--0930-->
+            <tr>
+                <td>{{clinicHours[6].time}}</td>
+                <td ng-repeat="md in clinicHours[6].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--0945-->
+            <tr>
+                <td>{{clinicHours[7].time}}</td>
+                <td ng-repeat="md in clinicHours[7].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1000-->
+            <tr>
+                <td>{{clinicHours[8].time}}</td>
+                <td ng-repeat="md in clinicHours[8].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1015-->
+            <tr>
+                <td>{{clinicHours[9].time}}</td>
+                <td ng-repeat="md in clinicHours[9].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1030-->
+            <tr>
+                <td>{{clinicHours[10].time}}</td>
+                <td ng-repeat="md in clinicHours[10].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1045-->
+            <tr>
+                <td>{{clinicHours[11].time}}</td>
+                <td ng-repeat="md in clinicHours[11].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1100-->
+            <tr>
+                <td>{{clinicHours[12].time}}</td>
+                <td ng-repeat="md in clinicHours[12].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1115-->
+            <tr>
+                <td>{{clinicHours[13].time}}</td>
+                <td ng-repeat="md in clinicHours[13].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1130-->
+            <tr>
+                <td>{{clinicHours[14].time}}</td>
+                <td ng-repeat="md in clinicHours[14].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1145-->
+            <tr>
+                <td>{{clinicHours[15].time}}</td>
+                <td ng-repeat="md in clinicHours[15].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1200-->
+            <tr>
+                <td>{{clinicHours[16].time}}</td>
+                <td ng-repeat="md in clinicHours[16].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1215-->
+            <tr>
+                <td>{{clinicHours[17].time}}</td>
+                <td ng-repeat="md in clinicHours[16].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1230-->
+            <tr>
+                <td>{{clinicHours[18].time}}</td>
+                <td ng-repeat="md in clinicHours[17].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1245-->
+            <tr>
+                <td>{{clinicHours[19].time}}</td>
+                <td ng-repeat="md in clinicHours[18].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1300-->
+            <tr>
+                <td>{{clinicHours[20].time}}</td>
+                <td ng-repeat="md in clinicHours[19].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1315-->
+            <tr>
+                <td>{{clinicHours[21].time}}</td>
+                <td ng-repeat="md in clinicHours[20].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1330-->
+            <tr>
+                <td>{{clinicHours[22].time}}</td>
+                <td ng-repeat="md in clinicHours[21].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1345-->
+            <tr>
+                <td>{{clinicHours[23].time}}</td>
+                <td ng-repeat="md in clinicHours[22].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1400-->
+            <tr>
+                <td>{{clinicHours[24].time}}</td>
+                <td ng-repeat="md in clinicHours[23].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1415-->
+            <tr>
+                <td>{{clinicHours[25].time}}</td>
+                <td ng-repeat="md in clinicHours[24].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1430-->
+            <tr>
+                <td>{{clinicHours[26].time}}</td>
+                <td ng-repeat="md in clinicHours[25].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1445-->
+            <tr>
+                <td>{{clinicHours[27].time}}</td>
+                <td ng-repeat="md in clinicHours[26].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1500-->
+            <tr>
+                <td>{{clinicHours[28].time}}</td>
+                <td ng-repeat="md in clinicHours[27].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1515-->
+            <tr>
+                <td>{{clinicHours[29].time}}</td>
+                <td ng-repeat="md in clinicHours[28].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1530-->
+            <tr>
+                <td>{{clinicHours[30].time}}</td>
+                <td ng-repeat="md in clinicHours[29].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1545-->
+            <tr>
+                <td>{{clinicHours[31].time}}</td>
+                <td ng-repeat="md in clinicHours[30].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1600-->
+            <tr>
+                <td>{{clinicHours[32].time}}</td>
+                <td ng-repeat="md in clinicHours[31].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1615-->
+            <tr>
+                <td>{{clinicHours[33].time}}</td>
+                <td ng-repeat="md in clinicHours[32].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1630-->
+            <tr>
+                <td>{{clinicHours[34].time}}</td>
+                <td ng-repeat="md in clinicHours[33].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            <!--1645-->
+            <tr>
+                <td>{{clinicHours[35].time}}</td>
+                <td ng-repeat="md in clinicHours[34].mds" class="blocked-{{md.blocked}} available-{{!(md.apt)}}">
+                    {{md.apt.patient || "Select Time Slot"}}
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="modal-footer">
+
+        <div class="scheduler-output">
+            <h3 ng-hide="desiredTime" class="icon-warning">
+                Please select a time slot above.
+            </h3>
+            <h3 ng-show="desiredTime" class="icon-check-alt">
+                You've selected: {{desiredTime}} with {{desiredMd}} on {{startDate}}
+            </h3>
+        </div>
+
+        <a class="btn btn-cancel" data-dismiss="modal" href="">Cancel</a>
+        <a class="btn btn-success" data-dismiss="modal"
+                ng-click="$emit('useTimeSlot', startDate, desiredTime, desiredMd)">Save</a>
+    </div>
+
+</div>

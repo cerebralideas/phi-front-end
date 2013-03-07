@@ -1,0 +1,53 @@
+{
+    "ptInfo": {
+
+        "uniqueId": 3,
+        "fullName": "John Sheppard",
+        "currentIns": null,
+        "admNum": null
+    },
+
+    "admDetails": {
+
+        "admType": "Surgery",
+        "date": "Thursday",
+        "time": "0700",
+        "length": "6 hours",
+        "admId": null
+    },
+
+    "md": {
+
+        "admitting": null,
+        "attending": null,
+        "surgical": "dr_eight",
+        "primary": null
+    },
+
+    "location": {
+
+        "specialty": "Cardiology",
+        "ward": null,
+        "roomNumber": 141,
+        "bedNumber": 12
+    },
+
+    "status": {
+
+        "ptStatus": null,
+        "admDate": null,
+        "admTime": null,
+        "dcDate": null,
+        "dcTime": null,
+        "dcNotes": "edit admission notes"
+    },
+
+    "notes": {
+
+        "authorization": "admission authorization note test",
+        "reminderNotes": null,
+        "equipment": null,
+        "facility": "fac note test",
+        "staff": null
+    }
+}

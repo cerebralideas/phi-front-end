@@ -1,0 +1,69 @@
+<div id="claimSearchModal" class="modal hide fade">
+
+    <div class="modal-header">
+        <a data-dismiss="modal" class="close">&#x2612;</a>
+        <h2>Claim Search</h2>
+    </div>
+
+    <div class="modal-body">
+
+        <form class="row-fluid" name="claimSearchModal">
+            <p class="formInstructions span12">
+
+                Find a claim with the search field below.
+            </p>
+
+            <div class="span12">
+
+                <label for="clSearch">Search</label>
+
+                <div class="input-append">
+
+                    <input class="span6 min-padding" id="clSearch" type="text" name="Claim Search"
+                            ng-model="sbSearchTerms"><button id="clSearchButton" ng-click='clSearch(clSearchTerms)'
+                        class="btn btn-small btn-success">New Search</button>
+                </div>
+            </div>
+
+            <fieldset class="row-fluid add-padding no-border">
+
+                <table id="scheduled" class="well data-list">
+                    <thead>
+                    <tr>
+                        <th>Date &amp; Time</th>
+                        <th>Claim #</th>
+                        <th>Payor</th>
+                        <th>Location</th>
+                        <th>Provider</th>
+                        <th>Total Charges</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr ng-repeat="opCl in claims">
+
+                        <td>
+                            <a ng-click="selectCl()">{{opCl.date}} {{opCl.time}}</a>
+                        </td>
+                        <td>
+                            <a ng-click="selectCl()">{{opCl.claimNum}}</a>
+                        </td>
+                        <td>
+                            <a ng-click="selectCl()">{{opCl.payor}}</a>
+                        </td>
+                        <td>
+                            <a ng-click="selectCl()">{{opCl.serviceLocation}}</a>
+                        </td>
+                        <td>
+                            <a ng-click="selectCl()">{{opCl.md}}</a>
+                        </td>
+                        <td>
+                            <a ng-click="selectCl()">{{opCl.totalCharges}}</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+</div>

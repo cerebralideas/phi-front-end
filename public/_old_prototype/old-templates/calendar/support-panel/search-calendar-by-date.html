@@ -1,0 +1,48 @@
+					<form id="search-calendar" class="form-stacked inline">
+                        <p class="formInstructions">To search only one day, just use the start date. To set a range, choose a start <strong>and</strong> end date.</p>
+                        <p class="required">Mandatory Field.</p>
+                            <fieldset>
+                                <div class="clearfix required">
+				                    <label for="startDate">Start Date</label>
+				                    <div class="input-append">
+				                        <input type="date" id="startDate">
+				                        <span class="add-on">d</span>
+				                    </div>
+				                </div>
+				                <div class="clearfix">
+				                    <label for="endDate">End Date</label>
+				                    <div class="input-append">
+				                        <input type="date" id="endDate">
+				                        <span class="add-on">d</span>
+				                    </div>
+				                </div>
+                                <div class="searchActions">
+                                    <a class="btn success" href="/template-parts/patients/main-panel/search-results.html">Search</a>
+                                </div>
+				                <label>Results</label>
+				                <table class="well data-list">
+						            <thead>
+						                <tr>
+						                    <th>Date/Time</th>
+						                    <th>Patient Name</th>
+						                    <th>Provider Name</th>
+						                    <th>Visit #</th>
+						                </tr>
+						            </thead>
+						            <tbody class="availListItems">
+						                <tr>
+						                    <td>8/25 1200</td>
+						                    <td>John Doe</td>
+						                    <td>Smith</td>
+						                    <td>021</td>
+						                </tr>
+						                <tr>
+						                    <td>8/25 0800</td>
+						                    <td>Bobby Smoot</td>
+						                    <td>Mills</td>
+						                    <td>023</td>
+						                </tr>
+						            </tbody>
+						        </table>
+                            </fieldset>
+                        </form>

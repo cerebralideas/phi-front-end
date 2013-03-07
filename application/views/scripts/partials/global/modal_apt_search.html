@@ -1,0 +1,64 @@
+<div id="aptSearchModal" class="modal hide fade">
+
+    <div class="modal-header">
+        <a data-dismiss="modal" class="close">&#x2612;</a>
+        <h2>Appointment Search</h2>
+    </div>
+
+    <div class="modal-body">
+
+        <form class="row-fluid">
+            <p class="formInstructions span12">
+
+                Find an appointment with the search field below.
+            </p>
+
+            <div class="span12">
+
+                <label for="aptSearch">Search</label>
+
+                <div class="input-append">
+
+                    <input class="span6 min-padding" id="aptSearch" type="text" name="aptSearch" ng-model="aptSearchTerms"><button id="aptSearchButton" ng-click='aptSearch(aptSearchTerms)' class="btn btn-small btn-success">New Search</button>
+                </div>
+            </div>
+
+            <fieldset class="row-fluid add-padding no-border">
+
+                <table id="patientSearchResults">
+
+                    <thead>
+                        <tr>
+                            <th>Date &amp; Time</th>
+                            <th>Length</th>
+                            <th>Location</th>
+                            <th>Provider</th>
+                            <th>Apt. Type</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="availItem" ng-repeat="apt in apts | filter:aptQuery | orderBy:'date':true">
+
+                            <td>
+                                <a ng-click="selectApt()">{{apt.date}} {{apt.time}}</a>
+                            </td>
+                            <td>
+                                <a ng-click="selectApt()">{{apt.length}}</a>
+                            </td>
+                            <td>
+                                <a ng-click="selectApt()">{{apt.serviceLocation}}</a>
+                            </td>
+                            <td>
+                                <a ng-click="selectApt()">{{apt.md}}</a>
+                            </td>
+                            <td>
+                                <a ng-click="selectApt()">{{apt.aptType}}</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+</div>

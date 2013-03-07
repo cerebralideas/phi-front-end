@@ -1,0 +1,52 @@
+<div id="modSearchModal" class="modal hide fade">
+
+    <div class="modal-header">
+        <a data-dismiss="modal" class="close">&#x2612;</a>
+        <h2>Modifier Code Search</h2>
+    </div>
+
+    <div class="modal-body">
+
+        <form class="row-fluid">
+            <p class="formInstructions span12">
+
+                Find a modifier code with the field below.
+            </p>
+
+            <div class="span12">
+
+                <label for="searchMod">Search</label>
+
+                <div class="input-append">
+
+                    <input class="span6 min-padding" id="searchMod" type="text" name="modFilter"
+                            ng-model="modFilter">
+                </div>
+            </div>
+
+            <fieldset class="row-fluid add-padding no-border">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr ng-repeat="mod in modList | filter:modFilter">
+
+                            <td>
+                                <a ng-click="selectCode('mod')">{{mod.code}}</a>
+                            </td>
+                            <td>
+                                <a ng-click="selectCode('mod')">{{mod.description}}</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+</div>

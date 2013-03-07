@@ -1,0 +1,195 @@
+<fieldset class="row-fluid">
+
+    <legend class="span12"><strong>Step 1 of 4:</strong> Appointment for Superbill</legend>
+
+    <div class="span12">
+
+        <p class="formInstructions">
+            To begin, choose an existing appointment for this superbill or create a new appointment.
+        </p>
+
+        <div class="span well">
+            <a class="btn btn-warning" data-toggle="modal" ng-click="getNonSbApts(pt.uniqueId)" href="#aptSearchModal">
+                Use Existing
+            </a>
+
+            <i><strong>OR</strong></i>
+
+            <a href="{{urlNewApt}}" class="btn btn-warning">
+                Use New
+            </a>
+        </div>
+
+        <h3>Review Appointment Details</h3>
+
+        <ul class="summary well">
+            <li>Date: <span class="value">{{aptDetails.startDate}}</span></li>
+            <li>Time: <span class="value">{{aptDetails.startTime}}</span></li>
+            <li>Length: <span class="value">{{aptDetails.length}}</span></li>
+            <li>Visit #: <span class="value">{{ptInfo.aptNum}}</span></li>
+            <li>Visit Type: <span class="value">{{aptDetails.aptType}}</span></li>
+            <li>Location: <span class="value">{{aptDetails.serviceLocation}}</span></li>
+            <li>Rendering Provider: <span class="value">{{md.clinic}}</span></li>
+            <li>Referring Provider: <span class="value">{{md.referring}} - {{md.referringId}}</span></li>
+            <li>Visit Related to: <span class="value">{{ptInfo.condRelatedTo}}</span></li>
+        </ul>
+    </div>
+</fieldset>
+
+<fieldset ng-show="aptChosen" class="row-fluid fix-space">
+
+    <legend class="span12"><strong>Step 2 of 4:</strong> Additional Visit Details</legend>
+
+    <p class="required span12">Mandatory Fields</p>
+
+    <div class="span4">
+        <label for="dateOfInitial">Date of Initial Sx, Acc or LMP <a class="icon tooltip-trigger" rel="tooltip" data-original-title="Initial illness/symptom, injury/accident or pregancy/last menstral period.">&#x2370;</a></label>
+        <div class="input">
+            <date-input
+                    id="dateOfInitial" model="opSb.opSbDetails.dateOfInitial" name="Date of Initial"
+                    disable="disable">
+            </date-input>
+        </div>
+    </div>
+
+    <div class="span4">
+        <label for="memo">Memo</label>
+        <div class="input">
+            <input ng-disabled="disable" type="text" id="memo" ng-model="opSb.opSbDetails.memo">
+        </div>
+    </div>
+
+    <div class="span4">
+        <label for="priorAuthNumber">Prior Authorization Number</label>
+        <div class="input">
+            <input ng-disabled="disable" type="text" id="priorAuthNumber" ng-model="opSb.opSbDetails.priorAuthNumber">
+        </div>
+    </div>
+
+    <div class="span6">
+        <label for="authNotes">Authorization Notes</label>
+        <div class="input">
+            <textarea ng-disabled="disable" type="text" ng-init="passAuth()"
+                    id="authNotes" ng-model="opSb.opSbDetails.authNotes"></textarea>
+        </div>
+    </div>
+
+    <div class="span6">
+        <label for="medicalNotes">Medical Notes</label>
+        <div class="input">
+            <textarea ng-disabled="disable" type="text" id="medicalNotes" ng-model="opSb.opSbDetails.medNotes"></textarea>
+        </div>
+    </div>
+
+    <div class="span6">
+        <label for="businessNotes">Business Notes</label>
+        <div class="input">
+            <textarea ng-disabled="disable" type="text" id="businessNotes" ng-model="opSb.opSbDetails.busNotes"></textarea>
+        </div>
+    </div>
+</fieldset>
+
+<fieldset ng-show="aptChosen" class="row-fluid">
+
+    <legend class="span12"><strong>Step 3 of 4:</strong> Diagnosis Codes</legend>
+
+    <p class="span12">Search for your diagnostic codes using the field below type code or description.</p>
+
+    <div class="span6">
+        <label for="diagnosisCode">Diagnosis Codes or Description</label>
+        <div class="input-prepend">
+            <span class="icon-search add-on">
+            </span><div id="diagnosisCode" class="uneditable-input" data-toggle="modal" href="#diagSearchModal">
+                Click here for diagnosis code search.
+            </div>
+        </div>
+    </div>
+
+    <div class="span12">
+
+        <label for="diagnosisCodes">Diagnosis Codes for Superbill</label>
+        <table id="diagnosisCodes" class="well data-list">
+            <thead>
+            <tr>
+                <th>Order <a ng-click="reorderCodes(opSb.diagCodes)" class="icon-large">⇵</a></th>
+                <th>ICD</th>
+                <th>Description</th>
+                <th>Remove</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="diag in opSb.diagCodes">
+                <td>
+                    <input ng-disabled="disable" ng-init="diag.order=$index" ng-model="diag.order" type="text"
+                            class="order input-mini">
+                </td>
+                <td>{{diag.name}}</td>
+                <td>{{diag.description}}</td>
+                <td class="center">
+                    <a ng-click="removeCode('diag', $index)" class="icon icon-large">&#x2715;</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</fieldset>
+
+<fieldset ng-show="aptChosen" class="row-fluid">
+
+    <legend class="span12"><strong>Step 4 of 4:</strong> Procedure Codes</legend>
+
+    <p class="span12">Search for your procedural codes using the field below type code or description.</p>
+
+    <div class="span6">
+
+        <label for="procedureCode">Procedure Codes or Description</label>
+
+        <div class="input-prepend">
+            <span class="icon-search add-on">
+            </span><div id="procedureCode" class="uneditable-input" data-toggle="modal" href="#procSearchModal">
+                Click here for procedure code search.
+            </div>
+        </div>
+    </div>
+
+    <div class="span12">
+
+        <label for="procedureCodes">Procedure Codes for Superbill</label>
+
+        <table id="procedureCodes" class="well data-list">
+            <thead>
+                <tr>
+                    <th>CPT</th>
+                    <th>Procedure</th>
+                    <th>Modifier</th>
+                    <th>Charge</th>
+                    <th>Qty</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr ng-repeat="proc in opSb.procCodes">
+                    <td>{{proc.name}}</td>
+                    <td>{{proc.description}}</td>
+                    <td class="input">
+                        <div id="modifier" class="uneditable-input ng-binding icon-search input-small"
+                                ng-click="initAndLinkMod($index)"
+                                data-toggle="modal" href="#modSearchModal">{{proc.modifier}}</div>
+                    </td>
+                    <td class="input">
+                        <price-input ng-disabled="disable" model="proc.charge" class="charge input-mini"
+                                 required></price-input>
+                    </td>
+                    <td class="input">
+                        <qty-input ng-disabled="disable" model="proc.qty" class="qty input-mini"
+                                required></qty-input>
+                    </td>
+                    <td class="center">
+                        <a ng-click="removeCode('proc', $index)" class="icon icon-large">&#x2715;</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</fieldset>

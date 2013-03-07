@@ -1,0 +1,99 @@
+<header class="mainPanelHeader">
+    <h1>
+        <span>North Clinic</span>
+        <span>#8962345</span>
+        <span>Service</span>
+    </h1>
+</header>
+<nav class="tabControls mainPanel" id="dashboardNav">
+    <ul class="tabs">
+        <li><a>&nbsp;</a></li>
+    </ul>
+</nav>
+<div id="adminContent" class="content container_16">
+    <div class="alert-message error" data-alert="alert">
+        <a class="hideAlert" href="#">×</a>
+        <p><strong>Oh snap!</strong> It seems there was some kind of error.</p>
+    </div>
+    <section class="tabContainer">
+        <form id="patientInfo" class="form-stacked inline">
+            <fieldset>
+            	<div class="clearfix activeCheckbox">
+                    <div class="input">
+                        <label for="inactive"><input type="checkbox" id="inactive" value="inactive">Inactive Charge Code</label>
+                    </div>
+                </div>
+                <legend>Charge Code Details</legend>
+                <p class="required">Mandatory Fields</p>
+                <div class="clearfix required">
+                    <label for="chargeCode">Charge Code</label>
+                    <div class="input">
+                        <input type="text" id="chargeCode">
+                    </div>
+                </div>
+                <div class="clearfix required select-radio">
+                    <label>CPT Code</label>
+                    <select name="CPTCode">
+                        <option value="" selected="selected">Select a CPT Code</option>
+                        <option value="optionA">Option A</option>
+                        <option value="optionB">Option B</option>
+                    </select>
+                </div>
+                <div class="clearfix required">
+                    <label for="price">Price ($)</label>
+                    <div class="input">
+                        <input type="text" id="price">
+                    </div>
+                </div>
+                <div class="clearfix select-radio">
+                    <label>Category</label>
+                    <select name="category">
+                        <option value="" selected="selected">Select a Category</option>
+                        <option value="optionA">Option A</option>
+                        <option value="optionB">Option B</option>
+                    </select>
+                </div>
+                <div class="clearfix select-radio">
+                    <label>Modifier</label>
+                    <select name="modifier">
+                        <option value="" selected="selected">Select a Modifier</option>
+                        <option value="optionA">Option A</option>
+                        <option value="optionB">Option B</option>
+                    </select>
+                </div>
+                <div class="clearfix select-radio">
+                    <label>Default POS</label>
+                    <select name="defaultPOS">
+                        <option value="" selected="selected">Select a Default POS</option>
+                        <option value="optionA">Option A</option>
+                        <option value="optionB">Option B</option>
+                    </select>
+                </div>
+                <div class="clearfix twoThirds">
+                    <label for="description">Description</label>
+                    <div class="input">
+                        <input type="text" id="description">
+                    </div>
+                </div>
+                <div class="clearfix select-radio">
+                    <label>Default TOS</label>
+                    <select name="defaultTOS">
+                        <option value="" selected="selected">Select a Default TOS</option>
+                        <option value="optionA">Option A</option>
+                        <option value="optionB">Option B</option>
+                    </select>
+                </div>
+                <div class="clearfix twoThirds">
+                    <label for="comments">Comments</label>
+                    <div class="input">
+                        <input type="text" id="comments">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </section>
+    <div class="actions">
+        <button type="submit" class="btn large cancel" data-controls-modal="confirmLossModal"><span class="icon cancel">*</span> <i>Cancel</i></button>
+        <button type="submit" class="btn large success"><span class="icon">S</span> Save</button>
+    </div>
+</div>

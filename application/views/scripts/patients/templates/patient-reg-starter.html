@@ -1,0 +1,43 @@
+<div class="span12">
+
+    <p class="formInstructions">Fill out the fields below to start a patient file.</p>
+
+    <p class="required">All Fields are Required</p>
+</div>
+
+<div class="span12 required">
+
+    <label for="newFirstName">First Name</label>
+
+    <div class="input">
+        <input type="text" id="newFirstName" name="newFirstName" ng-model="pt.firstName" required>
+    </div>
+</div>
+
+<div class="span12 required">
+
+    <label for="newLastName">Last Name</label>
+
+    <div class="input">
+        <input id="newLastName" name="newLastName" type="text" ng-model="pt.lastName" required>
+    </div>
+</div>
+
+<div class="span12 required">
+
+    <label for="newDateOfBirth">Date of Birth</label>
+
+    <date-input model="pt.dateOfBirth" id="newDateOfBirth" name="Date of Birth" disable="disable"
+            required="required"></date-input>
+</div>
+
+<div class="span12 required">
+
+    <label for="sex">Sex</label>
+
+    <select id="sex" name="Sex" ng-model="pt.sex" ng-options="sex.value as sex.text for sex in sexes" required>
+        <option value>Select Sex</option>
+    </select>
+</div>
+
+<input type="hidden" name="patientId" ng-model="pt.uniqueId" />

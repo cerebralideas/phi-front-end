@@ -1,0 +1,184 @@
+{
+
+		"pt": {
+
+			"uniqueId": null,
+			"firstName": "Wendy",
+			"lastName": "Khan",
+			"middleName": "Catherine",
+            "medRecNum": "100000570",
+		    "suffix": "",
+		    "dateOfBirth": "10/24/1976",
+			"age": "35 years",
+			"sex": "F",
+			"aliases": "Wendy Catherine Patron",
+			"maritalStatus": "Married",
+			"nationality": "Caucasian",
+			"streetAddress": "887 Sunnyside Drive",
+			"apptNum": null,
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68030",
+			"homePhone": "675-555-0812",
+			"workPhone": "800-555-2000 ext 1234",
+			"cellPhone": "548-555-8002",
+			"email": "wendy.patron@myemail.com",
+			"occupation": "Insurance Sales",
+			"employer": "Familycare Insurance",
+			"employerPhone": "800-555-2000",
+			"comment": null,
+			"eContact": {
+
+				"uniqueId": null,
+				"firstName": "Jackson",
+				"lastName": "Khan",
+				"suffix": null,
+				"phoneNumber": "675-555-0812",
+				"address": "8001 Zenith Blvd"
+			}
+		},
+
+		"pg": {
+
+			"p1": {
+
+				"uniqueId": null,
+				"firstName": null,
+				"lastName": null,
+				"suffix": null,
+				"relationship": null,
+				"streetAddress": null,
+				"apptNum": null,
+				"city":null,
+				"state": null,
+				"zip": null
+			},
+
+			"p2": {
+
+				"uniqueId": null,
+				"firstName": null,
+				"lastName": null,
+				"suffix": null,
+				"relationship": null,
+				"streetAddress": null,
+				"apptNum": null,
+				"city":null,
+				"state": null,
+				"zip": null,
+			}
+		},
+
+		"md": {
+
+	    	"primary": "Dr. Three",
+			"referring":"Dr. Six",
+			"rendering": null,
+			"serviceLocation": "General Medicine Clinic",
+			"providerSocSec": null
+		},
+
+		"gr": {
+
+			"relationship": "Husband",
+			"uniqueId": null,
+			"firstName": "Jackson",
+			"lastName": "Khan",
+			"suffix": null,
+			"streetAddress": "887 Sunnyside Drive",
+			"apptNum": null,
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68030"
+		},
+
+		"ins": {
+
+	    	"primary": {
+
+				"comp": "UnitedHealthcare Choice Plus",
+				"relationship": "Self",
+				"groupNumber": "HM78956",
+				"policyNumber": "764CR74X90",
+				"planName": "United Group Plan",
+				"effectiveDate": "09/01/2008",
+				"effYearDeviation": "-4",
+				"expirationDate": "08/31/2013",
+				"expYearDeviation": "+1",
+
+				"active": "icon-checkmark",
+				"verified": "icon-checkmark",
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"secondary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"expirationDate": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"tertiary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"expirationDate": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			}
+		}
+	}

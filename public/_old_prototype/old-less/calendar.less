@@ -1,0 +1,160 @@
+.calendarHead {
+    background: #d6d6d6;
+    border-bottom: 1px solid @grayLight;
+    border-top: 5px solid #5282C5;
+    box-shadow: inset 1px 1px 0 #eee;
+    list-style: none;
+}
+.columnLabel, .headerLabel {
+    border: none;
+    display: inline-block;
+    font-weight: 700;
+    height: 28px;
+    padding: 5px 0 3px;
+    text-align: center;
+    text-shadow: 0 1px 1px @white;
+    width: 13.5%;
+    vertical-align: middle;
+}
+.headerLabel {
+    width: 5%;
+}
+#calendarContent {
+    border: none;
+    padding: 0;
+}
+#calendarContent h4 {
+    background: @white;
+    padding: 12px 10px;
+}
+.calendar {
+    background: #ddd;
+    border-bottom: 1px solid @grayLight;
+    list-style: none;
+}
+.day, .times {
+    display: inline-block;
+    width: 13.5%;
+    vertical-align: top;
+}
+.calendar .times {
+    width: 5%;
+}
+.calendar .time, .rowLabel {
+    background-color: #f6f6f6;
+    border-left: 1px solid @grayLight;
+    border-top: 1px solid @grayLight;
+    box-shadow: inset 1px 1px 0 @white;
+    height: (@baseLineHeight * 8);
+    overflow: hidden;
+    padding: 10px 5px;
+}
+.rowLabel {
+    background-color: #e6e6e6;
+    border-left: none;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: right;
+    text-shadow: 0 1px 1px @white;
+}
+.calendar .time:hover {
+    background-color: #eee;
+}
+.appointment, .admission {
+    cursor: pointer;
+    text-transform: none;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.appointment.poppedItem, .admission.poppedItem {
+    background: #ddd;
+}
+.appointment:before, .admission:before {
+    content: 'C ';
+    color: #ddd;
+    font-family: IcoMoonRegular;
+    visibility: hidden;
+}
+.appointment a, .admission a{
+    color: #5282C5;
+    margin: 0;
+    padding: 0;
+    text-transform: none;
+}
+.appointment a:hover,
+.appointment a:focus,
+.admission a:hover,
+.admission a:focus{
+    background: inherit;
+    border: none;
+}
+.popover-inner {
+    width: 350px;
+}
+.popover h3 {
+    text-align: center;
+}
+.popover a.close {
+    color: @gray;
+    font-size: 20px;
+    padding: 0 5px;
+    position: absolute;
+    right: 15px;
+    text-shadow: 0 1px 1px @white;
+    top: 15px;
+}
+.popover a.close:hover,
+.popover a.close:focus {
+    text-decoration: none;
+    color: #c4453c;
+}
+.popover dt {
+    display: inline-block;
+    font-weight: bold;
+    padding: 5px 0 0 0;
+    text-align: right;
+    width: 20%;
+    vertical-align: top;
+}
+.popover dd {
+    display: inline-block;
+    padding: 5px 0 0;
+    text-align: left;
+    width: 76%;
+    vertical-align: top;
+}
+.calendar .moreItem {
+    height: 0.8em;
+    padding: 2px 0;
+    margin: 0;
+}
+.calendar .showMore {
+    position: absolute;
+    height: inherit;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.calendar .moreItem:before {
+    content: '';
+    width: 75%;
+    height: 1px;
+    display: inline-block;
+    vertical-align: top;
+    background: #ddd;
+    margin: 3px 0 0;
+    visibility: visible;
+}
+.calendar .moreItem a.more {
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0.75em;
+    line-height: 0.85em;
+    width: 20%;
+    text-align: right;
+    text-decoration: none;
+}
+.calendarControls form.calendarFilters {
+    margin-bottom: 0;
+    padding-bottom: 3px;
+}

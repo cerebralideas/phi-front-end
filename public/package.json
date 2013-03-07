@@ -1,0 +1,16 @@
+{
+    "name": "educationalPAS",
+    "version": "0.10.2",
+    "description": "A web-based, educational, patient-accounting system.",
+    "main": "PAS",
+    "devDependencies": {
+        "node.js": "0.8.11",
+        "grunt": "0.3.15",
+        "grunt-contrib": "0.2.0",
+        "grunt-docs": "0.2.3",
+        "docpad-plugin-marked": "~2.0.0",
+        "grunt-jasmine-runner": "0.5.6",
+        "grunt-modernizr": "0.1.3",
+        "testacular": "0.2.1"
+    }
+}

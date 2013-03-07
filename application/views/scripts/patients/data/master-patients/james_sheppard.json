@@ -1,0 +1,187 @@
+{
+
+		"pt": {
+
+			"uniqueId": null,
+			"firstName": "James",
+			"lastName": "Sheppard",
+			"middleName": "Thomas",
+            "medRecNum": "100000568",
+		    "suffix": "",
+		    "dateOfBirth": "10/13/2008",
+			"age": "3 years",
+			"sex": "M",
+			"aliases": null,
+			"maritalStatus": "Never Married",
+			"nationality": "Caucasian",
+			"streetAddress": "2798 East Mulberry Road",
+			"apptNum": null,
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68029",
+			"homePhone": "248-555-9752",
+			"workPhone": null,
+			"cellPhone": null,
+			"email": null,
+			"occupation": null,
+			"employer": null,
+			"employerPhone": null,
+			"comment": "Parents and sibling are also patients",
+			"eContact": {
+
+				"uniqueId": null,
+				"firstName": "John",
+				"lastName": "Sheppard",
+				"suffix": null,
+				"phoneNumber": "248-555-9752",
+				"address": "2798 East Mulberry Road"
+			}
+		},
+
+		"pg": {
+
+			"p1": {
+
+				"uniqueId": null,
+				"firstName": "John",
+				"lastName": "Sheppard Jr",
+				"suffix": null,
+				"relationship": "Father",
+				"streetAddress": "2798 East Mulberry Road",
+				"apptNum": null,
+				"city":"Anytown",
+				"state": "NP",
+				"zip": null
+			},
+
+			"p2": {
+
+				"uniqueId": null,
+				"firstName": "Melissa",
+				"lastName": "Sheppard",
+				"suffix": null,
+				"relationship": "Mother",
+				"streetAddress": "2798 East Mulberry Road",
+				"apptNum": null,
+				"city":"Anytown",
+				"state": "NP",
+				"zip": null
+			}
+		},
+
+		"md": {
+
+	    	"primary": "Dr. One",
+			"referring":null,
+			"rendering": null,
+			"serviceLocation": "General Medicine Clinic",
+			"providerSocSec": null
+		},
+
+		"gr": {
+
+			"relationship": "Father",
+			"uniqueId": null,
+			"firstName": "John",
+			"lastName": "Sheppard Jr",
+			"suffix": null,
+			"streetAddress": "2798 East Mulberry Road",
+			"apptNum": null,
+			"city": "Anytown",
+			"state": "NP",
+			"zip": "68028"
+		},
+
+		"ins": {
+
+	    	"primary": {
+
+				"comp": "TriWest Health Alliance",
+				"relationship": "Child",
+				"groupNumber": null,
+				"policyNumber": "0217-98-8712",
+				"planName": "TRICARE Standard",
+				"effectiveDate": "04/01/1996",
+				"effYearDeviation": "-18",
+				"expirationDate": null,
+				"expYearDeviation": null,
+				"active": "icon-checkmark",
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"secondary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"effYearDeviation": null,
+				"expirationDate": null,
+				"expYearDeviation": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			},
+
+			"tertiary": {
+
+				"comp": null,
+				"relationship": null,
+				"groupNumber": null,
+				"policyNumber": null,
+				"planName": null,
+				"effectiveDate": null,
+				"effYearDeviation": null,
+				"expirationDate": null,
+				"expYearDeviation": null,
+				"active": null,
+				"verified": null,
+
+				"notSelf": {
+
+					"firstName": null,
+					"lastName": null,
+					"sex": null,
+					"dateOfBirth": null,
+					"socialSecNumb": null,
+					"homePhone": null,
+					"streetAddress": null,
+					"apptNumber": null,
+					"city": null,
+					"state": null,
+					"zip": null
+				}
+			}
+		}
+	}

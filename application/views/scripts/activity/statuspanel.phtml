@@ -1,0 +1,87 @@
+<header class="mainPanelHeader">
+    <h1>
+        <span>Patient: <?= $this->firstName.' '.$this->lastName; ?></span>
+        <span>Author: <?= $this->getCreator($this->submittedBy); ?></span>
+        <span>Date: <?= $this->submittedDate; ?></span>
+    </h1>
+</header>
+<nav class="tabControls mainPanel" id="dashboardNav">
+    <ul class="nav nav-tabs">
+        <li><a rel="patient-info" href="/activity/reportpanel?submissionId=<?= $this->submissionId; ?>">Registration Info</a></li>
+        <li class="active"><a rel="status-comments" href="/activity/statuspanel?submissionId=<?= $this->submissionId; ?>">Status & Comments</a></li>
+    </ul>
+</nav>
+<div id="activityContent" class="content container_16">
+    <div class="alert-message error" data-alert="alert">
+        <a class="hideAlert" href="#">×</a>
+        <p><strong>Oh snap!</strong> It seems there was some kind of error.</p>
+    </div>
+    <section class="tabContainer">
+
+        <form id="statusAndComments" class="form-stacked inline">
+            <fieldset class="oneThird multiSelect">
+                <legend>Submission Details</legend>
+                <div class="clearfix">
+                    <label for="instructor">Instructor:</label>
+                    <div class="input">
+                        <input disabled="disabled" type="text" id="instructor" value="<?= $this->getCreator($this->submission['submission_to']); ?>">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="studentOrGroup">Student:</label>
+                    <div class="input">
+                        <input disabled="disabled" type="text" id="studentOrGroup" value="<?= $this->getCreator($this->submission['created_by']); ?>">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <label for="statusHistory">Status History:</label>
+                    <? foreach ($this->statusHistory as $historyItem) : ?>
+                    <?= '<p>'.$historyItem['submission_status_name'].' on '. date('m/d/Y', strtotime($historyItem['created_date'])).'</p>'; ?>
+                    <? endforeach; ?>
+                </div>
+            </fieldset>
+            <fieldset class="twoThirds">
+                <legend>Comments</legend>
+                <? foreach ($this->statusComments as $statusComment) : ?>
+                <? if (strcasecmp($statusComment['role'], 'org_student') == 0) : ?>
+                    <div class="studentComment">
+                        <div class="author">
+                            <span class="icon">U</span>
+                            <p>Author <br><?= $this->getCreator($statusComment['created_by']); ?></p>
+                        </div>
+                        <div class="message">
+                            <p><?= stripslashes($statusComment['comment']); ?></p>
+                            <div class="time">
+                                <p>Posted on <?= date('m/d/Y', strtotime($statusComment['created_date'])); ?></p>
+                            </div>
+                        </div>
+                    </div>
+                <? else : ?>
+                    <div class="instructorComment">
+                        <div class="author">
+                            <span class="icon">U</span>
+                            <p><?= $this->getCreator($statusComment['created_by']); ?></p>
+                        </div>
+                        <div class="message">
+                            <p><?= stripslashes($statusComment['comment']); ?></p>
+                            <div class="time">
+                                <p>Posted on <?= date('m/d/Y', strtotime($statusComment['created_date'])); ?></p>
+                            </div>
+                        </div>
+                    </div>
+                <? endif; ?>
+        <? endforeach; ?>
+            </fieldset>
+            <input type="hidden" id="submissionId" name="submissionId" value="<?= $this->submissionId; ?>" />
+        </form>
+    </section>
+    <div class="actions">
+        <div class="clearfix">
+            <label for="comment">Comment (optional)</label>
+            <div class="input">
+                <textarea id="comment"></textarea>
+            </div>
+        </div>
+        <button id="btnReviewed" type="submit" class="btn large success">Reviewed</button>
+    </div>
+</div>

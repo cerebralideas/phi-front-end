@@ -1,0 +1,437 @@
+/**********************************************************/
+/* To find modified LESS files, search for $$Customized$$ */
+
+// So far, I've modified the following files:
+// variables.less
+// scaffolding.less
+
+/**********************************************************/
+
+@import "bootstrap/bootstrap.less";
+@import "bootstrap/responsive.less";
+@import "login.less";
+
+/***************************************************/
+/*                IMPORT FONTS                     */
+/***************************************************/
+
+@import url('http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,700,400italic|Inconsolata');
+
+
+/***************************************************/
+/*           GLOBAL BOX-SIZING OVERRIDE            */
+/***************************************************/
+
+* {
+   .box-sizing(border-box);
+}
+
+
+/***************************************************/
+/*                CUSTOM STYLES                    */
+/***************************************************/
+
+table {
+    display: table;
+}
+i {
+    font-style: normal;
+}
+i:hover {
+    text-decoration: underline;
+}
+.normalWeight {
+    font-weight: normal;
+}
+.center {
+    text-align: center;
+}
+.btn.large {
+    padding: 9px 35px;
+}
+.nav-tabs > li > a {
+    color: #333;
+}
+.activeItem {
+    background: #E0FFE2;
+}
+.inlineEls {
+
+    input[type="text"] {
+        width: 39%;
+    }
+    select, .btn {
+        width: 25%;
+        vertical-align: top;
+        margin-top: 0;
+    }
+}
+.input > .btn {
+    margin-bottom: 9px;
+}
+.clinicHours {
+
+    .available-true.blocked-false {
+        cursor: pointer;
+        color: white;
+
+        &:hover {
+            background: @blueDark;
+            color: white;
+        }
+    }
+
+    .available-false {
+
+        &:hover {
+            cursor: not-allowed;
+        }
+    }
+
+    .blocked-true {
+        background: #DDD;
+        color: #DDD;
+
+        &:hover {
+            cursor: not-allowed;
+        }
+    }
+}
+
+/* All Activity > Status & Comments */
+
+.reviewerComment,
+.authorComment {
+    margin-bottom: 20px;
+    position: relative;
+}
+.reviewerComment .author,
+.authorComment .author {
+    position: absolute;
+    text-align: center;
+    width: 80px;
+}
+.reviewerComment .author {
+    left: 0;
+}
+.authorComment .author {
+    right: 0;
+}
+.reviewerComment .message,
+.authorComment .message {
+    padding: 0 100px;
+    position: relative;
+}
+.reviewerComment .message:after,
+.authorComment .message:after {
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    content: '';
+    height: 0;
+    position: absolute;
+    top: 30px;
+    width: 0;
+}
+.reviewerComment .message:after {
+    border-right: 10px solid #fff;
+    left: 90px;
+}
+.authorComment .message:after {
+    border-left: 10px solid #fff;
+    right: 90px;
+}
+.reviewerComment .message p,
+.authorComment .message p {
+    background: #fff;
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 0;
+    padding: 20px;
+}
+.reviewerComment .message .time,
+.authorComment .message .time {
+    background: #fff;
+    border-radius: 0 0 4px 4px;
+    padding: 10px 20px;
+    margin: 0;
+}
+.reviewerComment .message .time p,
+.authorComment .message .time p {
+    color: #888;
+    font-size: @smallFontSize;
+    margin: 0;
+    padding: 0;
+}
+
+/* Patients > Demographics */
+
+
+
+/* Patients > Claims */
+
+.claim-form {
+    margin: 0 auto;
+    padding: 20px;
+    overflow-x: auto;
+
+    h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 1.25em;
+        color: darkred;
+        font-family: sans-serif;
+        text-transform: uppercase;
+    }
+    .row {
+        display: table;
+        table-layout:fixed;
+        width: 100%;
+        border-collapse: collapse;
+        max-width: 1200px;
+        min-width: 850px;
+    }
+    & > .row {
+        border-top: 1px solid darkred;
+    }
+    & > .row:last-child {
+        border-bottom: 1px solid darkred;
+    }
+    .oneSeamlessColumn,
+    .oneSeamlessColumns,
+    .twoSeamlessColumns,
+    .threeSeamlessColumns,
+    .fourSeamlessColumns,
+    .fiveSeamlessColumns,
+    .sixSeamlessColumns,
+    .sevenSeamlessColumns,
+    .eightSeamlessColumns,
+    .nineSeamlessColumns,
+    .tenSeamlessColumns,
+    .elevenSeamlessColumns,
+    .twelveSeamlessColumns,
+    .thirteenSeamlessColumns,
+    .fourteenSeamlessColumns {
+        display: table-cell;
+        padding: 0.5em;
+        border: 1px solid darkred;
+        border-top: none;
+        border-bottom: none;
+        overflow-x: hidden;
+    }
+    .oneSeamlessColumn,
+    .oneSeamlessColumns {
+        width: 8.333333333%;
+    }
+    .twoSeamlessColumns {
+        width: 16.66666667%;
+    }
+    .threeSeamlessColumns {
+        width: 25%;
+    }
+    .fourSeamlessColumns {
+        width: 33.33333333%;
+    }
+    .fiveSeamlessColumns {
+        width: 41.66666667%;
+    }
+    .sixSeamlessColumns {
+        width: 50%;
+    }
+    .sevenSeamlessColumns {
+        width: 58.33333333%;
+    }
+    .eightSeamlessColumns {
+        width: 66.66666666%;
+    }
+    .nineSeamlessColumns {
+        width: 74.99999999%;
+    }
+    .tenSeamlessColumns {
+        width: 83.33333332%;
+    }
+    .elevenSeamlessColumns {
+        width: 91.66666665%;
+    }
+    .twelveSeamlessColumns {
+        width: 100%;
+    }
+    .rowHeader {
+        font-size: 0.7em;
+        font-family: sans-serif;
+        font-weight: bold;
+        color: darkred;
+        background: pink;
+        vertical-align: middle;
+    }
+    .innerRow > *, .innerRow > *:before {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    .hasLabel:before {
+        content: attr(title);
+        display: block;
+        font-size: 0.5em;
+        color: darkred;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        margin-bottom: 0.7em;
+        font-weight: normal;
+        text-align: left;
+    }
+    .collapse {
+        height: 0;
+        padding: 0;
+    }
+    .notUsed {
+        background: lightgray;
+    }
+}
+
+/* Table Styling (and Associated elements) */
+
+.row-fluid .newButton, .row-fluid .printButton {
+    text-align: right;
+    padding-right: @fluidGridPadding;
+}
+
+/* Calendar */
+
+// Removed all old week view CSS and placed it in
+// old-calendar.less
+
+/* Icons */
+
+.icon {
+    font-family: 'icomoon';
+    font-size: 100%;
+    line-height: 1em;
+}
+.newButton span.icon.big {
+    font-size: 200%;
+    vertical-align: -0.1em;
+}
+.icon:hover {
+    text-decoration: none;
+}
+#sectionNav .active .icon {
+    color: #888;
+}
+.nav-tabs .icon {
+    padding: 0 5px 0 0;
+    font-size: 28px;
+    vertical-align: middle;
+}
+
+/* Special Headers */
+
+.supportPanelHeader {
+}
+.supportPanelHeader h2 {
+    background: @grayLight;
+    text-align: center;
+    background: linear-gradient(top, #ccc, @grayLight);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    border-bottom: 2px groove #ddd;
+    margin: 0;
+}
+.mainPanelHeader {
+    background: #ddd;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.45);
+    padding-left: 20px;
+    margin: 0 0 20px;
+    width: 100%;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+}
+.mainPanelHeader span {
+    padding-right: 0.5em;
+}
+.mainPanelHeader .icon, .scheduler-header .icon {
+    margin: 0 15px;
+    line-height: 0.8em;
+    display: inline-block;
+    vertical-align: -0.025em;
+}
+.listTitle {
+    margin: 0 10px 0 0;
+}
+.calenderAdmitted .icon {
+    vertical-align: top;
+}
+
+/* Scrollable Outputs */
+
+.output {
+    max-width: 100%;
+    overflow-x: scroll;
+}
+
+/* Javascript Class Styles */
+
+.showBlock {
+    z-index: 1;
+}
+.hideBlock {
+    z-index: -1;
+}
+.twipsy {
+    font-size: 13px;
+    font-family: 'Droid Sans', sans-serif;
+    width: 100px;
+}
+
+/* Popover Styling */
+
+.form-actions.event {
+    position: static;
+    min-height: 40px;
+    margin: 0;
+    width: 100%;
+    box-shadow: 0 -2px 2px -1px rgba(0, 0, 0, 0.25);
+    border-top: 1px solid @gray;
+    background-image: linear-gradient(top, #f5f5f5, #eee);
+    padding: 12px 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* jQuery UI Styling */
+
+#ui-datepicker-div {
+    background: white;
+    z-index: 99 !important;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+#ui-datepicker-div table.ui-datepicker-calendar {
+    margin-bottom: 0;
+}
+.ui-datepicker-title {
+    font-size: 15px;
+    font-family: "droid sans", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin-top: -22px;
+    padding-bottom: 10px;
+}
+.ui-datepicker-next, .ui-datepicker-prev {
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+}
+.ui-datepicker-next {
+    float: right;
+}
+#ui-datepicker-div tbody td {
+    cursor: pointer;
+}
+#ui-datepicker-div tbody td:hover {
+    background: #5282C5;
+}
+#ui-datepicker-div tbody td:hover a {
+    color: white;
+    text-decoration: none;
+}
+#ui-datepicker-div tbody td.ui-datepicker-unselectable:hover {
+    background: @white;
+    cursor: default;
+}

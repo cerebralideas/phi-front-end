@@ -1,0 +1,182 @@
+<form id="outpatientEncounterForm" class="form-stacked inline">
+    <div class="tab-summary">
+        <a class="btn danger close closeForm" href="/template-parts/patients/main-panel/admissions.html">Close Form</a>
+        <h2>Create an Encounter from the following Admission:</h2>
+        <ul class="summary">
+            <li>Admit Date: <span class="value">8/29/2011</span></li>
+            <li>Length of Stay: <span class="value">3 days</span></li>
+            <li>Type of Visit: <span class="value">Surgery</span></li>
+            <li>Batch #: <span class="value">professor00</span></li>
+            <li>Primary Provider: <span class="value">Dr. Smith</span></li>
+        </ul>
+    </div>
+    <fieldset>
+        <legend><strong>Step 1 of 3:</strong> Encounter Details</legend>
+        <p class="required">Mandatory Fields</p>
+        <div class="clearfix required">
+            <label for="attendingProvider">Attending Provider</label>
+            <div class="input-prepend">
+                <span class="add-on">F</span>
+                <input type="search" id="attendingProvider">
+            </div>
+        </div>
+        <div class="clearfix required">
+            <label for="location">Location</label>
+            <select name="location">
+                <option value="" selected="selected">Select a Location</option>
+                <option value="locationA">Location A</option>
+                <option value="locationB">Location B</option>
+            </select>
+        </div>
+        <div class="clearfix required">
+            <label for="dischargeStatus">Discharge Status</label>
+            <select name="dischargeStatus">
+                <option value="" selected="selected">Select a Discharge Status</option>
+                <option value="dischargeStatusA">Discharge Status A</option>
+                <option value="dischargeStatusB">Discharge Status B</option>
+            </select>
+        </div>
+        <div class="clearfix required">
+            <label for="paymentMethod">Payment Method</label>
+            <select name="paymentMethod">
+                <option value="" selected="selected">Select a Payment Method</option>
+                <option value="paymentMethodA">Payment Method A</option>
+                <option value="paymentMethodB">Payment Method B</option>
+            </select>
+        </div>
+        <div class="clearfix required">
+            <label for="paymentCategory">Payment Category</label>
+            <select name="paymentCategory">
+                <option value="" selected="selected">Select a Payment Category</option>
+                <option value="paymentCategoryA">Payment Category A</option>
+                <option value="paymentCategoryB">Payment Category B</option>
+            </select>
+        </div>
+        <div class="clearfix details-btn">
+            <a href="#" class="btn small success hiddenFieldsetTrigger" data-open="Click Here for Less Details" data-collapsed="Click Here for More Details" data-wrapper="fieldset">Click Here for More Details</a>
+        </div>
+        <div class="hiddenFieldset">
+	        <div class="details">
+	            <div class="clearfix">
+	                <label for="surgicalProceduralProvider">Surgical/Procedural Provider</label>
+	                <div class="input-prepend">
+	                    <span class="add-on">F</span>
+	                    <input type="search" id="surgicalProceduralProvider">
+	                </div>
+	            </div>
+	            <div class="clearfix">
+	                <label for="admittingProvider">Admitting Provider</label>
+	                <div class="input-prepend">
+	                    <span class="add-on">F</span>
+	                    <input type="search" id="admittingProvider">
+	                </div>
+	            </div>
+	            <div class="clearfix">
+	                <label for="memo">Reference Number</label>
+	                <div class="input">
+	                    <input type="text" id="referenceNumber">
+	                </div>
+	            </div>
+	            <div class="clearfix">
+	                <label for="memo">Memo</label>
+	                <div class="input">
+	                    <input type="text" id="memo">
+	                </div>
+	            </div>
+	            <div class="clearfix twoInputs">
+	                <label for="serviceDatePostDate">Service Date/Post Date</label>
+	                <div class="input-append">
+	                    <input type="date" id="serviceDatePostDateStart">
+	                    <span class="add-on">d</span>
+	                </div>
+	                <div class="input-append">
+	                    <input type="date" id="serviceDatePostDateEnd">
+	                    <span class="add-on">d</span>
+	                </div>
+	            </div>
+	            <div class="clearfix">
+	                <label for="sourceOfAdmission">Source of Admission</label>
+	                <div class="input">
+	                    <input type="text" id="sourceOfAdmission">
+	                </div>
+	            </div>
+	            <div class="clearfix oneHalf">
+	                <label for="medicalNotes">Medical Notes</label>
+	                <div class="input">
+	                    <textarea type="text" id="medicalNotes"></textarea>
+	                </div>
+	            </div>
+	            <div class="clearfix oneHalf">
+	                <label for="businessNotes">Business Notes</label>
+	                <div class="input">
+	                    <textarea type="text" id="businessNotes"></textarea>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+    </fieldset>
+    <fieldset class="inline">
+        <legend><strong>Step 2 of 3:</strong> Diagnosis Codes</legend>
+        <p>Search for your diagnostic codes using the field below type code or description.</p>
+        <div class="clearfix">
+            <label for="diagnosisCodesOrDescription">Diagnosis Codes or Description</label>
+            <div class="input-prepend">
+                <span class="add-on">F</span>
+                <input type="search" id="diagnosisCodesOrDescription">
+            </div>
+        </div>
+        <div>
+            <label for="diagnosisCodesForEncounter">Diagnosis Codes for Encounter</label>
+            <table id="diagnosisCodesForEncounter" class="well data-list">
+                <thead>
+                    <tr>
+                        <th>Sn No</th>
+                        <th>Principal</th>
+                        <th>Admitting</th>
+                        <th>Diagnosis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0001</td>
+                        <td><input type="checkbox" id="principal-1" class="principal"></td>
+                        <td><input type="checkbox" id="admitting-1" class="admitting"></td>
+                        <td>00800 - Intestinal Infection due to E. coli</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </fieldset>
+    <fieldset class="inline">
+        <legend><strong>Step 3 of 3:</strong> Procedure Codes</legend>
+        <p>Search for your procedural codes using the field below type code or description.</p>
+        <div class="clearfix">
+            <label for="procedureCodesOrDescription">Procedure Codes or Description</label>
+            <div class="input-prepend">
+                <span class="add-on">F</span>
+                <input type="search" id="procedureCodesOrDescription">
+            </div>
+        </div>
+        <div>
+            <label for="procedureCodesForEncounter">Procedure Codes for Encounter</label>
+            <table id="procedureCodesForEncounter" class="well data-list">
+                <thead>
+                    <tr>
+                        <th>Sn No</th>
+                        <th>Procedure</th>
+                        <th>Modifier</th>
+                        <th>Qty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0023</td>
+                        <td>50320 - Endoscopy of Large Intestine</td>
+                        <td class="input"><input type="text" id="modifier-1" class="modifier"></td>
+                        <td class="input"><input type="text" id="qty-1" class="qty"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </fieldset>
+</form>

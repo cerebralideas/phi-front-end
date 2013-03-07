@@ -1,0 +1,33 @@
+<?
+$sexModel = new Model_Sex();
+$sexModel->select()->query();
+$sexOptions = $sexModel->fetchAll();
+
+$prefix = $this->prefix;
+$selectedValue = $this->selectedValue;
+if (!isset($this->disabled))
+    $disabled = 'false';
+?>
+<? if (strcasecmp($disabled, 'false') == 0) : ?>
+<div class="clearfix required select-radio">
+    <label for="<?= $prefix; ?>Sex">Sex</label>
+    <select id="<?= $prefix; ?>Sex" name="<?= $prefix; ?>Sex">
+        <option value="0" <?= ($selectedValue == "0" || $selectedValue == "") ? 'selected="selected"' : '' ?>>Select a Sex</option>
+        <? foreach ($sexOptions as $sexOption): ?>
+        <option value="<?= $sexOption['sex_id']; ?>"<?= ($selectedValue == $sexOption['sex_id']) ? 'selected="selected"' : '' ?>><?= $sexOption['sex_desc']; ?></option>
+        <? endforeach; ?>
+    </select>
+</div>
+<? else : ?>
+<div class="clearfix">
+    <label for="<?= $prefix; ?>Sex">Sex</label>
+    <div class="input">
+        <?
+        foreach ($sexOptions as $sexOption)
+            if (strcasecmp($sexOption['sex_id'], $selectedValue) == 0 )
+                echo '<input disabled="disabled" type="text" id="'.$prefix.'Sex" name="'.$prefix.'Sex" value="'.$sexOption['sex_desc'].'" />';
+        ?>
+
+    </div>
+</div>
+<? endif; ?>

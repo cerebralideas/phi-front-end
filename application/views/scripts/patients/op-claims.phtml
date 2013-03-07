@@ -1,0 +1,182 @@
+<?php
+    // Construct new Pt Service Object
+    $ptService = new Service_Pt();
+    // Construct new Apt Service Object
+    $aptService = new Service_Apt();
+    // Construct new Outpatient Superbill Object
+    $opSbService = new Service_OpSb();
+    // Construct new Outpatient Claim Object
+    $opClService = new Service_OpCl();
+?>
+
+<script type="text/javascript">
+
+    // Load the data into the PAS.data object
+    DATA.reg = <?php echo $ptService->getJson($this->patientId); ?>;
+    DATA.apt = <?php echo $aptService->getJson($this->aptId); ?>;
+    DATA.opSb = <?php echo $opSbService->getJson($this->opSbId); ?>;
+
+    // Claim stuff
+    DATA.opCl = <?= $opClService->getJson($this->opClId); ?>;
+    DATA.opNewCl = {};
+    DATA.opClList = <?= $opClService->getByPtId($this->patientId); ?>;
+
+    DATA.query = '<?= $this->searchTerms; ?>';
+    DATA.searchTerms = '<?= $this->searchTerms; ?>';
+</script>
+
+<!-- AngularJS services for patient file -->
+<script type="text/javascript" src="/js/services/serv-patient.js"></script>
+
+<!-- AngularJS controllers for patient file -->
+<script type="text/javascript" src="/js/controllers/ctrlr-patient.js"></script>
+
+<!-- AngularJS controllers for patient file -->
+<script type="text/javascript" src="/js/controllers/ctrlr-exported-claim.js"></script>
+
+<div id="sectionContent" class="row-fluid tabContainer" role="main" ng-controller="PAS.ctrlr.patient">
+
+<?= $this->ptsActionsNav(); ?>
+
+<!-- Imports from views > helpers PtsSidebar.php -->
+<!-- This handles what sidebar to use -->
+<?= $this->ptsSidebar(); ?>
+
+    <section id="mainPanel" class="<?= $this->mainPanelWidth; ?> parent">
+
+        <!-- This imports the header, patient file navigation and the alert elements -->
+        <?= $this->ptsHeader(); ?>
+
+        <section class="tabContainer">
+
+            <?php if (strcasecmp($this->data, 'claim') == 0) { ?>
+
+            <form name="opClForm">
+
+                <div ng-show="opClForm.$invalid" class="alert">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>Required fields:</strong> You have required fields that are still empty.
+                </div>
+
+                <?php echo $this->partial('/partials/global/op-claim.html'); ?>
+
+                <div class="form-actions <?= $this->mainPanelWidth; ?>">
+
+                    <button class="btn btn-large btn-preview" data-toggle="modal" href="#exportedClaimModal">
+                        <span class="icon-eye icon-large"></span> <i>Preview</i>
+                    </button>
+
+                    <button class="btn btn-large btn-cancel" data-toggle="modal" href="#confirmLossModal">
+                        <span class="icon-x icon-large"></span> <i>Cancel</i>
+                    </button>
+                    <button ng-click="save('opCl', 'opClForm')" ng-disabled="" data-toggle="modal"
+                            href="#saveStatusModal" class="btn btn-success btn-large">
+                        <span class="icon-install icon-large"></span> <i>Save</i>
+                    </button>
+                    <button class="btn btn-large btn-inverse" data-toggle="modal" href="#signSubmitModal"
+                            ng-disabled="">
+                        <span class="icon-drawer icon-large"></span> <i>Submit</i>
+                    </button>
+                </div>
+            </form>
+
+            <div id="signSubmitModal" class="modal hidden fade">
+
+                <?php echo $this->partial('/partials/global/modal_submission.html'); ?>
+
+                <div class="modal-footer">
+
+                    <a class="btn btn-cancel" data-dismiss="modal">Cancel</a>
+                    <a ng-click="submit('opCl', 'opClForm', 'submitForm')" class="btn btn-success">Submit</a>
+                </div>
+            </div>
+
+            <?php } else { ?>
+
+            <form>
+
+                <fieldset class="row-fluid">
+
+                    <legend>Outpatient Claims</legend>
+
+                    <p class="formInstructions span9">
+                        To view and/or edit a claim, just click on it below.
+                    </p><!-- Remove whitespace
+
+                 --><a href="<?= $this->urlClNew; ?>" class="newButton span3 no-padding">
+                        <span class="icon-calendar icon-large"></span>
+                        New Claim
+                    </a>
+
+                    <div class="span12 tableContainer">
+                        <table id="scheduled" class="well data-list">
+                            <thead>
+                            <tr>
+                                <th>Date &amp; Time</th>
+                                <th>Length</th>
+                                <th>Location</th>
+                                <th>Provider</th>
+                                <th>Apt. Type</th>
+                                <th>Diag Codes</th>
+                                <th>Proc Codes</th>
+                                <th>Total Charges</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr ng-repeat="opCl in claims">
+
+                                <td>
+                                    <a href="<?= $this->urlClEdit; ?>">{{opCl.date}} {{opCl.time}}</a>
+                                </td>
+                                <td>
+                                    <a href="<?= $this->urlClEdit; ?>">{{opCl.length}}</a>
+                                </td>
+                                <td>
+                                    <a href="<?= $this->urlClEdit; ?>">{{opCl.serviceLocation}}</a>
+                                </td>
+                                <td>
+                                    <a href="<?= $this->urlClEdit; ?>">{{opCl.md}}</a>
+                                </td>
+                                <td>
+                                    <a href="<?= $this->urlClEdit; ?>">{{opCl.aptType}}</a>
+                                </td>
+                                <td>
+                                    <a href="<?= $this->urlClEdit; ?>">{{opCl.diagCount}}</a>
+                                </td>
+                                <td>
+                                    <a href="<?= $this->urlClEdit; ?>">{{opCl.procCount}}</a>
+                                </td>
+                                <td>
+                                    <a href="<?= $this->urlClEdit; ?>">{{opCl.totalCharges}}</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </fieldset>
+            </form>
+
+            <?php } ?>
+
+        </section><!-- .tabContainer -->
+</div> <!-- .content: it was opened in ActHeader.php -->
+</section> <!-- #mainPanel -->
+
+<?php echo $this->partial('/partials/global/modal_superbill_search.html'); ?>
+
+<div id="exportedClaimModal" class="modal modal-large hide fade">
+
+	<div class="modal-header">
+		<a data-dismiss="modal" class="close">&#x2612;</a>
+		<h2>Generated Claim Form: {{pt.firstName}} {{pt.lastName}} for {{aptDetails.startDate}}</h2>
+	</div>
+
+	<form name="exportedOpClaim" class="row-fluid modal-body">
+
+		<ng-include src="'/templates/includes/export-op-claim.html'"
+					ng-controller="PAS.ctrlr.exportedClaim"></ng-include>
+	</form>
+</div>
+
+</div><!-- end of #sectionContent -->

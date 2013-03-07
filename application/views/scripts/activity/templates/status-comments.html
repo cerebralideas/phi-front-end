@@ -1,0 +1,57 @@
+    <fieldset class="span4 no-border">
+
+        <legend>Submission Details</legend>
+
+        <div class="span12">
+
+            <label>Instructor:</label>
+            <ul class="unstyled">
+                <li>{{subFaculty}}</li>
+            </ul>
+        </div>
+
+        <hr/>
+
+        <div class="span12">
+
+            <label>Student:</label>
+            <ul class="unstyled">
+                <li>{{subStudent}}</li>
+            </ul>
+        </div>
+
+        <hr/>
+
+        <div class="span12">
+
+            <label>Status History:</label>
+            <ul class="unstyled">
+                <li ng-repeat="snapshot in history">{{snapshot.status}} {{snapshot.data}}</li>
+            </ul>
+        </div>
+    </fieldset><!-- Remove whitespace
+
+ --><fieldset class="span8 no-border">
+
+        <legend>Comments</legend>
+
+        <div class="row-fluid">
+
+            <article ng-repeat="comment in comments | orderBy:'subCommentId':true" class="{{comment.subCommentType}}Comment">
+
+                <header class="author">
+                    <span class="icon-user icon-large"></span>
+                    <p>{{comment.fullName}}</p>
+                </header>
+
+                <section class="message">
+
+                    <p>{{comment.comment}}</p>
+
+                    <footer class="time">
+                        <p>Posted on {{comment.commentDate}}</p>
+                    </footer>
+                </section>
+            </article>
+        </div>
+    </fieldset>

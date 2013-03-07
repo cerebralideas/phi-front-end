@@ -1,0 +1,82 @@
+<?php
+// Construct new Pt Service Object
+$ptService = new Service_Pt();
+?>
+
+<!-- AngularJS services for patient file -->
+<script type="text/javascript" src="/js/services/serv-patient.js"></script>
+
+<!-- AngularJS controllers for patient file -->
+<script type="text/javascript" src="/js/controllers/ctrlr-patient.js"></script>
+
+<div id="sectionContent" class="row-fluid tabContainer" role="main" ng-controller="PAS.ctrlr.patient">
+
+    <script type="text/javascript">
+
+        // Load the data into the PAS.data object
+
+        // Todo: Will be replaced with a php variable
+        // that will load the data from the DB.
+        DATA.list = <?php echo $ptService->getPtListJson(); ?>;
+        DATA.query = '<?= $this->searchTerms; ?>';
+        DATA.searchTerms = '<?= $this->searchTerms; ?>';
+    </script>
+
+    <!-- Imports from views > helpers PtsActionsNav.php -->
+    <!-- This handles the actions nav and what nav-element has class "active" -->
+    <?= $this->ptsActionsNav($this->view); ?>
+
+    <!-- Imports from views > helpers PtsSidebar.php -->
+    <!-- This handles what sidebar to use -->
+    <?= $this->ptsSidebar(); ?>
+
+    <section id="mainPanel" class="<?= $this->mainPanelWidth; ?> parent">
+
+        <!-- Imports from views > helpers PtsHeader.php -->
+        <!-- This imports the header, patient file navigation and the alert elements -->
+        <?= $this->ptsHeader(); ?>
+
+                <section class="tabContainer">
+                    <form>
+                        <form class="form-stacked inline">
+                            <div class="row-fluid add-padding">
+                                <table id="patientSearchResults">
+                                    <thead>
+                                        <tr>
+                                            <th>Last Name</th>
+                                            <th>First Name</th>
+                                            <th>DOB</th>
+                                            <th>SSN</th>
+                                            <th>Created by</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                        <tr ng-repeat="pt in list | filter:query">
+                                            <td>
+                                                <a href="<?= $this->url; ?>">{{pt.lastName}}</a>
+                                            </td>
+                                            <td>
+                                                <a href="<?= $this->url; ?>">{{pt.firstName}}</a>
+                                            </td>
+                                            <td>
+                                                <a href="<?= $this->url; ?>">{{pt.dateOfBirth}}</a>
+                                            </td>
+                                            <td>
+                                                <a href="<?= $this->url; ?>">{{pt.socialSecurity}}</a>
+                                            </td>
+                                            <td>
+                                                <a href="<?= $this->url; ?>">{{pt.author}}</a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                    </form>
+                </section><!-- .tabContainer -->
+            </div> <!-- .content: it was opened in ActHeader.php -->
+    </section>
+</div><!-- end of #sectionContent -->

@@ -1,0 +1,48 @@
+<script type="text/javascript">
+
+    // Load the data into the PAS.data object
+    DATA.reg = {
+
+        "pt": {
+
+            "firstName": null,
+            "lastName": null,
+            "dateOfBirth": null,
+            "sex": null
+        }
+    }
+</script>
+
+<!-- AngularJS services for patient file -->
+<script type="text/javascript" src="/js/services/serv-patient.js"></script>
+
+<!-- AngularJS controllers for patient file -->
+<script type="text/javascript" src="/js/controllers/ctrlr-patient.js"></script>
+
+<div id="sectionContent" class="row-fluid tabContainer" role="main" ng-controller="PAS.ctrlr.patient">
+
+    <!-- Imports from views > helpers PtsActionsNav.php -->
+    <!-- This handles the actions nav and what nav-element has class "active" -->
+    <?= $this->ptsActionsNav(); ?>
+
+    <!-- Imports from views > helpers PtsSidebar.php -->
+    <!-- This handles what sidebar to use -->
+    <?= $this->ptsSidebar(); ?>
+
+    <section id="mainPanel" class="<?= $this->mainPanelWidth; ?> parent">
+
+        <!-- Imports from views > helpers PtsHeader.php -->
+        <!-- This imports the header, patient file navigation and the alert elements -->
+        <?= $this->ptsHeader(); ?>
+
+            <section id="patientInfoContainer" class="tabContainer">
+
+                <form class="noSelection">
+                    <div>
+                        <p>Use the form to the left,<br>to create your new patient.</p>
+                    </div>
+                </form>
+            </section><!-- .tabContainer -->
+        </div> <!-- .content: it was opened in ActHeader.php -->
+    </section> <!-- #mainPanel -->
+</div><!-- end of #sectionContent -->

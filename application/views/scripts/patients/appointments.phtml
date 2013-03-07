@@ -1,0 +1,212 @@
+<?php
+    // Construct new Pt Service Object
+    $ptService = new Service_Pt();
+    // Construct new Apt Service Object
+    $aptService = new Service_Apt();
+?>
+
+<script type="text/javascript">
+
+    // Load the data into the PAS.data object
+    DATA.reg = <?php echo $ptService->getJson($this->patientId); ?>;
+    DATA.apt = <?php echo $aptService->getJson($this->aptId); ?>;
+    DATA.newApt = {
+
+        "ptInfo": {
+
+            "uniqueId": <?= $this->patientId;?>,
+            "newPt": null,
+            "currentIns": null,
+            "aptNum": null,
+            "condRelatedTo": null
+        },
+
+        "md": {
+
+            "clinic": null,
+            "referring": null,
+            "referringId": null
+        },
+
+        "aptDetails": {
+
+            "serviceLocation": null,
+            "startDate": null,
+            "startTime": null,
+            "length": null,
+            "aptType": null,
+            "reason": null,
+            "aptId": null
+        },
+
+        "status": {
+
+            "ptStatus": "Scheduled",
+            "checkInDate": null,
+            "checkInTime": null,
+            "checkOutDate": null,
+            "checkOutTime": null,
+            "statusNotes": null
+        },
+
+        "notes": {
+
+            "authorization": null,
+            "reminderNotes": null,
+            "equipment": null,
+            "facility": null,
+            "staff": null
+        }
+    };
+    DATA.aptList = <?= $aptService->getAptListForPtJson( $this->patientId ); ?>;
+    DATA.query = '<?= $this->searchTerms; ?>';
+    DATA.searchTerms = '<?= $this->searchTerms; ?>';
+</script>
+
+<!-- AngularJS services for patient file -->
+<script type="text/javascript" src="/js/services/serv-patient.js"></script>
+
+<!-- AngularJS controllers for patient file -->
+<script type="text/javascript" src="/js/controllers/ctrlr-patient.js"></script>
+
+<!-- AngularJS controllers for patient file -->
+<script type="text/javascript" src="/js/controllers/ctrlr-scheduler.js"></script>
+
+<div id="sectionContent" class="row-fluid tabContainer" role="main" ng-controller="PAS.ctrlr.patient">
+
+    <?= $this->ptsActionsNav(); ?>
+
+    <!-- Imports from views > helpers PtsSidebar.php -->
+    <!-- This handles what sidebar to use -->
+    <?= $this->ptsSidebar(); ?>
+
+    <section id="mainPanel" class="<?= $this->mainPanelWidth; ?> parent">
+
+        <!-- This imports the header, patient file navigation and the alert elements -->
+        <?= $this->ptsHeader(); ?>
+
+                <section class="tabContainer">
+
+                    <form name="aptsListForm">
+
+                        <fieldset class="row-fluid">
+
+                            <legend>Future Appointments</legend>
+
+                            <p class="formInstructions span9">
+                                To edit an appointment, just click on an appointment below.
+                            </p><!-- Remove whitespace
+
+                         --><a href="<?= $this->urlNew; ?>" class="newButton span3 no-padding">
+                                <span class="icon-calendar icon-large"></span>
+                                New Appointment
+                            </a>
+
+                            <div class="span12 tableContainer">
+                                <table id="scheduled" class="well data-list">
+                                    <thead>
+                                        <tr>
+                                            <th>Status</th>
+                                            <th>Date &amp; Time</th>
+                                            <th>Length</th>
+                                            <th>Location</th>
+                                            <th>Provider</th>
+                                            <th>Apt. Type</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr class="availItem"
+                                                ng-repeat="apt in apts | filter:futureApts | orderBy:'date':false">
+
+                                            <td>
+                                                <a href="<?= $this->urlEdit; ?>">{{apt.ptStatus}}</a>
+                                            </td>
+                                            <td>
+                                                <a href="<?= $this->urlEdit; ?>">{{apt.date}} {{apt.time}}</a>
+                                            </td>
+                                            <td>
+                                                <a href="<?= $this->urlEdit; ?>">{{apt.length}}</a>
+                                            </td>
+                                            <td>
+                                                <a href="<?= $this->urlEdit; ?>">{{apt.serviceLocation}}</a>
+                                            </td>
+                                            <td>
+                                                <a href="<?= $this->urlEdit; ?>" >{{apt.md}}</a>
+                                            </td>
+                                            <td>
+                                                <a href="<?= $this->urlEdit; ?>">{{apt.aptType}}</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="row-fluid">
+                            <legend>Past Appointments</legend>
+
+                            <p class="formInstructions span12">
+                                To edit an appointment, just click on an appointment below.
+                            </p>
+
+                            <div class="span12 tableContainer">
+                                <table id="checkedIn" class=" well data-list">
+                                    <thead>
+                                        <tr>
+                                            <th>New</th>
+                                            <th>Date &amp; Time</th>
+                                            <th>Length</th>
+                                            <th>Location</th>
+                                            <th>Provider</th>
+                                            <th>Apt. Type</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody class="availListItems">
+                                        <tr class="availItem"
+                                                ng-repeat="apt in apts | filter:pastApts | orderBy:'date':true">
+
+                                            <td>
+                                                <a href="<?= $this->urlEdit; ?>">{{apt.ptStatus}}</a>
+                                            </td>
+                                            <td>
+                                                <a href="<?= $this->urlEdit; ?>">{{apt.date}} {{apt.time}}</a>
+                                            </td>
+                                            <td>
+                                                <a href="<?= $this->urlEdit; ?>">{{apt.length}}</a>
+                                            </td>
+                                            <td>
+                                                <a href="<?= $this->urlEdit; ?>">{{apt.serviceLocation}}</a>
+                                            </td>
+                                            <td>
+                                                <a href="<?= $this->urlEdit; ?>">{{apt.md}}</a>
+                                            </td>
+                                            <td>
+                                                <a href="<?= $this->urlEdit; ?>">{{apt.aptType}}</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </fieldset>
+                    </form>
+
+                </section><!-- .tabContainer -->
+        </div> <!-- .content: it was opened in ActHeader.php -->
+    </section> <!-- #mainPanel -->
+
+    <div id="signSubmitModal" class="modal hidden fade">
+
+        <?php echo $this->partial('/partials/global/modal_submission.html'); ?>
+
+        <div class="modal-footer">
+
+            <a class="btn btn-cancel" data-dismiss="modal">Cancel</a>
+            <a id="patientSignSubmit" ng-click="submit('apt', 'aptForm', 'submitForm')" class="btn btn-success">Submit</a>
+        </div>
+    </div>
+
+    <ng-include src="'/templates/includes/scheduler.html'" ng-controller="PAS.ctrlr.scheduler"></ng-include>
+
+</div><!-- end of #sectionContent -->

@@ -1,0 +1,30 @@
+
+<header class="supportPanelHeader">
+
+    <h2>Calendar Search</h2>
+
+    <nav id="supportNav" class="tabControls" role="navigation">
+        <ul class="nav nav-tabs">
+        </ul>
+    </nav>
+</header>
+
+<div id="supportContent" class="tabContainer">
+    <form class="row-fluid add-padding" id="patientSearchForm" method="post" accept="/patient/search">
+        <p class="formInstructions">
+            Use one (1) of the methods below to find a patient.
+        </p>
+        <fieldset>
+            <div class="span12">
+                <label for="searchName">Search</label>
+                <div class="input-prepend">
+                    <span class="add-on">F</span><input id="searchName" type="text" name="searchName" ng-model="query">
+                </div>
+            </div>
+            <!-- <div class="searchActions">
+               <a id="patientSearchButton" ng-click="query" class="btn btn-success" href="/template-parts/patients/main-panel/search-results.html">Search</a>
+               <a class="btn btn-cancel" href="/template-parts/patients/main-panel/search-results.html">Return to Results <span class="icon cancel"> 2</span></a>
+           </div> -->
+        </fieldset>
+    </form>
+</div>

@@ -1,0 +1,72 @@
+
+<header class="supportPanelHeader">
+    <h2>Schedule New Event</h2>
+    <nav id="supportNav" class="tabControls" role="navigation">
+        <ul class="nav nav-tabs">
+        </ul>
+    </nav>
+</header>
+
+<div id="supportContent" class="tabContainer">
+
+    <fieldset class="row-fluid">
+
+        <div class="span12">
+
+            <p class="formInstructions">Fill out the fields below to start a patient file.</p>
+
+            <p class="required">Mandatory Fields</p>
+        </div>
+
+        <div class="span12 required">
+
+            <label for="newFirstName">First Name</label>
+
+            <div class="input">
+                <div class="input">
+                    <input type="text" id="newFirstName" name="newFirstName" ng-model="pt.firstName" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="span12 required">
+
+            <label for="newLastName">Last Name</label>
+
+            <div class="input">
+                <div class="input">
+                    <input id="newLastName" name="newLastName" type="text" ng-model="pt.lastName" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="span12 required">
+
+            <label for="newDateOfBirth">Date of Birth</label>
+
+            <div class="input-append">
+                <div class="input">
+                    <input type="text" class="dateInputType" id="newDateOfBirth" ng-model="pt.dateOfBirth" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="span12 required">
+
+            <label for="sex">Sex</label>
+
+            <select id="sex" name="Sex" ng-model="pt.sex" ng-options="sex.value as sex.text for sex in sexes" required>
+                <option value="">Select Sex</option>
+            </select>
+        </div>
+
+    </fieldset>
+
+    <input type="hidden" name="patientId" ng-model="pt.uniqueId" />
+</div>
+
+<div class="actions" ng-controller="PAS.ctrlr.submit">
+
+    <button id="patientNewCancel" class="btn btn-cancel" data-original-title="Cancel">Cancel</button>
+    <button id="patientNewSubmit" type="submit" class="btn btn-success marginBottom" data-original-title="Save">Save</button>
+</div>

@@ -1,0 +1,284 @@
+<form id="claimFormOutpatient" class="form-stacked inline">
+    <div class="tab-summary">
+        <a class="btn danger close closeForm " href="/template-parts/patients/main-panel/claims.html">Close Form</a>
+        <h2>Create a Bill from the following Outpatient Encounter:</h2>
+        <ul class="summary">
+            <li>Check In/Out: <span class="value">8/25/2011 1200 - 8/29/2011 0800</span></li>
+            <li>Visit #: <span class="value">021</span></li>
+            <li>Encounter #: <span class="value">100010</span></li>
+            <li>Patient Type: <span class="value">Outpatient</span></li>
+            <li>Primary Provider: <span class="value">Dr. Smith</span></li>
+            <li>Bill #: <span class="value">100010.8</span></li>
+            <li>Bill Date: <span class="value">9/19/2011</span></li>
+        </ul>
+    </div>
+    <fieldset>
+        <a href="javascript:void(0);" class="newItem"><span class="icon">v</span> Preview Claim</a>
+        <legend><strong>Step 1 of 2:</strong> Bill Information</legend>
+        <p class="required">Mandatory Fields</p>
+        <div class="clearfix required">
+            <label for="typeOfBill">Type of Bill</label>
+            <div class="input">
+                <input type="text" id="typeOfBill">
+            </div>
+        </div>
+        <div class="clearfix twoInputs">
+            <label for="statementCoveragePeriodStart">Statement Coverage Period</label>
+            <div class="input-append">
+                <input type="date" id="statementCoveragePeriodStart">
+                <span class="add-on">d</span>
+            </div>
+            <div class="input-append">
+                <input type="date" id="statementCoveragePeriodEnd">
+                <span class="add-on">d</span>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend><strong>Step 2 of 2:</strong> Billing Details</legend>
+        <p>Open each CPT item below to assign billing details to each CPT item.</p>
+        <div class="well cpt-item collapsed">
+            <div class="summary-bar">
+                <ul class="summary">
+                    <li><a href="#" class="btn small success hiddenFieldsetTrigger" data-open="Collapse" data-collapsed="Open" data-wrapper="div.cpt-item">Open</a></li>
+                    <li>CPT: <span class="uneditable-input">800897</span></li>
+                    <li>Charges: <span class="uneditable-input">--</span></li>
+                    <li>Total Charges: <span class="uneditable-input">--</span></li>
+                    <li>Balance: <span class="uneditable-input">--</span></li>
+                    <li>NPI-TAX: <span class="uneditable-input">489654</span></li>
+                    <li>POS: <span class="uneditable-input">Cardiac Unit</span></li>
+                </ul>
+            </div>
+            <div class="hiddenFieldset">
+	            <div class="clearfix required">
+	                <label for="unit-1">Unit(s)</label>
+	                <div class="input">
+	                    <input type="text" id="unit-1">
+	                </div>
+	            </div>
+	            <div class="clearfix required">
+	                <label for="primaryICD-1">Primary ICD</label>
+	                <select name="primaryICD-1">
+	                    <option value="" selected="selected">Select Primary ICD</option>
+	                    <option value="primaryICD-1">Primary ICD A</option>
+	                    <option value="primaryICD-1">Primary ICD B</option>
+	                </select>
+	            </div>
+	            <div class="clearfix required">
+	                <label for="chargeCode-1">Charge Code</label>
+	                <select name="chargeCode-1">
+	                    <option value="" selected="selected">Select a Charge Code</option>
+	                    <option value="chargeCodeA-1">Charge Code A</option>
+	                    <option value="chargeCodeB-1">Charge Code B</option>
+	                </select>
+	            </div>
+	            <div class="clearfix">
+	                <label for="modifier-1">Modifier</label>
+	                <select name="modifier-1">
+	                    <option value="" selected="selected">Select a Modifier</option>
+	                    <option value="modifierA-1">Modifier A</option>
+	                    <option value="modifierB-1">Modifier B</option>
+	                </select>
+	            </div>
+	            <div class="clearfix">
+	                <label for="icd2-1">ICD2</label>
+	                <select name="icd2-1">
+	                    <option value="" selected="selected">Select ICD2</option>
+	                    <option value="ICD2A-1">ICD2 A</option>
+	                    <option value="ICD2B-1">ICD2 B</option>
+	                </select>
+	            </div>
+	            <div class="clearfix">
+	                <label for="icd3-1">ICD3</label>
+	                <select name="icd3-1">
+	                    <option value="" selected="selected">Select ICD3</option>
+	                    <option value="icd3A-1">ICD3 A</option>
+	                    <option value="icd3B-1">ICD3 B</option>
+	                </select>
+	            </div>
+	            <div class="clearfix">
+	                <label for="icd4-1">ICD4</label>
+	                <select name="icd4-1">
+	                    <option value="" selected="selected">Select ICD4</option>
+	                    <option value="icd4A-1">ICD4 A</option>
+	                    <option value="icd4B-1">ICD4 B</option>
+	                </select>
+	            </div>
+	            <div class="clearfix">
+	                <label for="adjustedCode-1">Adjusted Code</label>
+	                <div class="input">
+	                    <input type="text" id="adjustedCode-1">
+	                </div>
+	            </div>
+	            <div class="clearfix">
+	                <label for="adjustedAmount-1">Adjusted Amount</label>
+	                <div class="input">
+	                    <input type="text" id="adjustedAmount-1">
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="well cpt-item collapsed">
+            <div class="summary-bar">
+                <ul class="summary">
+                    <li><a href="#" class="btn small success hiddenFieldsetTrigger" data-open="Collapse" data-collapsed="Open" data-wrapper="div.cpt-item">Open</a></li>
+                    <li>CPT: <span class="uneditable-input">800897</span></li>
+                    <li>Charges: <span class="uneditable-input">--</span></li>
+                    <li>Total Charges: <span class="uneditable-input">--</span></li>
+                    <li>Balance: <span class="uneditable-input">--</span></li>
+                    <li>NPI-TAX: <span class="uneditable-input">489654</span></li>
+                    <li>POS: <span class="uneditable-input">Cardiac Unit</span></li>
+                </ul>
+            </div>
+            <div class="hiddenFieldset">
+	            <div class="clearfix required">
+	                <label for="unit-1">Unit(s)</label>
+	                <div class="input">
+	                    <input type="text" id="unit-1">
+	                </div>
+	            </div>
+	            <div class="clearfix required">
+	                <label for="primaryICD-1">Primary ICD</label>
+	                <select name="primaryICD-1">
+	                    <option value="" selected="selected">Select Primary ICD</option>
+	                    <option value="primaryICD-1">Primary ICD A</option>
+	                    <option value="primaryICD-1">Primary ICD B</option>
+	                </select>
+	            </div>
+	            <div class="clearfix required">
+	                <label for="chargeCode-1">Charge Code</label>
+	                <select name="chargeCode-1">
+	                    <option value="" selected="selected">Select a Charge Code</option>
+	                    <option value="chargeCodeA-1">Charge Code A</option>
+	                    <option value="chargeCodeB-1">Charge Code B</option>
+	                </select>
+	            </div>
+	            <div class="clearfix">
+	                <label for="modifier-1">Modifier</label>
+	                <select name="modifier-1">
+	                    <option value="" selected="selected">Select a Modifier</option>
+	                    <option value="modifierA-1">Modifier A</option>
+	                    <option value="modifierB-1">Modifier B</option>
+	                </select>
+	            </div>
+	            <div class="clearfix">
+	                <label for="icd2-1">ICD2</label>
+	                <select name="icd2-1">
+	                    <option value="" selected="selected">Select ICD2</option>
+	                    <option value="ICD2A-1">ICD2 A</option>
+	                    <option value="ICD2B-1">ICD2 B</option>
+	                </select>
+	            </div>
+	            <div class="clearfix">
+	                <label for="icd3-1">ICD3</label>
+	                <select name="icd3-1">
+	                    <option value="" selected="selected">Select ICD3</option>
+	                    <option value="icd3A-1">ICD3 A</option>
+	                    <option value="icd3B-1">ICD3 B</option>
+	                </select>
+	            </div>
+	            <div class="clearfix">
+	                <label for="icd4-1">ICD4</label>
+	                <select name="icd4-1">
+	                    <option value="" selected="selected">Select ICD4</option>
+	                    <option value="icd4A-1">ICD4 A</option>
+	                    <option value="icd4B-1">ICD4 B</option>
+	                </select>
+	            </div>
+	            <div class="clearfix">
+	                <label for="adjustedCode-1">Adjusted Code</label>
+	                <div class="input">
+	                    <input type="text" id="adjustedCode-1">
+	                </div>
+	            </div>
+	            <div class="clearfix">
+	                <label for="adjustedAmount-1">Adjusted Amount</label>
+	                <div class="input">
+	                    <input type="text" id="adjustedAmount-1">
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="well cpt-item collapsed">
+            <div class="summary-bar">
+                <ul class="summary">
+                    <li><a href="#" class="btn small success hiddenFieldsetTrigger" data-open="Collapse" data-collapsed="Open" data-wrapper="div.cpt-item">Open</a></li>
+                    <li>CPT: <span class="uneditable-input">800897</span></li>
+                    <li>Charges: <span class="uneditable-input">--</span></li>
+                    <li>Total Charges: <span class="uneditable-input">--</span></li>
+                    <li>Balance: <span class="uneditable-input">--</span></li>
+                    <li>NPI-TAX: <span class="uneditable-input">489654</span></li>
+                    <li>POS: <span class="uneditable-input">Cardiac Unit</span></li>
+                </ul>
+            </div>
+            <div class="hiddenFieldset">
+	            <div class="clearfix required">
+	                <label for="unit-1">Unit(s)</label>
+	                <div class="input">
+	                    <input type="text" id="unit-1">
+	                </div>
+	            </div>
+	            <div class="clearfix required">
+	                <label for="primaryICD-1">Primary ICD</label>
+	                <select name="primaryICD-1">
+	                    <option value="" selected="selected">Select Primary ICD</option>
+	                    <option value="primaryICD-1">Primary ICD A</option>
+	                    <option value="primaryICD-1">Primary ICD B</option>
+	                </select>
+	            </div>
+	            <div class="clearfix required">
+	                <label for="chargeCode-1">Charge Code</label>
+	                <select name="chargeCode-1">
+	                    <option value="" selected="selected">Select a Charge Code</option>
+	                    <option value="chargeCodeA-1">Charge Code A</option>
+	                    <option value="chargeCodeB-1">Charge Code B</option>
+	                </select>
+	            </div>
+	            <div class="clearfix">
+	                <label for="modifier-1">Modifier</label>
+	                <select name="modifier-1">
+	                    <option value="" selected="selected">Select a Modifier</option>
+	                    <option value="modifierA-1">Modifier A</option>
+	                    <option value="modifierB-1">Modifier B</option>
+	                </select>
+	            </div>
+	            <div class="clearfix">
+	                <label for="icd2-1">ICD2</label>
+	                <select name="icd2-1">
+	                    <option value="" selected="selected">Select ICD2</option>
+	                    <option value="ICD2A-1">ICD2 A</option>
+	                    <option value="ICD2B-1">ICD2 B</option>
+	                </select>
+	            </div>
+	            <div class="clearfix">
+	                <label for="icd3-1">ICD3</label>
+	                <select name="icd3-1">
+	                    <option value="" selected="selected">Select ICD3</option>
+	                    <option value="icd3A-1">ICD3 A</option>
+	                    <option value="icd3B-1">ICD3 B</option>
+	                </select>
+	            </div>
+	            <div class="clearfix">
+	                <label for="icd4-1">ICD4</label>
+	                <select name="icd4-1">
+	                    <option value="" selected="selected">Select ICD4</option>
+	                    <option value="icd4A-1">ICD4 A</option>
+	                    <option value="icd4B-1">ICD4 B</option>
+	                </select>
+	            </div>
+	            <div class="clearfix">
+	                <label for="adjustedCode-1">Adjusted Code</label>
+	                <div class="input">
+	                    <input type="text" id="adjustedCode-1">
+	                </div>
+	            </div>
+	            <div class="clearfix">
+	                <label for="adjustedAmount-1">Adjusted Amount</label>
+	                <div class="input">
+	                    <input type="text" id="adjustedAmount-1">
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+    </fieldset>
+</form>
