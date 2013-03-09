@@ -1,0 +1,308 @@
+/* Labels ---------------------- */
+
+.label {
+	padding: 0 ($baseLineHeight / 4);
+	text-decoration: none;
+	height: $baseLineHeight;
+	line-height: 1em;
+	white-space: nowrap;
+	display: inline-block;
+	@include border-radius($buttonRadius);
+
+	&.round {
+		padding: 0 ($baseLineHeight / 2);
+		@include border-radius(1000px);
+	}
+}
+
+/* Panels ---------------------- */
+
+.panel {
+	background: $mainColor;
+	border: solid 1px darken($mainColor, 10%);
+	margin: $baseLineHeight 0;
+	padding: 0 $baseLineHeight $baseLineHeight;
+	@include border-radius($buttonRadius);
+
+	&.callout {
+		background: $primaryColor;
+		border-color: darken($primaryColor, 10%);
+
+		a, p, h1, h2, h3, h4, h5, h6, p {
+			color: #fff;
+		}
+	}
+}
+
+/* Breadcrumbs ---------------------- */
+
+.breadcrumbs {
+	display: block;
+	background: $mainColor;
+	border: 1px solid darken($mainColor, 10%);
+	@include border-radius($buttonRadius);
+
+	li {
+		display: inline-block;
+		margin: 0;
+		padding: 0 ($baseLineHeight / 2) 0 0;
+		list-style: none;
+
+		a, span {
+			display: block;
+			padding: ($baseLineHeight / 2) $baseLineHeight;
+			position: relative;
+			line-height: 1.125em;
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: -($baseLineHeight * 1.5);
+				height: $baseLineHeight * 1.45;
+				width: $baseLineHeight * 1.45;
+				margin-top: -($baseLineHeight / 4);
+				@include rotate(45deg);
+				@include border-radius($buttonRadius);
+				border-top: 1px solid darken($mainColor, 10%);
+				border-right: 1px solid darken($mainColor, 10%);
+			}
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		span {
+			color: $inactiveColor;
+		}
+	}
+	li:first-child a:before {
+		content: none;
+	}
+	li:hover a, li a:focus {
+		text-decoration: underline;
+	}
+	li.current:hover a, li.current a:focus {
+		text-decoration: none;
+	}
+	li.unavailable {
+		a {
+			color: #999;
+		}
+		&:hover a, a:focus {
+			text-decoration: none;
+			color: #999;
+			cursor: default;
+		}
+	}
+}
+
+/* Inline Link List */
+ul.inlineList, ul.linkList {
+	margin: $baseLineHeight 0;
+	padding: 0;
+	list-style: none;
+
+	& > li {
+		list-style: none;
+		padding-#{$defaultOpposite}: $baseLineHeight;
+		display: inline-block;
+
+		& > * {
+			display: block;
+		}
+	}
+}
+
+/* Keytroke Characters ---------------------- */
+
+.keystroke, kbd {
+	font-family: $monoFontFamily;
+	padding: 2px 4px 0px;
+	margin: 0;
+	background: $mainColor;
+	border: solid 1px darken($mainColor, 5%);
+	@include border-radius($buttonRadius);
+}
+
+/* Image Thumbnails ---------------------- */
+.th {
+	display: inline-block;
+	margin: 0 0 $baseLineHeight;
+
+	img {
+		display: block;
+		border: solid 4px #fff;
+		@include box-shadow(0 0 0 1px rgba(#000, .2));
+		@include border-radius($thumbRadius);
+		@include transition-property(box-shadow);
+		@include transition-duration(300ms);
+	}
+	&:hover, &:focus {
+		img {
+			@include box-shadow(0 0 6px 1px rgba($mainColor, .5));
+		}
+	}
+}
+
+/* Video - Mad props to http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/ ---------------------- */
+
+.flex-video {
+	position: relative;
+	padding-top: 25px;
+	padding-bottom: 67.5%;
+	height: 0;
+	margin-bottom: 16px;
+	overflow: hidden;
+
+	&.widescreen {
+		padding-bottom: 57.25%;
+	}
+	&.vimeo {
+		padding-top: 0;
+	}
+
+	iframe, object, embed, video {
+		position: absolute;
+		top: 0;
+		#{$defaultDirection}: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+}
+
+/* Microformats ---------------------- */
+
+ul.vcard {
+	display: inline-block;
+	margin: 0 0 12px 0;
+	border: 1px solid #ddd;
+	padding: 10px;
+
+	li {
+		margin: 0;
+		display: block;
+	}
+	li.fn {
+		font-weight: bold;
+		font-size: ms(0) + 1;
+	}
+
+}
+
+p.vevent {
+	span.summary {
+		font-weight: bold;
+	}
+	abbr {
+		cursor: default;
+		text-decoration: none;
+		font-weight: bold;
+		border: none;
+		padding: 0 1px;
+	}
+}
+
+/* Progress Bar ---------------------- */
+
+div.progress {
+	padding: $progBarPad;
+	margin-bottom: 10px;
+	border: $progBarBorderSize solid $progBarBorderColor;
+	height: $baseLineHeight;
+
+	/* meter */
+	.meter {
+		display: block;
+		height: 100%;
+	}
+
+	/* border radii */
+	&.radius {
+		@include border-radius($buttonRadius);
+		.meter {
+			@include border-radius(2px);
+		}
+	}
+	&.round {
+		@include border-radius(1000px);
+		.meter {
+			@include border-radius(1000px);
+		}
+	}
+}
+
+/* Very large screens */
+@media only screen and (min-width: $screenXlarge) {}
+
+/* Medium screens */
+@media only screen and (max-width: $screenMedium) and (min-width: $screenSmall) {}
+
+/* Small screens */
+@media only screen and (max-width: $screenSmall) {
+
+	.breadcrumbs {
+		display: block;
+		background: $mainColor;
+		border: 1px solid darken($mainColor, 10%);
+		@include border-radius($buttonRadius);
+
+		li {
+			display: inline-block;
+			margin: 0;
+			padding: 0 ($baseLineHeight / 4) 0 0;
+			list-style: none;
+
+			a, span {
+				display: block;
+				padding: ($baseLineHeight / 2) ($baseLineHeight / 4);
+				position: relative;
+				line-height: 1.125em;
+
+				&:before {
+					content: ">";
+					position: static;
+					height: auto;
+					width: auto;
+					margin-right: ($baseLineHeight / 2);
+					@include rotate(0);
+					@include border-radius(0);
+					border: none;
+				}
+				&:hover {
+					text-decoration: none;
+				}
+			}
+			span {
+				color: $inactiveColor;
+			}
+		}
+		li:first-child a:before {
+			content: none;
+		}
+		li:hover a, li a:focus {
+			text-decoration: underline;
+		}
+		li.current:hover a, li.current a:focus {
+			text-decoration: none;
+		}
+		li.unavailable {
+			a {
+				color: #999;
+			}
+			&:hover a, a:focus {
+				text-decoration: none;
+				color: #999;
+				cursor: default;
+			}
+		}
+	}
+}
+
+/* Landscape Orientation */
+@media screen and (orientation: landscape) {}
+
+/* Portrait Orientation */
+@media screen and (orientation: portrait) {}
+
+/* Touch Detection */
+.touch .your-class {}

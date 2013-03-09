@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>phi: A Web-App Toolkit & Framework</title>
+
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- This is for all the wonderful favicons and touch icons,
+		 pattern found here: http://mathiasbynens.be/notes/touch-icons#sizes -->
+	<link rel="shortcut icon" href="/icons/favicon.ico">
+	<!-- For third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/icons/apple-touch-icon-144x144-precomposed.png">
+	<!-- For iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/icons/apple-touch-icon-114x114-precomposed.png">
+	<!-- For first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/icons/apple-touch-icon-72x72-precomposed.png">
+	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="/icons/apple-touch-icon-precomposed.png">
+
+	<!-- This is generated from the Sass files, any changes here will be overwritten -->
+	<link rel="stylesheet" href="../ui-ix/compiled/main.css">
+
+	<!-- Testing script loader
+	<script src="/vendor/angularjs/angular.js"></script>
+	<script src="app/app.js"></script> -->
+
+	<script src="../../vendor/modernizr/modernizr.js"></script>
+	<script src="main.js"></script>
+
+	<!-- To test vertical rhythm
+	<style>
+		body {
+			/* Baseline grid stolen from http://jsfiddle.net/joshnh/GdAEf/ for example purposes only */
+			background-image: -webkit-linear-gradient(hsla(0,0%,0%,0) 95%, hsla(0,25%,50%,.1) 95%);
+			background-image:    -moz-linear-gradient(hsla(0,0%,0%,0) 95%, hsla(0,25%,50%,.1) 95%);
+			background-image:     -ms-linear-gradient(hsla(0,0%,0%,0) 95%, hsla(0,25%,50%,.1) 95%);
+			background-image:      -o-linear-gradient(hsla(0,0%,0%,0) 95%, hsla(0,25%,50%,.1) 95%);
+			background-image:         linear-gradient(hsla(0,0%,0%,0) 95%, hsla(0,25%,50%,.1) 95%);
+			background-position: 50% 0;
+			background-size: 1.25em 1.25em;
+			margin: 0;
+		}
+	</style> -->
+
+	<!--[if lte IE 8]>
+		<script>
+			// Add the below elements for IE8 compatibility.
+			// If you add any new element type directives, you need to add them here.
+
+			document.createElement('ng-include');
+			document.createElement('ng-pluralize');
+			document.createElement('ng-view');
+			document.createElement('date-input');
+			document.createElement('phone-input');
+			document.createElement('time-input');
+			document.createElement('warning-blocks');
+		</script>
+	<![endif]-->
+
+</head>
+<body ng-controller="Ctrlr">
+
+	<div class="rowMain center">
+
+		<div class="eightColumns left">
+
+			<h1>AngularJS Example App</h1>
+
+			<form name="exampleForm">
+
+				<warning-required form-check="exampleForm"></warning-required>
+				<warning-pattern form-check="exampleForm"></warning-pattern>
+				<warning-date form-check="exampleForm"></warning-date>
+
+				<fieldset>
+
+					<legend>User Identification</legend>
+
+					<p class="required">Mandatory Fields</p>
+
+					<div class="row">
+						<div class="sixColumns required">
+							<label for="firstName">First Name</label>
+							<input ng-disabled="disable" name="First Name" type="text" id="firstName" ng-model="user.firstName" required>
+						</div>
+
+						<div class="sixColumns required">
+							<label for="lastName">Last Name</label>
+							<input ng-disabled="disable" name="Last Name" type="text" id="lastName" ng-model="user.lastName" required>
+						</div>
+
+						<div class="sixColumns required">
+							<label for="sex">Sex</label>
+							<select ng-disabled="disable" name="Sex" id="sex" ng-model="user.sex"
+									ng-options="sex for sex in sexes" required>
+								<option value="">Select Sex</option>
+							</select>
+						</div>
+
+						<div class="sixColumns required">
+							<label for="dateOfBirth">Date of Birth</label>
+							<date-input model="user.dateOfBirth" id="dateOfBirth" name="Date of Birth"
+									disable="disable" required></date-input>
+							<p ng-show="invalidDate">Date is not valid</p>
+						</div>
+					</div>
+				</fieldset>
+
+				<fieldset>
+
+					<legend>User Address</legend>
+
+					<div class="row">
+						<div class="sixColumns">
+							<label for="streetAddress">Street Address</label>
+							<input ng-disabled="disable" class="two-thirds" type="text" id="streetAddress" ng-model="user.streetAddress">
+						</div>
+
+						<div class="sixColumns">
+							<label for="city">City</label>
+							<input ng-disabled="disable" type="text" id="city" ng-model="user.city">
+						</div>
+
+						<div class="sixColumns">
+							<label for="state">State</label>
+							<select ng-disabled="disable" id="state" name="state" ng-model="user.state"
+									ng-options="state.value as state.text for state in states">
+								<option value="">Select State</option>
+							</select>
+						</div>
+
+						<div class="sixColumns">
+							<label for="zip">Zip</label>
+							<input ng-disabled="disable" type="text" id="zip" ng-model="user.zip">
+						</div>
+
+						<div class="sixColumns">
+							<label for="homePhone">Primary Phone</label>
+							<phone-number model="user.homePhone" id="homePhone" name="Primary Phone"
+								></phone-number>
+						</div>
+
+						<div class="sixColumns">
+							<label for="workPhone">Work Phone</label>
+							<phone-number model="user.workPhone" id="workPhone" name="Work Phone" ></phone-number>
+						</div>
+					</div>
+				</fieldset>
+
+				<hr />
+
+				<div class="twelveColumns right">
+					<button class="button default">Cancel</button>
+					<button ng-disabled="exampleForm.$invalid" ng-click="save()"
+							data-reveal-id="exampleModal" class="button primary modalTrigger">
+						Submit
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="exampleModal" class="modal">
+		<h2>Data from Form</h2>
+
+		<pre>{{savedData}}</pre>
+		<div class="twelveColumns right">
+
+			<a href="#" class="button default js_closeModal">Close Modal</a>
+		</div>
+	</div>
+</body>
+</html>
