@@ -1,0 +1,25 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Justin Lowery — UX Architect, Front-End Engineer — http://twitter.com/cerebralideas
+
+# THANKS
+
+    Zurb Team
+    HTML5 Boilerplate Team
+    AngularJS Team
+    Modernizr Team
+    jQuery Team
+    Compass and Sass Teams
+    The Open Source Movement
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Compass, Sass
+    Node.js, Grunt
+    Zurb Foundation
+    AngularJS, jQuery, Modernizr
+    Testacular, Jasmine
