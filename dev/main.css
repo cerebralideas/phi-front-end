@@ -4193,3 +4193,8 @@ table tbody tr td {
   width: 100%;
   font-family: entypo;
 }
+
+/* This file contains styles for rapid prototyping
+ * Remove this dependency from your main Sass file
+ * when you start fully developing your website/app
+ */

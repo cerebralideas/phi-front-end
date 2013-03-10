@@ -48,22 +48,25 @@
 @import 'extensions/grid-system/_grid';
 
 // Include Navigation Styles
-@import 'extensions/navigation/_navbar.scss';
+@import 'extensions/navigation/_navbar';
 
 // Include Tab Styles
-@import 'extensions/tabs/_tabs.scss';
+@import 'extensions/tabs/_tabs';
 
 // Helper Classes Styles
-@import 'extensions/helper-classes/_helper-classes.scss';
+@import 'extensions/helper-classes/_helper-classes';
 
 // Modal, "Reveal", Styles
-@import 'extensions/modals/_reveal.scss';
+@import 'extensions/modals/_reveal';
 
 // Alert Styles
-@import 'extensions/alerts/_alerts.scss';
+@import 'extensions/alerts/_alerts';
 
 // Table Styles
-@import 'extensions/tables/_tables.scss';
+@import 'extensions/tables/_tables';
 
 // Date-Picker Styles
-@import 'extensions/date-picker/_kalendae.scss';
+@import 'extensions/date-picker/_kalendae';
+
+// Prototyping Styles
+@import 'prototype/prototype';

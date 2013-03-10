@@ -68,5 +68,11 @@
 // Date-Picker Styles
 @import '../../phi/ui-ix/extensions/date-picker/_kalendae';
 
+// Prototyping Styles
+// Comment this out once you start fully developing your site/app
+@import '../../phi/ui-ix/prototype/_prototype';
+
 // Project Specific Styles
+// Place all project specific styles here
+// DO NOT add custom styles to the phi directory
 @import '_project';
