@@ -1,10 +1,10 @@
 @charset 'UTF-8';
 
-/******************************************
-* IMPORT FONTS FROM GOOGLE IF NEEDED      *
-******************************************/
+/*******************************************
+* IMPORT FONTS FROM GOOGLE, IF NEEDED      *
+*******************************************/
 
-// Arial and Helvetica have poor glyph specificity (e.g. 1lI), so Verdana is used for sans-serif.
+// Arial and Helvetica have poor glyph specificity (e.g. 1lI), so Verdana is used for sans-serif default/fallback.
 // Source Sans Pro can be used for even better glyph specificity. Uncomment the first @import below
 // use it.
 
@@ -47,7 +47,7 @@
 @import 'extensions/grid-system/_m_respond-to';
 @import 'extensions/grid-system/_grid';
 
-// Include Topbar Styles
+// Include Navigation Styles
 @import 'extensions/navigation/_navbar.scss';
 
 // Include Tab Styles

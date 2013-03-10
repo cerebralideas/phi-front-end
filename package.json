@@ -1,6 +1,6 @@
 {
 	"name": "Phi",
-	"version": "14.0-alpha",
+	"version": "0.15.1",
 	"description": "A Web-App Toolkit and Modular Framework",
 	"author": {
 		"name": "Justin Lowery",
@@ -9,7 +9,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/cerebralideas/phi.git"
+		"url": "https://github.com/cerebralideas/phi-framework.git"
 	},
 	"bugs": {
 		"url": ""
@@ -23,13 +23,14 @@
 	"dependencies": {},
 	"devDependencies": {
 		"node.js": "0.8.11",
-		"zurb-foundation": "", // Git rid of this!
+		"zurb-foundation": "",
 		"compass-ruby": "",
 		"grunt": "0.3.15",
 		"grunt-contrib": "0.2.0",
 		"grunt-docs": "0.2.3",
 		"testacular": "0.2.1",
-		"grunt-compass": "0.3.7"
+		"grunt-compass": "0.3.7",
+		"grunt-macreload": "0.1.3"
 	},
 	"keywords": []
 }

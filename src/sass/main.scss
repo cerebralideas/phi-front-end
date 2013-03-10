@@ -1,0 +1,72 @@
+@charset 'UTF-8';
+
+/*******************************************
+* IMPORT FONTS FROM GOOGLE, IF NEEDED      *
+*******************************************/
+
+// Arial and Helvetica have poor glyph specificity (e.g. 1lI), so Verdana is used for sans-serif default/fallback.
+// Source Sans Pro can be used for even better glyph specificity. Uncomment the first @import below
+// use it.
+
+// To use Source Sans from Adobe for the sans-serif and native Georgia for the serifed,
+// Uncomment the below @import. Source Sans is slightly more condensed and better for UI than Verdana.
+// Most performant @import option
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic);
+
+// Use this one if you need a better, more condensed mono-spaced font than the native monospace
+// Moderately performant
+// @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic|Inconsolata);
+
+// Use this if Source Sans and Georgia are not working well. Droid Sans and Droid Serif work very well
+// Least performant option
+// @import url('http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,700,400italic|Inconsolata');
+
+/******************************************
+* THIS MAKES UP THE CORE OF THE FRAMEWORK *
+******************************************/
+
+// These come from core compass framework, not phi test
+@import "compass/css3";
+@import "modular-scale";
+
+// This is all your settings variables
+@import 'settings';
+
+// This is your core: normalize and HTML5 Boilerplate CSS
+@import '../../phi/ui-ix/core/_globals';
+@import '../../phi/ui-ix/core/_ratios';
+@import '../../phi/ui-ix/core/_typography';
+@import '../../phi/ui-ix/core/_forms';
+@import '../../phi/ui-ix/core/_buttons';
+@import '../../phi/ui-ix/core/_icons';
+
+// Extensions below here
+// Include Grid System
+@import '../../phi/ui-ix/extensions/grid-system/_f_convert-number-to-word';
+@import '../../phi/ui-ix/extensions/grid-system/_f_grid-calc';
+@import '../../phi/ui-ix/extensions/grid-system/_m_respond-to';
+@import '../../phi/ui-ix/extensions/grid-system/_grid';
+
+// Include Navigation Styles
+@import '../../phi/ui-ix/extensions/navigation/_navbar';
+
+// Include Tab Styles
+@import '../../phi/ui-ix/extensions/tabs/_tabs';
+
+// Helper Classes Styles
+@import '../../phi/ui-ix/extensions/helper-classes/_helper-classes';
+
+// Modal, "Reveal", Styles
+@import '../../phi/ui-ix/extensions/modals/_reveal';
+
+// Alert Styles
+@import '../../phi/ui-ix/extensions/alerts/_alerts';
+
+// Table Styles
+@import '../../phi/ui-ix/extensions/tables/_tables';
+
+// Date-Picker Styles
+@import '../../phi/ui-ix/extensions/date-picker/_kalendae';
+
+// Project Specific Styles
+@import '_project';

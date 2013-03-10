@@ -13,7 +13,10 @@ module.exports = function(grunt) {
 				' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */'
 		},
 		lint: {
-			files: ['grunt.js','src/ui-ix/core/*.js', 'src/ui-ix/extensions/**/*.js', 'src/app/**/*.js', 'test/**/*.js']
+			files: [
+				'grunt.js','phi/ui-ix/core/*.js', 'phi/ui-ix/extensions/**/*.js', 'phi/app/**/*.js', 'test/**/*.js',
+				'src/js/*.js', 'src/js/**/*.js'
+			]
 		},
 		qunit: {
 			files: []
@@ -31,7 +34,10 @@ module.exports = function(grunt) {
 			}
 		},
 		watch: {
-			files: ['<config:lint.files>', 'src/ui-ix/*.scss', 'src/ui-ix/core/**/*.scss', 'src/ui-ix/extensions/**/*.scss'],
+			files: [
+				'<config:lint.files>', 'phi/ui-ix/*.scss', 'phi/ui-ix/core/**/*.scss', 'phi/ui-ix/extensions/**/*.scss',
+				'src/sass/*.scss'
+			],
 			tasks: 'default'
 		},
 		jshint: {
@@ -53,16 +59,6 @@ module.exports = function(grunt) {
 				angular: true
 			}
 		},
-		server: {
-			base: 'http://phi.site'
-		},
-		reload: {
-			port: 80,
-			proxy: {
-				port: 80,
-				host: 'phi.site'
-			}
-		},
 		uglify: {},
 		replace: {
 			srcToDist: {
@@ -76,19 +72,24 @@ module.exports = function(grunt) {
 		},
 		compass: {
 			dev: {
-				src: 'src/ui-ix/',
-				dest: 'src/ui-ix/compiled',
+				src: 'src/sass/',
+				dest: 'dev/',
 				linecomments: true,
 				forcecompile: true,
 				require: []
 			},
 			prod: {
-				src: 'src/',
+				src: 'src/sass',
 				dest: 'dist/',
 				outputstyle: 'compressed',
 				linecomments: false,
 				forcecompile: true,
 				require: []
+			}
+		},
+		macreload: {
+			reload: {
+				browser: 'canary'
 			}
 		}
 	});
@@ -96,16 +97,16 @@ module.exports = function(grunt) {
 	// Replaces strings for potential builds
 	// grunt.loadNpmTasks('grunt-text-replace');
 
-	// Run Grunt Reload
-	grunt.loadNpmTasks('grunt-reload');
+	// Live Reload
+	grunt.loadNpmTasks('grunt-macreload');
 
 	// Run Sass conversion
 	grunt.loadNpmTasks('grunt-compass');
 
 	// Default task.
-	grunt.registerTask('default', 'compass:dev');
+	grunt.registerTask('default', 'compass:dev macreload');
 
 	// Build task.
-	grunt.registerTask('build', 'lint concat min compass-clean compass:prod');
+	grunt.registerTask('build', 'lint concat min compass-clean compass:prod macreload');
 
 };
