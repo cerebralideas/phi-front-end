@@ -133,7 +133,7 @@
 					input[type=text] {
 						@include border-right-radius(0);
 						float: left;
-						font-size: ms(0) - 1;
+						font-size: $smallFontSize;
 						margin-top: -1px;
 						height: $topBarHeight / 2;
 						//28px margin-bottom: 0; width: $topBarSearchWidth - 70px;
@@ -141,7 +141,7 @@
 							border-left: none;
 							@include border-left-radius(0);
 							float: left;
-							font-size: ms(0) - 2;
+							font-size: $smallFontSize;
 							margin-top: -1px;
 							padding: 5px 12px 4px;
 						}
@@ -207,7 +207,7 @@
 						}
 						label {
 							color: lighten($topBarDropBgColor, 30%);
-							font-size: ms(0) - 4;
+							font-size: $smallFontSize;
 							font-weight: $topBarLinkWeight;
 							margin: 0;
 							padding-left: $topBarHeight / 3;

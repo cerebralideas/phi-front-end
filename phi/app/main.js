@@ -38,7 +38,7 @@
 				'app.js',
 
 				// Load controllers
-				'controllers/example-form.js',
+				'controllers/ctrl-example.js',
 
 				// directives
 				'directives/dir-common-warnings.js',

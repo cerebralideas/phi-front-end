@@ -1,686 +1,0 @@
-3.2.1 (Media Mark)
-bc909762248e88149de36c708c16f46fc712ae72
-o:Sass::Tree::RootNode
-:
-@linei:@template"'// Settings file containing Foundation defaults
-
-// Colors
-
-// Grays
-// -------------------------
-$black:                 #111 !default;
-$grayDarker:            #222 !default;
-$grayDark:              #333 !default;
-$gray:                  #555 !default;
-$grayLight:             #999 !default;
-$grayLighter:           #aaa !default;
-$darkWhite:             #efefef !default;
-$white:                 #fff !default;
-
-// Accent colors
-// -------------------------
-$blue:                  #1195BE !default;
-$lightBlue:             #17C8FF !default;
-$green:                 #13AA19 !default;
-$red:                   #C9281C !default;
-$yellow:                #ffff99 !default;
-$orange:                #E38219 !default;
-$pink:                  #c3325f !default;
-$purple:                #913E9C !default;
-
-// Scaffolding
-// -------------------------
-$bodyBackground: #F5F5F5 url('/img/100-100-3.png') !default;
-$baseTextColor: $grayDark !default;
-
-// Links
-// -------------------------
-$linkColor: darken($blue, 20%) !default;
-$linkColorHover: darken($linkColor, 15%) !default;
-
-// Typography
-// -------------------------
-
-$sansFontFamily: 'Source Sans Pro', Verdana, sans-serif !default;
-$serifFontFamily: Georgia, serif !default;
-$monoFontFamily: monospace !default;
-$iconFontFamily: entypo !default;
-
-$baseFontSize: 1em !default;
-// $importantModNum: 44px !default; Not used
-$base-size: $baseFontSize;
-$bodyFontWeight: 400;
-
-$smallFontSize: 0.9em !default;
-$largeFontSize: 1.125em !default;
-$baseFontFamily: $sansFontFamily !default;
-
-/* Set the vertical rhythm */
-/* Round, even numbers are best */
-/* Default is 20px increments */
-$baseLineHeight: 1.25em !default;
-$baseFontWeight: normal;
-$baseFontStyle: normal;
-$altFontFamily: $serifFontFamily !default;
-
-$fontSmoothing: subpixel-antialiased;
-
-/* Header type settings */
-$headerXLargeFontFamily: $sansFontFamily !default;
-$headerXLargeFontWeight: 100 !default;
-$headerXLargeFontStyle: normal !default;
-$headerXLargeFontColor: $grayLight !default;
-
-$headerLargeFontFamily: $sansFontFamily !default;
-$headerLargeFontWeight: 700 !default;
-$headerLargeFontStyle: normal !default;
-$headerLargeFontColor: $gray !default;
-
-$headerMediumFontFamily: $serifFontFamily;
-$headerMediumFontWeight: 700 !default;
-$headerMediumFontStyle: normal !default;
-$headerMediumFontColor: $gray !default;
-
-$headerSmallFontFamily: $serifFontFamily !default;
-$headerSmallFontWeight: 400 !default;
-$headerSmallFontStyle: italic !default;
-$headerSmallFontColor: $grayLight !default;
-
-/* Global UI color settings */
-$mainColor: $darkWhite !default;
-$mainBorderColor: darken(($mainColor), 10%);
-$lightColor: $darkWhite !default;
-$primaryColor: $blue !default;
-$secondaryColor: $lightBlue !default;
-$alertColor: $red !default;
-$successColor: $green !default;
-$txtColor: $grayDarker !default;
-$highlightColor: $yellow !default;
-$shinyEdge: rgba($white, .5) !default;
-$darkEdge: rgba($black, .2) !default;
-$inactiveColor: $grayLight !default;
-
-// Global UI design Settings
-$cornerRadius: 3px !default;
-
-// Grid Settings
-$containerWidth: none !default;
-$containerMaxWidth: 960px !default;
-$containerMinWidth: none !default;
-$rowWidth: auto !default;
-$rowMainMaxWidth: none !default;
-$rowMaxWidth: none !default;
-$rowMainMinWidth: none !default;
-$rowMinWidth: none !default;
-$columnGutter: $baseLineHeight !default;
-
-// Maximum of 14
-$totalColumns: 12 !default;
-$mobileTotalColumns: 4 !default;
-$blockGridElements: 12 !default; // Highest number of block grid elements, Maximum of 24 supported
-
-// Text Direction Settings
-// TODO: We should probably remove this.
-$textDirection: ltr !default; // Controls default global text direction, 'rtl' or 'ltr'
-$defaultDirection: left !default; // Change this to 'right' for right-to-left languages
-$defaultOpposite: right !default; // Change this to 'left' for right-to-left languages
-
-@if $textDirection == ltr {
-  $defaultDirection: left;
-  $defaultOpposite: right;
-} @else {
-  $defaultDirection: right;
-  $defaultOpposite: left;
-}
-
-// Button Settings
-
-$buttonFontFamily: $sansFontFamily !default;
-$buttonFontWeight: 400 !default;
-$buttonRadius: $cornerRadius !default;
-$btnBase: 10px !default;
-
-$tinyBtnBase: $btnBase - 5 !default;
-$smallBtnBase: $btnBase - 3 !default;
-$largeBtnBase: $btnBase + 5 !default;
-
-// Form Settings
-
-$formSpacing: 1em !default;
-$labelFontWeight: 700 !default;
-$labelFontColor: $gray !default;
-$labelBtmMargin: 3px !default;
-$inputFontColor: rgba(0,0,0,0.75) !default;
-$inputFontSize: 14px !default;
-$inputBgColor: $white !default;
-$inputFocusBgColor: darken(#fff, 2%) !default;
-$inputBorderColor: darken($mainBorderColor, 5%) !default;
-$inputFocusBorderColor: darken($mainBorderColor, 15%) !default;
-$inputBorderStyle: solid !default;
-$inputBorderWidth: 1px !default;
-$inputBorderRadius: $cornerRadius !default;
-$fieldsetBorderRadius: $cornerRadius !default;
-
-// Custom Form Settings
-
-$custFormBorderColor: #ccc !default;
-$custFormBgColor: #fff !default;
-$custCheckColor: #222 !default;
-$custSelectCurrentFontColor: #141414 !default;
-$custSelectBgColor: #fff !default;
-$custSelectBorderColor: #ddd !default;
-$custSelectTriangleColor: #aaa !default;
-$custSelectTriangleColorOpen: #222 !default;
-$custSelectDropHeight: 200px !default;
-$custDropdownBgColor: #fff !default;
-$custDropdownBorderColor: darken(#fff, 20%) !default;
-$custDropdownFontColor: #555 !default;
-$custDropdownSelectedBgColor: lighten(#2ba6cb, 40%) !default;
-$custDropdownSelectedFontColor: #000 !default;
-$custFormDisabledBgColor: #ddd !default;
-
-// Tab Settings
-
-$tabHeight: 40px !default;
-$tabTermFontSize: 12px;
-
-// Nav Bar Settings
-
-$navBarHeight: 40px !default;
-$navFlyoutBaseWidth: 250px !default;
-
-// Top Bar Settings
-
-$topBarBgColor: #222 !default;
-$topBarHeight: 45px !default;
-$topBarHeightMobile: 45px !default;
-$topBarBtmMargin: 30px !default;
-$topBarTitleWeight: bold !default;
-$topBarTitleSize: 17px !default;
-$topBarLinkColor: #fff !default;
-$topBarLinkWeight: bold !default;
-$topBarLinkSize: 13px !default;
-$topBarDropBgColor: #222 !default;
-$topBarDropLinkColor: #fff !default;
-$topBarDropToggleSize: 5px !default;
-$topBarDropToggleColor: #fff !default;
-$topBarDropToggleAlpha: 0.5 !default;
-$topBarSearchWidth: 200px !default;
-$topBarBreakPoint: 940px !default;
-$topBarNavToggleSize: 8px !default;
-
-// UI Settings
-
-$thumbRadius: 3px !default;
-$progBarHeight: 25px !default;
-$progBarBorderColor: darken(#fff, 20%) !default;
-$progBarBorderSize: 1px !default;
-$progBarPad: 2px !default;
-$linkListBottomMargin: 17px -22px !default;
-$tableBorderRadius: $cornerRadius !default;
-
-// Tooltip Settings
-
-$hasTipBorderBottom: dotted 1px #ccc !default;
-$hasTipFontWeight: bold !default;
-$hasTipFontColor: #333 !default;
-$hasTipBorderBottomHover: dotted 1px darken($mainColor, 20%) !default;
-$hasTipFontColorHover: $mainColor !default;
-$tooltipBackgroundColor: #000 !default;
-$tooltipBackgroundOpacity: 0.85 !default;
-$tooltipFontSize: 12px !default;
-$tooltipFontWeight: bold !default;
-$tooltipFontColor: #fff !default;
-$tapToCloseFontSize: 10 !default;
-$tapToCloseFontWeight: normal !default;
-$tapToCloseFontColor: #888 !default;
-$tooltipFontSizeScreenSm: 14 !default;
-$tooltipBgOpacityScreenSm: 0.85 !default;
-$tooltipBorderRadius: $cornerRadius !default;
-
-// Orbit Settings
-
-$orbitCaptionBgColorOldBrowser: #000 !default;
-$orbitCaptionBgColor: rgba(0,0,0,.6) !default;
-$orbitCaptionFontColor: #fff !default;
-$orbitBulletNavColor: #999 !default;
-$orbitBulletNavColorActive: #222 !default;
-$orbitHasThumbBorderColor: #000 !default;
-$orbitHasThumbBorderWidth: 2px !default;
-$orbitHasThumbBorderStyle: solid !default;
-$orbitSlideNumBgColor: rgba(0,0,0,0.7) !default;
-$orbitSlideNumFontColor: #fff !default;
-$orbitSlideNumPadding: 5px !default;
-
-// Clearing Settings
-
-$clearingBg: rgba(0,0,0,0.8) !default;
-$clearingOldBrowserBg: rgb(0,0,0) !default;
-$clearingCaptionBg: rgba(0,0,0,0.7) !default;
-$clearingCaptionOldBrowserBg: rgb(0,0,0) !default;
-$clearingCaptionFontColor: #fff !default;
-$clearingCloseColor: #fff !default;
-$clearingArrowColor: #fff !default;
-$clearingArrowSize: 16px !default;
-$clearingCarouselBg: rgba(0,0,0,0.75) !default;
-$clearingCarouselOldBrowserBg: rgb(0,0,0) !default;
-$clearingCarouselHeight: 150px !default;
-$clearingActiveImgHeight: 75% !default;
-$clearingCarouselThumbWidth: 175px;
-$clearingCarouselThumbActiveBorder: 4px solid rgb(255,255,255) !default;
-$clearingImgBg: rgba(0,0,0,0.75) !default;
-$clearingImgOldBrowserBg: rgb(0,0,0) !default;
-
-// Joyride Settings
-
-$tipBg: rgba(0,0,0,0.8) !default;
-$tipBgIE8: #000 !default;
-$tipFontColor: #fff !default;
-$tipHeaderWeight: bold !default;
-$tipDefaultWidth: 300px !default;
-$tipBorderRadius: 4px !default;
-$tipPadding: 18px 20px 24px !default;
-$tipNubSize: 14px !default;
-$tipFontSize: 14px !default;
-$tipTimerWidth: 50px !default;
-$tipTimerHeight: 3px !default;
-$tipTimerBorder: solid 1px #555 !default;
-$tipTimerColor: #666 !default;
-$tipCloseColor: #777 !default;
-$tipCloseSize: 20px !default;
-$tipCloseWeight: normal !default;
-$tipScreenFill: rgba(0,0,0,0.5) !default;
-
-// Off Canvas Width Settings
-
-$mainWidth: 80% !default;
-$complementaryWidth: 20% !default;
-
-// Media Queries
-
-$screenSmall: 768px !default;
-$screenMedium: 1279px !default;
-$screenXlarge: 1441px !default;
-
-// Saving for better em-based testing
-// $screenSmall: 44em !default;
-// $screenMedium: 77em !default;
-// $screenXlarge: 104em !default;
-
-// Saving for Sass 3.2 stable release
-// $mediaSmall: "only screen and (max-width: 767px)" !default;
-// $mediaMedium: "only screen and (max-width: 1279px) and (min-width: 768px)" !default;
-// $mediaXlarge: "only screen and (min-width: 1441px)" !default;
-// $mediaLandscape: "screen and (orientation: landscape)" !default;
-// $mediaPortrait: "screen and (orientation: portrait)" !default;
-// $mediaAll: "only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px)" !default;
-
-:@has_childrenT:@options{ :@children[ıo:Sass::Tree::CommentNode
-:
-@type:silent;i;	@;
-[ :@value["7/* Settings file containing Foundation defaults */o;
-;;;i;	@;
-[ ;["/* Colors */o;
-;;;i
-;	@;
-[ ;["-/* Grays
- * ------------------------- */o:Sass::Tree::VariableNode:@guarded"!default:
-@name"
-black;i:
-@expro:Sass::Script::Color	:@attrs{	:
-alphai:
-greeni:	bluei:redi;i;	@;0;	@;
-[ o;;"!default;"grayDarker;i;o;	;{	;i;i';i';i';i;	@;0;	@;
-[ o;;"!default;"grayDark;i;o;	;{	;i;i8;i8;i8;i;	@;0;	@;
-[ o;;"!default;"	gray;i;o;	;{	;i;iZ;iZ;iZ;i;	@;0;	@;
-[ o;;"!default;"grayLight;i;o;	;{	;i;iô;iô;iô;i;	@;0;	@;
-[ o;;"!default;"grayLighter;i;o;	;{	;i;i™;i™;i™;i;	@;0;	@;
-[ o;;"!default;"darkWhite;i;o;	;{	;i;iÔ;iÔ;iÔ;i;	@;0;	@;
-[ o;;"!default;"
-white;i;o;	;{	;i;iˇ;iˇ;iˇ;i;	@;0;	@;
-[ o;
-;;;i;	@;
-[ ;["5/* Accent colors
- * ------------------------- */o;;"!default;"	blue;i;o;	;{	;i;iï;iæ;i;i;	@;0;	@;
-[ o;;"!default;"lightBlue;i;o;	;{	;i;i»;iˇ;i;i;	@;0;	@;
-[ o;;"!default;"
-green;i;o;	;{	;i;i™;i;i;i;	@;0;	@;
-[ o;;"!default;"red;i;o;	;{	;i;i-;i!;i…;i;	@;0;	@;
-[ o;;"!default;"yellow;i;o;	;{	;i;iˇ;iô;iˇ;i;	@;0;	@;
-[ o;;"!default;"orange;i;o;	;{	;i;iÇ;i;i„;i;	@;0;	@;
-[ o;;"!default;"	pink;i;o;	;{	;i;i7;id;i√;i;	@;0;	@;
-[ o;;"!default;"purple;i;o;	;{	;i;iC;iú;ië;i;	@;0;	@;
-[ o;
-;;;i ;	@;
-[ ;["3/* Scaffolding
- * ------------------------- */o;;"!default;"bodyBackground;i";o:Sass::Script::List	;i":@separator:
-space;	@;[o;	;{	;i;iı;iı;iı;i";	@;0o:Sass::Script::Funcall;"url;i":@keywords{ ;	@:@splat0:
-@args[o:Sass::Script::String	;:string;i";	@;"/img/100-100-3.png;	@;
-[ o;;"!default;"baseTextColor;i#;o:Sass::Script::Variable	;"grayDark;i#:@underscored_name"grayDark;	@;	@;
-[ o;
-;;;i%;	@;
-[ ;["-/* Links
- * ------------------------- */o;;"!default;"linkColor;i';o;;"darken;i';{ ;	@;0;[o;"	;"	blue;i';#"	blue;	@o:Sass::Script::Number:@original"20%;i';	@:@denominator_units[ ;i:@numerator_units["%;	@;
-[ o;;"!default;"linkColorHover;i(;o;;"darken;i(;{ ;	@;0;[o;"	;"linkColor;i(;#"linkColor;	@o;$;%"15%;i(;	@;&[ ;i;'["%;	@;
-[ o;
-;;;i*;	@;
-[ ;["2/* Typography
- * ------------------------- */o;;"!default;"sansFontFamily;i-;o;	;i-;:
-comma;	@;[o; 	;;!;i-;	@;"Source Sans Proo; 	;:identifier;i-;	@;"Verdanao; 	;;);i-;	@;"sans-serif;	@;
-[ o;;"!default;"serifFontFamily;i.;o;	;i.;;(;	@;[o; 	;;);i.;	@;"Georgiao; 	;;);i.;	@;"
-serif;	@;
-[ o;;"!default;"monoFontFamily;i/;o; 	;;);i/;	@;"monospace;	@;
-[ o;;"!default;"iconFontFamily;i0;o; 	;;);i0;	@;"entypo;	@;
-[ o;;"!default;"baseFontSize;i2;o;$;%"1em;i2;	@;&[ ;i;'["em;	@;
-[ o;
-;;;i3;	@;
-[ ;["4/* $importantModNum: 44px !default; Not used */o;;0;"base-size;i4;o;"	;"baseFontSize;i4;#"baseFontSize;	@;	@;
-[ o;;0;"bodyFontWeight;i5;o;$;%"400;i5;	@;&[ ;iê;'[ ;	@;
-[ o;;"!default;"smallFontSize;i7;o;$;%"
-0.9em;i7;	@;&[ ;f0.90000000000000002 ÃÕ;'["em;	@;
-[ o;;"!default;"largeFontSize;i8;o;$;%"1.125em;i8;	@;&[ ;f
-1.125;'["em;	@;
-[ o;;"!default;"baseFontFamily;i9;o;"	;"sansFontFamily;i9;#"sansFontFamily;	@;	@;
-[ o;
-;:normal;i;;	@;
-[ ;[""/* Set the vertical rhythm */o;
-;;*;i<;	@;
-[ ;["'/* Round, even numbers are best */o;
-;;*;i=;	@;
-[ ;["%/* Default is 20px increments */o;;"!default;"baseLineHeight;i>;o;$;%"1.25em;i>;	@;&[ ;f	1.25;'["em;	@;
-[ o;;0;"baseFontWeight;i?;o; 	;;);i?;	@;"normal;	@;
-[ o;;0;"baseFontStyle;i@;o; 	;;);i@;	@;"normal;	@;
-[ o;;"!default;"altFontFamily;iA;o;"	;"serifFontFamily;iA;#"serifFontFamily;	@;	@;
-[ o;;0;"fontSmoothing;iC;o; 	;;);iC;	@;"subpixel-antialiased;	@;
-[ o;
-;;*;iE;	@;
-[ ;["/* Header type settings */o;;"!default;"headerXLargeFontFamily;iF;o;"	;"sansFontFamily;iF;#"sansFontFamily;	@;	@;
-[ o;;"!default;"headerXLargeFontWeight;iG;o;$;%"100;iG;	@;&@Ó;ii;'[ ;	@;
-[ o;;"!default;"headerXLargeFontStyle;iH;o; 	;;);iH;	@;"normal;	@;
-[ o;;"!default;"headerXLargeFontColor;iI;o;"	;"grayLight;iI;#"grayLight;	@;	@;
-[ o;;"!default;"headerLargeFontFamily;iK;o;"	;"sansFontFamily;iK;#"sansFontFamily;	@;	@;
-[ o;;"!default;"headerLargeFontWeight;iL;o;$;%"700;iL;	@;&@Ó;iº;'[ ;	@;
-[ o;;"!default;"headerLargeFontStyle;iM;o; 	;;);iM;	@;"normal;	@;
-[ o;;"!default;"headerLargeFontColor;iN;o;"	;"	gray;iN;#"	gray;	@;	@;
-[ o;;0;"headerMediumFontFamily;iP;o;"	;"serifFontFamily;iP;#"serifFontFamily;	@;	@;
-[ o;;"!default;"headerMediumFontWeight;iQ;o;$;%"700;iQ;	@;&@Ó;iº;'[ ;	@;
-[ o;;"!default;"headerMediumFontStyle;iR;o; 	;;);iR;	@;"normal;	@;
-[ o;;"!default;"headerMediumFontColor;iS;o;"	;"	gray;iS;#"	gray;	@;	@;
-[ o;;"!default;"headerSmallFontFamily;iU;o;"	;"serifFontFamily;iU;#"serifFontFamily;	@;	@;
-[ o;;"!default;"headerSmallFontWeight;iV;o;$;%"400;iV;	@;&@Ó;iê;'[ ;	@;
-[ o;;"!default;"headerSmallFontStyle;iW;o; 	;;);iW;	@;"italic;	@;
-[ o;;"!default;"headerSmallFontColor;iX;o;"	;"grayLight;iX;#"grayLight;	@;	@;
-[ o;
-;;*;iZ;	@;
-[ ;["#/* Global UI color settings */o;;"!default;"mainColor;i[;o;"	;"darkWhite;i[;#"darkWhite;	@;	@;
-[ o;;0;"mainBorderColor;i\;o;;"darken;i\;{ ;	@;0;[o;"	;"mainColor;i\;#"mainColor;	@o;$;%"10%;i\;	@;&[ ;i;'["%;	@;
-[ o;;"!default;"lightColor;i];o;"	;"darkWhite;i];#"darkWhite;	@;	@;
-[ o;;"!default;"primaryColor;i^;o;"	;"	blue;i^;#"	blue;	@;	@;
-[ o;;"!default;"secondaryColor;i_;o;"	;"lightBlue;i_;#"lightBlue;	@;	@;
-[ o;;"!default;"alertColor;i`;o;"	;"red;i`;#"red;	@;	@;
-[ o;;"!default;"successColor;ia;o;"	;"
-green;ia;#"
-green;	@;	@;
-[ o;;"!default;"txtColor;ib;o;"	;"grayDarker;ib;#"grayDarker;	@;	@;
-[ o;;"!default;"highlightColor;ic;o;"	;"yellow;ic;#"yellow;	@;	@;
-[ o;;"!default;"shinyEdge;id;o;;"	rgba;id;{ ;	@;0;[o;"	;"
-white;id;#"
-white;	@o;$;%"0.5;id;	@;&@Ó;f0.5;'[ ;	@;
-[ o;;"!default;"darkEdge;ie;o;;"	rgba;ie;{ ;	@;0;[o;"	;"
-black;ie;#"
-black;	@o;$;%"0.2;ie;	@;&@Ó;f0.20000000000000001 ôö;'[ ;	@;
-[ o;;"!default;"inactiveColor;if;o;"	;"grayLight;if;#"grayLight;	@;	@;
-[ o;
-;;;ih;	@;
-[ ;["$/* Global UI design Settings */o;;"!default;"cornerRadius;ii;o;$;%"3px;ii;	@;&[ ;i;'["px;	@;
-[ o;
-;;;ik;	@;
-[ ;["/* Grid Settings */o;;"!default;"containerWidth;il;o; 	;;);il;	@;"	none;	@;
-[ o;;"!default;"containerMaxWidth;im;o;$;%"
-960px;im;	@;&[ ;i¿;'["px;	@;
-[ o;;"!default;"containerMinWidth;in;o; 	;;);in;	@;"	none;	@;
-[ o;;"!default;"rowWidth;io;o; 	;;);io;	@;"	auto;	@;
-[ o;;"!default;"rowMainMaxWidth;ip;o; 	;;);ip;	@;"	none;	@;
-[ o;;"!default;"rowMaxWidth;iq;o; 	;;);iq;	@;"	none;	@;
-[ o;;"!default;"rowMainMinWidth;ir;o; 	;;);ir;	@;"	none;	@;
-[ o;;"!default;"rowMinWidth;is;o; 	;;);is;	@;"	none;	@;
-[ o;;"!default;"columnGutter;it;o;"	;"baseLineHeight;it;#"baseLineHeight;	@;	@;
-[ o;
-;;;iv;	@;
-[ ;["/* Maximum of 14 */o;;"!default;"totalColumns;iw;o;$;%"12;iw;	@;&@Ó;i;'[ ;	@;
-[ o;;"!default;"mobileTotalColumns;ix;o;$;%"4;ix;	@;&@Ó;i	;'[ ;	@;
-[ o;;"!default;"blockGridElements;iy;o;$;%"12;iy;	@;&@Ó;i;'[ ;	@;
-[ o;
-;;;iy;	@;
-[ ;["I/* Highest number of block grid elements, Maximum of 24 supported */o;
-;;;i{;	@;
-[ ;["K/* Text Direction Settings
- * TODO: We should probably remove this. */o;;"!default;"textDirection;i};o; 	;;);i};	@;"ltr;	@;
-[ o;
-;;;i};	@;
-[ ;["A/* Controls default global text direction, 'rtl' or 'ltr' */o;;"!default;"defaultDirection;i~;o; 	;;);i~;	@;"	left;	@;
-[ o;
-;;;i~;	@;
-[ ;["=/* Change this to 'right' for right-to-left languages */o;;"!default;"defaultOpposite;i;o; 	;;);i;	@;"
-right;	@;
-[ o;
-;;;i;	@;
-[ ;["</* Change this to 'left' for right-to-left languages */u:Sass::Tree::IfNode∫[o:Sass::Script::Operation
-:
-@linei|:@operand2o:Sass::Script::String	:
-@type:identifier;i|:@options{ :@value"ltr:@operand1o:Sass::Script::Variable	:
-@name"textDirection;i|:@underscored_name"textDirection;@;@:@operator:equ:Sass::Tree::IfNode˜[00[o:Sass::Tree::VariableNode:@guarded0:
-@name"defaultDirection:
-@lineiÄ:
-@expro:Sass::Script::String	:
-@type:identifier;iÄ:@options{ :@value"
-right;@
-:@children[ o; ;0;"defaultOpposite;iÅ;	o;
-	;;;iÅ;@
-;"	left;@
-;[ [o:Sass::Tree::VariableNode:@guarded0;"defaultDirection;i}:
-@expro;	;	;
-;i};@;"	left;@:@children[ o;;0;"defaultOpposite;i~;o;	;	;
-;i~;@;"
-right;@;[ o;
-;;;iÑ;	@;
-[ ;["/* Button Settings */o;;"!default;"buttonFontFamily;iÜ;o;"	;"sansFontFamily;iÜ;#"sansFontFamily;	@;	@;
-[ o;;"!default;"buttonFontWeight;iá;o;$;%"400;iá;	@;&@Ó;iê;'[ ;	@;
-[ o;;"!default;"buttonRadius;ià;o;"	;"cornerRadius;ià;#"cornerRadius;	@;	@;
-[ o;;"!default;"btnBase;iâ;o;$;%"	10px;iâ;	@;&[ ;i;'["px;	@;
-[ o;;"!default;"tinyBtnBase;iã;o:Sass::Script::Operation
-;iã:@operand2o;$;%"5;iã;	@;&@Ó;i
-;'[ :@operand1o;"	;"btnBase;iã;#"btnBase;	@;	@:@operator:
-minus;	@;
-[ o;;"!default;"smallBtnBase;iå;o;,
-;iå;-o;$;%"3;iå;	@;&@Ó;i;'[ ;.o;"	;"btnBase;iå;#"btnBase;	@;	@;/;0;	@;
-[ o;;"!default;"largeBtnBase;iç;o;,
-;iç;-o;$;%"5;iç;	@;&@Ó;i
-;'[ ;.o;"	;"btnBase;iç;#"btnBase;	@;	@;/:	plus;	@;
-[ o;
-;;;iè;	@;
-[ ;["/* Form Settings */o;;"!default;"formSpacing;ië;o;$;%"1em;ië;	@;&[ ;i;'["em;	@;
-[ o;;"!default;"labelFontWeight;ií;o;$;%"700;ií;	@;&@Ó;iº;'[ ;	@;
-[ o;;"!default;"labelFontColor;iì;o;"	;"	gray;iì;#"	gray;	@;	@;
-[ o;;"!default;"labelBtmMargin;iî;o;$;%"3px;iî;	@;&[ ;i;'["px;	@;
-[ o;;"!default;"inputFontColor;iï;o;;"	rgba;iï;{ ;	@;0;[	o;$;%"0;iï;	@;&@Ó;i ;'[ o;$;%"0;iï;	@;&@Ó;i ;'[ o;$;%"0;iï;	@;&@Ó;i ;'[ o;$;%"	0.75;iï;	@;&@Ó;f	0.75;'[ ;	@;
-[ o;;"!default;"inputFontSize;iñ;o;$;%"	14px;iñ;	@;&[ ;i;'["px;	@;
-[ o;;"!default;"inputBgColor;ió;o;"	;"
-white;ió;#"
-white;	@;	@;
-[ o;;"!default;"inputFocusBgColor;iò;o;;"darken;iò;{ ;	@;0;[o;	;{	;i;iˇ;iˇ;iˇ;iò;	@;0o;$;%"2%;iò;	@;&[ ;i;'["%;	@;
-[ o;;"!default;"inputBorderColor;iô;o;;"darken;iô;{ ;	@;0;[o;"	;"mainBorderColor;iô;#"mainBorderColor;	@o;$;%"5%;iô;	@;&[ ;i
-;'["%;	@;
-[ o;;"!default;"inputFocusBorderColor;iö;o;;"darken;iö;{ ;	@;0;[o;"	;"mainBorderColor;iö;#"mainBorderColor;	@o;$;%"15%;iö;	@;&[ ;i;'["%;	@;
-[ o;;"!default;"inputBorderStyle;iõ;o; 	;;);iõ;	@;"
-solid;	@;
-[ o;;"!default;"inputBorderWidth;iú;o;$;%"1px;iú;	@;&[ ;i;'["px;	@;
-[ o;;"!default;"inputBorderRadius;iù;o;"	;"cornerRadius;iù;#"cornerRadius;	@;	@;
-[ o;;"!default;"fieldsetBorderRadius;iû;o;"	;"cornerRadius;iû;#"cornerRadius;	@;	@;
-[ o;
-;;;i†;	@;
-[ ;["/* Custom Form Settings */o;;"!default;"custFormBorderColor;i¢;o;	;{	;i;iÃ;iÃ;iÃ;i¢;	@;0;	@;
-[ o;;"!default;"custFormBgColor;i£;o;	;{	;i;iˇ;iˇ;iˇ;i£;	@;0;	@;
-[ o;;"!default;"custCheckColor;i§;o;	;{	;i;i';i';i';i§;	@;0;	@;
-[ o;;"!default;"custSelectCurrentFontColor;i•;o;	;{	;i;i;i;i;i•;	@;0;	@;
-[ o;;"!default;"custSelectBgColor;i¶;o;	;{	;i;iˇ;iˇ;iˇ;i¶;	@;0;	@;
-[ o;;"!default;"custSelectBorderColor;iß;o;	;{	;i;i›;i›;i›;iß;	@;0;	@;
-[ o;;"!default;"custSelectTriangleColor;i®;o;	;{	;i;i™;i™;i™;i®;	@;0;	@;
-[ o;;"!default;" custSelectTriangleColorOpen;i©;o;	;{	;i;i';i';i';i©;	@;0;	@;
-[ o;;"!default;"custSelectDropHeight;i™;o;$;%"
-200px;i™;	@;&[ ;i»;'["px;	@;
-[ o;;"!default;"custDropdownBgColor;i´;o;	;{	;i;iˇ;iˇ;iˇ;i´;	@;0;	@;
-[ o;;"!default;"custDropdownBorderColor;i¨;o;;"darken;i¨;{ ;	@;0;[o;	;{	;i;iˇ;iˇ;iˇ;i¨;	@;0o;$;%"20%;i¨;	@;&[ ;i;'["%;	@;
-[ o;;"!default;"custDropdownFontColor;i≠;o;	;{	;i;iZ;iZ;iZ;i≠;	@;0;	@;
-[ o;;"!default;" custDropdownSelectedBgColor;iÆ;o;;"lighten;iÆ;{ ;	@;0;[o;	;{	;i;i¶;iÀ;i0;iÆ;	@;0o;$;%"40%;iÆ;	@;&[ ;i-;'["%;	@;
-[ o;;"!default;""custDropdownSelectedFontColor;iØ;o;	;{	;i;i ;i ;i ;iØ;	@;0;	@;
-[ o;;"!default;"custFormDisabledBgColor;i∞;o;	;{	;i;i›;i›;i›;i∞;	@;0;	@;
-[ o;
-;;;i≤;	@;
-[ ;["/* Tab Settings */o;;"!default;"tabHeight;i¥;o;$;%"	40px;i¥;	@;&[ ;i-;'["px;	@;
-[ o;;0;"tabTermFontSize;iµ;o;$;%"	12px;iµ;	@;&[ ;i;'["px;	@;
-[ o;
-;;;i∑;	@;
-[ ;["/* Nav Bar Settings */o;;"!default;"navBarHeight;iπ;o;$;%"	40px;iπ;	@;&[ ;i-;'["px;	@;
-[ o;;"!default;"navFlyoutBaseWidth;i∫;o;$;%"
-250px;i∫;	@;&[ ;i˙;'["px;	@;
-[ o;
-;;;iº;	@;
-[ ;["/* Top Bar Settings */o;;"!default;"topBarBgColor;iæ;o;	;{	;i;i';i';i';iæ;	@;0;	@;
-[ o;;"!default;"topBarHeight;iø;o;$;%"	45px;iø;	@;&[ ;i2;'["px;	@;
-[ o;;"!default;"topBarHeightMobile;i¿;o;$;%"	45px;i¿;	@;&[ ;i2;'["px;	@;
-[ o;;"!default;"topBarBtmMargin;i¡;o;$;%"	30px;i¡;	@;&[ ;i#;'["px;	@;
-[ o;;"!default;"topBarTitleWeight;i¬;o; 	;;);i¬;	@;"	bold;	@;
-[ o;;"!default;"topBarTitleSize;i√;o;$;%"	17px;i√;	@;&[ ;i;'["px;	@;
-[ o;;"!default;"topBarLinkColor;iƒ;o;	;{	;i;iˇ;iˇ;iˇ;iƒ;	@;0;	@;
-[ o;;"!default;"topBarLinkWeight;i≈;o; 	;;);i≈;	@;"	bold;	@;
-[ o;;"!default;"topBarLinkSize;i∆;o;$;%"	13px;i∆;	@;&[ ;i;'["px;	@;
-[ o;;"!default;"topBarDropBgColor;i«;o;	;{	;i;i';i';i';i«;	@;0;	@;
-[ o;;"!default;"topBarDropLinkColor;i»;o;	;{	;i;iˇ;iˇ;iˇ;i»;	@;0;	@;
-[ o;;"!default;"topBarDropToggleSize;i…;o;$;%"5px;i…;	@;&[ ;i
-;'["px;	@;
-[ o;;"!default;"topBarDropToggleColor;i ;o;	;{	;i;iˇ;iˇ;iˇ;i ;	@;0;	@;
-[ o;;"!default;"topBarDropToggleAlpha;iÀ;o;$;%"0.5;iÀ;	@;&@Ó;f0.5;'[ ;	@;
-[ o;;"!default;"topBarSearchWidth;iÃ;o;$;%"
-200px;iÃ;	@;&[ ;i»;'["px;	@;
-[ o;;"!default;"topBarBreakPoint;iÕ;o;$;%"
-940px;iÕ;	@;&[ ;i¨;'["px;	@;
-[ o;;"!default;"topBarNavToggleSize;iŒ;o;$;%"8px;iŒ;	@;&[ ;i;'["px;	@;
-[ o;
-;;;i–;	@;
-[ ;["/* UI Settings */o;;"!default;"thumbRadius;i“;o;$;%"3px;i“;	@;&[ ;i;'["px;	@;
-[ o;;"!default;"progBarHeight;i”;o;$;%"	25px;i”;	@;&[ ;i;'["px;	@;
-[ o;;"!default;"progBarBorderColor;i‘;o;;"darken;i‘;{ ;	@;0;[o;	;{	;i;iˇ;iˇ;iˇ;i‘;	@;0o;$;%"20%;i‘;	@;&[ ;i;'["%;	@;
-[ o;;"!default;"progBarBorderSize;i’;o;$;%"1px;i’;	@;&[ ;i;'["px;	@;
-[ o;;"!default;"progBarPad;i÷;o;$;%"2px;i÷;	@;&[ ;i;'["px;	@;
-[ o;;"!default;"linkListBottomMargin;i◊;o;	;i◊;;;	@;[o;$;%"	17px;i◊;	@;&[ ;i;'["pxo;$;%"
--22px;i◊;	@;&[ ;iÂ;'["px;	@;
-[ o;;"!default;"tableBorderRadius;iÿ;o;"	;"cornerRadius;iÿ;#"cornerRadius;	@;	@;
-[ o;
-;;;i⁄;	@;
-[ ;["/* Tooltip Settings */o;;"!default;"hasTipBorderBottom;i‹;o;	;i‹;;;	@;[o; 	;;);i‹;	@;"dottedo;$;%"1px;i‹;	@;&[ ;i;'["pxo;	;{	;i;iÃ;iÃ;iÃ;i‹;	@;0;	@;
-[ o;;"!default;"hasTipFontWeight;i›;o; 	;;);i›;	@;"	bold;	@;
-[ o;;"!default;"hasTipFontColor;iﬁ;o;	;{	;i;i8;i8;i8;iﬁ;	@;0;	@;
-[ o;;"!default;"hasTipBorderBottomHover;iﬂ;o;	;iﬂ;;;	@;[o; 	;;);iﬂ;	@;"dottedo;$;%"1px;iﬂ;	@;&[ ;i;'["pxo;;"darken;iﬂ;{ ;	@;0;[o;"	;"mainColor;iﬂ;#"mainColor;	@o;$;%"20%;iﬂ;	@;&[ ;i;'["%;	@;
-[ o;;"!default;"hasTipFontColorHover;i‡;o;"	;"mainColor;i‡;#"mainColor;	@;	@;
-[ o;;"!default;"tooltipBackgroundColor;i·;o;	;{	;i;i ;i ;i ;i·;	@;0;	@;
-[ o;;"!default;"tooltipBackgroundOpacity;i‚;o;$;%"	0.85;i‚;	@;&@Ó;f0.84999999999999998 33;'[ ;	@;
-[ o;;"!default;"tooltipFontSize;i„;o;$;%"	12px;i„;	@;&[ ;i;'["px;	@;
-[ o;;"!default;"tooltipFontWeight;i‰;o; 	;;);i‰;	@;"	bold;	@;
-[ o;;"!default;"tooltipFontColor;iÂ;o;	;{	;i;iˇ;iˇ;iˇ;iÂ;	@;0;	@;
-[ o;;"!default;"tapToCloseFontSize;iÊ;o;$;%"10;iÊ;	@;&@Ó;i;'[ ;	@;
-[ o;;"!default;"tapToCloseFontWeight;iÁ;o; 	;;);iÁ;	@;"normal;	@;
-[ o;;"!default;"tapToCloseFontColor;iË;o;	;{	;i;ià;ià;ià;iË;	@;0;	@;
-[ o;;"!default;"tooltipFontSizeScreenSm;iÈ;o;$;%"14;iÈ;	@;&@Ó;i;'[ ;	@;
-[ o;;"!default;"tooltipBgOpacityScreenSm;iÍ;o;$;%"	0.85;iÍ;	@;&@Ó;f0.84999999999999998 33;'[ ;	@;
-[ o;;"!default;"tooltipBorderRadius;iÎ;o;"	;"cornerRadius;iÎ;#"cornerRadius;	@;	@;
-[ o;
-;;;iÌ;	@;
-[ ;["/* Orbit Settings */o;;"!default;""orbitCaptionBgColorOldBrowser;iÔ;o;	;{	;i;i ;i ;i ;iÔ;	@;0;	@;
-[ o;;"!default;"orbitCaptionBgColor;i;o;;"	rgba;i;{ ;	@;0;[	o;$;%"0;i;	@;&@Ó;i ;'[ o;$;%"0;i;	@;&@Ó;i ;'[ o;$;%"0;i;	@;&@Ó;i ;'[ o;$;%"0.6;i;	@;&@Ó;f0.59999999999999998 33;'[ ;	@;
-[ o;;"!default;"orbitCaptionFontColor;iÒ;o;	;{	;i;iˇ;iˇ;iˇ;iÒ;	@;0;	@;
-[ o;;"!default;"orbitBulletNavColor;iÚ;o;	;{	;i;iô;iô;iô;iÚ;	@;0;	@;
-[ o;;"!default;"orbitBulletNavColorActive;iÛ;o;	;{	;i;i';i';i';iÛ;	@;0;	@;
-[ o;;"!default;"orbitHasThumbBorderColor;iÙ;o;	;{	;i;i ;i ;i ;iÙ;	@;0;	@;
-[ o;;"!default;"orbitHasThumbBorderWidth;iı;o;$;%"2px;iı;	@;&[ ;i;'["px;	@;
-[ o;;"!default;"orbitHasThumbBorderStyle;iˆ;o; 	;;);iˆ;	@;"
-solid;	@;
-[ o;;"!default;"orbitSlideNumBgColor;i˜;o;;"	rgba;i˜;{ ;	@;0;[	o;$;%"0;i˜;	@;&@Ó;i ;'[ o;$;%"0;i˜;	@;&@Ó;i ;'[ o;$;%"0;i˜;	@;&@Ó;i ;'[ o;$;%"0.7;i˜;	@;&@Ó;f0.69999999999999996 ff;'[ ;	@;
-[ o;;"!default;"orbitSlideNumFontColor;i¯;o;	;{	;i;iˇ;iˇ;iˇ;i¯;	@;0;	@;
-[ o;;"!default;"orbitSlideNumPadding;i˘;o;$;%"5px;i˘;	@;&[ ;i
-;'["px;	@;
-[ o;
-;;;i˚;	@;
-[ ;["/* Clearing Settings */o;;"!default;"clearingBg;i˝;o;;"	rgba;i˝;{ ;	@;0;[	o;$;%"0;i˝;	@;&@Ó;i ;'[ o;$;%"0;i˝;	@;&@Ó;i ;'[ o;$;%"0;i˝;	@;&@Ó;i ;'[ o;$;%"0.8;i˝;	@;&@Ó;f0.80000000000000004 ôö;'[ ;	@;
-[ o;;"!default;"clearingOldBrowserBg;i˛;o;;"rgb;i˛;{ ;	@;0;[o;$;%"0;i˛;	@;&@Ó;i ;'[ o;$;%"0;i˛;	@;&@Ó;i ;'[ o;$;%"0;i˛;	@;&@Ó;i ;'[ ;	@;
-[ o;;"!default;"clearingCaptionBg;iˇ;o;;"	rgba;iˇ;{ ;	@;0;[	o;$;%"0;iˇ;	@;&@Ó;i ;'[ o;$;%"0;iˇ;	@;&@Ó;i ;'[ o;$;%"0;iˇ;	@;&@Ó;i ;'[ o;$;%"0.7;iˇ;	@;&@Ó;f0.69999999999999996 ff;'[ ;	@;
-[ o;;"!default;" clearingCaptionOldBrowserBg;i ;o;;"rgb;i ;{ ;	@;0;[o;$;%"0;i ;	@;&@Ó;i ;'[ o;$;%"0;i ;	@;&@Ó;i ;'[ o;$;%"0;i ;	@;&@Ó;i ;'[ ;	@;
-[ o;;"!default;"clearingCaptionFontColor;i;o;	;{	;i;iˇ;iˇ;iˇ;i;	@;0;	@;
-[ o;;"!default;"clearingCloseColor;i;o;	;{	;i;iˇ;iˇ;iˇ;i;	@;0;	@;
-[ o;;"!default;"clearingArrowColor;i;o;	;{	;i;iˇ;iˇ;iˇ;i;	@;0;	@;
-[ o;;"!default;"clearingArrowSize;i;o;$;%"	16px;i;	@;&[ ;i;'["px;	@;
-[ o;;"!default;"clearingCarouselBg;i;o;;"	rgba;i;{ ;	@;0;[	o;$;%"0;i;	@;&@Ó;i ;'[ o;$;%"0;i;	@;&@Ó;i ;'[ o;$;%"0;i;	@;&@Ó;i ;'[ o;$;%"	0.75;i;	@;&@Ó;f	0.75;'[ ;	@;
-[ o;;"!default;"!clearingCarouselOldBrowserBg;i;o;;"rgb;i;{ ;	@;0;[o;$;%"0;i;	@;&@Ó;i ;'[ o;$;%"0;i;	@;&@Ó;i ;'[ o;$;%"0;i;	@;&@Ó;i ;'[ ;	@;
-[ o;;"!default;"clearingCarouselHeight;i;o;$;%"
-150px;i;	@;&[ ;iñ;'["px;	@;
-[ o;;"!default;"clearingActiveImgHeight;i;o;$;%"75%;i;	@;&[ ;iP;'["%;	@;
-[ o;;0;"clearingCarouselThumbWidth;i	;o;$;%"
-175px;i	;	@;&[ ;iØ;'["px;	@;
-[ o;;"!default;"&clearingCarouselThumbActiveBorder;i
-;o;	;i
-;;;	@;[o;$;%"4px;i
-;	@;&[ ;i	;'["pxo; 	;;);i
-;	@;"
-solido;;"rgb;i
-;{ ;	@;0;[o;$;%"255;i
-;	@;&@Ó;iˇ;'[ o;$;%"255;i
-;	@;&@Ó;iˇ;'[ o;$;%"255;i
-;	@;&@Ó;iˇ;'[ ;	@;
-[ o;;"!default;"clearingImgBg;i;o;;"	rgba;i;{ ;	@;0;[	o;$;%"0;i;	@;&@Ó;i ;'[ o;$;%"0;i;	@;&@Ó;i ;'[ o;$;%"0;i;	@;&@Ó;i ;'[ o;$;%"	0.75;i;	@;&@Ó;f	0.75;'[ ;	@;
-[ o;;"!default;"clearingImgOldBrowserBg;i;o;;"rgb;i;{ ;	@;0;[o;$;%"0;i;	@;&@Ó;i ;'[ o;$;%"0;i;	@;&@Ó;i ;'[ o;$;%"0;i;	@;&@Ó;i ;'[ ;	@;
-[ o;
-;;;i;	@;
-[ ;["/* Joyride Settings */o;;"!default;"
-tipBg;i;o;;"	rgba;i;{ ;	@;0;[	o;$;%"0;i;	@;&@Ó;i ;'[ o;$;%"0;i;	@;&@Ó;i ;'[ o;$;%"0;i;	@;&@Ó;i ;'[ o;$;%"0.8;i;	@;&@Ó;f0.80000000000000004 ôö;'[ ;	@;
-[ o;;"!default;"tipBgIE8;i;o;	;{	;i;i ;i ;i ;i;	@;0;	@;
-[ o;;"!default;"tipFontColor;i;o;	;{	;i;iˇ;iˇ;iˇ;i;	@;0;	@;
-[ o;;"!default;"tipHeaderWeight;i;o; 	;;);i;	@;"	bold;	@;
-[ o;;"!default;"tipDefaultWidth;i;o;$;%"
-300px;i;	@;&[ ;i,;'["px;	@;
-[ o;;"!default;"tipBorderRadius;i;o;$;%"4px;i;	@;&[ ;i	;'["px;	@;
-[ o;;"!default;"tipPadding;i;o;	;i;;;	@;[o;$;%"	18px;i;	@;&[ ;i;'["pxo;$;%"	20px;i;	@;&[ ;i;'["pxo;$;%"	24px;i;	@;&[ ;i;'["px;	@;
-[ o;;"!default;"tipNubSize;i;o;$;%"	14px;i;	@;&[ ;i;'["px;	@;
-[ o;;"!default;"tipFontSize;i;o;$;%"	14px;i;	@;&[ ;i;'["px;	@;
-[ o;;"!default;"tipTimerWidth;i;o;$;%"	50px;i;	@;&[ ;i7;'["px;	@;
-[ o;;"!default;"tipTimerHeight;i;o;$;%"3px;i;	@;&[ ;i;'["px;	@;
-[ o;;"!default;"tipTimerBorder;i;o;	;i;;;	@;[o; 	;;);i;	@;"
-solido;$;%"1px;i;	@;&[ ;i;'["pxo;	;{	;i;iZ;iZ;iZ;i;	@;0;	@;
-[ o;;"!default;"tipTimerColor;i;o;	;{	;i;ik;ik;ik;i;	@;0;	@;
-[ o;;"!default;"tipCloseColor;i;o;	;{	;i;i|;i|;i|;i;	@;0;	@;
-[ o;;"!default;"tipCloseSize;i;o;$;%"	20px;i;	@;&[ ;i;'["px;	@;
-[ o;;"!default;"tipCloseWeight;i;o; 	;;);i;	@;"normal;	@;
-[ o;;"!default;"tipScreenFill;i ;o;;"	rgba;i ;{ ;	@;0;[	o;$;%"0;i ;	@;&@Ó;i ;'[ o;$;%"0;i ;	@;&@Ó;i ;'[ o;$;%"0;i ;	@;&@Ó;i ;'[ o;$;%"0.5;i ;	@;&@Ó;f0.5;'[ ;	@;
-[ o;
-;;;i";	@;
-[ ;["$/* Off Canvas Width Settings */o;;"!default;"mainWidth;i$;o;$;%"80%;i$;	@;&[ ;iU;'["%;	@;
-[ o;;"!default;"complementaryWidth;i%;o;$;%"20%;i%;	@;&[ ;i;'["%;	@;
-[ o;
-;;;i';	@;
-[ ;["/* Media Queries */o;;"!default;"screenSmall;i);o;$;%"
-768px;i);	@;&[ ;i ;'["px;	@;
-[ o;;"!default;"screenMedium;i*;o;$;%"1279px;i*;	@;&[ ;iˇ;'["px;	@;
-[ o;;"!default;"screenXlarge;i+;o;$;%"1441px;i+;	@;&[ ;i°;'["px;	@;
-[ o;
-;;;i-;	@;
-[ ;["ã/* Saving for better em-based testing
- * $screenSmall: 44em !default;
- * $screenMedium: 77em !default;
- * $screenXlarge: 104em !default; */o;
-;;;i2;	@;
-[ ;["ñ/* Saving for Sass 3.2 stable release
- * $mediaSmall: "only screen and (max-width: 767px)" !default;
- * $mediaMedium: "only screen and (max-width: 1279px) and (min-width: 768px)" !default;
- * $mediaXlarge: "only screen and (min-width: 1441px)" !default;
- * $mediaLandscape: "screen and (orientation: landscape)" !default;
- * $mediaPortrait: "screen and (orientation: portrait)" !default;
- * $mediaAll: "only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px)" !default; */

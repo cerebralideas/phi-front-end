@@ -21,18 +21,17 @@
 // Least performant option
 // @import url('http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,700,400italic|Inconsolata');
 
-/******************************************
-* THIS MAKES UP THE CORE OF THE FRAMEWORK *
-******************************************/
+/*******************************************
+ * THIS MAKES UP THE CORE OF THE FRAMEWORK *
+ *******************************************/
 
 // These come from core compass framework, not phi test
 @import "compass/css3";
-@import "modular-scale";
 
 // This is all your settings variables
 @import 'settings';
 
-// This is your core: normalize and HTML5 Boilerplate CSS
+// This is your core, normalize and HTML5 Boilerplate CSS
 @import '../../phi/ui-ix/core/_globals';
 @import '../../phi/ui-ix/core/_ratios';
 @import '../../phi/ui-ix/core/_typography';
@@ -40,7 +39,13 @@
 @import '../../phi/ui-ix/core/_buttons';
 @import '../../phi/ui-ix/core/_icons';
 
-// Extensions below here
+/*******************************************
+ * THIS MAKES UP THE COMPONENTS OF PHI     *
+ *******************************************
+ * NOTE: Comment out the components you do *
+ * not want to use in your site/app.       *
+********************************************/
+
 // Include Grid System
 @import '../../phi/ui-ix/extensions/grid-system/_f_convert-number-to-word';
 @import '../../phi/ui-ix/extensions/grid-system/_f_grid-calc';

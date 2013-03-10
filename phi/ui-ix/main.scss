@@ -40,7 +40,13 @@
 @import 'core/_buttons';
 @import 'core/_icons';
 
-// Extensions below here
+/*******************************************
+ * THIS MAKES UP THE COMPONENTS OF PHI     *
+ *******************************************
+ * NOTE: Comment out the components you do *
+ * not want to use in your site/app.       *
+********************************************/
+
 // Include Grid System
 @import 'extensions/grid-system/_f_convert-number-to-word';
 @import 'extensions/grid-system/_f_grid-calc';

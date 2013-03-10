@@ -3,9 +3,9 @@
 /*******************************************
 * IMPORT FONTS FROM GOOGLE, IF NEEDED      *
 *******************************************/
-/******************************************
-* THIS MAKES UP THE CORE OF THE FRAMEWORK *
-******************************************/
+/*******************************************
+ * THIS MAKES UP THE CORE OF THE FRAMEWORK *
+ *******************************************/
 /* Set the vertical rhythm */
 /* Round, even numbers are best */
 /* Default is 20px increments */
@@ -895,33 +895,32 @@ body {
   font-family: "Source Sans Pro", Verdana, sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 1em;
   line-height: 1.25em;
 }
 
-/* line 14, ../phi/ui-ix/core/_typography.scss */
+/* line 13, ../phi/ui-ix/core/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   text-rendering: optimizelegibility;
 }
-/* line 18, ../phi/ui-ix/core/_typography.scss */
+/* line 17, ../phi/ui-ix/core/_typography.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-weight: normal;
   color: #999999;
   line-height: 1em;
 }
 
-/* line 26, ../phi/ui-ix/core/_typography.scss */
+/* line 25, ../phi/ui-ix/core/_typography.scss */
 hgroup h2:first-child, hgroup h3:first-child, hgroup h4:first-child, hgroup h5:first-child {
   padding-bottom: 0;
 }
 
-/* line 30, ../phi/ui-ix/core/_typography.scss */
+/* line 29, ../phi/ui-ix/core/_typography.scss */
 h1, h2 {
   letter-spacing: -0.05em;
 }
 
-/* line 33, ../phi/ui-ix/core/_typography.scss */
+/* line 32, ../phi/ui-ix/core/_typography.scss */
 h1 {
   /* Total Height: 100px */
   font-size: 400%;
@@ -937,12 +936,12 @@ h1 {
   font-style: normal;
   font-weight: 100;
 }
-/* line 48, ../phi/ui-ix/core/_typography.scss */
+/* line 47, ../phi/ui-ix/core/_typography.scss */
 h1 small {
   font-size: 70%;
 }
 
-/* line 52, ../phi/ui-ix/core/_typography.scss */
+/* line 51, ../phi/ui-ix/core/_typography.scss */
 h2, h3 {
   font-family: "Source Sans Pro", Verdana, sans-serif;
   font-weight: 700;
@@ -950,7 +949,7 @@ h2, h3 {
   font-style: normal;
 }
 
-/* line 58, ../phi/ui-ix/core/_typography.scss */
+/* line 57, ../phi/ui-ix/core/_typography.scss */
 h2 {
   /* Total Height: 80px */
   font-size: 200%;
@@ -961,12 +960,12 @@ h2 {
   padding: 0.625em 0;
   /* 20 */
 }
-/* line 66, ../phi/ui-ix/core/_typography.scss */
+/* line 65, ../phi/ui-ix/core/_typography.scss */
 h2 small {
   font-size: 70%;
 }
 
-/* line 70, ../phi/ui-ix/core/_typography.scss */
+/* line 69, ../phi/ui-ix/core/_typography.scss */
 h3, legend {
   /* Total Height: 60px */
   font-size: 150%;
@@ -977,12 +976,12 @@ h3, legend {
   padding: 0.833333333em 0;
   /* 20 */
 }
-/* line 78, ../phi/ui-ix/core/_typography.scss */
+/* line 77, ../phi/ui-ix/core/_typography.scss */
 h3 small, legend small {
   font-size: 70%;
 }
 
-/* line 82, ../phi/ui-ix/core/_typography.scss */
+/* line 81, ../phi/ui-ix/core/_typography.scss */
 h4, h5 {
   font-family: Georgia, serif;
   font-weight: 700;
@@ -990,7 +989,7 @@ h4, h5 {
   color: #555555;
 }
 
-/* line 88, ../phi/ui-ix/core/_typography.scss */
+/* line 87, ../phi/ui-ix/core/_typography.scss */
 h4 {
   /* Total Height: 80px */
   font-size: 113%;
@@ -1001,12 +1000,12 @@ h4 {
   padding: 1.1em 0 0;
   /* 20 */
 }
-/* line 96, ../phi/ui-ix/core/_typography.scss */
+/* line 95, ../phi/ui-ix/core/_typography.scss */
 h4 small {
   font-size: 70%;
 }
 
-/* line 100, ../phi/ui-ix/core/_typography.scss */
+/* line 99, ../phi/ui-ix/core/_typography.scss */
 h5 {
   /* Total Height: 40px */
   font-size: 100%;
@@ -1021,7 +1020,7 @@ h5 {
   text-transform: uppercase;
 }
 
-/* line 112, ../phi/ui-ix/core/_typography.scss */
+/* line 111, ../phi/ui-ix/core/_typography.scss */
 h6 {
   /* Total Height: 40px */
   font-size: 100%;
@@ -1038,36 +1037,36 @@ h6 {
   color: #999999;
 }
 
-/* line 130, ../phi/ui-ix/core/_typography.scss */
+/* line 129, ../phi/ui-ix/core/_typography.scss */
 p, ul, ol, dl {
   margin: 1.25em 0;
   /* 20 */
 }
-/* line 133, ../phi/ui-ix/core/_typography.scss */
+/* line 132, ../phi/ui-ix/core/_typography.scss */
 p small, ul small, ol small, dl small {
   font-size: 0.9em;
   color: #999999;
   line-height: 1em;
 }
 
-/* line 139, ../phi/ui-ix/core/_typography.scss */
+/* line 138, ../phi/ui-ix/core/_typography.scss */
 li {
   margin: 0;
 }
 
-/* line 144, ../phi/ui-ix/core/_typography.scss */
+/* line 143, ../phi/ui-ix/core/_typography.scss */
 .page-header {
   padding-bottom: 1.25em;
   margin: 1.25em 0;
   border-bottom: 1px solid #aaaaaa;
 }
 
-/* line 149, ../phi/ui-ix/core/_typography.scss */
+/* line 148, ../phi/ui-ix/core/_typography.scss */
 .page-header h1 {
   line-height: 1;
 }
 
-/* line 152, ../phi/ui-ix/core/_typography.scss */
+/* line 151, ../phi/ui-ix/core/_typography.scss */
 hr {
   border: solid #ddd;
   border-width: 1px 0 0;
@@ -1077,127 +1076,127 @@ hr {
   height: 0;
 }
 
-/* line 160, ../phi/ui-ix/core/_typography.scss */
+/* line 159, ../phi/ui-ix/core/_typography.scss */
 .doubleRule {
   border-width: 1px 0;
   clear: both;
   margin: 1.25em 0 2px;
 }
 
-/* line 165, ../phi/ui-ix/core/_typography.scss */
+/* line 164, ../phi/ui-ix/core/_typography.scss */
 .subheader {
   color: #a2a2a2;
   font-weight: 300;
   padding-top: 0;
 }
 
-/* line 170, ../phi/ui-ix/core/_typography.scss */
+/* line 169, ../phi/ui-ix/core/_typography.scss */
 em {
   font-style: italic;
   line-height: inherit;
 }
 
-/* line 174, ../phi/ui-ix/core/_typography.scss */
+/* line 173, ../phi/ui-ix/core/_typography.scss */
 strong {
   font-weight: bold;
   line-height: inherit;
 }
 
-/* line 178, ../phi/ui-ix/core/_typography.scss */
+/* line 177, ../phi/ui-ix/core/_typography.scss */
 small {
   font-size: 0.9em;
   line-height: inherit;
 }
 
-/* line 182, ../phi/ui-ix/core/_typography.scss */
+/* line 181, ../phi/ui-ix/core/_typography.scss */
 code {
   font-weight: bold;
   background: #ffff99;
 }
 
 /* Lists ---------------------- */
-/* line 188, ../phi/ui-ix/core/_typography.scss */
+/* line 187, ../phi/ui-ix/core/_typography.scss */
 ul, ol, dl {
   list-style-position: outside;
 }
 
-/* line 194, ../phi/ui-ix/core/_typography.scss */
+/* line 193, ../phi/ui-ix/core/_typography.scss */
 ul li ul, ul li ol {
   margin-left: 1.25em;
 }
-/* line 199, ../phi/ui-ix/core/_typography.scss */
+/* line 198, ../phi/ui-ix/core/_typography.scss */
 ul.square {
   list-style-type: square;
 }
-/* line 202, ../phi/ui-ix/core/_typography.scss */
+/* line 201, ../phi/ui-ix/core/_typography.scss */
 ul.square li ul {
   list-style: inherit;
 }
-/* line 207, ../phi/ui-ix/core/_typography.scss */
+/* line 206, ../phi/ui-ix/core/_typography.scss */
 ul.circle {
   list-style-type: circle;
 }
-/* line 210, ../phi/ui-ix/core/_typography.scss */
+/* line 209, ../phi/ui-ix/core/_typography.scss */
 ul.circle li ul {
   list-style: inherit;
 }
-/* line 215, ../phi/ui-ix/core/_typography.scss */
+/* line 214, ../phi/ui-ix/core/_typography.scss */
 ul.disc {
   list-style-type: disc;
 }
-/* line 218, ../phi/ui-ix/core/_typography.scss */
+/* line 217, ../phi/ui-ix/core/_typography.scss */
 ul.disc li ul {
   list-style: inherit;
 }
-/* line 223, ../phi/ui-ix/core/_typography.scss */
+/* line 222, ../phi/ui-ix/core/_typography.scss */
 ul.no-bullet {
   list-style: none;
 }
-/* line 226, ../phi/ui-ix/core/_typography.scss */
+/* line 225, ../phi/ui-ix/core/_typography.scss */
 ul.large li {
   line-height: 21px;
 }
 
-/* line 230, ../phi/ui-ix/core/_typography.scss */
+/* line 229, ../phi/ui-ix/core/_typography.scss */
 ol {
   margin-left: 1.25em;
 }
-/* line 235, ../phi/ui-ix/core/_typography.scss */
+/* line 234, ../phi/ui-ix/core/_typography.scss */
 ol li ul, ol li ol {
   margin-left: 1.25em;
   margin-bottom: 0;
 }
 
 /* Blockquotes ---------------------- */
-/* line 242, ../phi/ui-ix/core/_typography.scss */
+/* line 241, ../phi/ui-ix/core/_typography.scss */
 blockquote, blockquote p {
   font-style: italic;
   font-family: Georgia, serif;
   color: #999999;
 }
 
-/* line 247, ../phi/ui-ix/core/_typography.scss */
+/* line 246, ../phi/ui-ix/core/_typography.scss */
 blockquote {
   margin: 0 0 1.25em;
   padding: 1.25em;
   border-left: 5px solid #aaaaaa;
 }
-/* line 252, ../phi/ui-ix/core/_typography.scss */
+/* line 251, ../phi/ui-ix/core/_typography.scss */
 blockquote cite {
   display: block;
   font-size: 0.9em;
   color: #888888;
 }
-/* line 257, ../phi/ui-ix/core/_typography.scss */
+/* line 256, ../phi/ui-ix/core/_typography.scss */
 blockquote cite:before {
   content: "\2014 \0020";
 }
-/* line 260, ../phi/ui-ix/core/_typography.scss */
+/* line 259, ../phi/ui-ix/core/_typography.scss */
 blockquote cite a, blockquote cite a:visited {
   color: #888888;
 }
 
-/* line 266, ../phi/ui-ix/core/_typography.scss */
+/* line 265, ../phi/ui-ix/core/_typography.scss */
 abbr, acronym {
   text-transform: uppercase;
   font-size: 90%;
@@ -1206,7 +1205,7 @@ abbr, acronym {
   cursor: help;
 }
 
-/* line 273, ../phi/ui-ix/core/_typography.scss */
+/* line 272, ../phi/ui-ix/core/_typography.scss */
 abbr {
   text-transform: none;
 }
@@ -1217,14 +1216,14 @@ abbr {
  * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
  * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
 */
-/* line 283, ../phi/ui-ix/core/_typography.scss */
+/* line 282, ../phi/ui-ix/core/_typography.scss */
 .print-only {
   display: none !important;
 }
 
 @media print {
   /* Black prints faster: h5bp.com/s */
-  /* line 289, ../phi/ui-ix/core/_typography.scss */
+  /* line 288, ../phi/ui-ix/core/_typography.scss */
   * {
     background: transparent !important;
     color: black !important;
@@ -1234,45 +1233,45 @@ abbr {
     -ms-filter: none !important;
   }
 
-  /* line 297, ../phi/ui-ix/core/_typography.scss */
+  /* line 296, ../phi/ui-ix/core/_typography.scss */
   a, a:visited {
     text-decoration: underline;
   }
 
-  /* line 300, ../phi/ui-ix/core/_typography.scss */
+  /* line 299, ../phi/ui-ix/core/_typography.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 303, ../phi/ui-ix/core/_typography.scss */
+  /* line 302, ../phi/ui-ix/core/_typography.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
   /* Don't show links for images, or javascript/internal links */
-  /* line 307, ../phi/ui-ix/core/_typography.scss */
+  /* line 306, ../phi/ui-ix/core/_typography.scss */
   .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
     content: "";
   }
 
-  /* line 310, ../phi/ui-ix/core/_typography.scss */
+  /* line 309, ../phi/ui-ix/core/_typography.scss */
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
   /* h5bp.com/t */
-  /* line 315, ../phi/ui-ix/core/_typography.scss */
+  /* line 314, ../phi/ui-ix/core/_typography.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 318, ../phi/ui-ix/core/_typography.scss */
+  /* line 317, ../phi/ui-ix/core/_typography.scss */
   tr, img {
     page-break-inside: avoid;
   }
 
-  /* line 321, ../phi/ui-ix/core/_typography.scss */
+  /* line 320, ../phi/ui-ix/core/_typography.scss */
   img {
     max-width: 100% !important;
   }
@@ -1281,33 +1280,33 @@ abbr {
     margin: 0.5cm;
 }
 
-  /* line 327, ../phi/ui-ix/core/_typography.scss */
+  /* line 326, ../phi/ui-ix/core/_typography.scss */
   p, h2, h3 {
     orphans: 3;
     widows: 3;
   }
 
-  /* line 331, ../phi/ui-ix/core/_typography.scss */
+  /* line 330, ../phi/ui-ix/core/_typography.scss */
   h2, h3 {
     page-break-after: avoid;
   }
 
-  /* line 334, ../phi/ui-ix/core/_typography.scss */
+  /* line 333, ../phi/ui-ix/core/_typography.scss */
   .hide-on-print {
     display: none !important;
   }
 
-  /* line 337, ../phi/ui-ix/core/_typography.scss */
+  /* line 336, ../phi/ui-ix/core/_typography.scss */
   .print-only {
     display: block !important;
   }
 
-  /* line 340, ../phi/ui-ix/core/_typography.scss */
+  /* line 339, ../phi/ui-ix/core/_typography.scss */
   .hide-for-print {
     display: none !important;
   }
 
-  /* line 343, ../phi/ui-ix/core/_typography.scss */
+  /* line 342, ../phi/ui-ix/core/_typography.scss */
   .show-for-print {
     display: inherit !important;
   }
@@ -1369,21 +1368,14 @@ select {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.75);
   display: block;
   margin: 0 0 1.25em 0;
   padding: 0.625em;
   height: 2.5em;
   width: 100%;
-  -webkit-transition: all 0.15s linear;
-  -moz-transition: all 0.15s linear;
-  -o-transition: all 0.15s linear;
-  transition: all 0.15s linear;
 }
-/* line 52, ../phi/ui-ix/core/_forms.scss */
+/* line 50, ../phi/ui-ix/core/_forms.scss */
 input[type='text'].oversize,
 input[type='password'].oversize,
 input[type='date'].oversize,
@@ -1399,7 +1391,7 @@ select.oversize {
   font-size: 1.125;
   padding: 1.25em 0.5em;
 }
-/* line 56, ../phi/ui-ix/core/_forms.scss */
+/* line 54, ../phi/ui-ix/core/_forms.scss */
 input[type='text'][disabled],
 input[type='password'][disabled],
 input[type='date'][disabled],
@@ -1415,7 +1407,7 @@ select[disabled] {
   background-color: #ddd;
 }
 
-/* line 60, ../phi/ui-ix/core/_forms.scss */
+/* line 58, ../phi/ui-ix/core/_forms.scss */
 input + small {
   display: block;
   padding: 0 4px;
@@ -1429,27 +1421,27 @@ input + small {
   border-bottom-left-radius: 3px;
 }
 
-/* line 68, ../phi/ui-ix/core/_forms.scss */
+/* line 66, ../phi/ui-ix/core/_forms.scss */
 input:focus, textarea:focus {
   background: #fafafa;
   border-color: #afafaf;
 }
 
-/* line 73, ../phi/ui-ix/core/_forms.scss */
+/* line 71, ../phi/ui-ix/core/_forms.scss */
 .inputPrefix,
 .inputPostfix {
   display: block;
   padding-top: 0;
   padding-bottom: 0;
 }
-/* line 78, ../phi/ui-ix/core/_forms.scss */
+/* line 76, ../phi/ui-ix/core/_forms.scss */
 .inputPrefix input,
 .inputPostfix input {
   display: inline-block;
   width: 75%;
 }
 
-/* line 83, ../phi/ui-ix/core/_forms.scss */
+/* line 81, ../phi/ui-ix/core/_forms.scss */
 .addOn {
   display: inline-block;
   vertical-align: top;
@@ -1461,7 +1453,7 @@ input:focus, textarea:focus {
   text-align: center;
   line-height: 1em;
 }
-/* line 94, ../phi/ui-ix/core/_forms.scss */
+/* line 92, ../phi/ui-ix/core/_forms.scss */
 .addOn.button {
   margin: 0;
   -webkit-border-radius: 0;
@@ -1471,16 +1463,16 @@ input:focus, textarea:focus {
   border-radius: 0;
 }
 
-/* line 101, ../phi/ui-ix/core/_forms.scss */
+/* line 99, ../phi/ui-ix/core/_forms.scss */
 .inputPrefixMini .addOn {
   width: 15%;
 }
-/* line 104, ../phi/ui-ix/core/_forms.scss */
+/* line 102, ../phi/ui-ix/core/_forms.scss */
 .inputPrefixMini input {
   width: 85%;
 }
 
-/* line 110, ../phi/ui-ix/core/_forms.scss */
+/* line 108, ../phi/ui-ix/core/_forms.scss */
 .inputPrefix .addOn {
   border-right: none;
   -moz-border-radius-topleft: 3px;
@@ -1490,7 +1482,7 @@ input:focus, textarea:focus {
   -webkit-border-bottom-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
-/* line 115, ../phi/ui-ix/core/_forms.scss */
+/* line 113, ../phi/ui-ix/core/_forms.scss */
 .inputPrefix input {
   -moz-border-radius-topleft: 0;
   -webkit-border-top-left-radius: 0;
@@ -1500,7 +1492,7 @@ input:focus, textarea:focus {
   border-bottom-left-radius: 0;
 }
 
-/* line 122, ../phi/ui-ix/core/_forms.scss */
+/* line 120, ../phi/ui-ix/core/_forms.scss */
 .inputPostfix .addOn {
   border-left: none;
   -moz-border-radius-topright: 3px;
@@ -1510,7 +1502,7 @@ input:focus, textarea:focus {
   -webkit-border-bottom-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
-/* line 127, ../phi/ui-ix/core/_forms.scss */
+/* line 125, ../phi/ui-ix/core/_forms.scss */
 .inputPostfix input {
   -moz-border-radius-topright: 0;
   -webkit-border-top-right-radius: 0;
@@ -1520,32 +1512,25 @@ input:focus, textarea:focus {
   border-bottom-right-radius: 0;
 }
 
-/* line 132, ../phi/ui-ix/core/_forms.scss */
+/* line 130, ../phi/ui-ix/core/_forms.scss */
 textarea {
   height: 5em;
 }
 
-/* line 135, ../phi/ui-ix/core/_forms.scss */
+/* line 133, ../phi/ui-ix/core/_forms.scss */
 select {
   -webkit-appearance: none;
   line-height: 1em;
   background: url("../img/svg-icons/select-arrow.svg") no-repeat right center, #efefef;
-  -webkit-box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.05);
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  transition: none;
   cursor: pointer;
 }
-/* line 143, ../phi/ui-ix/core/_forms.scss */
+/* line 139, ../phi/ui-ix/core/_forms.scss */
 select:hover, select:focus {
   -webkit-box-shadow: inset 0 4em 4px rgba(0, 0, 0, 0.025);
   -moz-box-shadow: inset 0 4em 4px rgba(0, 0, 0, 0.025);
   box-shadow: inset 0 4em 4px rgba(0, 0, 0, 0.025);
 }
-/* line 146, ../phi/ui-ix/core/_forms.scss */
+/* line 142, ../phi/ui-ix/core/_forms.scss */
 select:active {
   -webkit-box-shadow: inset 0 4em 4px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 4em 4px rgba(0, 0, 0, 0.05);
@@ -1553,13 +1538,13 @@ select:active {
 }
 
 /* Inline form */
-/* line 153, ../phi/ui-ix/core/_forms.scss */
+/* line 149, ../phi/ui-ix/core/_forms.scss */
 .inlineForm label, .inlineForm input {
   display: inline-block;
   vertical-align: top;
 }
 
-/* line 157, ../phi/ui-ix/core/_forms.scss */
+/* line 153, ../phi/ui-ix/core/_forms.scss */
 .inlineForm label {
   margin: 0;
   width: 30%;
@@ -1567,20 +1552,20 @@ select:active {
   padding: 0.625em 0.625em 0 0;
 }
 
-/* line 163, ../phi/ui-ix/core/_forms.scss */
+/* line 159, ../phi/ui-ix/core/_forms.scss */
 .inlineForm input {
   width: 59%;
 }
 
 /* Fieldsets */
-/* line 168, ../phi/ui-ix/core/_forms.scss */
+/* line 164, ../phi/ui-ix/core/_forms.scss */
 fieldset {
   border: none;
   border-top: solid 1px #ddd;
   padding: 0 1.25em;
   margin: 0;
 }
-/* line 174, ../phi/ui-ix/core/_forms.scss */
+/* line 170, ../phi/ui-ix/core/_forms.scss */
 fieldset legend {
   font-weight: bold;
   padding: 0 5px;
@@ -1588,14 +1573,14 @@ fieldset legend {
 }
 
 /* Required */
-/* line 185, ../phi/ui-ix/core/_forms.scss */
+/* line 181, ../phi/ui-ix/core/_forms.scss */
 .required label,
 label.required,
 select.required,
 p.required {
   color: #c9281c;
 }
-/* line 188, ../phi/ui-ix/core/_forms.scss */
+/* line 184, ../phi/ui-ix/core/_forms.scss */
 .required label:after,
 label.required:after,
 select.required:after,
@@ -1604,7 +1589,7 @@ p.required:after {
 }
 
 /* Errors */
-/* line 197, ../phi/ui-ix/core/_forms.scss */
+/* line 193, ../phi/ui-ix/core/_forms.scss */
 .error input,
 input.error,
 .error textarea,
@@ -1619,12 +1604,12 @@ textarea.error {
   border-bottom-right-radius: 0;
 }
 
-/* line 203, ../phi/ui-ix/core/_forms.scss */
+/* line 199, ../phi/ui-ix/core/_forms.scss */
 .error label, label.error {
   color: #c9281c;
 }
 
-/* line 207, ../phi/ui-ix/core/_forms.scss */
+/* line 203, ../phi/ui-ix/core/_forms.scss */
 .error textarea:focus, textarea.error:focus {
   background: #fafafa;
   border-color: #b3b3b3;
@@ -1632,7 +1617,7 @@ textarea.error {
 
 /* Very large screens */
 @media only screen and (min-width: 1441px) {
-  /* line 215, ../phi/ui-ix/core/_forms.scss */
+  /* line 211, ../phi/ui-ix/core/_forms.scss */
   .row form .row {
     margin: 0 -2.5em;
   }
@@ -1640,21 +1625,21 @@ textarea.error {
 /* Medium screens */
 /* Small screens */
 @media only screen and (max-width: 768px) {
-  /* line 228, ../phi/ui-ix/core/_forms.scss */
+  /* line 224, ../phi/ui-ix/core/_forms.scss */
   .inputPrefix,
   .inputPostfix {
     display: block;
     padding-top: 0;
     padding-bottom: 0;
   }
-  /* line 233, ../phi/ui-ix/core/_forms.scss */
+  /* line 229, ../phi/ui-ix/core/_forms.scss */
   .inputPrefix input,
   .inputPostfix input {
     display: inline-block;
     width: 60%;
   }
 
-  /* line 238, ../phi/ui-ix/core/_forms.scss */
+  /* line 234, ../phi/ui-ix/core/_forms.scss */
   .addOn {
     display: inline-block;
     vertical-align: top;
@@ -1666,7 +1651,7 @@ textarea.error {
     text-align: center;
     line-height: 1em;
   }
-  /* line 249, ../phi/ui-ix/core/_forms.scss */
+  /* line 245, ../phi/ui-ix/core/_forms.scss */
   .addOn.button {
     margin: 0;
     width: 40%;
@@ -1678,16 +1663,16 @@ textarea.error {
     border-bottom-right-radius: 3px;
   }
 
-  /* line 258, ../phi/ui-ix/core/_forms.scss */
+  /* line 254, ../phi/ui-ix/core/_forms.scss */
   .inputPrefixMini .addOn {
     width: 25%;
   }
-  /* line 261, ../phi/ui-ix/core/_forms.scss */
+  /* line 257, ../phi/ui-ix/core/_forms.scss */
   .inputPrefixMini input {
     width: 75%;
   }
 
-  /* line 267, ../phi/ui-ix/core/_forms.scss */
+  /* line 263, ../phi/ui-ix/core/_forms.scss */
   .inputPrefix .addOn {
     border-right: none;
     -moz-border-radius-topleft: 3px;
@@ -1697,7 +1682,7 @@ textarea.error {
     -webkit-border-bottom-left-radius: 3px;
     border-bottom-left-radius: 3px;
   }
-  /* line 272, ../phi/ui-ix/core/_forms.scss */
+  /* line 268, ../phi/ui-ix/core/_forms.scss */
   .inputPrefix input {
     -moz-border-radius-topleft: 0;
     -webkit-border-top-left-radius: 0;
@@ -1707,7 +1692,7 @@ textarea.error {
     border-bottom-left-radius: 0;
   }
 
-  /* line 279, ../phi/ui-ix/core/_forms.scss */
+  /* line 275, ../phi/ui-ix/core/_forms.scss */
   .inputPostfix .addOn {
     border-left: none;
     -moz-border-radius-topright: 3px;
@@ -1717,7 +1702,7 @@ textarea.error {
     -webkit-border-bottom-right-radius: 3px;
     border-bottom-right-radius: 3px;
   }
-  /* line 284, ../phi/ui-ix/core/_forms.scss */
+  /* line 280, ../phi/ui-ix/core/_forms.scss */
   .inputPostfix input {
     -moz-border-radius-topright: 0;
     -webkit-border-top-right-radius: 0;
@@ -2310,6 +2295,12 @@ div.buttonBar ul.buttonGroup:last-child {
   content: "\2339";
 }
 
+/*******************************************
+ * THIS MAKES UP THE COMPONENTS OF PHI     *
+ *******************************************
+ * NOTE: Comment out the components you do *
+ * not want to use in your site/app.       *
+********************************************/
 /***********************************
  * The Grid ---------------------- */
 /* line 4, ../phi/ui-ix/extensions/grid-system/_grid.scss */
@@ -3613,7 +3604,7 @@ ul.vcard li {
 /* line 185, ../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 ul.vcard li.fn {
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.125em;
 }
 
 /* line 193, ../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
@@ -4198,3 +4189,35 @@ table tbody tr td {
  * Remove this dependency from your main Sass file
  * when you start fully developing your website/app
  */
+/* line 22, ../phi/ui-ix/prototype/_prototype.scss */
+input[type='text'],
+input[type='password'],
+input[type='date'],
+input[type='datetime'],
+input[type='email'],
+input[type='number'],
+input[type='search'],
+input[type='tel'],
+input[type='time'],
+input[type='url'],
+textarea,
+select {
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  -o-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+
+/* line 26, ../phi/ui-ix/prototype/_prototype.scss */
+select {
+  -webkit-box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.05);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}

@@ -1,6 +1,6 @@
 # **phi**: A Web-App Toolkit and Modular Framework
 ## Do not use this. It is still in rapid development and in a pre-release stage.
-## Status: Version 0.14-alpha — Currently: missing core app features; in cross-browser and cross-device testing.
+## Status: Version 0.15 — Currently: missing core app features; in cross-browser and cross-device testing.
 
 The goal of this project is to create a web application toolkit and framework that's built with the best in modern technology, test-driven and incorporates the modular approach to application design. This is also a very opinionated stack that focuses on an intimate alignment and integration with the needed components to build a successful web-app, rather than a mash-up disparate technologies.
 
@@ -87,6 +87,10 @@ The goal of this project is to create a web application toolkit and framework th
 	* Make vertical tabs more mobile friendly version
 	* Make Wayfinder more mobile friendly version
 	* Collapsible Navigation
+
+### JS that passes tests
+
+1. Not started
 
 ### Suggested Features
 
