@@ -184,7 +184,11 @@ ul.vcard {
 	}
 	li.fn {
 		font-weight: bold;
+<<<<<<< HEAD
 		font-size: $largeFontSize;
+=======
+		font-size: ms(0) + 1;
+>>>>>>> 380867b9bf3383138fea6796d9ae537c4c3912b8
 	}
 
 }
