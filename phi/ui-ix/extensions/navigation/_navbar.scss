@@ -1,0 +1,257 @@
+.navItem {
+	position: relative;
+	background: $mainColor;
+
+	a {
+		color: $baseTextColor;
+		font-size: $largeFontSize;
+		line-height: 100%;
+		text-decoration: none;
+		padding: 0.6em $baseLineHeight;
+
+		&:hover,
+		&:focus {
+			color: $baseTextColor;
+			@include background-image(linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)));
+		}
+	}
+	&.hasDropdown > a {
+		display: table-cell;
+		width: 100%;
+	}
+	& > .dropDownTrigger {
+		display: table-cell;
+	}
+	& > .dropDownTrigger > a {
+		display: table-cell;
+		text-decoration: none;
+		padding-left: ($baseLineHeight / 2);
+		padding-right: ($baseLineHeight / 2);
+		border-color: #999;
+		border-left: 1px dotted $mainBorderColor;
+	}
+	& > ul {
+		display: none;
+	}
+	&.active {
+		background: $primaryColor;
+		border-color: darken($primaryColor, 10%);
+
+		& > a {
+			color: $white;
+			cursor: default;
+
+			&:hover {
+				background: $primaryColor;
+				color: $white;
+				background-image: none;
+				cursor: default;
+			}
+		}
+		.dropDownTrigger > a {
+			color: $white;
+
+			&:hover {
+				color: $white;
+				@include background-image(linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)));
+				cursor: pointer;
+			}
+		}
+	}
+}
+/* This is the hidden dropdown menu */
+.dropDown {
+	display: none;
+	width: 100%;
+	margin: 0;
+	font-weight: 100;
+	border: 1px solid $mainBorderColor;
+	background: $mainColor;
+	@include border-corner-radius(bottom, $defaultDirection, $buttonRadius);
+	@include border-corner-radius(bottom, $defaultOpposite, $buttonRadius);
+
+	& > li {
+		background: $mainColor;
+		border-bottom: 1px solid $mainBorderColor;
+	}
+	& > li > a {
+		display: block;
+		text-align: center;
+		font-weight: 100;
+		padding: ($baseLineHeight / 2) $baseLineHeight;
+	}
+	& > li:last-child {
+		border: none;
+		@include border-corner-radius(bottom, $defaultDirection, $buttonRadius);
+		@include border-corner-radius(bottom, $defaultOpposite, $buttonRadius);
+	}
+	& > li > a:hover, .dropDown > li > a:focus {
+		@include background-image(linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)));
+	}
+}
+.navBar {
+	margin: $baseLineHeight 0 0;
+	padding: 0;
+	display: table;
+	border: 1px solid $mainBorderColor;
+	@include border-radius($buttonRadius);
+	white-space: nowrap;
+
+	.navItem {
+		display: table-cell;
+		border-right: 1px solid $mainBorderColor;
+
+		&:last-child {
+			border: none;
+		}
+		& > a {
+			display: table-cell;
+		}
+		&:first-child {
+			@include border-corner-radius(top, $defaultDirection, $buttonRadius);
+			@include border-corner-radius(bottom, $defaultDirection, $buttonRadius);
+		}
+		&:last-child {
+			@include border-corner-radius(top, $defaultOpposite, $buttonRadius);
+			@include border-corner-radius(bottom, $defaultOpposite, $buttonRadius);
+		}
+	}
+	.dropDown {
+		position: absolute;
+	}
+}
+.navSide {
+	list-style: none;
+	margin: $baseLineHeight 0 0;
+	padding: 0;
+	display: block;
+	border: 1px solid $mainBorderColor;
+	@include border-radius($buttonRadius);
+
+	.navItem {
+		border-bottom: 1px solid $mainBorderColor;
+
+		&:last-child {
+			border: none;
+		}
+		&:first-child {
+			@include border-corner-radius(top, $defaultDirection, $buttonRadius);
+			@include border-corner-radius(top, $defaultOpposite, $buttonRadius);
+		}
+		&:last-child {
+			@include border-corner-radius(bottom, $defaultDirection, $buttonRadius);
+			@include border-corner-radius(bottom, $defaultOpposite, $buttonRadius);
+		}
+	}
+	.dropDown {
+		list-style: none;
+
+		li {
+			border-color: lighten($grayDark, 10%);
+		}
+
+		a {
+			background: $grayDark;
+			color: $white;
+			text-align: left;
+			padding-left: $baseLineHeight * 2;
+
+			&:hover, &:focus {
+				background: darken($grayDark, 10%);
+				color: $white;
+			}
+		}
+	}
+	a {
+		display: block;
+	}
+}
+
+/* This is the fallback Superfish hover menu */
+.hasHover > ul > li:hover > ul, .hasHover > ul > li > ul.hovering {
+	 display: block !important;
+ }
+
+/* Very large screens */
+@media only screen and (min-width: $screenXlarge) {}
+
+/* Medium screens */
+@media only screen and (max-width: $screenMedium) and (min-width: $screenSmall) {
+
+	.navItem {
+
+		a {
+			font-size: $baseFontSize;
+			line-height: $baseLineHeight;
+			padding-top: $baseLineHeight / 2;
+			padding-bottom: $baseLineHeight / 2;
+		}
+	}
+}
+
+/* Small screens */
+@media only screen and (max-width: $screenSmall) {
+
+	.navBar {
+		list-style: none;
+		margin: $baseLineHeight 0 0;
+		padding: 0;
+		display: block;
+		border: 1px solid $mainBorderColor;
+		@include border-radius($buttonRadius);
+
+		.navItem {
+			display: block;
+			border: none;
+			border-bottom: 1px solid $mainBorderColor;
+
+			& > a {
+				display: inherit;
+			}
+			&.hasDropdown > a {
+				display: table-cell;
+			}
+
+			&:first-child {
+				@include border-corner-radius(top, $defaultDirection, $buttonRadius);
+				@include border-corner-radius(top, $defaultOpposite, $buttonRadius);
+			}
+			&:last-child {
+				@include border-corner-radius(bottom, $defaultDirection, $buttonRadius);
+				@include border-corner-radius(bottom, $defaultOpposite, $buttonRadius);
+			}
+		}
+		.dropDown {
+			position: static;
+			list-style: none;
+
+			li {
+				border-color: lighten($grayDark, 10%);
+			}
+
+			a {
+				background: $grayDark;
+				color: $white;
+				text-align: left;
+				padding-left: $baseLineHeight * 2;
+
+				&:hover, &:focus {
+					background: darken($grayDark, 10%);
+					color: $white;
+				}
+			}
+		}
+		a {
+			display: block;
+		}
+	}
+}
+
+/* Landscape Orientation */
+@media screen and (orientation: landscape) {}
+
+/* Portrait Orientation */
+@media screen and (orientation: portrait) {}
+
+/* Touch Detection */
+.touch .your-class {}

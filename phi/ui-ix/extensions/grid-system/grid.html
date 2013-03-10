@@ -1,0 +1,613 @@
+	<!-- Test Foundation Components Here -->
+	<style type="text/css">
+		.row.display,
+        .rowSeamless.display {
+			background: #F4F4F4;
+			margin-bottom: 10px;
+		}
+        .row.display div,
+        .rowSeamless.display div,
+        .block-grid li {
+			background: #E7E7E7;
+			border: 1px solid #DDD;
+			font-size: 12px;
+			text-indent: 3px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			min-height: 40px;
+		}
+	</style>
+	<div class="row">
+		<div class="twelveColumns">
+            <hgroup>
+                <h3>The Grid</h3>
+                <h4 class="subheader">Create powerful multi-device layouts quickly and easily with the 12Column grid.</h4>
+            </hgroup>
+			<h4>The Basics</h4>
+			<p>The grid is built around two key elements: rows andColumns. Rows create a max-width and contain the-columns;-columns create the actual structure. For layouts to work properly, always put your page content inside a row and a column.</p>
+
+			<p>What you need to know is that <strong>columns don't have a fixed width.</strong> They can vary based on the resolution of the screen, or the size of the window (try scaling down this window to see what we mean). Design with that in mind.</p>
+
+			<hr />
+
+			<h4>Technical Details</h4>
+			<p>The Foundation 3 grid, like everything else in Foundation 3, is built with <code>box-sizing: border-box</code>, a powerful CSS property that tells the browser to consider border and padding as part of the width of an object rather than as an addition. That enables us to construct the grid extremely simply, which is good news for anyone who lamented how difficult it was to modify the Foundation 2 grid.</p>
+			<p>Now, gutters are created simply with padding on the-columns. That means-columns have simple widths like 25%, or 50%. Adjusting the padding adjusts the gutters, and this can be controlled either through SCSS variables, the download customizer, or through the CSS itself.</p>
+
+            <div class="row">
+                <div class="fourColumns">
+                    <h5>Spaced Grid</h5>
+                    <p>The grid uses <code>display: inline-block</code> and has a bit of space between elements. This is good for the inner portions of your app that seamless design is not an issue and more independent blocks, rather than table-cells are needed.</p>
+                </div>
+
+                <div class="eightColumns">
+                    <div class="row display">
+                        <div class="fourColumns">
+                            .fourColumns
+                        </div>
+                        <div class="fourColumns">
+                            .fourColumns
+                        </div>
+                        <div class="fourColumns">
+                            .fourColumns
+                        </div>
+                    </div>
+                    <div class="row display">
+                        <div class="threeColumns">
+                            .threeColumns
+                        </div>
+                        <div class="sixColumns">
+                            .sixColumns
+                        </div>
+                        <div class="threeColumns">
+                            .threeColumns
+                        </div>
+                    </div>
+                    <div class="row display">
+                        <div class="twoColumns">
+                            .twoColumns
+                        </div>
+                        <div class="eightColumns">
+                            .eightColumns
+                        </div>
+                        <div class="twoColumns">
+                            .twoColumns
+                        </div>
+                    </div>
+                    <div class="row display">
+                        <div class="oneColumns">
+                            .one
+                        </div>
+                        <div class="elevenColumns">
+                            .elevenColumns
+                        </div>
+                    </div>
+                    <div class="row display">
+                        <div class="twoColumns">
+                            .twoColumns
+                        </div>
+                        <div class="tenColumns">
+                            .tenColumns
+                        </div>
+                    </div>
+                    <div class="row display">
+                        <div class="threeColumns">
+                            .threeColumns
+                        </div>
+                        <div class="nineColumns">
+                            .nineColumns
+                        </div>
+                    </div>
+                    <div class="row display">
+                        <div class="fourColumns">
+                            .fourColumns
+                        </div>
+                        <div class="eightColumns">
+                            .eightColumns
+                        </div>
+                    </div>
+                    <div class="row display">
+                        <div class="fiveColumns">
+                            .fiveColumns
+                        </div>
+                        <div class="sevenColumns">
+                            .sevenColumns
+                        </div>
+                    </div>
+                    <div class="row display">
+                        <div class="sixColumns">
+                            .sixColumns
+                        </div>
+                        <div class="sixColumns">
+                            .sixColumns
+                        </div>
+                    </div>
+                    <div class="row display">
+                        <div class="sevenColumns">
+                            .sevenColumns
+                        </div>
+                        <div class="fiveColumns">
+                            .fiveColumns
+                        </div>
+                    </div>
+                    <div class="row display">
+                        <div class="eightColumns">
+                            .eightColumns
+                        </div>
+                        <div class="fourColumns">
+                            .fourColumns
+                        </div>
+                    </div>
+                    <div class="row display">
+                        <div class="nineColumns">
+                            .nineColumns
+                        </div>
+                        <div class="threeColumns">
+                            .threeColumns
+                        </div>
+                    </div>
+                    <div class="row display">
+                        <div class="tenColumns">
+                            .tenColumns
+                        </div>
+                        <div class="twoColumns">
+                            .twoColumns
+                        </div>
+                    </div>
+                    <div class="row display">
+                        <div class="elevenColumns">
+                            .elevenColumns
+                        </div>
+                        <div class="oneColumns">
+                            .one
+                        </div>
+                    </div>
+                    <div class="row display">
+                        <div class="twelveColumns">
+                            .twelveColumns
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+			<div class="row">
+				<div class="fourColumns">
+					<a name="base-ex"></a>
+
+					<h5>Seamless Grid with Equal HeightColumns</h5>
+					<p>This grid uses <code>display: table-cell</code> to create a seamless grid system and provides equal heightColumns. This grid system is good for laying out the sections of your site.</p>
+				</div>
+
+				<div class="eightColumns">
+					<div class="rowSeamless display">
+						<div class="fourSeamlessColumns">
+							.fourSeamlessColumns
+						</div>
+						<div class="fourSeamlessColumns">
+							.fourSeamlessColumns
+						</div>
+						<div class="fourSeamlessColumns">
+							.fourSeamlessColumns
+						</div>
+					</div>
+					<div class="rowSeamless display">
+						<div class="threeSeamlessColumns">
+							.threeSeamlessColumns
+						</div>
+						<div class="sixSeamlessColumns">
+							.sixSeamlessColumns
+						</div>
+						<div class="threeSeamlessColumns">
+							.threeSeamlessColumns
+						</div>
+					</div>
+					<div class="rowSeamless display">
+						<div class="twoSeamlessColumns">
+							.twoSeamlessColumns
+						</div>
+						<div class="eightSeamlessColumns">
+							.eightSeamlessColumns
+						</div>
+						<div class="twoSeamlessColumns">
+							.twoSeamlessColumns
+						</div>
+					</div>
+					<div class="rowSeamless display">
+						<div class="oneSeamlessColumns">
+							.one
+						</div>
+						<div class="elevenSeamlessColumns">
+							.elevenSeamlessColumns
+						</div>
+					</div>
+					<div class="rowSeamless display">
+						<div class="twoSeamlessColumns">
+							.twoSeamlessColumns
+						</div>
+						<div class="tenSeamlessColumns">
+							.tenSeamlessColumns
+						</div>
+					</div>
+					<div class="rowSeamless display">
+						<div class="threeSeamlessColumns">
+							.threeSeamlessColumns
+						</div>
+						<div class="nineSeamlessColumns">
+							.nineSeamlessColumns
+						</div>
+					</div>
+					<div class="rowSeamless display">
+						<div class="fourSeamlessColumns">
+							.fourSeamlessColumns
+						</div>
+						<div class="eightSeamlessColumns">
+							.eightSeamlessColumns
+						</div>
+					</div>
+					<div class="rowSeamless display">
+						<div class="fiveSeamlessColumns">
+							.fiveSeamlessColumns
+						</div>
+						<div class="sevenSeamlessColumns">
+							.sevenSeamlessColumns
+						</div>
+					</div>
+					<div class="rowSeamless display">
+						<div class="sixSeamlessColumns">
+							.sixSeamlessColumns
+						</div>
+						<div class="sixSeamlessColumns">
+							.sixSeamlessColumns
+						</div>
+					</div>
+					<div class="rowSeamless display">
+						<div class="sevenSeamlessColumns">
+							.sevenSeamlessColumns
+						</div>
+						<div class="fiveSeamlessColumns">
+							.fiveSeamlessColumns
+						</div>
+					</div>
+					<div class="rowSeamless display">
+						<div class="eightSeamlessColumns">
+							.eightSeamlessColumns
+						</div>
+						<div class="fourSeamlessColumns">
+							.fourSeamlessColumns
+						</div>
+					</div>
+					<div class="rowSeamless display">
+						<div class="nineSeamlessColumns">
+							.nineSeamlessColumns
+						</div>
+						<div class="threeSeamlessColumns">
+							.threeSeamlessColumns
+						</div>
+					</div>
+					<div class="rowSeamless display">
+						<div class="tenSeamlessColumns">
+							.tenSeamlessColumns
+						</div>
+						<div class="twoSeamlessColumns">
+							.twoSeamlessColumns
+						</div>
+					</div>
+					<div class="rowSeamless display">
+						<div class="elevenSeamlessColumns">
+							.elevenSeamlessColumns
+						</div>
+						<div class="oneSeamlessColumns">
+							.one
+						</div>
+					</div>
+					<div class="rowSeamless display">
+						<div class="twelveSeamlessColumns">
+							.twelveSeamlessColumns
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="fourColumns">
+					<a name="offset"></a>
+					<h4>Offsets</h4>
+					<p>Offsets allow you to create additional space betweenColumns in a row. Like the rest of the grid, they're nestable.</p>
+				</div>
+				<div class="eightColumns">
+					<div class="row display">
+						<div class="oneColumns">
+							.one
+						</div>
+						<div class="elevenColumns">
+							.elevenColumns
+						</div>
+					</div>
+					<div class="row display">
+						<div class="oneColumns">
+							.one
+						</div>
+						<div class="tenColumns offset-by-one">
+							.tenColumns.offset-by-one
+						</div>
+					</div>
+					<div class="row display">
+						<div class="oneColumns">
+							.one
+						</div>
+						<div class="nineColumns offset-by-two">
+							.nineColumns.offset-by-two
+						</div>
+					</div>
+					<div class="row display">
+						<div class="oneColumns">
+							.one
+						</div>
+						<div class="eightColumns offset-by-three">
+							.eightColumns.offset-by-three
+						</div>
+					</div>
+					<div class="row display">
+						<div class="sevenColumns offset-by-five">
+							.sevenColumns.offset-by-five
+						</div>
+					</div>
+					<div class="row display">
+						<div class="sixColumns offset-by-six">
+							.sixColumns.offset-by-six
+						</div>
+					</div>
+					<div class="row display">
+						<div class="fiveColumns offset-by-seven">
+							.fiveColumns.offset-by-seven
+						</div>
+					</div>
+					<div class="row display">
+						<div class="fourColumns offset-by-eight">
+							.fourColumns.offset-by-eight
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="fourColumns">
+					<a name="center"></a>
+					<h4>Right Aligned Columns</h4>
+					<p>Columns are naturally centered, but you can control the alignment by adding an additional left or right class to the row. This does not alter the alignment of their content, but just the grid element itself.</p>
+				</div>
+				<div class="eightColumns">
+					<div class="row display align-right">
+						<div class="oneColumns">
+							.oneColumns. align-right
+						</div>
+					</div>
+					<div class="row display align-right">
+						<div class="twoColumns">
+							.twoColumns. align-right
+						</div>
+					</div>
+					<div class="row display align-right">
+						<div class="threeColumns">
+							.threeColumns. align-right
+						</div>
+					</div>
+					<div class="row display align-right">
+						<div class="fourColumns">
+							.fourColumns. align-right
+						</div>
+					</div>
+					<div class="row display align-right">
+						<div class="fiveColumns">
+							.fiveColumns. align-right
+						</div>
+					</div>
+					<div class="row display align-right">
+						<div class="sixColumns">
+							.sixColumns. align-right
+						</div>
+					</div>
+					<div class="row display align-right">
+						<div class="sevenColumns">
+							.sevenColumns. align-right
+						</div>
+					</div>
+					<div class="row display align-right">
+						<div class="eightColumns">
+							.eightColumns. align-right
+						</div>
+					</div>
+					<div class="row display align-right">
+						<div class="nineColumns">
+							.nineColumns. align-right
+						</div>
+					</div>
+					<div class="row display align-right">
+						<div class="tenColumns">
+							.tenColumns. align-right
+						</div>
+					</div>
+					<div class="row display align-right">
+						<div class="elevenColumns">
+							.elevenColumns. align-right
+						</div>
+					</div>
+					<div class="row display align-right">
+						<div class="twelveColumns">
+							.twelveColumns. align-right
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="fourColumns">
+					<a name="center"></a>
+					<h4>Center Aligned Columns</h4>
+					<p>Columns are naturally centered, but you can control the alignment by adding an additional left or right class to the row. This does not alter the alignment of their content, but just the grid element itself.</p>
+				</div>
+				<div class="eightColumns">
+					<div class="row display center">
+						<div class="oneColumns">
+							.oneColumns.center
+						</div>
+					</div>
+					<div class="row display center">
+						<div class="twoColumns">
+							.twoColumns.center
+						</div>
+					</div>
+					<div class="row display center">
+						<div class="threeColumns">
+							.threeColumns.center
+						</div>
+					</div>
+					<div class="row display center">
+						<div class="fourColumns">
+							.fourColumns.center
+						</div>
+					</div>
+					<div class="row display center">
+						<div class="fiveColumns">
+							.fiveColumns.center
+						</div>
+					</div>
+					<div class="row display center">
+						<div class="sixColumns">
+							.sixColumns.center
+						</div>
+					</div>
+					<div class="row display center">
+						<div class="sevenColumns">
+							.sevenColumns.center
+						</div>
+					</div>
+					<div class="row display center">
+						<div class="eightColumns">
+							.eightColumns.center
+						</div>
+					</div>
+					<div class="row display center">
+						<div class="nineColumns">
+							.nineColumns.center
+						</div>
+					</div>
+					<div class="row display center">
+						<div class="tenColumns">
+							.tenColumns.center
+						</div>
+					</div>
+					<div class="row display center">
+						<div class="elevenColumns">
+							.elevenColumns.center
+						</div>
+					</div>
+					<div class="row display center">
+						<div class="twelveColumns">
+							.twelveColumns.center
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="fourColumns">
+					<a name="mobile"></a>
+					<h4>Mobile Grid</h4>
+					<p>When you're creating your layout you can optionally attach classes that take your existing grid elements and attach them to a phone grid.</p>
+					<h5>Mobile Source Ordering</h5>
+					<p>The syntax includes <code>.pull-one-mobile</code>, <code>.pull-two-mobile</code>, <code>.pull-three-mobile</code>, <code>.push-one-mobile</code>, <code>.push-two-mobile</code>, <code>.push-three-mobile</code>.</p>
+				</div>
+				<div class="eightColumns">
+					<div class="row display">
+						<div class="threeColumns mobile-one">
+							.threeColumns.mobile-one
+						</div>
+						<div class="nineColumns mobile-three">
+							.nineColumns.mobile-three
+						</div>
+					</div>
+					<div class="row display">
+						<div class="sixColumns mobile-two">
+							.sixColumns.mobile-two
+						</div>
+						<div class="sixColumns mobile-two">
+							.sixColumns.mobile-two
+						</div>
+					</div>
+					<div class="row display">
+						<div class="nineColumns mobile-three">
+							.nineColumns.mobile-three
+						</div>
+						<div class="threeColumns mobile-one">
+							.threeColumns.mobile-one
+						</div>
+					</div>
+					<div class="row display">
+						<div class="sixColumns mobile-two">
+							.sixColumns.mobile-two
+						</div>
+						<div class="sixColumns mobile-two">
+							.sixColumns.mobile-two
+						</div>
+					</div>
+					<div class="row display">
+						<div class="nineColumns mobile-three">
+							.nineColumns.mobile-three
+						</div>
+						<div class="threeColumns mobile-one">
+							.threeColumns.mobile-one
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="fourColumns">
+					<a name="block"></a>
+					<h4>Block Grids</h4>
+					<p>Block grids are <code>ul</code> with <code>.two-up</code>, <code>.three-up</code>, <code>.four-up</code> and <code>.five-up</code> styles. These are ideal for blocked-in content generated by an application, as they do not require rows or even numbers of elements to display correctly.</p>
+				</div>
+				<div class="eightColumns">
+					<h6>Two-up</h6>
+					<ul class="block-grid two-up">
+						<li>Two-up element</li>
+						<li>Two-up element</li>
+						<li>Two-up element</li>
+						<li>Two-up element</li>
+						<li>Two-up element</li>
+					</ul>
+
+					<h6>Three-up</h6>
+					<ul class="block-grid three-up">
+						<li>Three-up element</li>
+						<li>Three-up element</li>
+						<li>Three-up element</li>
+						<li>Three-up element</li>
+						<li>Three-up element</li>
+					</ul>
+
+					<h6>Four-up (Mobile)</h6>
+					<ul class="block-grid mobile four-up">
+						<li>Four-up element</li>
+						<li>Four-up element</li>
+						<li>Four-up element</li>
+						<li>Four-up element</li>
+						<li>Four-up element</li>
+						<li>Four-up element</li>
+					</ul>
+
+					<h6>Five-up</h6>
+					<ul class="block-grid five-up mobile-three-up">
+						<li>Five-up element</li>
+						<li>Five-up element</li>
+						<li>Five-up element</li>
+						<li>Five-up element</li>
+						<li>Five-up element</li>
+						<li>Five-up element</li>
+						<li>Five-up element</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>

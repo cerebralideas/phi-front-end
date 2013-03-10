@@ -1,0 +1,364 @@
+body {
+	font-family: sans-serif;
+	font-family: $baseFontFamily;
+	font-weight: $baseFontWeight;
+	font-style: $baseFontStyle;
+	font-size: ms(0);
+	line-height: $baseLineHeight;
+}
+
+// HEADINGS: Verticle Rhythm should be multiples of line-height (default 20px)
+//			(declared in variables.less)
+// --------
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	text-rendering: optimizelegibility; // Fix the character spacing for headings
+
+	small {
+		font-weight: normal;
+		color: $grayLight;
+		line-height: 1em;
+	}
+}
+hgroup {
+
+	h2:first-child, h3:first-child, h4:first-child, h5:first-child {
+		padding-bottom: 0;
+	}
+}
+h1, h2 {
+	letter-spacing: -0.05em;
+}
+h1 {
+	/* Total Height: 100px */
+	font-size: 400%; /* 64 */
+
+	/* Below should be multiple 0f 20px */
+	line-height: 94%; /* 60 */
+	padding: 0.3125em 0; /* 20 */
+
+	/* More specific design */
+	font-family: $headerXLargeFontFamily;
+	color: $headerXLargeFontColor;
+	font-style: $headerXLargeFontStyle;
+	font-weight: $headerXLargeFontWeight;
+
+	// Still needs work
+	small {
+		font-size: 70%;
+	}
+}
+h2, h3 {
+	font-family: $headerLargeFontFamily;
+	font-weight: $headerLargeFontWeight;
+	color: $headerLargeFontColor;
+	font-style: $headerLargeFontStyle;
+}
+h2 {
+	/* Total Height: 80px */
+	font-size: 200%; /* 32 */
+
+	/* Below should be multiple 0f 20px */
+	line-height: 125%; /* 40 */
+	padding: 0.625em 0; /* 20 */
+
+	small {
+		font-size: 70%;
+	}
+}
+h3, legend {
+	/* Total Height: 60px */
+	font-size: 150%; /* 24 */
+
+	/* Below should be multiple 0f 20px */
+	line-height: 167%; /* 40 */
+	padding: 0.833333333em 0; /* 20 */
+
+	small {
+		font-size: 70%;
+	}
+}
+h4, h5 {
+	font-family: $headerMediumFontFamily;
+	font-weight: $headerMediumFontWeight;
+	font-style: $headerMediumFontStyle;
+	color: $headerMediumFontColor;
+}
+h4 {
+	/* Total Height: 80px */
+	font-size: 113%; /* 18 */
+
+	/* Below should be multiple 0f 20px */
+	line-height: 112%; /* 20 */
+	padding: 1.1em 0 0; /* 20 */
+
+	small {
+		font-size: 70%;
+	}
+}
+h5 {
+	/* Total Height: 40px */
+	font-size: 100%; /* 16 / 16 */
+
+	/* Below should be multiple 0f 20px */
+	line-height: 125%; /* 20 */
+	padding: 1.25em 0 0; /* 20 */
+
+	/* More specific design */
+	font-weight: 400;
+	text-transform: uppercase;
+}
+h6 {
+	/* Total Height: 40px */
+	font-size: 100%; /* 16 / 16 */
+
+	/* Below should be multiple 0f 20px */
+	line-height: 125%; /* 20 */
+	padding: 1.25em 0 0; /* 20 */
+
+	/* More specific design */
+	font-family: $headerSmallFontFamily;
+	font-weight: $headerSmallFontWeight;
+	font-style: $headerSmallFontStyle;
+	color: $headerSmallFontColor;
+}
+
+// BODY TEXT
+// ---------
+
+p, ul, ol, dl {
+	margin: $baseLineHeight 0; /* 20 */
+
+	small {
+		font-size: $smallFontSize;
+		color: $grayLight;
+		line-height: 1em;
+	}
+}
+li {
+	margin: 0;
+}
+
+// Page header
+.page-header {
+	padding-bottom: $baseLineHeight;
+	margin: $baseLineHeight 0;
+	border-bottom: 1px solid $grayLighter;
+}
+.page-header h1 {
+	line-height: 1;
+}
+hr {
+	border: solid #ddd;
+	border-width: 1px 0 0;
+	clear: both;
+	margin: $baseLineHeight 0 -1px;
+	padding-bottom: $baseLineHeight;
+	height: 0;
+}
+.doubleRule {
+	border-width: 1px 0;
+	clear: both;
+	margin: $baseLineHeight 0 2px;
+}
+.subheader {
+	color: lighten($headerMediumFontColor, 30%);
+	font-weight: 300;
+	padding-top: 0;
+}
+em {
+	font-style: italic;
+	line-height: inherit;
+}
+strong {
+	font-weight: bold;
+	line-height: inherit;
+}
+small {
+	font-size: $smallFontSize;
+	line-height: inherit;
+}
+code {
+	font-weight: bold;
+	background: $highlightColor;
+}
+
+/* Lists ---------------------- */
+ul, ol, dl {
+	list-style-position: outside;
+}
+ul {
+
+	li {
+		ul, ol {
+			margin-#{$defaultDirection}: $baseLineHeight;
+		}
+	}
+
+	&.square {
+		list-style-type: square;
+
+		li ul {
+			list-style: inherit;
+		}
+	}
+
+	&.circle {
+		list-style-type: circle;
+
+		li ul {
+			list-style: inherit;
+		}
+	}
+
+	&.disc {
+		list-style-type: disc;
+
+		li ul {
+			list-style: inherit;
+		}
+	}
+
+	&.no-bullet {
+		list-style: none;
+	}
+	&.large li {
+		line-height: 21px;
+	}
+}
+ol {
+	margin-#{$defaultDirection}: $baseLineHeight;
+
+	li {
+
+		ul, ol {
+			margin-#{$defaultDirection}: $baseLineHeight;
+			margin-bottom: 0; }
+	}
+}
+
+/* Blockquotes ---------------------- */
+blockquote, blockquote p {
+	font-style: italic;
+	font-family: $serifFontFamily;
+	color: $grayLight;
+}
+blockquote {
+	margin: 0 0 $baseLineHeight;
+	padding: $baseLineHeight;
+	border-#{$defaultDirection}: 5px solid $grayLighter;
+
+	cite {
+		display: block;
+		font-size: $smallFontSize;
+		color: lighten($headerMediumFontColor, 20%);
+
+		&:before {
+			content: "\2014 \0020";
+		}
+		a, a:visited {
+			color: lighten($headerMediumFontColor, 20%);
+		}
+	}
+}
+
+abbr, acronym {
+	text-transform: uppercase;
+	font-size: 90%;
+	color: $headerMediumFontColor;
+	border-bottom: 1px solid #ddd;
+	cursor: help;
+}
+abbr {
+	text-transform: none;
+}
+
+/*
+ * Print styles.
+ *
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
+*/
+.print-only {
+	display: none !important;
+}
+@media print {
+
+/* Black prints faster: h5bp.com/s */
+	* {
+		background: transparent !important;
+		color: black !important;
+		box-shadow:none !important;
+		text-shadow: none !important;
+		filter:none !important;
+		-ms-filter: none !important;
+	}
+	a, a:visited {
+		text-decoration: underline;
+	}
+	a[href]:after {
+		content: " (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content: " (" attr(title) ")";
+	}
+	/* Don't show links for images, or javascript/internal links */
+	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+		content: "";
+	}
+	pre, blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
+	/* h5bp.com/t */
+	thead {
+		display: table-header-group;
+	}
+	tr, img {
+		page-break-inside: avoid;
+	}
+	img {
+		max-width: 100% !important;
+	}
+	@page {
+		margin: 0.5cm;
+	}
+	p, h2, h3 {
+		orphans: 3;
+		widows: 3;
+	}
+	h2, h3 {
+		page-break-after: avoid;
+	}
+	.hide-on-print {
+		display: none !important;
+	}
+	.print-only {
+		display: block !important;
+	}
+	.hide-for-print {
+		display: none !important;
+	}
+	.show-for-print {
+		display: inherit !important;
+	}
+}
+
+/* Very large screens */
+@media only screen and (min-width: $screenXlarge) {}
+
+/* Medium screens */
+@media only screen and (max-width: $screenMedium) and (min-width: $screenSmall) {}
+
+/* Small screens */
+@media only screen and (max-width: $screenSmall) {}
+
+/* Landscape Orientation */
+@media screen and (orientation: landscape) {}
+
+/* Portrait Orientation */
+@media screen and (orientation: portrait) {}
+
+/* Touch Detection */
+.touch .your-class {}
