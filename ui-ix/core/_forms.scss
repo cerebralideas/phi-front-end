@@ -40,14 +40,12 @@ select {
 	font-family: inherit;
 	border: $inputBorderWidth $inputBorderStyle $inputBorderColor;
 	@include border-radius($inputBorderRadius);
-	@include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.1));
 	color: $inputFontColor;
 	display: block;
 	margin: 0 0 $baseLineHeight 0;
 	padding: ($baseLineHeight / 2);
 	height: $baseLineHeight * 2;
 	width: 100%;
-	@include transition(all 0.15s linear);
 
 	&.oversize {
 		font-size: 1.125;
@@ -136,8 +134,6 @@ select {
 	-webkit-appearance: none;
 	line-height: 1em;
 	background: url('../img/svg-icons/select-arrow.svg') no-repeat right center, $mainColor;
-	@include box-shadow(inset 0 -2px 4px rgba(0, 0, 0, 0.05));
-	@include transition(none);
 	cursor: pointer;
 
 	&:hover, &:focus {

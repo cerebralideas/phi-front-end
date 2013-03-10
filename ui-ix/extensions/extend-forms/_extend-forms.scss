@@ -148,7 +148,7 @@ form.custom {
 
 		li {
 			color: $custDropdownFontColor;
-			font-size: ms(0) - 1;
+			font-size: $smallFontSize;
 			cursor: pointer;
 			padding: 3px;
 			padding-#{$defaultDirection}: 6px;
@@ -247,7 +247,7 @@ form.custom {
 			a {
 				display: block;
 				color: #555;
-				font-size: ms(0) - 1;
+				font-size: $smallFontSize;
 				font-weight: $bodyFontWeight;
 				padding: 6px 14px;
 				text-align: $defaultDirection;
