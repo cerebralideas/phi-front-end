@@ -73,14 +73,14 @@ module.exports = function(grunt) {
 		compass: {
 			dev: {
 				src: 'src/sass/',
-				dest: 'dev/',
+				dest: 'dev/css',
 				linecomments: true,
 				forcecompile: true,
 				require: []
 			},
 			prod: {
 				src: 'src/sass',
-				dest: 'dist/',
+				dest: 'dist/css',
 				outputstyle: 'compressed',
 				linecomments: false,
 				forcecompile: true,
