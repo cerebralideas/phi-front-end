@@ -1,0 +1,201 @@
+/* Tabs ---------------------- */
+
+.tabs {
+	list-style: none;
+	display: block;
+	padding: 0 0 0 ($baseLineHeight / 2);
+	margin: $baseLineHeight 0 -5px;
+}
+
+.tab {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	min-width: 4em;
+
+	& > a {
+		display: block;
+		text-align: center;
+		color: $baseTextColor;
+		padding: ($baseLineHeight / 2);
+		line-height: $baseLineHeight;
+		border: 1px solid transparent;
+		border-bottom: none;
+		text-decoration: none;
+		@include border-corner-radius(top, $defaultDirection, $buttonRadius);
+		@include border-corner-radius(top, $defaultOpposite, $buttonRadius);
+
+		&:hover {
+			border-color: $mainBorderColor;
+			border-bottom: none;
+			background: $mainColor;
+		}
+	}
+	// Active state, and it's :hover to override normal :hover
+	&.active > a,
+	&.active > a:hover {
+		border: none;
+		color: $white;
+		background-color: $primaryColor;
+		cursor: default;
+	}
+}
+
+.tabsVertical {
+	padding: 0;
+	margin: 0;
+	display: table-cell;
+
+	.tab {
+		display: block;
+
+		& > a {
+			border-radius: 0;
+			border: none;
+			padding-left: $baseLineHeight;
+
+			&:hover {
+				background: $mainColor;
+			}
+		}
+		&.active {
+
+			& > a {
+				border: 1px solid darken($mainColor, 10%);
+				border-right: none;
+				background: $mainColor;
+				font-weight: 700;
+				color: $baseTextColor;
+				position: relative;
+
+				&:after {
+					content: '';
+					height: $baseLineHeight;
+					width: $baseLineHeight;
+					position: absolute;
+					top: 0;
+					right: 0;
+					border: $baseLineHeight solid transparent;
+					border-right-color: $primaryColor;
+				}
+			}
+		}
+	}
+	& + .tabsContent {
+		border: none;
+		border-left: 5px solid $primaryColor;
+	}
+}
+
+.pillStyle {
+	margin: 0;
+
+	.tab > a {
+		@include border-radius(1000px);
+		padding: ($baseLineHeight / 2);
+	}
+	.tab.active a {
+		background-color: $primaryColor;
+		color: #fff;
+	}
+	& + .tabsContent {
+		border: none;
+	}
+}
+
+.tabsContent {
+	position: relative;
+	overflow: auto;
+	height: 100%;
+	margin: 0;
+	border-top: 5px solid $primaryColor;
+
+	& > li {
+		padding: $baseLineHeight;
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+}
+.contentContained li {
+	border-right: 2px solid $mainColor;
+	border-bottom: 2px solid $mainColor;
+	border-left: 2px solid $mainColor;
+}
+.no-js .tabsContent > li {
+	display: block;
+}
+
+/* Very large screens */
+@media only screen and (min-width: $screenXlarge) {}
+
+/* Medium screens */
+@media only screen and (max-width: $screenMedium) and (min-width: $screenSmall) {}
+
+/* Small screens */
+@media only screen and (max-width: $screenSmall) {
+
+
+	.tabsVertical {
+		padding: 0;
+		margin: 0;
+		display: none;
+
+		.tab {
+			display: block;
+
+			& > a {
+				border-radius: 0;
+				border: none;
+				padding-left: $baseLineHeight;
+
+				&:hover {
+					background: $mainColor;
+				}
+			}
+			&.active {
+
+				& > a {
+					border: 1px solid darken($mainColor, 10%);
+					border-right: none;
+					background: $mainColor;
+					font-weight: 700;
+					color: $baseTextColor;
+					position: relative;
+
+					&:after {
+						content: '';
+						height: $baseLineHeight;
+						width: $baseLineHeight;
+						position: absolute;
+						top: 0;
+						right: 0;
+						border: $baseLineHeight solid transparent;
+						border-right-color: $primaryColor;
+					}
+				}
+			}
+		}
+		& + .tabsContent {
+			border: none;
+			padding: 0;
+
+			li {
+				display: block !important;
+				margin: 0 0 $baseLineHeight;
+				border-left: 5px solid $primaryColor;
+			}
+		}
+	}
+}
+
+/* Landscape Orientation */
+@media screen and (orientation: landscape) {}
+
+/* Portrait Orientation */
+@media screen and (orientation: portrait) {}
+
+/* Touch Detection */
+.touch .your-class {}

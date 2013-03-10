@@ -1,0 +1,168 @@
+.kalendae {
+	background: white;
+	border: 2px solid darken($darkWhite, 10%);
+	font-family: $sansFontFamily;
+	color: $baseTextColor;
+	cursor: default;
+	margin: $baseLineHeight 0 0;
+	width: ($baseLineHeight * 15);
+	padding: ($baseLineHeight / 2);
+	position: absolute;
+	text-align: left;
+	z-index: 1001;
+	@include border-radius($cornerRadius);
+}
+.kalendae::before {
+	border-left: 1em solid transparent;
+	border-right: 1em solid transparent;
+	border-bottom: 1em solid darken($darkWhite, 10%);
+	content: "";
+	height: 0;
+	left: 50%;
+	margin: -1em 0 0 -1em;
+	position: absolute;
+	top: 0;
+	width: 0;
+}
+.kalendae .k-calendar {
+	vertical-align: top;
+}
+.kalendae .k-title, .kalendae .k-header, .kalendae .k-days {
+	overflow: hidden;
+	width: 100%;
+}
+.kalendae .k-title {
+	height: 26px;
+	position: relative;
+	text-align: center;
+	white-space: nowrap;
+}
+.kalendae .k-caption {
+	font-weight: bold;
+}
+.kalendae .k-btn-previous-month, .kalendae .k-btn-next-month {
+	color: $grayLighter;
+	cursor: pointer;
+	font-family: $iconFontFamily;
+	font-weight: normal;
+	font-size: 1.5em;
+	position: absolute;
+	text-decoration: none;
+	top: 2px;
+	height: 1em;
+	width: 1em;
+}
+.kalendae .k-btn-previous-month:hover, .kalendae .k-btn-next-month:hover {
+	color: $grayLight;
+	text-decoration: none;
+}
+.kalendae .k-btn-previous-month:active, .kalendae .k-btn-next-month:active {
+	color: #444;
+}
+.kalendae .k-header span, .kalendae .k-days span {
+	border: 1px solid transparent;
+	display: inline-block;
+	margin: 0;
+	padding: ($baseLineHeight / 4);
+	text-align: center;
+	width: 14.28%;
+}
+.kalendae .k-header span {
+	border: 0;
+	border-bottom: 1px solid #ddd;
+	font-weight: bold;
+	margin-bottom: 2px;
+}
+.kalendae .k-days span {
+	font-weight: 500;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+}
+.kalendae .k-days span.k-today {
+	background: $mainColor;
+	border-color: $mainBorderColor;
+}
+.kalendae .k-days span.k-active {
+	cursor: pointer;
+}
+.kalendae .k-days span.k-selected {
+	background: #f4f4f4;
+	border-color: #ccc;
+}
+.kalendae .k-days span.k-selected.k-active {
+	background: $primaryColor;
+	border-color: transparent;
+	color: $white;
+}
+.kalendae .k-days span.k-selected.k-active:hover {
+	background: $primaryColor;
+	border-color: transparent;
+	color: $white;
+}
+.kalendae .k-days span.k-active:hover {
+	background: $mainColor;
+	border-color: transparent;
+	color: $baseTextColor;
+}
+.kalendae .k-days span.k-out-of-month {
+	color: #ccc;
+}
+.kalendae .k-first-month .k-btn-next-month, .kalendae .k-middle-month .k-btn-next-month, .kalendae .k-middle-month .k-btn-previous-month, .kalendae .k-last-month .k-btn-previous-month, .kalendae .k-first-month .k-btn-next-year, .kalendae .k-middle-month .k-btn-next-year, .kalendae .k-middle-month .k-btn-previous-year, .kalendae .k-last-month .k-btn-previous-year {
+	display: none;
+}
+.kalendae .k-btn-previous-year {
+	left: 0;
+}
+.kalendae .k-btn-previous-month {
+	left: 16px;
+
+	&:before {
+		content: '\25c2';
+	}
+}
+.kalendae .k-btn-next-month {
+	right: 16px;
+
+	&:after {
+		content: '\25b8';
+	}
+}
+.kalendae .k-btn-next-year {
+	right: 0;
+}
+.kalendae .k-title.k-disable-year-nav .k-btn-next-year, .kalendae .k-title.k-disable-year-nav .k-btn-previous-year {
+	display: none;
+}
+.kalendae .k-title.k-disable-year-nav .k-btn-next-month {
+	right: 0;
+}
+.kalendae .k-title.k-disable-year-nav .k-btn-previous-month {
+	left: 0;
+}
+.kalendae.k-disable-next-month-btn .k-btn-next-month, .kalendae.k-disable-previous-month-btn .k-btn-previous-month, .kalendae.k-disable-next-year-btn .k-btn-next-year, .kalendae.k-disable-previous-year-btn .k-btn-previous-year {
+	display: none;
+}
+.k-btn-close {
+	color: $grayLight;
+	display: block;
+	position: absolute;
+	top: -0.5em;
+	right: -0.5em;
+	font-size: 1.5em;
+	text-decoration: none;
+	background: $white;
+	border-radius: 1em;
+	border: 1px solid $white;
+	cursor: pointer;
+}
+.k-btn-close:before {
+	content: '\2613';
+	display: block;
+	height: 100%;
+	width: 100%;
+	font-family: entypo;
+}
