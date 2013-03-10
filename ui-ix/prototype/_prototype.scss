@@ -8,6 +8,25 @@
 
 // Forms
 
+input[type='text'],
+input[type='password'],
+input[type='date'],
+input[type='datetime'],
+input[type='email'],
+input[type='number'],
+input[type='search'],
+input[type='tel'],
+input[type='time'],
+input[type='url'],
+textarea,
+select {
+	@include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.1));
+	@include transition(all 0.15s linear);
+}
+select {
+	@include box-shadow(inset 0 -2px 4px rgba(0, 0, 0, 0.05));
+	@include transition(none);
+}
 
 // Buttons
 

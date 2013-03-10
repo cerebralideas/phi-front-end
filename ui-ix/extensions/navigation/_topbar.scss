@@ -133,7 +133,11 @@
 					input[type=text] {
 						@include border-right-radius(0);
 						float: left;
+<<<<<<< HEAD
+						font-size: $smallFontSize;
+=======
 						font-size: ms(0) - 1;
+>>>>>>> 380867b9bf3383138fea6796d9ae537c4c3912b8
 						margin-top: -1px;
 						height: $topBarHeight / 2;
 						//28px margin-bottom: 0; width: $topBarSearchWidth - 70px;
@@ -141,7 +145,11 @@
 							border-left: none;
 							@include border-left-radius(0);
 							float: left;
+<<<<<<< HEAD
+							font-size: $smallFontSize;
+=======
 							font-size: ms(0) - 2;
+>>>>>>> 380867b9bf3383138fea6796d9ae537c4c3912b8
 							margin-top: -1px;
 							padding: 5px 12px 4px;
 						}
@@ -207,7 +215,11 @@
 						}
 						label {
 							color: lighten($topBarDropBgColor, 30%);
+<<<<<<< HEAD
+							font-size: $smallFontSize;
+=======
 							font-size: ms(0) - 4;
+>>>>>>> 380867b9bf3383138fea6796d9ae537c4c3912b8
 							font-weight: $topBarLinkWeight;
 							margin: 0;
 							padding-left: $topBarHeight / 3;
