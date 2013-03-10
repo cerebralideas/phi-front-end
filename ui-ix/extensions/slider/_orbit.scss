@@ -8,7 +8,11 @@
 
   .orbit-wrapper { width: 1px; height: 1px; position: relative; }
 
+<<<<<<< HEAD
   .orbit { width: 1px; height: 1px; position: relative; overflow: hidden; margin-bottom: $baseLineHeight * 2;
+=======
+  .orbit { width: 1px; height: 1px; position: relative; overflow: hidden; margin-bottom: ms(1);
+>>>>>>> 380867b9bf3383138fea6796d9ae537c4c3912b8
 
     &.with-bullets { margin-bottom: 40px; }
 
@@ -38,7 +42,11 @@
   /* Captions ---------------------- */
 
   .orbit-caption { display: none; font-family: inherit; }
+<<<<<<< HEAD
   .orbit-wrapper .orbit-caption { background: $orbitCaptionBgColorOldBrowser; background: $orbitCaptionBgColor; z-index: 30; color: $orbitCaptionFontColor; text-align: center; padding: 7px 0; font-size: $smallFontSize; position: absolute; #{$defaultOpposite}: 0; bottom: 0; width: 100%; }
+=======
+  .orbit-wrapper .orbit-caption { background: $orbitCaptionBgColorOldBrowser; background: $orbitCaptionBgColor; z-index: 30; color: $orbitCaptionFontColor; text-align: center; padding: 7px 0; font-size: ms(0) - 1; position: absolute; #{$defaultOpposite}: 0; bottom: 0; width: 100%; }
+>>>>>>> 380867b9bf3383138fea6796d9ae537c4c3912b8
 
   /* Directional Nav ---------------------- */
 
