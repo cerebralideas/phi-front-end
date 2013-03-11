@@ -1,15 +1,14 @@
 $(function () {
 
 	/* GLOBAL DROP-DOWN FUNCTIONALITY: This creates the drop-down functionality
-	 for hidden sub-menus.
+	 * for hidden sub-menus.
 	 */
 
-	/* This deactivates the fallback Suckerfish (if there is one)
-	 drop-down, creates the drop-down functionality for hidden
-	 sub-menus using jQuery.
+	/* This deactivates the fallback Suckerfish drop-down (if there is one),
+	 * creates the drop-down functionality for hidden sub-menus using jQuery.
 	 */
 
-	var $nav = $('.navBar, .navSide'),
+	var $nav = $('.dropDownMenu'),
 		$navItem = $nav.find('.navItem'),
 		downArrow = '<i>&#x25be;</i>', // creates HTML arrow
 		upArrow = '<i>&#x25b4;</i>', // creates HTML arrow
@@ -45,21 +44,20 @@ $(function () {
 			if (dropDown.is(':visible')) {
 
 				dropDown.slideUp(100);
-				dropDown.parent().find(arrow).html(downArrow);
+				dropDown.parent().find(arrow).html(downArrow).removeClass('open');
 			}
 
 			subMenu = $(this).parent().find(dropDown);
 
 			if ( subMenu.is(':hidden')) {
 
-				dropDown.css('width', parentWidth);
 				subMenu.slideDown(200);
-				subMenu.parent().find(arrow).html(upArrow);
+				subMenu.parent().find(arrow).html(upArrow).addClass('open');
 
 			} else {
 
 				subMenu.slideUp(100);
-				subMenu.parent().find(arrow).html(downArrow);
+				subMenu.parent().find(arrow).html(downArrow).removeClass('open');
 
 			}
 
@@ -78,7 +76,7 @@ $(function () {
 
 			var subMenu = $(this).parent('li').find('.dropDown');
 			subMenu.slideDown(400);
-			subMenu.parent().find(arrow).html(upArrow);
+			subMenu.parent().find(arrow).html(upArrow).addClass('open');
 
 		});
 
@@ -89,7 +87,7 @@ $(function () {
 
 			var subMenu = $(this).parent().parent(dropDown);
 			subMenu.slideUp(100);
-			subMenu.parent().find(arrow).html(downArrow);
+			subMenu.parent().find(arrow).html(downArrow).removeClass('open');
 
 		});
 
@@ -100,7 +98,7 @@ $(function () {
 			if (dropDown.is(':visible')) {
 
 				dropDown.slideUp(100);
-				dropDown.parent().find(arrow).html(downArrow);
+				dropDown.parent().find(arrow).html(downArrow).removeClass('open');
 
 			}
 		});

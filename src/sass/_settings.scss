@@ -1,4 +1,6 @@
-// Settings file containing Foundation defaults
+/*******************************************
+* SETTINGS, VARIABLES, DEFAULTS            *
+*******************************************/
 
 // Colors
 
@@ -43,7 +45,6 @@ $monoFontFamily: monospace !default;
 $iconFontFamily: entypo !default;
 
 $baseFontSize: 1em !default;
-// $importantModNum: 44px !default; Not used
 $base-size: $baseFontSize;
 $bodyFontWeight: 400;
 
@@ -62,25 +63,47 @@ $altFontFamily: $serifFontFamily !default;
 $fontSmoothing: subpixel-antialiased;
 
 /* Header type settings */
-$headerXLargeFontFamily: $sansFontFamily !default;
-$headerXLargeFontWeight: 100 !default;
-$headerXLargeFontStyle: normal !default;
-$headerXLargeFontColor: $grayLight !default;
+// h1
+$h1FontSize: 400% !default;
 
-$headerLargeFontFamily: $sansFontFamily !default;
-$headerLargeFontWeight: 700 !default;
-$headerLargeFontStyle: normal !default;
-$headerLargeFontColor: $gray !default;
+// Below should be multiple 0f $baseLineHeight
+$h1LineHeight: 94% !default;
+$h1Padding: 0.3125em 0 !default;
 
-$headerMediumFontFamily: $serifFontFamily;
-$headerMediumFontWeight: 700 !default;
-$headerMediumFontStyle: normal !default;
-$headerMediumFontColor: $gray !default;
+// h2
+$h2FontSize: 200% !default;
 
-$headerSmallFontFamily: $serifFontFamily !default;
-$headerSmallFontWeight: 400 !default;
-$headerSmallFontStyle: italic !default;
-$headerSmallFontColor: $grayLight !default;
+// Below should be multiple 0f $baseLineHeight
+$h2LineHeight: 125% !default;
+$h2Padding: 0.625em 0 !default;
+
+// h3 & Legend Title
+$h3FontSize: 150% !default;
+
+// Below should be multiple 0f $baseLineHeight
+$h3LineHeight: 167% !default;
+$h3Padding: 0.833333333em 0 !default;
+
+// h4
+$h4FontSize: 113% !default;
+
+// Below should be multiple 0f $baseLineHeight
+$h4LineHeight: 112% !default;
+$h4Padding: 1.1em 0 0 !default;
+
+// h5
+$h5FontSize: 100% !default;
+
+// Below should be multiple 0f $baseLineHeight
+$h5LineHeight: 125% !default;
+$h5Padding: 1.25em 0 !default;
+
+// h6
+$h6FontSize: 100% !default;
+
+// Below should be multiple 0f $baseLineHeight
+$h6LineHeight: 125% !default;
+$h6Padding: 1.25em 0 !default;
 
 /* Global UI color settings */
 $mainColor: $darkWhite !default;
@@ -116,17 +139,17 @@ $mobileTotalColumns: 4 !default;
 $blockGridElements: 12 !default; // Highest number of block grid elements, Maximum of 24 supported
 
 // Text Direction Settings
-// TODO: We should probably remove this.
+// This is not supported at this time.
 $textDirection: ltr !default; // Controls default global text direction, 'rtl' or 'ltr'
 $defaultDirection: left !default; // Change this to 'right' for right-to-left languages
 $defaultOpposite: right !default; // Change this to 'left' for right-to-left languages
 
 @if $textDirection == ltr {
-  $defaultDirection: left;
-  $defaultOpposite: right;
+	$defaultDirection: left;
+	$defaultOpposite: right;
 } @else {
-  $defaultDirection: right;
-  $defaultOpposite: left;
+	$defaultDirection: right;
+	$defaultOpposite: left;
 }
 
 // Button Settings
@@ -297,17 +320,3 @@ $complementaryWidth: 20% !default;
 $screenSmall: 768px !default;
 $screenMedium: 1279px !default;
 $screenXlarge: 1441px !default;
-
-// Saving for better em-based testing
-// $screenSmall: 44em !default;
-// $screenMedium: 77em !default;
-// $screenXlarge: 104em !default;
-
-// Saving for Sass 3.2 stable release
-// $mediaSmall: "only screen and (max-width: 767px)" !default;
-// $mediaMedium: "only screen and (max-width: 1279px) and (min-width: 768px)" !default;
-// $mediaXlarge: "only screen and (min-width: 1441px)" !default;
-// $mediaLandscape: "screen and (orientation: landscape)" !default;
-// $mediaPortrait: "screen and (orientation: portrait)" !default;
-// $mediaAll: "only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px)" !default;
-

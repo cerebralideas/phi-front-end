@@ -60,16 +60,6 @@ module.exports = function(grunt) {
 			}
 		},
 		uglify: {},
-		replace: {
-			srcToDist: {
-				src: 'index.html',
-				overwrite: true,
-				replacements: [{
-					from: '/src',
-					to: '/dist'
-				}]
-			}
-		},
 		compass: {
 			dev: {
 				src: 'src/sass/',

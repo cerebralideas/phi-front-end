@@ -11,7 +11,7 @@
 // To use Source Sans from Adobe for the sans-serif and native Georgia for the serifed,
 // Uncomment the below @import. Source Sans is slightly more condensed and better for UI than Verdana.
 // Most performant @import option
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic);
+// @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic);
 
 // Use this one if you need a better, more condensed mono-spaced font than the native monospace
 // Moderately performant
@@ -27,7 +27,6 @@
 
 // These come from core compass framework, not phi
 @import "compass/css3";
-@import "modular-scale";
 
 // This is all your settings variables
 @import 'settings';
@@ -54,7 +53,7 @@
 @import 'extensions/grid-system/_grid';
 
 // Include Navigation Styles
-@import 'extensions/navigation/_navbar';
+@import 'extensions/navigation/_navigation';
 
 // Include Tab Styles
 @import 'extensions/tabs/_tabs';

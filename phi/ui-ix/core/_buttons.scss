@@ -13,30 +13,11 @@
 	text-align: center;
 	text-decoration: none;
 	@include border-radius($buttonRadius);
-	@include box-shadow(inset 0 -2px 4px rgba(0, 0, 0, 0.05));
-
-	&:hover, &:focus {
-		@include box-shadow(inset 0 4em 4px rgba(255, 255, 255, 0.5));
-	}
-	&:active {
-		@include box-shadow(inset 0 4em 4px rgba(0, 0, 0, 0.05));
-	}
-
-	&.primary, &.secondary, &.alert, &.success {
-
-		&:hover, &:focus {
-			@include box-shadow(inset 0 4em 4px rgba(255, 255, 255, 0.15));
-		}
-		&:active {
-			@include box-shadow(inset 0 4em 4px rgba(0, 0, 0, 0.05));
-		}
-	}
 
 	/* Disabled ---------- */
 	&.disabled, &[disabled] {
 		opacity: 0.6;
 		cursor: not-allowed;
-		@include box-shadow(none);
 	}
 }
 .button + .button {

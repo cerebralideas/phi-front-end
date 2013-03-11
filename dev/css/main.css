@@ -6,6 +6,9 @@
 /*******************************************
  * THIS MAKES UP THE CORE OF THE FRAMEWORK *
  *******************************************/
+/*******************************************
+* SETTINGS, VARIABLES, DEFAULTS            *
+*******************************************/
 /* Set the vertical rhythm */
 /* Round, even numbers are best */
 /* Default is 20px increments */
@@ -930,26 +933,13 @@ h1 {
   /* 60 */
   padding: 0.3125em 0;
   /* 20 */
-  /* More specific design */
-  font-family: "Source Sans Pro", Verdana, sans-serif;
-  color: #999999;
-  font-style: normal;
-  font-weight: 100;
 }
-/* line 47, ../../phi/ui-ix/core/_typography.scss */
+/* line 41, ../../phi/ui-ix/core/_typography.scss */
 h1 small {
   font-size: 70%;
 }
 
-/* line 51, ../../phi/ui-ix/core/_typography.scss */
-h2, h3 {
-  font-family: "Source Sans Pro", Verdana, sans-serif;
-  font-weight: 700;
-  color: #555555;
-  font-style: normal;
-}
-
-/* line 57, ../../phi/ui-ix/core/_typography.scss */
+/* line 45, ../../phi/ui-ix/core/_typography.scss */
 h2 {
   /* Total Height: 80px */
   font-size: 200%;
@@ -960,12 +950,12 @@ h2 {
   padding: 0.625em 0;
   /* 20 */
 }
-/* line 65, ../../phi/ui-ix/core/_typography.scss */
+/* line 53, ../../phi/ui-ix/core/_typography.scss */
 h2 small {
   font-size: 70%;
 }
 
-/* line 69, ../../phi/ui-ix/core/_typography.scss */
+/* line 57, ../../phi/ui-ix/core/_typography.scss */
 h3, legend {
   /* Total Height: 60px */
   font-size: 150%;
@@ -973,23 +963,15 @@ h3, legend {
   /* Below should be multiple 0f 20px */
   line-height: 167%;
   /* 40 */
-  padding: 0.833333333em 0;
+  padding: 0.83333em 0;
   /* 20 */
 }
-/* line 77, ../../phi/ui-ix/core/_typography.scss */
+/* line 65, ../../phi/ui-ix/core/_typography.scss */
 h3 small, legend small {
   font-size: 70%;
 }
 
-/* line 81, ../../phi/ui-ix/core/_typography.scss */
-h4, h5 {
-  font-family: Georgia, serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #555555;
-}
-
-/* line 87, ../../phi/ui-ix/core/_typography.scss */
+/* line 69, ../../phi/ui-ix/core/_typography.scss */
 h4 {
   /* Total Height: 80px */
   font-size: 113%;
@@ -1000,12 +982,12 @@ h4 {
   padding: 1.1em 0 0;
   /* 20 */
 }
-/* line 95, ../../phi/ui-ix/core/_typography.scss */
+/* line 77, ../../phi/ui-ix/core/_typography.scss */
 h4 small {
   font-size: 70%;
 }
 
-/* line 99, ../../phi/ui-ix/core/_typography.scss */
+/* line 81, ../../phi/ui-ix/core/_typography.scss */
 h5 {
   /* Total Height: 40px */
   font-size: 100%;
@@ -1013,14 +995,11 @@ h5 {
   /* Below should be multiple 0f 20px */
   line-height: 125%;
   /* 20 */
-  padding: 1.25em 0 0;
+  padding: 1.25em 0;
   /* 20 */
-  /* More specific design */
-  font-weight: 400;
-  text-transform: uppercase;
 }
 
-/* line 111, ../../phi/ui-ix/core/_typography.scss */
+/* line 89, ../../phi/ui-ix/core/_typography.scss */
 h6 {
   /* Total Height: 40px */
   font-size: 100%;
@@ -1028,45 +1007,40 @@ h6 {
   /* Below should be multiple 0f 20px */
   line-height: 125%;
   /* 20 */
-  padding: 1.25em 0 0;
+  padding: 1.25em 0;
   /* 20 */
-  /* More specific design */
-  font-family: Georgia, serif;
-  font-weight: 400;
-  font-style: italic;
-  color: #999999;
 }
 
-/* line 129, ../../phi/ui-ix/core/_typography.scss */
+/* line 101, ../../phi/ui-ix/core/_typography.scss */
 p, ul, ol, dl {
   margin: 1.25em 0;
   /* 20 */
 }
-/* line 132, ../../phi/ui-ix/core/_typography.scss */
+/* line 104, ../../phi/ui-ix/core/_typography.scss */
 p small, ul small, ol small, dl small {
   font-size: 0.9em;
   color: #999999;
   line-height: 1em;
 }
 
-/* line 138, ../../phi/ui-ix/core/_typography.scss */
+/* line 110, ../../phi/ui-ix/core/_typography.scss */
 li {
   margin: 0;
 }
 
-/* line 143, ../../phi/ui-ix/core/_typography.scss */
+/* line 115, ../../phi/ui-ix/core/_typography.scss */
 .page-header {
   padding-bottom: 1.25em;
   margin: 1.25em 0;
   border-bottom: 1px solid #aaaaaa;
 }
 
-/* line 148, ../../phi/ui-ix/core/_typography.scss */
+/* line 120, ../../phi/ui-ix/core/_typography.scss */
 .page-header h1 {
   line-height: 1;
 }
 
-/* line 151, ../../phi/ui-ix/core/_typography.scss */
+/* line 123, ../../phi/ui-ix/core/_typography.scss */
 hr {
   border: solid #ddd;
   border-width: 1px 0 0;
@@ -1076,136 +1050,109 @@ hr {
   height: 0;
 }
 
-/* line 159, ../../phi/ui-ix/core/_typography.scss */
+/* line 131, ../../phi/ui-ix/core/_typography.scss */
 .doubleRule {
   border-width: 1px 0;
   clear: both;
   margin: 1.25em 0 2px;
 }
 
-/* line 164, ../../phi/ui-ix/core/_typography.scss */
+/* line 136, ../../phi/ui-ix/core/_typography.scss */
 .subheader {
-  color: #a2a2a2;
   font-weight: 300;
   padding-top: 0;
 }
 
-/* line 169, ../../phi/ui-ix/core/_typography.scss */
+/* line 140, ../../phi/ui-ix/core/_typography.scss */
 em {
   font-style: italic;
   line-height: inherit;
 }
 
-/* line 173, ../../phi/ui-ix/core/_typography.scss */
+/* line 144, ../../phi/ui-ix/core/_typography.scss */
 strong {
   font-weight: bold;
   line-height: inherit;
 }
 
-/* line 177, ../../phi/ui-ix/core/_typography.scss */
+/* line 148, ../../phi/ui-ix/core/_typography.scss */
 small {
   font-size: 0.9em;
   line-height: inherit;
 }
 
-/* line 181, ../../phi/ui-ix/core/_typography.scss */
+/* line 152, ../../phi/ui-ix/core/_typography.scss */
 code {
   font-weight: bold;
   background: #ffff99;
 }
 
 /* Lists ---------------------- */
-/* line 187, ../../phi/ui-ix/core/_typography.scss */
+/* line 158, ../../phi/ui-ix/core/_typography.scss */
 ul, ol, dl {
   list-style-position: outside;
 }
 
-/* line 193, ../../phi/ui-ix/core/_typography.scss */
+/* line 164, ../../phi/ui-ix/core/_typography.scss */
 ul li ul, ul li ol {
   margin-left: 1.25em;
 }
-/* line 198, ../../phi/ui-ix/core/_typography.scss */
+/* line 169, ../../phi/ui-ix/core/_typography.scss */
 ul.square {
   list-style-type: square;
 }
-/* line 201, ../../phi/ui-ix/core/_typography.scss */
+/* line 172, ../../phi/ui-ix/core/_typography.scss */
 ul.square li ul {
   list-style: inherit;
 }
-/* line 206, ../../phi/ui-ix/core/_typography.scss */
+/* line 177, ../../phi/ui-ix/core/_typography.scss */
 ul.circle {
   list-style-type: circle;
 }
-/* line 209, ../../phi/ui-ix/core/_typography.scss */
+/* line 180, ../../phi/ui-ix/core/_typography.scss */
 ul.circle li ul {
   list-style: inherit;
 }
-/* line 214, ../../phi/ui-ix/core/_typography.scss */
+/* line 185, ../../phi/ui-ix/core/_typography.scss */
 ul.disc {
   list-style-type: disc;
 }
-/* line 217, ../../phi/ui-ix/core/_typography.scss */
+/* line 188, ../../phi/ui-ix/core/_typography.scss */
 ul.disc li ul {
   list-style: inherit;
 }
-/* line 222, ../../phi/ui-ix/core/_typography.scss */
+/* line 193, ../../phi/ui-ix/core/_typography.scss */
 ul.no-bullet {
   list-style: none;
 }
-/* line 225, ../../phi/ui-ix/core/_typography.scss */
+/* line 196, ../../phi/ui-ix/core/_typography.scss */
 ul.large li {
   line-height: 21px;
 }
 
-/* line 229, ../../phi/ui-ix/core/_typography.scss */
+/* line 200, ../../phi/ui-ix/core/_typography.scss */
 ol {
   margin-left: 1.25em;
 }
-/* line 234, ../../phi/ui-ix/core/_typography.scss */
+/* line 205, ../../phi/ui-ix/core/_typography.scss */
 ol li ul, ol li ol {
   margin-left: 1.25em;
   margin-bottom: 0;
 }
 
 /* Blockquotes ---------------------- */
-/* line 241, ../../phi/ui-ix/core/_typography.scss */
-blockquote, blockquote p {
-  font-style: italic;
-  font-family: Georgia, serif;
-  color: #999999;
-}
-
-/* line 246, ../../phi/ui-ix/core/_typography.scss */
+/* line 212, ../../phi/ui-ix/core/_typography.scss */
 blockquote {
   margin: 0 0 1.25em;
   padding: 1.25em;
-  border-left: 5px solid #aaaaaa;
 }
-/* line 251, ../../phi/ui-ix/core/_typography.scss */
+/* line 216, ../../phi/ui-ix/core/_typography.scss */
 blockquote cite {
   display: block;
   font-size: 0.9em;
-  color: #888888;
-}
-/* line 256, ../../phi/ui-ix/core/_typography.scss */
-blockquote cite:before {
-  content: "\2014 \0020";
-}
-/* line 259, ../../phi/ui-ix/core/_typography.scss */
-blockquote cite a, blockquote cite a:visited {
-  color: #888888;
 }
 
-/* line 265, ../../phi/ui-ix/core/_typography.scss */
-abbr, acronym {
-  text-transform: uppercase;
-  font-size: 90%;
-  color: #555555;
-  border-bottom: 1px solid #ddd;
-  cursor: help;
-}
-
-/* line 272, ../../phi/ui-ix/core/_typography.scss */
+/* line 221, ../../phi/ui-ix/core/_typography.scss */
 abbr {
   text-transform: none;
 }
@@ -1216,14 +1163,14 @@ abbr {
  * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
  * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
 */
-/* line 282, ../../phi/ui-ix/core/_typography.scss */
+/* line 231, ../../phi/ui-ix/core/_typography.scss */
 .print-only {
   display: none !important;
 }
 
 @media print {
   /* Black prints faster: h5bp.com/s */
-  /* line 288, ../../phi/ui-ix/core/_typography.scss */
+  /* line 237, ../../phi/ui-ix/core/_typography.scss */
   * {
     background: transparent !important;
     color: black !important;
@@ -1233,45 +1180,45 @@ abbr {
     -ms-filter: none !important;
   }
 
-  /* line 296, ../../phi/ui-ix/core/_typography.scss */
+  /* line 245, ../../phi/ui-ix/core/_typography.scss */
   a, a:visited {
     text-decoration: underline;
   }
 
-  /* line 299, ../../phi/ui-ix/core/_typography.scss */
+  /* line 248, ../../phi/ui-ix/core/_typography.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 302, ../../phi/ui-ix/core/_typography.scss */
+  /* line 251, ../../phi/ui-ix/core/_typography.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
   /* Don't show links for images, or javascript/internal links */
-  /* line 306, ../../phi/ui-ix/core/_typography.scss */
+  /* line 255, ../../phi/ui-ix/core/_typography.scss */
   .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
     content: "";
   }
 
-  /* line 309, ../../phi/ui-ix/core/_typography.scss */
+  /* line 258, ../../phi/ui-ix/core/_typography.scss */
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
   /* h5bp.com/t */
-  /* line 314, ../../phi/ui-ix/core/_typography.scss */
+  /* line 263, ../../phi/ui-ix/core/_typography.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 317, ../../phi/ui-ix/core/_typography.scss */
+  /* line 266, ../../phi/ui-ix/core/_typography.scss */
   tr, img {
     page-break-inside: avoid;
   }
 
-  /* line 320, ../../phi/ui-ix/core/_typography.scss */
+  /* line 269, ../../phi/ui-ix/core/_typography.scss */
   img {
     max-width: 100% !important;
   }
@@ -1280,33 +1227,33 @@ abbr {
     margin: 0.5cm;
 }
 
-  /* line 326, ../../phi/ui-ix/core/_typography.scss */
+  /* line 275, ../../phi/ui-ix/core/_typography.scss */
   p, h2, h3 {
     orphans: 3;
     widows: 3;
   }
 
-  /* line 330, ../../phi/ui-ix/core/_typography.scss */
+  /* line 279, ../../phi/ui-ix/core/_typography.scss */
   h2, h3 {
     page-break-after: avoid;
   }
 
-  /* line 333, ../../phi/ui-ix/core/_typography.scss */
+  /* line 282, ../../phi/ui-ix/core/_typography.scss */
   .hide-on-print {
     display: none !important;
   }
 
-  /* line 336, ../../phi/ui-ix/core/_typography.scss */
+  /* line 285, ../../phi/ui-ix/core/_typography.scss */
   .print-only {
     display: block !important;
   }
 
-  /* line 339, ../../phi/ui-ix/core/_typography.scss */
+  /* line 288, ../../phi/ui-ix/core/_typography.scss */
   .hide-for-print {
     display: none !important;
   }
 
-  /* line 342, ../../phi/ui-ix/core/_typography.scss */
+  /* line 291, ../../phi/ui-ix/core/_typography.scss */
   .show-for-print {
     display: inherit !important;
   }
@@ -1521,7 +1468,7 @@ textarea {
 select {
   -webkit-appearance: none;
   line-height: 1em;
-  background: url("../img/svg-icons/select-arrow.svg") no-repeat right center, #efefef;
+  background: url("../ui-ix/img/svg-icons/select-arrow.svg") no-repeat right center, #efefef;
   cursor: pointer;
 }
 /* line 139, ../../phi/ui-ix/core/_forms.scss */
@@ -1734,51 +1681,21 @@ textarea.error {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.05);
   /* Disabled ---------- */
 }
 /* line 18, ../../phi/ui-ix/core/_buttons.scss */
-.button:hover, .button:focus {
-  -webkit-box-shadow: inset 0 4em 4px rgba(255, 255, 255, 0.5);
-  -moz-box-shadow: inset 0 4em 4px rgba(255, 255, 255, 0.5);
-  box-shadow: inset 0 4em 4px rgba(255, 255, 255, 0.5);
-}
-/* line 21, ../../phi/ui-ix/core/_buttons.scss */
-.button:active {
-  -webkit-box-shadow: inset 0 4em 4px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 4em 4px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 4em 4px rgba(0, 0, 0, 0.05);
-}
-/* line 27, ../../phi/ui-ix/core/_buttons.scss */
-.button.primary:hover, .button.primary:focus, .button.secondary:hover, .button.secondary:focus, .button.alert:hover, .button.alert:focus, .button.success:hover, .button.success:focus {
-  -webkit-box-shadow: inset 0 4em 4px rgba(255, 255, 255, 0.15);
-  -moz-box-shadow: inset 0 4em 4px rgba(255, 255, 255, 0.15);
-  box-shadow: inset 0 4em 4px rgba(255, 255, 255, 0.15);
-}
-/* line 30, ../../phi/ui-ix/core/_buttons.scss */
-.button.primary:active, .button.secondary:active, .button.alert:active, .button.success:active {
-  -webkit-box-shadow: inset 0 4em 4px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 4em 4px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 4em 4px rgba(0, 0, 0, 0.05);
-}
-/* line 36, ../../phi/ui-ix/core/_buttons.scss */
 .button.disabled, .button[disabled] {
   opacity: 0.6;
   cursor: not-allowed;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
 }
 
-/* line 42, ../../phi/ui-ix/core/_buttons.scss */
+/* line 23, ../../phi/ui-ix/core/_buttons.scss */
 .button + .button {
   margin-left: 0.625em;
 }
 
 /* Sizes */
-/* line 47, ../../phi/ui-ix/core/_buttons.scss */
+/* line 28, ../../phi/ui-ix/core/_buttons.scss */
 .largeButton {
   font-size: 1.125em;
   line-height: 1em;
@@ -1787,32 +1704,32 @@ textarea.error {
   margin: 0.55em 0;
 }
 
-/* line 54, ../../phi/ui-ix/core/_buttons.scss */
+/* line 35, ../../phi/ui-ix/core/_buttons.scss */
 .mediumButton {
   font-size: 1em;
 }
 
-/* line 57, ../../phi/ui-ix/core/_buttons.scss */
+/* line 38, ../../phi/ui-ix/core/_buttons.scss */
 .smallButton {
   font-size: 0.9em;
   padding: 0 0.3125em;
   line-height: 1.285714286em;
 }
 
-/* line 62, ../../phi/ui-ix/core/_buttons.scss */
+/* line 43, ../../phi/ui-ix/core/_buttons.scss */
 .expandedButton {
   width: 100%;
 }
 
 /* Don't use native buttons on iOS */
-/* line 67, ../../phi/ui-ix/core/_buttons.scss */
+/* line 48, ../../phi/ui-ix/core/_buttons.scss */
 input[type=submit].button, button.button {
   -webkit-appearance: none;
 }
 
 /* Correct FF button padding */
 @-moz-document url-prefix() {
-  /* line 77, ../../phi/ui-ix/core/_buttons.scss */
+  /* line 58, ../../phi/ui-ix/core/_buttons.scss */
   button::-moz-focus-inner,
   input[type="reset"]::-moz-focus-inner,
   input[type="button"]::-moz-focus-inner,
@@ -1822,46 +1739,46 @@ input[type=submit].button, button.button {
     padding: 0;
   }
 
-  /* line 80, ../../phi/ui-ix/core/_buttons.scss */
+  /* line 61, ../../phi/ui-ix/core/_buttons.scss */
   input[type="submit"].tiny.button {
     padding: 3px 10px 4px;
   }
 
-  /* line 83, ../../phi/ui-ix/core/_buttons.scss */
+  /* line 64, ../../phi/ui-ix/core/_buttons.scss */
   input[type="submit"].small.button {
     padding: 5px 14px 6px;
   }
 
-  /* line 86, ../../phi/ui-ix/core/_buttons.scss */
+  /* line 67, ../../phi/ui-ix/core/_buttons.scss */
   input[type="submit"].button, input[type=submit].medium.button {
     padding: 8px 20px 9px;
   }
 
-  /* line 89, ../../phi/ui-ix/core/_buttons.scss */
+  /* line 70, ../../phi/ui-ix/core/_buttons.scss */
   input[type="submit"].large.button {
     padding: 13px 30px 14px;
   }
 }
 
 /* Button Groups ---------------------- */
-/* line 96, ../../phi/ui-ix/core/_buttons.scss */
+/* line 77, ../../phi/ui-ix/core/_buttons.scss */
 .buttonGroup {
   list-style: none;
   padding: 0;
   margin: 0 0 12px;
   display: table;
 }
-/* line 102, ../../phi/ui-ix/core/_buttons.scss */
+/* line 83, ../../phi/ui-ix/core/_buttons.scss */
 .buttonGroup li {
   padding: 0;
   margin: 0 0 0 -1px;
   display: table-cell;
 }
-/* line 106, ../../phi/ui-ix/core/_buttons.scss */
+/* line 87, ../../phi/ui-ix/core/_buttons.scss */
 .buttonGroup li:first-child {
   margin-left: 0;
 }
-/* line 111, ../../phi/ui-ix/core/_buttons.scss */
+/* line 92, ../../phi/ui-ix/core/_buttons.scss */
 .buttonGroup li a.button, .buttonGroup li a.button, .buttonGroup li input[type="submit"].button, .buttonGroup li input[type="submit"].button {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -1870,7 +1787,7 @@ input[type=submit].button, button.button {
   border-radius: 0px;
   border-right-width: 0;
 }
-/* line 117, ../../phi/ui-ix/core/_buttons.scss */
+/* line 98, ../../phi/ui-ix/core/_buttons.scss */
 .buttonGroup li:first-child a.button, .buttonGroup li:first-child input[type="submit"].button {
   -moz-border-radius-topleft: 3px;
   -webkit-border-top-left-radius: 3px;
@@ -1879,7 +1796,7 @@ input[type=submit].button, button.button {
   -webkit-border-bottom-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
-/* line 121, ../../phi/ui-ix/core/_buttons.scss */
+/* line 102, ../../phi/ui-ix/core/_buttons.scss */
 .buttonGroup li:first-child a.button.rounded, .buttonGroup li:first-child input[type="submit"].button.rounded {
   -moz-border-radius-topleft: 1000px;
   -webkit-border-top-left-radius: 1000px;
@@ -1888,7 +1805,7 @@ input[type=submit].button, button.button {
   -webkit-border-bottom-left-radius: 1000px;
   border-bottom-left-radius: 1000px;
 }
-/* line 127, ../../phi/ui-ix/core/_buttons.scss */
+/* line 108, ../../phi/ui-ix/core/_buttons.scss */
 .buttonGroup li:last-child a.button, .buttonGroup li:last-child input[type="submit"].button {
   -moz-border-radius-topright: 3px;
   -webkit-border-top-right-radius: 3px;
@@ -1898,7 +1815,7 @@ input[type=submit].button, button.button {
   border-bottom-right-radius: 3px;
   border-right-width: 1px;
 }
-/* line 132, ../../phi/ui-ix/core/_buttons.scss */
+/* line 113, ../../phi/ui-ix/core/_buttons.scss */
 .buttonGroup li:last-child a.button.rounded, .buttonGroup li:last-child input[type="submit"].button.rounded {
   -moz-border-radius-topright: 1000px;
   -webkit-border-top-right-radius: 1000px;
@@ -1909,12 +1826,12 @@ input[type=submit].button, button.button {
   border-right-width: 1px;
 }
 
-/* line 143, ../../phi/ui-ix/core/_buttons.scss */
+/* line 124, ../../phi/ui-ix/core/_buttons.scss */
 div.buttonBar .buttonGroup {
   display: inline-block;
   margin-right: 1.25em;
 }
-/* line 147, ../../phi/ui-ix/core/_buttons.scss */
+/* line 128, ../../phi/ui-ix/core/_buttons.scss */
 div.buttonBar ul.buttonGroup:last-child {
   margin-right: 0;
 }
@@ -2314,14 +2231,16 @@ div.buttonBar ul.buttonGroup:last-child {
 /* NOTE TO USER: Use row-main for the initial row of your page */
 /* line 12, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .rowMain {
+  font-family: Georgia;
   margin: 0 1.25em;
   max-width: none;
   min-width: none;
 }
 
 /* NOTE TO USER: Use this for all subsequent rows */
-/* line 19, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 20, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .row {
+  font-family: Georgia;
   display: block;
   width: auto;
   margin: 0 -1.25em;
@@ -2329,7 +2248,7 @@ div.buttonBar ul.buttonGroup:last-child {
   min-width: none;
 }
 
-/* line 42, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 44, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .oneColumn,
 .oneColumns,
 .twoColumns,
@@ -2348,17 +2267,18 @@ div.buttonBar ul.buttonGroup:last-child {
   display: inline-block;
   vertical-align: top;
   padding: 0 1.25em;
+  font-family: "Source Sans Pro", Verdana, sans-serif;
 }
 
 /* NOTE TO USER: Use this row type if the small white-space of the inline-block is unwanted,
    OR you want equal height for columns. */
-/* line 50, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 53, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .rowSeamless {
   display: table;
   width: 100%;
 }
 
-/* line 70, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 73, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .oneSeamlessColumn,
 .oneSeamlessColumns,
 .twoSeamlessColumns,
@@ -2378,283 +2298,283 @@ div.buttonBar ul.buttonGroup:last-child {
   padding: 0 1.25em;
 }
 
-/* line 78, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 81, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .oneColumns {
   width: 7.83333%;
 }
 
-/* line 78, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 81, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .twoColumns {
   width: 16.16667%;
 }
 
-/* line 78, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 81, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .threeColumns {
   width: 24.5%;
 }
 
-/* line 78, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 81, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .fourColumns {
   width: 32.83333%;
 }
 
-/* line 78, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 81, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .fiveColumns {
   width: 41.16667%;
 }
 
-/* line 78, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 81, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .sixColumns {
   width: 49.5%;
 }
 
-/* line 78, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 81, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .sevenColumns {
   width: 57.83333%;
 }
 
-/* line 78, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 81, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .eightColumns {
   width: 66.16667%;
 }
 
-/* line 78, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 81, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .nineColumns {
   width: 74.5%;
 }
 
-/* line 78, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 81, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .tenColumns {
   width: 82.83333%;
 }
 
-/* line 78, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 81, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .elevenColumns {
   width: 91.16667%;
 }
 
-/* line 78, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 81, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .twelveColumns {
   width: 99.5%;
 }
 
-/* line 86, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 89, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .oneSeamlessColumns {
   width: 7.83333%;
 }
 
-/* line 86, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 89, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .twoSeamlessColumns {
   width: 16.16667%;
 }
 
-/* line 86, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 89, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .threeSeamlessColumns {
   width: 24.5%;
 }
 
-/* line 86, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 89, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .fourSeamlessColumns {
   width: 32.83333%;
 }
 
-/* line 86, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 89, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .fiveSeamlessColumns {
   width: 41.16667%;
 }
 
-/* line 86, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 89, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .sixSeamlessColumns {
   width: 49.5%;
 }
 
-/* line 86, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 89, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .sevenSeamlessColumns {
   width: 57.83333%;
 }
 
-/* line 86, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 89, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .eightSeamlessColumns {
   width: 66.16667%;
 }
 
-/* line 86, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 89, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .nineSeamlessColumns {
   width: 74.5%;
 }
 
-/* line 86, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 89, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .tenSeamlessColumns {
   width: 82.83333%;
 }
 
-/* line 86, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 89, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .elevenSeamlessColumns {
   width: 91.16667%;
 }
 
-/* line 86, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 89, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .twelveSeamlessColumns {
   width: 99.5%;
 }
 
-/* line 93, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 96, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .offset-by-one {
   margin-left: 7.83333%;
 }
 
-/* line 93, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 96, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .offset-by-two {
   margin-left: 16.16667%;
 }
 
-/* line 93, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 96, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .offset-by-three {
   margin-left: 24.5%;
 }
 
-/* line 93, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 96, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .offset-by-four {
   margin-left: 32.83333%;
 }
 
-/* line 93, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 96, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .offset-by-five {
   margin-left: 41.16667%;
 }
 
-/* line 93, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 96, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .offset-by-six {
   margin-left: 49.5%;
 }
 
-/* line 93, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 96, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .offset-by-seven {
   margin-left: 57.83333%;
 }
 
-/* line 93, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 96, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .offset-by-eight {
   margin-left: 66.16667%;
 }
 
-/* line 93, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 96, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .offset-by-nine {
   margin-left: 74.5%;
 }
 
-/* line 93, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 96, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .offset-by-ten {
   margin-left: 82.83333%;
 }
 
-/* line 101, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 104, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .push-two {
   left: 16.16667%;
 }
 
-/* line 104, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 107, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .pull-two {
   right: 16.16667%;
 }
 
-/* line 101, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 104, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .push-three {
   left: 24.5%;
 }
 
-/* line 104, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 107, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .pull-three {
   right: 24.5%;
 }
 
-/* line 101, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 104, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .push-four {
   left: 32.83333%;
 }
 
-/* line 104, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 107, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .pull-four {
   right: 32.83333%;
 }
 
-/* line 101, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 104, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .push-five {
   left: 41.16667%;
 }
 
-/* line 104, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 107, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .pull-five {
   right: 41.16667%;
 }
 
-/* line 101, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 104, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .push-six {
   left: 49.5%;
 }
 
-/* line 104, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 107, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .pull-six {
   right: 49.5%;
 }
 
-/* line 101, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 104, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .push-seven {
   left: 57.83333%;
 }
 
-/* line 104, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 107, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .pull-seven {
   right: 57.83333%;
 }
 
-/* line 101, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 104, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .push-eight {
   left: 66.16667%;
 }
 
-/* line 104, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 107, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .pull-eight {
   right: 66.16667%;
 }
 
-/* line 101, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 104, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .push-nine {
   left: 74.5%;
 }
 
-/* line 104, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 107, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .pull-nine {
   right: 74.5%;
 }
 
-/* line 101, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 104, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .push-ten {
   left: 82.83333%;
 }
 
-/* line 104, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 107, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .pull-ten {
   right: 82.83333%;
 }
 
-/* line 109, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 112, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 img, object, embed {
   max-width: 100%;
   height: auto;
 }
 
-/* line 114, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 117, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 object, embed {
   height: 100%;
 }
 
-/* line 118, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 121, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 img {
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 122, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 125, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 #map_canvas img, .map_canvas img {
   max-width: none !important;
 }
@@ -2670,38 +2590,38 @@ the same height. You can optionally uncomment the
 lines below to support arbitrary height, but know
 that IE7/8 do not support :nth-child.
 -------------------------------------------------- */
-/* line 139, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 142, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .block-grid {
   display: block;
   overflow: hidden;
   padding: 0;
 }
-/* line 144, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 147, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .block-grid > li {
   display: inline-block;
   height: auto;
 }
-/* line 152, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 155, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .block-grid.one-up > li {
   width: 100%;
   padding: 0 0 15px;
 }
-/* line 152, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 155, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .block-grid.two-up > li {
   width: 49.5%;
   padding: 0 15px 15px;
 }
-/* line 152, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 155, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .block-grid.three-up > li {
   width: 32.83333%;
   padding: 0 12px 12px;
 }
-/* line 152, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 155, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .block-grid.four-up > li {
   width: 24.5%;
   padding: 0 10px 10px;
 }
-/* line 152, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+/* line 155, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
 .block-grid.five-up > li {
   width: 19.5%;
   padding: 0 8px 8px;
@@ -2709,12 +2629,12 @@ that IE7/8 do not support :nth-child.
 
 /* Very large screens */
 @media only screen and (min-width: 1441px) {
-  /* line 181, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+  /* line 184, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
   .row {
     margin: 0 -2.5em;
   }
 
-  /* line 198, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+  /* line 201, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
   .oneColumn,
   .oneColumns,
   .twoColumns,
@@ -2736,12 +2656,12 @@ that IE7/8 do not support :nth-child.
 /* Medium screens */
 /* Small screens */
 @media only screen and (max-width: 768px) {
-  /* line 209, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+  /* line 212, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
   .row-main {
     margin: 0;
   }
 
-  /* line 227, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+  /* line 230, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
   .oneColumn,
   .oneColumns,
   .twoColumns,
@@ -2761,7 +2681,7 @@ that IE7/8 do not support :nth-child.
     display: block;
   }
 
-  /* line 245, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+  /* line 248, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
   .oneSeamlessColumn,
   .oneSeamlessColumns,
   .twoSeamlessColumns,
@@ -2781,52 +2701,52 @@ that IE7/8 do not support :nth-child.
     display: block;
   }
 
-  /* line 251, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+  /* line 254, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
   .offset-by-one {
     margin-left: 0;
   }
 
-  /* line 251, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+  /* line 254, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
   .offset-by-two {
     margin-left: 0;
   }
 
-  /* line 251, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+  /* line 254, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
   .offset-by-three {
     margin-left: 0;
   }
 
-  /* line 251, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+  /* line 254, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
   .offset-by-four {
     margin-left: 0;
   }
 
-  /* line 251, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+  /* line 254, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
   .offset-by-five {
     margin-left: 0;
   }
 
-  /* line 251, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+  /* line 254, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
   .offset-by-six {
     margin-left: 0;
   }
 
-  /* line 251, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+  /* line 254, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
   .offset-by-seven {
     margin-left: 0;
   }
 
-  /* line 251, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+  /* line 254, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
   .offset-by-eight {
     margin-left: 0;
   }
 
-  /* line 251, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+  /* line 254, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
   .offset-by-nine {
     margin-left: 0;
   }
 
-  /* line 251, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
+  /* line 254, ../../phi/ui-ix/extensions/grid-system/_grid.scss */
   .offset-by-ten {
     margin-left: 0;
   }
@@ -2834,12 +2754,28 @@ that IE7/8 do not support :nth-child.
 /* Landscape Orientation */
 /* Portrait Orientation */
 /* Touch Detection */
-/* line 1, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
+/* line 1, ../../phi/ui-ix/extensions/navigation/_navigation.scss */
+.inlineLinkList {
+  margin: 1.25em 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 6, ../../phi/ui-ix/extensions/navigation/_navigation.scss */
+.inlineLinkList > li {
+  list-style: none;
+  display: inline-block;
+}
+/* line 10, ../../phi/ui-ix/extensions/navigation/_navigation.scss */
+.inlineLinkList > li > a {
+  display: block;
+  padding: 0.625em 1.25em;
+}
+
+/* line 16, ../../phi/ui-ix/extensions/navigation/_navigation.scss */
 .navItem {
   position: relative;
-  background: #efefef;
 }
-/* line 5, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
+/* line 19, ../../phi/ui-ix/extensions/navigation/_navigation.scss */
 .navItem a {
   color: #333333;
   font-size: 1.125em;
@@ -2847,98 +2783,73 @@ that IE7/8 do not support :nth-child.
   text-decoration: none;
   padding: 0.6em 1.25em;
 }
-/* line 13, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navItem a:hover, .navItem a:focus {
-  color: #333333;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.5)), color-stop(100%, rgba(255, 255, 255, 0.5)));
-  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
-  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
-  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
-}
-/* line 18, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
+/* line 26, ../../phi/ui-ix/extensions/navigation/_navigation.scss */
 .navItem.hasDropdown > a {
-  display: table-cell;
-  width: 100%;
+  display: inline-block;
+  padding-right: 0.3125em;
 }
-/* line 22, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navItem > .dropDownTrigger {
-  display: table-cell;
-}
-/* line 25, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navItem > .dropDownTrigger > a {
-  display: table-cell;
+/* line 30, ../../phi/ui-ix/extensions/navigation/_navigation.scss */
+.navItem .disclosureArrow {
+  display: inline-block;
   text-decoration: none;
-  padding-left: 0.625em;
-  padding-right: 0.625em;
-  border-color: #999;
-  border-left: 1px dotted #d5d5d5;
+  padding-left: 0.3125em;
 }
-/* line 33, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
+/* line 35, ../../phi/ui-ix/extensions/navigation/_navigation.scss */
+.navItem .disclosureArrow.open {
+  background: #efefef;
+}
+/* line 39, ../../phi/ui-ix/extensions/navigation/_navigation.scss */
 .navItem > ul {
   display: none;
 }
-/* line 36, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navItem.active {
-  background: #1195be;
-  border-color: #0d708f;
-}
-/* line 40, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
+/* line 44, ../../phi/ui-ix/extensions/navigation/_navigation.scss */
 .navItem.active > a {
-  color: white;
+  color: #0d708f;
   cursor: default;
 }
-/* line 44, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
+/* line 48, ../../phi/ui-ix/extensions/navigation/_navigation.scss */
 .navItem.active > a:hover {
-  background: #1195be;
-  color: white;
-  background-image: none;
   cursor: default;
 }
-/* line 51, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navItem.active .dropDownTrigger > a {
-  color: white;
-}
-/* line 54, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
+/* line 54, ../../phi/ui-ix/extensions/navigation/_navigation.scss */
 .navItem.active .dropDownTrigger > a:hover {
-  color: white;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, rgba(0, 0, 0, 0.1)));
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-  background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
   cursor: pointer;
 }
 
 /* This is the hidden dropdown menu */
-/* line 63, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
+/* line 61, ../../phi/ui-ix/extensions/navigation/_navigation.scss */
 .dropDown {
   display: none;
-  width: 100%;
+  position: absolute;
+  right: 0;
+  width: inherit;
+  min-width: 10em;
+  max-width: 20em;
   margin: 0;
   font-weight: 100;
-  border: 1px solid #d5d5d5;
   background: #efefef;
-  -moz-border-radius-bottomleft: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  -moz-border-radius-bottomright: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -moz-border-radius-topright: 0;
+  -webkit-border-top-right-radius: 0;
+  border-top-right-radius: 0;
 }
-/* line 73, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
+/* line 74, ../../phi/ui-ix/extensions/navigation/_navigation.scss */
 .dropDown > li {
   background: #efefef;
-  border-bottom: 1px solid #d5d5d5;
+  border-bottom: 1px solid #e2e2e2;
 }
-/* line 77, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
+/* line 78, ../../phi/ui-ix/extensions/navigation/_navigation.scss */
 .dropDown > li > a {
   display: block;
   text-align: center;
   font-weight: 100;
   padding: 0.625em 1.25em;
 }
-/* line 83, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
+/* line 84, ../../phi/ui-ix/extensions/navigation/_navigation.scss */
 .dropDown > li:last-child {
   border: none;
   -moz-border-radius-bottomleft: 3px;
@@ -2948,130 +2859,9 @@ that IE7/8 do not support :nth-child.
   -webkit-border-bottom-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
-/* line 88, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.dropDown > li > a:hover, .dropDown .dropDown > li > a:focus {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.5)), color-stop(100%, rgba(255, 255, 255, 0.5)));
-  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
-  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
-  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
-}
-
-/* line 92, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navBar {
-  margin: 1.25em 0 0;
-  padding: 0;
-  display: table;
-  border: 1px solid #d5d5d5;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  white-space: nowrap;
-}
-/* line 100, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navBar .navItem {
-  display: table-cell;
-  border-right: 1px solid #d5d5d5;
-}
-/* line 104, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navBar .navItem:last-child {
-  border: none;
-}
-/* line 107, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navBar .navItem > a {
-  display: table-cell;
-}
-/* line 110, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navBar .navItem:first-child {
-  -moz-border-radius-topleft: 3px;
-  -webkit-border-top-left-radius: 3px;
-  border-top-left-radius: 3px;
-  -moz-border-radius-bottomleft: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-/* line 114, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navBar .navItem:last-child {
-  -moz-border-radius-topright: 3px;
-  -webkit-border-top-right-radius: 3px;
-  border-top-right-radius: 3px;
-  -moz-border-radius-bottomright: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-/* line 119, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navBar .dropDown {
-  position: absolute;
-}
-
-/* line 123, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navSide {
-  list-style: none;
-  margin: 1.25em 0 0;
-  padding: 0;
-  display: block;
-  border: 1px solid #d5d5d5;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-}
-/* line 131, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navSide .navItem {
-  border-bottom: 1px solid #d5d5d5;
-}
-/* line 134, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navSide .navItem:last-child {
-  border: none;
-}
-/* line 137, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navSide .navItem:first-child {
-  -moz-border-radius-topleft: 3px;
-  -webkit-border-top-left-radius: 3px;
-  border-top-left-radius: 3px;
-  -moz-border-radius-topright: 3px;
-  -webkit-border-top-right-radius: 3px;
-  border-top-right-radius: 3px;
-}
-/* line 141, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navSide .navItem:last-child {
-  -moz-border-radius-bottomleft: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  -moz-border-radius-bottomright: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-/* line 146, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navSide .dropDown {
-  list-style: none;
-}
-/* line 149, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navSide .dropDown li {
-  border-color: #4d4d4d;
-}
-/* line 153, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navSide .dropDown a {
-  background: #333333;
-  color: white;
-  text-align: left;
-  padding-left: 2.5em;
-}
-/* line 159, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navSide .dropDown a:hover, .navSide .dropDown a:focus {
-  background: #1a1a1a;
-  color: white;
-}
-/* line 165, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-.navSide a {
-  display: block;
-}
 
 /* This is the fallback Superfish hover menu */
-/* line 171, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
+/* line 92, ../../phi/ui-ix/extensions/navigation/_navigation.scss */
 .hasHover > ul > li:hover > ul, .hasHover > ul > li > ul.hovering {
   display: block !important;
 }
@@ -3079,7 +2869,7 @@ that IE7/8 do not support :nth-child.
 /* Very large screens */
 /* Medium screens */
 @media only screen and (max-width: 1279px) and (min-width: 768px) {
-  /* line 183, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
+  /* line 104, ../../phi/ui-ix/extensions/navigation/_navigation.scss */
   .navItem a {
     font-size: 1em;
     line-height: 1.25em;
@@ -3088,78 +2878,6 @@ that IE7/8 do not support :nth-child.
   }
 }
 /* Small screens */
-@media only screen and (max-width: 768px) {
-  /* line 195, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-  .navBar {
-    list-style: none;
-    margin: 1.25em 0 0;
-    padding: 0;
-    display: block;
-    border: 1px solid #d5d5d5;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-    border-radius: 3px;
-  }
-  /* line 203, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-  .navBar .navItem {
-    display: block;
-    border: none;
-    border-bottom: 1px solid #d5d5d5;
-  }
-  /* line 208, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-  .navBar .navItem > a {
-    display: inherit;
-  }
-  /* line 211, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-  .navBar .navItem.hasDropdown > a {
-    display: table-cell;
-  }
-  /* line 215, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-  .navBar .navItem:first-child {
-    -moz-border-radius-topleft: 3px;
-    -webkit-border-top-left-radius: 3px;
-    border-top-left-radius: 3px;
-    -moz-border-radius-topright: 3px;
-    -webkit-border-top-right-radius: 3px;
-    border-top-right-radius: 3px;
-  }
-  /* line 219, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-  .navBar .navItem:last-child {
-    -moz-border-radius-bottomleft: 3px;
-    -webkit-border-bottom-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    -moz-border-radius-bottomright: 3px;
-    -webkit-border-bottom-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-  }
-  /* line 224, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-  .navBar .dropDown {
-    position: static;
-    list-style: none;
-  }
-  /* line 228, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-  .navBar .dropDown li {
-    border-color: #4d4d4d;
-  }
-  /* line 232, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-  .navBar .dropDown a {
-    background: #333333;
-    color: white;
-    text-align: left;
-    padding-left: 2.5em;
-  }
-  /* line 238, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-  .navBar .dropDown a:hover, .navBar .dropDown a:focus {
-    background: #1a1a1a;
-    color: white;
-  }
-  /* line 244, ../../phi/ui-ix/extensions/navigation/_navbar.scss */
-  .navBar a {
-    display: block;
-  }
-}
 /* Landscape Orientation */
 /* Portrait Orientation */
 /* Touch Detection */
@@ -3494,26 +3212,22 @@ that IE7/8 do not support :nth-child.
   cursor: default;
 }
 
-/* Inline Link List */
+/* Inline List */
 /* line 99, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
-ul.inlineList, ul.linkList {
+ul.inlineList {
   margin: 1.25em 0;
   padding: 0;
   list-style: none;
 }
 /* line 104, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
-ul.inlineList > li, ul.linkList > li {
+ul.inlineList > li {
   list-style: none;
   padding-right: 1.25em;
   display: inline-block;
 }
-/* line 109, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
-ul.inlineList > li > *, ul.linkList > li > * {
-  display: block;
-}
 
 /* Keytroke Characters ---------------------- */
-/* line 117, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 113, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .keystroke, kbd {
   font-family: monospace;
   padding: 2px 4px 0px;
@@ -3528,12 +3242,12 @@ ul.inlineList > li > *, ul.linkList > li > * {
 }
 
 /* Image Thumbnails ---------------------- */
-/* line 127, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 123, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .th {
   display: inline-block;
   margin: 0 0 1.25em;
 }
-/* line 131, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 127, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .th img {
   display: block;
   border: solid 4px #fff;
@@ -3554,7 +3268,7 @@ ul.inlineList > li > *, ul.linkList > li > * {
   -o-transition-duration: 300ms;
   transition-duration: 300ms;
 }
-/* line 140, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 136, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .th:hover img, .th:focus img {
   -webkit-box-shadow: 0 0 6px 1px rgba(239, 239, 239, 0.5);
   -moz-box-shadow: 0 0 6px 1px rgba(239, 239, 239, 0.5);
@@ -3562,7 +3276,7 @@ ul.inlineList > li > *, ul.linkList > li > * {
 }
 
 /* Video - Mad props to http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/ ---------------------- */
-/* line 148, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 144, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .flex-video {
   position: relative;
   padding-top: 25px;
@@ -3571,15 +3285,15 @@ ul.inlineList > li > *, ul.linkList > li > * {
   margin-bottom: 16px;
   overflow: hidden;
 }
-/* line 156, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 152, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .flex-video.widescreen {
   padding-bottom: 57.25%;
 }
-/* line 159, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 155, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .flex-video.vimeo {
   padding-top: 0;
 }
-/* line 163, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 159, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .flex-video iframe, .flex-video object, .flex-video embed, .flex-video video {
   position: absolute;
   top: 0;
@@ -3589,29 +3303,29 @@ ul.inlineList > li > *, ul.linkList > li > * {
 }
 
 /* Microformats ---------------------- */
-/* line 175, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 171, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 ul.vcard {
   display: inline-block;
   margin: 0 0 12px 0;
   border: 1px solid #ddd;
   padding: 10px;
 }
-/* line 181, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 177, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 ul.vcard li {
   margin: 0;
   display: block;
 }
-/* line 185, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 181, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 ul.vcard li.fn {
   font-weight: bold;
   font-size: 1.125em;
 }
 
-/* line 193, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 189, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 p.vevent span.summary {
   font-weight: bold;
 }
-/* line 196, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 192, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 p.vevent abbr {
   cursor: default;
   text-decoration: none;
@@ -3621,7 +3335,7 @@ p.vevent abbr {
 }
 
 /* Progress Bar ---------------------- */
-/* line 207, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 203, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 div.progress {
   padding: 2px;
   margin-bottom: 10px;
@@ -3630,12 +3344,12 @@ div.progress {
   /* meter */
   /* border radii */
 }
-/* line 214, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 210, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 div.progress .meter {
   display: block;
   height: 100%;
 }
-/* line 220, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 216, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 div.progress.radius {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -3643,7 +3357,7 @@ div.progress.radius {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 222, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 218, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 div.progress.radius .meter {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -3651,7 +3365,7 @@ div.progress.radius .meter {
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 226, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 222, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 div.progress.round {
   -webkit-border-radius: 1000px;
   -moz-border-radius: 1000px;
@@ -3659,7 +3373,7 @@ div.progress.round {
   -o-border-radius: 1000px;
   border-radius: 1000px;
 }
-/* line 228, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 224, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 div.progress.round .meter {
   -webkit-border-radius: 1000px;
   -moz-border-radius: 1000px;
@@ -3672,7 +3386,7 @@ div.progress.round .meter {
 /* Medium screens */
 /* Small screens */
 @media only screen and (max-width: 768px) {
-  /* line 243, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 239, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs {
     display: block;
     background: #efefef;
@@ -3683,21 +3397,21 @@ div.progress.round .meter {
     -o-border-radius: 3px;
     border-radius: 3px;
   }
-  /* line 249, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 245, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li {
     display: inline-block;
     margin: 0;
     padding: 0 0.3125em 0 0;
     list-style: none;
   }
-  /* line 255, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 251, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li a, .breadcrumbs li span {
     display: block;
     padding: 0.625em 0.3125em;
     position: relative;
     line-height: 1.125em;
   }
-  /* line 261, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 257, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li a:before, .breadcrumbs li span:before {
     content: ">";
     position: static;
@@ -3716,31 +3430,31 @@ div.progress.round .meter {
     border-radius: 0;
     border: none;
   }
-  /* line 271, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 267, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li a:hover, .breadcrumbs li span:hover {
     text-decoration: none;
   }
-  /* line 275, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 271, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li span {
     color: #999999;
   }
-  /* line 279, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 275, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li:first-child a:before {
     content: none;
   }
-  /* line 282, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 278, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li:hover a, .breadcrumbs li a:focus {
     text-decoration: underline;
   }
-  /* line 285, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 281, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li.current:hover a, .breadcrumbs li.current a:focus {
     text-decoration: none;
   }
-  /* line 289, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 285, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li.unavailable a {
     color: #999;
   }
-  /* line 292, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 288, ../../phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li.unavailable:hover a, .breadcrumbs li.unavailable a:focus {
     text-decoration: none;
     color: #999;
@@ -4189,7 +3903,93 @@ table tbody tr td {
  * Remove this dependency from your main Sass file
  * when you start fully developing your website/app
  */
-/* line 22, ../../phi/ui-ix/prototype/_prototype.scss */
+/* line 8, ../../phi/ui-ix/prototype/_prototype.scss */
+h1 {
+  font-family: "Source Sans Pro", Verdana, sans-serif;
+  color: #999999;
+  font-style: normal;
+  font-weight: 100;
+}
+
+/* line 14, ../../phi/ui-ix/prototype/_prototype.scss */
+h2 {
+  font-family: "Source Sans Pro", Verdana, sans-serif;
+  color: #555555;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* line 20, ../../phi/ui-ix/prototype/_prototype.scss */
+h3, legend {
+  font-family: "Source Sans Pro", Verdana, sans-serif;
+  color: #555555;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* line 26, ../../phi/ui-ix/prototype/_prototype.scss */
+h4 {
+  font-family: Georgia, serif;
+  color: #555555;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* line 32, ../../phi/ui-ix/prototype/_prototype.scss */
+h5 {
+  font-family: Georgia, serif;
+  color: #555555;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* line 38, ../../phi/ui-ix/prototype/_prototype.scss */
+h6 {
+  font-family: Georgia, serif;
+  color: #999999;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* line 44, ../../phi/ui-ix/prototype/_prototype.scss */
+.subheader {
+  color: #a2a2a2;
+}
+
+/* line 47, ../../phi/ui-ix/prototype/_prototype.scss */
+blockquote, blockquote p {
+  font-style: italic;
+  font-family: Georgia, serif;
+  color: #999999;
+}
+
+/* line 52, ../../phi/ui-ix/prototype/_prototype.scss */
+blockquote {
+  border-left: 5px solid #aaaaaa;
+}
+/* line 55, ../../phi/ui-ix/prototype/_prototype.scss */
+blockquote cite {
+  color: #888888;
+}
+/* line 58, ../../phi/ui-ix/prototype/_prototype.scss */
+blockquote cite:before {
+  content: "\2014 \0020";
+}
+/* line 61, ../../phi/ui-ix/prototype/_prototype.scss */
+blockquote cite a, blockquote cite a:visited {
+  color: #888888;
+}
+
+/* line 66, ../../phi/ui-ix/prototype/_prototype.scss */
+abbr, acronym {
+  text-transform: uppercase;
+  font-size: 90%;
+  color: #555555;
+  border-bottom: 1px solid #ddd;
+  cursor: help;
+}
+
+/* line 87, ../../phi/ui-ix/prototype/_prototype.scss */
 input[type='text'],
 input[type='password'],
 input[type='date'],
@@ -4211,7 +4011,7 @@ select {
   transition: all 0.15s linear;
 }
 
-/* line 26, ../../phi/ui-ix/prototype/_prototype.scss */
+/* line 91, ../../phi/ui-ix/prototype/_prototype.scss */
 select {
   -webkit-box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.05);

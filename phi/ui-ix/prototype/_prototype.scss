@@ -5,6 +5,71 @@
 
 // Typography
 
+h1 {
+	font-family: $sansFontFamily;
+	color: $grayLight;
+	font-style: normal;
+	font-weight: 100;
+}
+h2 {
+	font-family: $sansFontFamily;
+	color: $gray;
+	font-style: normal;
+	font-weight: 700;
+}
+h3, legend {
+	font-family: $sansFontFamily;
+	color: $gray;
+	font-style: normal;
+	font-weight: 700;
+}
+h4 {
+	font-family: $serifFontFamily;
+	color: $gray;
+	font-style: normal;
+	font-weight: 700;
+}
+h5 {
+	font-family: $serifFontFamily;
+	color: $gray;
+	font-style: normal;
+	font-weight: 700;
+}
+h6 {
+	font-family: $serifFontFamily;
+	color: $grayLight;
+	font-style: italic;
+	font-weight: 400;
+}
+.subheader {
+	color: lighten($gray, 30%);
+}
+blockquote, blockquote p {
+	font-style: italic;
+	font-family: $serifFontFamily;
+	color: $grayLight;
+}
+blockquote {
+	border-#{$defaultDirection}: 5px solid $grayLighter;
+
+	cite {
+		color: lighten($gray, 20%);
+
+		&:before {
+			content: "\2014 \0020";
+		}
+		a, a:visited {
+			color: lighten($gray, 20%);
+		}
+	}
+}
+abbr, acronym {
+	text-transform: uppercase;
+	font-size: 90%;
+	color: $gray;
+	border-bottom: 1px solid #ddd;
+	cursor: help;
+}
 
 // Forms
 
