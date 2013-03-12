@@ -1,3 +1,18 @@
+.linkList {
+	margin: 0 0 $baseLineHeight;
+	padding: 0;
+	list-style: none;
+
+	& > li {
+		list-style: none;
+		display: block;
+
+		& > a {
+			display: block;
+			padding: ($baseLineHeight / 2) $baseLineHeight;
+		}
+	}
+}
 .inlineLinkList {
 	margin: $baseLineHeight 0;
 	padding: 0;
@@ -12,13 +27,24 @@
 			padding: ($baseLineHeight / 2) $baseLineHeight;
 		}
 	}
+	.dropDown {
+		position: absolute;
+		right: 0;
+		width: inherit;
+		min-width: 10em;
+		max-width: 20em;
+
+		& > li > a {
+			text-align: center;
+			padding: ($baseLineHeight / 2) $baseLineHeight;
+		}
+	}
 }
 .navItem {
 	position: relative;
 
 	a {
 		color: $baseTextColor;
-		font-size: $largeFontSize;
 		line-height: 100%;
 		text-decoration: none;
 		padding: 0.6em $baseLineHeight;
@@ -32,6 +58,9 @@
 		text-decoration: none;
 		padding-left: ($baseLineHeight / 4);
 
+		&:hover i {
+			background: $mainColor;
+		}
 		&.open {
 			background: $mainColor;
 		}
@@ -42,7 +71,6 @@
 	&.active {
 
 		& > a {
-			color: darken($primaryColor, 10%);
 			cursor: default;
 
 			&:hover {
@@ -60,31 +88,11 @@
 /* This is the hidden dropdown menu */
 .dropDown {
 	display: none;
-	position: absolute;
-	right: 0;
-	width: inherit;
-	min-width: 10em;
-	max-width: 20em;
 	margin: 0;
-	font-weight: 100;
-	background: $mainColor;
-	@include border-radius($buttonRadius);
-	@include border-corner-radius(top, right, 0);
 
-	& > li {
-		background: $mainColor;
-		border-bottom: 1px solid darken($mainColor, 5%);
-	}
 	& > li > a {
 		display: block;
-		text-align: center;
-		font-weight: 100;
 		padding: ($baseLineHeight / 2) $baseLineHeight;
-	}
-	& > li:last-child {
-		border: none;
-		@include border-corner-radius(bottom, $defaultDirection, $buttonRadius);
-		@include border-corner-radius(bottom, $defaultOpposite, $buttonRadius);
 	}
 }
 
@@ -102,7 +110,6 @@
 	.navItem {
 
 		a {
-			font-size: $baseFontSize;
 			line-height: $baseLineHeight;
 			padding-top: $baseLineHeight / 2;
 			padding-bottom: $baseLineHeight / 2;

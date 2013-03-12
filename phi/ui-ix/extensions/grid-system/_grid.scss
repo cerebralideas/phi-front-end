@@ -139,14 +139,16 @@ lines below to support arbitrary height, but know
 that IE7/8 do not support :nth-child.
 -------------------------------------------------- */
 
-.block-grid {
+.blockGrid {
     display: block;
     overflow: hidden;
     padding: 0;
+	font-family: Georgia;
 
-    &>li {
+    & > * {
         display: inline-block;
         height: auto;
+		font-family: $baseFontFamily;
     }
 
     @for $i from 1 through $blockGridElements {

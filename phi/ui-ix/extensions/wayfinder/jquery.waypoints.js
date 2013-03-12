@@ -58,7 +58,7 @@ Support:
 	- Other versions and browsers may work, these are just the ones I've looked at.
 */
 
-(function($, wp, wps, window, undefined){
+(function($, wp, wps, window, undefined) {
 
 	'use strict';
 
@@ -445,6 +445,8 @@ Support:
 						*/
 						o.offset = o.element.offset().top - contextOffset
 							+ contextScroll - adjustment;
+
+						console.log(o);
 
 						/*
 						An element offset change across the current scroll point triggers

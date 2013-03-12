@@ -99,11 +99,53 @@ select {
 // Icons
 
 
-// Navbar
+// Navigation
 
+.navItem.active > a {
+	color: darken($primaryColor, 10%);
+}
+/* This is the hidden dropdown menu */
+.dropDown {
+	background: $mainColor;
+	@include border-radius($cornerRadius);
+	@include border-corner-radius(top, right, 0);
+
+	& > li {
+		background: $mainColor;
+		border-bottom: 1px solid darken($mainColor, 5%);
+	}
+	& > li > a {
+		font-weight: 100;
+	}
+	& > li:last-child {
+		border: none;
+		@include border-corner-radius(bottom, $defaultDirection, $cornerRadius);
+		@include border-corner-radius(bottom, $defaultOpposite, $cornerRadius);
+	}
+}
 
 // Tabs
 
+.pillStyle {
+	margin: 0;
+
+	.tab > a {
+		@include border-radius(1000px);
+		padding: ($baseLineHeight / 2);
+	}
+	.tab.active a {
+		background-color: $primaryColor;
+		color: #fff;
+	}
+	& + .tabsContent {
+		border: none;
+	}
+}
+.contentContained li {
+	border-right: 2px solid $mainColor;
+	border-bottom: 2px solid $mainColor;
+	border-left: 2px solid $mainColor;
+}
 
 // Helper Classes
 
