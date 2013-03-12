@@ -7,7 +7,7 @@ $(document).ready(function() {
 	var $doc = $(document),
 		$waypointsContainer = $('.js_waypoints'),
 		$waypointNav = $('.js_waypointNav'),
-		$waypoints = $waypointsContainer.children('div, li, dd');
+		$waypoints = $waypointsContainer.children('div, li, dd, ng-include');
 
 	$.fn.foundationAlerts ? $doc.foundationAlerts() : null;
 	$.fn.foundationButtons ? $doc.foundationButtons() : null;
@@ -25,6 +25,10 @@ $(document).ready(function() {
 	$.fn.waypoint ? $waypoints.waypoint({
 		context: $waypointsContainer,
 		handler: function(event, direction) {
+
+			console.log('Scroll!');
+
+			console.log('waypoints!');
 
 			$active = $(this);
 

@@ -70,7 +70,7 @@
 				'../../vendor/jquery/full/jquery.js',
 
 				// Load extensions
-				'../ui-ix/extensions/navigation/phi.navigation.js',
+				'../ui-ix/extensions/navigation/navigation.js',
 				'../ui-ix/extensions/tabs/jquery.foundation.tabs.js',
 				'../ui-ix/extensions/modals/jquery.foundation.reveal.js',
 				'../ui-ix/extensions/wayfinder/jquery.waypoints.js',

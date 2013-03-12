@@ -2590,50 +2590,52 @@ lines below to support arbitrary height, but know
 that IE7/8 do not support :nth-child.
 -------------------------------------------------- */
 /* line 142, ../ui-ix/extensions/grid-system/_grid.scss */
-.block-grid {
+.blockGrid {
   display: block;
   overflow: hidden;
   padding: 0;
+  font-family: Georgia;
 }
-/* line 147, ../ui-ix/extensions/grid-system/_grid.scss */
-.block-grid > li {
+/* line 148, ../ui-ix/extensions/grid-system/_grid.scss */
+.blockGrid > * {
   display: inline-block;
   height: auto;
+  font-family: "Source Sans Pro", Verdana, sans-serif;
 }
-/* line 155, ../ui-ix/extensions/grid-system/_grid.scss */
-.block-grid.one-up > li {
+/* line 157, ../ui-ix/extensions/grid-system/_grid.scss */
+.blockGrid.one-up > li {
   width: 100%;
   padding: 0 0 15px;
 }
-/* line 155, ../ui-ix/extensions/grid-system/_grid.scss */
-.block-grid.two-up > li {
+/* line 157, ../ui-ix/extensions/grid-system/_grid.scss */
+.blockGrid.two-up > li {
   width: 49.5%;
   padding: 0 15px 15px;
 }
-/* line 155, ../ui-ix/extensions/grid-system/_grid.scss */
-.block-grid.three-up > li {
+/* line 157, ../ui-ix/extensions/grid-system/_grid.scss */
+.blockGrid.three-up > li {
   width: 32.83333%;
   padding: 0 12px 12px;
 }
-/* line 155, ../ui-ix/extensions/grid-system/_grid.scss */
-.block-grid.four-up > li {
+/* line 157, ../ui-ix/extensions/grid-system/_grid.scss */
+.blockGrid.four-up > li {
   width: 24.5%;
   padding: 0 10px 10px;
 }
-/* line 155, ../ui-ix/extensions/grid-system/_grid.scss */
-.block-grid.five-up > li {
+/* line 157, ../ui-ix/extensions/grid-system/_grid.scss */
+.blockGrid.five-up > li {
   width: 19.5%;
   padding: 0 8px 8px;
 }
 
 /* Very large screens */
 @media only screen and (min-width: 1441px) {
-  /* line 184, ../ui-ix/extensions/grid-system/_grid.scss */
+  /* line 186, ../ui-ix/extensions/grid-system/_grid.scss */
   .row {
     margin: 0 -2.5em;
   }
 
-  /* line 201, ../ui-ix/extensions/grid-system/_grid.scss */
+  /* line 203, ../ui-ix/extensions/grid-system/_grid.scss */
   .oneColumn,
   .oneColumns,
   .twoColumns,
@@ -2655,12 +2657,12 @@ that IE7/8 do not support :nth-child.
 /* Medium screens */
 /* Small screens */
 @media only screen and (max-width: 768px) {
-  /* line 212, ../ui-ix/extensions/grid-system/_grid.scss */
+  /* line 214, ../ui-ix/extensions/grid-system/_grid.scss */
   .row-main {
     margin: 0;
   }
 
-  /* line 230, ../ui-ix/extensions/grid-system/_grid.scss */
+  /* line 232, ../ui-ix/extensions/grid-system/_grid.scss */
   .oneColumn,
   .oneColumns,
   .twoColumns,
@@ -2680,7 +2682,7 @@ that IE7/8 do not support :nth-child.
     display: block;
   }
 
-  /* line 248, ../ui-ix/extensions/grid-system/_grid.scss */
+  /* line 250, ../ui-ix/extensions/grid-system/_grid.scss */
   .oneSeamlessColumn,
   .oneSeamlessColumns,
   .twoSeamlessColumns,
@@ -2700,52 +2702,52 @@ that IE7/8 do not support :nth-child.
     display: block;
   }
 
-  /* line 254, ../ui-ix/extensions/grid-system/_grid.scss */
+  /* line 256, ../ui-ix/extensions/grid-system/_grid.scss */
   .offset-by-one {
     margin-left: 0;
   }
 
-  /* line 254, ../ui-ix/extensions/grid-system/_grid.scss */
+  /* line 256, ../ui-ix/extensions/grid-system/_grid.scss */
   .offset-by-two {
     margin-left: 0;
   }
 
-  /* line 254, ../ui-ix/extensions/grid-system/_grid.scss */
+  /* line 256, ../ui-ix/extensions/grid-system/_grid.scss */
   .offset-by-three {
     margin-left: 0;
   }
 
-  /* line 254, ../ui-ix/extensions/grid-system/_grid.scss */
+  /* line 256, ../ui-ix/extensions/grid-system/_grid.scss */
   .offset-by-four {
     margin-left: 0;
   }
 
-  /* line 254, ../ui-ix/extensions/grid-system/_grid.scss */
+  /* line 256, ../ui-ix/extensions/grid-system/_grid.scss */
   .offset-by-five {
     margin-left: 0;
   }
 
-  /* line 254, ../ui-ix/extensions/grid-system/_grid.scss */
+  /* line 256, ../ui-ix/extensions/grid-system/_grid.scss */
   .offset-by-six {
     margin-left: 0;
   }
 
-  /* line 254, ../ui-ix/extensions/grid-system/_grid.scss */
+  /* line 256, ../ui-ix/extensions/grid-system/_grid.scss */
   .offset-by-seven {
     margin-left: 0;
   }
 
-  /* line 254, ../ui-ix/extensions/grid-system/_grid.scss */
+  /* line 256, ../ui-ix/extensions/grid-system/_grid.scss */
   .offset-by-eight {
     margin-left: 0;
   }
 
-  /* line 254, ../ui-ix/extensions/grid-system/_grid.scss */
+  /* line 256, ../ui-ix/extensions/grid-system/_grid.scss */
   .offset-by-nine {
     margin-left: 0;
   }
 
-  /* line 254, ../ui-ix/extensions/grid-system/_grid.scss */
+  /* line 256, ../ui-ix/extensions/grid-system/_grid.scss */
   .offset-by-ten {
     margin-left: 0;
   }
@@ -2754,113 +2756,113 @@ that IE7/8 do not support :nth-child.
 /* Portrait Orientation */
 /* Touch Detection */
 /* line 1, ../ui-ix/extensions/navigation/_navigation.scss */
-.inlineLinkList {
-  margin: 1.25em 0;
+.linkList {
+  margin: 0 0 1.25em;
   padding: 0;
   list-style: none;
 }
 /* line 6, ../ui-ix/extensions/navigation/_navigation.scss */
-.inlineLinkList > li {
+.linkList > li {
   list-style: none;
-  display: inline-block;
+  display: block;
 }
 /* line 10, ../ui-ix/extensions/navigation/_navigation.scss */
-.inlineLinkList > li > a {
+.linkList > li > a {
   display: block;
   padding: 0.625em 1.25em;
 }
 
 /* line 16, ../ui-ix/extensions/navigation/_navigation.scss */
-.navItem {
-  position: relative;
+.inlineLinkList {
+  margin: 1.25em 0;
+  padding: 0;
+  list-style: none;
 }
-/* line 19, ../ui-ix/extensions/navigation/_navigation.scss */
-.navItem a {
-  color: #333333;
-  font-size: 1.125em;
-  line-height: 100%;
-  text-decoration: none;
-  padding: 0.6em 1.25em;
-}
-/* line 26, ../ui-ix/extensions/navigation/_navigation.scss */
-.navItem.hasDropdown > a {
+/* line 21, ../ui-ix/extensions/navigation/_navigation.scss */
+.inlineLinkList > li {
+  list-style: none;
   display: inline-block;
-  padding-right: 0.3125em;
+}
+/* line 25, ../ui-ix/extensions/navigation/_navigation.scss */
+.inlineLinkList > li > a {
+  display: block;
+  padding: 0.625em 1.25em;
 }
 /* line 30, ../ui-ix/extensions/navigation/_navigation.scss */
-.navItem .disclosureArrow {
-  display: inline-block;
-  text-decoration: none;
-  padding-left: 0.3125em;
-}
-/* line 35, ../ui-ix/extensions/navigation/_navigation.scss */
-.navItem .disclosureArrow.open {
-  background: #efefef;
-}
-/* line 39, ../ui-ix/extensions/navigation/_navigation.scss */
-.navItem > ul {
-  display: none;
-}
-/* line 44, ../ui-ix/extensions/navigation/_navigation.scss */
-.navItem.active > a {
-  color: #0d708f;
-  cursor: default;
-}
-/* line 48, ../ui-ix/extensions/navigation/_navigation.scss */
-.navItem.active > a:hover {
-  cursor: default;
-}
-/* line 54, ../ui-ix/extensions/navigation/_navigation.scss */
-.navItem.active .dropDownTrigger > a:hover {
-  cursor: pointer;
-}
-
-/* This is the hidden dropdown menu */
-/* line 61, ../ui-ix/extensions/navigation/_navigation.scss */
-.dropDown {
-  display: none;
+.inlineLinkList .dropDown {
   position: absolute;
   right: 0;
   width: inherit;
   min-width: 10em;
   max-width: 20em;
-  margin: 0;
-  font-weight: 100;
-  background: #efefef;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  -moz-border-radius-topright: 0;
-  -webkit-border-top-right-radius: 0;
-  border-top-right-radius: 0;
 }
-/* line 74, ../ui-ix/extensions/navigation/_navigation.scss */
-.dropDown > li {
-  background: #efefef;
-  border-bottom: 1px solid #e2e2e2;
-}
-/* line 78, ../ui-ix/extensions/navigation/_navigation.scss */
-.dropDown > li > a {
-  display: block;
+/* line 37, ../ui-ix/extensions/navigation/_navigation.scss */
+.inlineLinkList .dropDown > li > a {
   text-align: center;
-  font-weight: 100;
   padding: 0.625em 1.25em;
 }
-/* line 84, ../ui-ix/extensions/navigation/_navigation.scss */
-.dropDown > li:last-child {
-  border: none;
-  -moz-border-radius-bottomleft: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  -moz-border-radius-bottomright: 3px;
-  -webkit-border-bottom-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+
+/* line 43, ../ui-ix/extensions/navigation/_navigation.scss */
+.navItem {
+  position: relative;
+}
+/* line 46, ../ui-ix/extensions/navigation/_navigation.scss */
+.navItem a {
+  color: #333333;
+  line-height: 100%;
+  text-decoration: none;
+  padding: 0.6em 1.25em;
+}
+/* line 52, ../ui-ix/extensions/navigation/_navigation.scss */
+.navItem.hasDropdown > a {
+  display: inline-block;
+  padding-right: 0.3125em;
+}
+/* line 56, ../ui-ix/extensions/navigation/_navigation.scss */
+.navItem .disclosureArrow {
+  display: inline-block;
+  text-decoration: none;
+  padding-left: 0.3125em;
+}
+/* line 61, ../ui-ix/extensions/navigation/_navigation.scss */
+.navItem .disclosureArrow:hover i {
+  background: #efefef;
+}
+/* line 64, ../ui-ix/extensions/navigation/_navigation.scss */
+.navItem .disclosureArrow.open {
+  background: #efefef;
+}
+/* line 68, ../ui-ix/extensions/navigation/_navigation.scss */
+.navItem > ul {
+  display: none;
+}
+/* line 73, ../ui-ix/extensions/navigation/_navigation.scss */
+.navItem.active > a {
+  cursor: default;
+}
+/* line 76, ../ui-ix/extensions/navigation/_navigation.scss */
+.navItem.active > a:hover {
+  cursor: default;
+}
+/* line 82, ../ui-ix/extensions/navigation/_navigation.scss */
+.navItem.active .dropDownTrigger > a:hover {
+  cursor: pointer;
+}
+
+/* This is the hidden dropdown menu */
+/* line 89, ../ui-ix/extensions/navigation/_navigation.scss */
+.dropDown {
+  display: none;
+  margin: 0;
+}
+/* line 93, ../ui-ix/extensions/navigation/_navigation.scss */
+.dropDown > li > a {
+  display: block;
+  padding: 0.625em 1.25em;
 }
 
 /* This is the fallback Superfish hover menu */
-/* line 92, ../ui-ix/extensions/navigation/_navigation.scss */
+/* line 100, ../ui-ix/extensions/navigation/_navigation.scss */
 .hasHover > ul > li:hover > ul, .hasHover > ul > li > ul.hovering {
   display: block !important;
 }
@@ -2868,9 +2870,8 @@ that IE7/8 do not support :nth-child.
 /* Very large screens */
 /* Medium screens */
 @media only screen and (max-width: 1279px) and (min-width: 768px) {
-  /* line 104, ../ui-ix/extensions/navigation/_navigation.scss */
+  /* line 112, ../ui-ix/extensions/navigation/_navigation.scss */
   .navItem a {
-    font-size: 1em;
     line-height: 1.25em;
     padding-top: 0.625em;
     padding-bottom: 0.625em;
@@ -2949,14 +2950,13 @@ that IE7/8 do not support :nth-child.
 }
 /* line 63, ../ui-ix/extensions/tabs/_tabs.scss */
 .tabsVertical .tab.active > a {
-  border: 1px solid #d5d5d5;
+  background: transparent;
   border-right: none;
-  background: #efefef;
   font-weight: 700;
   color: #333333;
   position: relative;
 }
-/* line 71, ../ui-ix/extensions/tabs/_tabs.scss */
+/* line 70, ../ui-ix/extensions/tabs/_tabs.scss */
 .tabsVertical .tab.active > a:after {
   content: '';
   height: 1.25em;
@@ -2967,36 +2967,13 @@ that IE7/8 do not support :nth-child.
   border: 1.25em solid transparent;
   border-right-color: #1195be;
 }
-/* line 84, ../ui-ix/extensions/tabs/_tabs.scss */
+/* line 83, ../ui-ix/extensions/tabs/_tabs.scss */
 .tabsVertical + .tabsContent {
   border: none;
   border-left: 5px solid #1195be;
 }
 
-/* line 90, ../ui-ix/extensions/tabs/_tabs.scss */
-.pillStyle {
-  margin: 0;
-}
-/* line 93, ../ui-ix/extensions/tabs/_tabs.scss */
-.pillStyle .tab > a {
-  -webkit-border-radius: 1000px;
-  -moz-border-radius: 1000px;
-  -ms-border-radius: 1000px;
-  -o-border-radius: 1000px;
-  border-radius: 1000px;
-  padding: 0.625em;
-}
-/* line 97, ../ui-ix/extensions/tabs/_tabs.scss */
-.pillStyle .tab.active a {
-  background-color: #1195be;
-  color: #fff;
-}
-/* line 101, ../ui-ix/extensions/tabs/_tabs.scss */
-.pillStyle + .tabsContent {
-  border: none;
-}
-
-/* line 106, ../ui-ix/extensions/tabs/_tabs.scss */
+/* line 89, ../ui-ix/extensions/tabs/_tabs.scss */
 .tabsContent {
   position: relative;
   overflow: auto;
@@ -3004,24 +2981,17 @@ that IE7/8 do not support :nth-child.
   margin: 0;
   border-top: 5px solid #1195be;
 }
-/* line 113, ../ui-ix/extensions/tabs/_tabs.scss */
+/* line 96, ../ui-ix/extensions/tabs/_tabs.scss */
 .tabsContent > li {
   padding: 1.25em;
   display: none;
 }
-/* line 117, ../ui-ix/extensions/tabs/_tabs.scss */
+/* line 100, ../ui-ix/extensions/tabs/_tabs.scss */
 .tabsContent > li.active {
   display: block;
 }
 
-/* line 122, ../ui-ix/extensions/tabs/_tabs.scss */
-.contentContained li {
-  border-right: 2px solid #efefef;
-  border-bottom: 2px solid #efefef;
-  border-left: 2px solid #efefef;
-}
-
-/* line 127, ../ui-ix/extensions/tabs/_tabs.scss */
+/* line 105, ../ui-ix/extensions/tabs/_tabs.scss */
 .no-js .tabsContent > li {
   display: block;
 }
@@ -3030,27 +3000,27 @@ that IE7/8 do not support :nth-child.
 /* Medium screens */
 /* Small screens */
 @media only screen and (max-width: 768px) {
-  /* line 141, ../ui-ix/extensions/tabs/_tabs.scss */
+  /* line 119, ../ui-ix/extensions/tabs/_tabs.scss */
   .tabsVertical {
     padding: 0;
     margin: 0;
     display: none;
   }
-  /* line 146, ../ui-ix/extensions/tabs/_tabs.scss */
+  /* line 124, ../ui-ix/extensions/tabs/_tabs.scss */
   .tabsVertical .tab {
     display: block;
   }
-  /* line 149, ../ui-ix/extensions/tabs/_tabs.scss */
+  /* line 127, ../ui-ix/extensions/tabs/_tabs.scss */
   .tabsVertical .tab > a {
     border-radius: 0;
     border: none;
     padding-left: 1.25em;
   }
-  /* line 154, ../ui-ix/extensions/tabs/_tabs.scss */
+  /* line 132, ../ui-ix/extensions/tabs/_tabs.scss */
   .tabsVertical .tab > a:hover {
     background: #efefef;
   }
-  /* line 160, ../ui-ix/extensions/tabs/_tabs.scss */
+  /* line 138, ../ui-ix/extensions/tabs/_tabs.scss */
   .tabsVertical .tab.active > a {
     border: 1px solid #d5d5d5;
     border-right: none;
@@ -3059,7 +3029,7 @@ that IE7/8 do not support :nth-child.
     color: #333333;
     position: relative;
   }
-  /* line 168, ../ui-ix/extensions/tabs/_tabs.scss */
+  /* line 146, ../ui-ix/extensions/tabs/_tabs.scss */
   .tabsVertical .tab.active > a:after {
     content: '';
     height: 1.25em;
@@ -3070,12 +3040,12 @@ that IE7/8 do not support :nth-child.
     border: 1.25em solid transparent;
     border-right-color: #1195be;
   }
-  /* line 181, ../ui-ix/extensions/tabs/_tabs.scss */
+  /* line 159, ../ui-ix/extensions/tabs/_tabs.scss */
   .tabsVertical + .tabsContent {
     border: none;
     padding: 0;
   }
-  /* line 185, ../ui-ix/extensions/tabs/_tabs.scss */
+  /* line 163, ../ui-ix/extensions/tabs/_tabs.scss */
   .tabsVertical + .tabsContent li {
     display: block !important;
     margin: 0 0 1.25em;
@@ -3225,8 +3195,14 @@ ul.inlineList > li {
   display: inline-block;
 }
 
-/* Keytroke Characters ---------------------- */
+/* Reverse Color ---------------------- */
 /* line 113, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+.reverseColor a {
+  color: white !important;
+}
+
+/* Keytroke Characters ---------------------- */
+/* line 119, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
 .keystroke, kbd {
   font-family: monospace;
   padding: 2px 4px 0px;
@@ -3241,12 +3217,12 @@ ul.inlineList > li {
 }
 
 /* Image Thumbnails ---------------------- */
-/* line 123, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 129, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
 .th {
   display: inline-block;
   margin: 0 0 1.25em;
 }
-/* line 127, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 133, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
 .th img {
   display: block;
   border: solid 4px #fff;
@@ -3267,7 +3243,7 @@ ul.inlineList > li {
   -o-transition-duration: 300ms;
   transition-duration: 300ms;
 }
-/* line 136, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 142, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
 .th:hover img, .th:focus img {
   -webkit-box-shadow: 0 0 6px 1px rgba(239, 239, 239, 0.5);
   -moz-box-shadow: 0 0 6px 1px rgba(239, 239, 239, 0.5);
@@ -3275,7 +3251,7 @@ ul.inlineList > li {
 }
 
 /* Video - Mad props to http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/ ---------------------- */
-/* line 144, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 150, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
 .flex-video {
   position: relative;
   padding-top: 25px;
@@ -3284,15 +3260,15 @@ ul.inlineList > li {
   margin-bottom: 16px;
   overflow: hidden;
 }
-/* line 152, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 158, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
 .flex-video.widescreen {
   padding-bottom: 57.25%;
 }
-/* line 155, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 161, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
 .flex-video.vimeo {
   padding-top: 0;
 }
-/* line 159, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 165, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
 .flex-video iframe, .flex-video object, .flex-video embed, .flex-video video {
   position: absolute;
   top: 0;
@@ -3302,29 +3278,29 @@ ul.inlineList > li {
 }
 
 /* Microformats ---------------------- */
-/* line 171, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 177, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
 ul.vcard {
   display: inline-block;
   margin: 0 0 12px 0;
   border: 1px solid #ddd;
   padding: 10px;
 }
-/* line 177, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 183, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
 ul.vcard li {
   margin: 0;
   display: block;
 }
-/* line 181, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 187, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
 ul.vcard li.fn {
   font-weight: bold;
   font-size: 1.125em;
 }
 
-/* line 189, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 195, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
 p.vevent span.summary {
   font-weight: bold;
 }
-/* line 192, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 198, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
 p.vevent abbr {
   cursor: default;
   text-decoration: none;
@@ -3334,7 +3310,7 @@ p.vevent abbr {
 }
 
 /* Progress Bar ---------------------- */
-/* line 203, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 209, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
 div.progress {
   padding: 2px;
   margin-bottom: 10px;
@@ -3343,12 +3319,12 @@ div.progress {
   /* meter */
   /* border radii */
 }
-/* line 210, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 216, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
 div.progress .meter {
   display: block;
   height: 100%;
 }
-/* line 216, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 222, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
 div.progress.radius {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -3356,7 +3332,7 @@ div.progress.radius {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 218, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 224, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
 div.progress.radius .meter {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -3364,7 +3340,7 @@ div.progress.radius .meter {
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 222, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 228, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
 div.progress.round {
   -webkit-border-radius: 1000px;
   -moz-border-radius: 1000px;
@@ -3372,7 +3348,7 @@ div.progress.round {
   -o-border-radius: 1000px;
   border-radius: 1000px;
 }
-/* line 224, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 230, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
 div.progress.round .meter {
   -webkit-border-radius: 1000px;
   -moz-border-radius: 1000px;
@@ -3385,7 +3361,7 @@ div.progress.round .meter {
 /* Medium screens */
 /* Small screens */
 @media only screen and (max-width: 768px) {
-  /* line 239, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 245, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs {
     display: block;
     background: #efefef;
@@ -3396,21 +3372,21 @@ div.progress.round .meter {
     -o-border-radius: 3px;
     border-radius: 3px;
   }
-  /* line 245, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 251, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li {
     display: inline-block;
     margin: 0;
     padding: 0 0.3125em 0 0;
     list-style: none;
   }
-  /* line 251, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 257, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li a, .breadcrumbs li span {
     display: block;
     padding: 0.625em 0.3125em;
     position: relative;
     line-height: 1.125em;
   }
-  /* line 257, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 263, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li a:before, .breadcrumbs li span:before {
     content: ">";
     position: static;
@@ -3429,31 +3405,31 @@ div.progress.round .meter {
     border-radius: 0;
     border: none;
   }
-  /* line 267, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 273, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li a:hover, .breadcrumbs li span:hover {
     text-decoration: none;
   }
-  /* line 271, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 277, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li span {
     color: #999999;
   }
-  /* line 275, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 281, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li:first-child a:before {
     content: none;
   }
-  /* line 278, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 284, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li:hover a, .breadcrumbs li a:focus {
     text-decoration: underline;
   }
-  /* line 281, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 287, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li.current:hover a, .breadcrumbs li.current a:focus {
     text-decoration: none;
   }
-  /* line 285, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 291, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li.unavailable a {
     color: #999;
   }
-  /* line 288, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 294, ../ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li.unavailable:hover a, .breadcrumbs li.unavailable a:focus {
     text-decoration: none;
     color: #999;
@@ -4019,4 +3995,72 @@ select {
   -moz-transition: none;
   -o-transition: none;
   transition: none;
+}
+
+/* line 104, ../ui-ix/prototype/_prototype.scss */
+.navItem.active > a {
+  color: #0d708f;
+}
+
+/* This is the hidden dropdown menu */
+/* line 108, ../ui-ix/prototype/_prototype.scss */
+.dropDown {
+  background: #efefef;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -moz-border-radius-topright: 0;
+  -webkit-border-top-right-radius: 0;
+  border-top-right-radius: 0;
+}
+/* line 113, ../ui-ix/prototype/_prototype.scss */
+.dropDown > li {
+  background: #efefef;
+  border-bottom: 1px solid #e2e2e2;
+}
+/* line 117, ../ui-ix/prototype/_prototype.scss */
+.dropDown > li > a {
+  font-weight: 100;
+}
+/* line 120, ../ui-ix/prototype/_prototype.scss */
+.dropDown > li:last-child {
+  border: none;
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+/* line 129, ../ui-ix/prototype/_prototype.scss */
+.pillStyle {
+  margin: 0;
+}
+/* line 132, ../ui-ix/prototype/_prototype.scss */
+.pillStyle .tab > a {
+  -webkit-border-radius: 1000px;
+  -moz-border-radius: 1000px;
+  -ms-border-radius: 1000px;
+  -o-border-radius: 1000px;
+  border-radius: 1000px;
+  padding: 0.625em;
+}
+/* line 136, ../ui-ix/prototype/_prototype.scss */
+.pillStyle .tab.active a {
+  background-color: #1195be;
+  color: #fff;
+}
+/* line 140, ../ui-ix/prototype/_prototype.scss */
+.pillStyle + .tabsContent {
+  border: none;
+}
+
+/* line 144, ../ui-ix/prototype/_prototype.scss */
+.contentContained li {
+  border-right: 2px solid #efefef;
+  border-bottom: 2px solid #efefef;
+  border-left: 2px solid #efefef;
 }

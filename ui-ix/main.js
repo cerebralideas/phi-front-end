@@ -61,10 +61,10 @@
 				'../../vendor/jquery/full/jquery.js',
 
 				// Load extensions
-				'extensions/navigation/phi.navigation.js',
+				'extensions/navigation/navigation.js',
 				'extensions/tabs/jquery.foundation.tabs.js',
 				'extensions/modals/jquery.foundation.reveal.js',
-				'extensions/wayfinder/jquery.waypoints.js',
+				// Broken 'extensions/wayfinder/jquery.waypoints.js',
 				'extensions/alerts/jquery.foundation.alerts.js',
 				'extensions/date-picker/kalendae.js',
 

@@ -61,9 +61,8 @@
 		&.active {
 
 			& > a {
-				border: 1px solid darken($mainColor, 10%);
+				background: transparent;
 				border-right: none;
-				background: $mainColor;
 				font-weight: 700;
 				color: $baseTextColor;
 				position: relative;
@@ -87,22 +86,6 @@
 	}
 }
 
-.pillStyle {
-	margin: 0;
-
-	.tab > a {
-		@include border-radius(1000px);
-		padding: ($baseLineHeight / 2);
-	}
-	.tab.active a {
-		background-color: $primaryColor;
-		color: #fff;
-	}
-	& + .tabsContent {
-		border: none;
-	}
-}
-
 .tabsContent {
 	position: relative;
 	overflow: auto;
@@ -118,11 +101,6 @@
 			display: block;
 		}
 	}
-}
-.contentContained li {
-	border-right: 2px solid $mainColor;
-	border-bottom: 2px solid $mainColor;
-	border-left: 2px solid $mainColor;
 }
 .no-js .tabsContent > li {
 	display: block;

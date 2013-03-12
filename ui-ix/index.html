@@ -32,21 +32,6 @@
 	<script src="../../vendor/modernizr/load-shiv/modernizr.js"></script>
 	<script src="main.js"></script>
 
-    <!-- To test vertical rhythm
-    <style>
-        body {
-            /* Baseline grid borrowed from http://jsfiddle.net/joshnh/GdAEf/ for example purposes only */
-            background-image: -webkit-linear-gradient(hsla(0,0%,0%,0) 95%, hsla(0,25%,50%,.1) 95%);
-            background-image:    -moz-linear-gradient(hsla(0,0%,0%,0) 95%, hsla(0,25%,50%,.1) 95%);
-            background-image:     -ms-linear-gradient(hsla(0,0%,0%,0) 95%, hsla(0,25%,50%,.1) 95%);
-            background-image:      -o-linear-gradient(hsla(0,0%,0%,0) 95%, hsla(0,25%,50%,.1) 95%);
-            background-image:         linear-gradient(hsla(0,0%,0%,0) 95%, hsla(0,25%,50%,.1) 95%);
-            background-position: 50% 0;
-            background-size: 1.25em 1.25em;
-            margin: 0;
-        }
-    </style> -->
-
 	<!--[if lte IE 8]>
 		<script>
 			// Add the below elements for IE8 compatibility.
@@ -69,6 +54,37 @@
 		</a> to improve your experience.</p>
 	<![endif]-->
 
+	<!-- This is broken.
+	<div style="position: fixed; top: 0; left: 0; width: 100%; background: #333; z-index: 10;">
+		<ul class="inlineLinkList js_waypointNav reverseColor center">
+			<li class="navItem active">
+				<a href="#type">Type</a>
+			</li>
+			<li class="navItem">
+				<a href="#forms">Forms Elements</a>
+			</li>
+			<li class="navItem">
+				<a href="#grids">Grid System</a>
+			</li>
+			<li class="navItem">
+				<a href="#navigation">Navigation</a>
+			</li>
+			<li class="navItem">
+				<a href="#helpers">Helpers</a>
+			</li>
+			<li class="navItem">
+				<a href="#modals">Modals</a>
+			</li>
+			<li class="navItem">
+				<a href="#alerts">Alerts</a>
+			</li>
+			<li class="navItem">
+				<a href="#tables">Tables</a>
+			</li>
+		</ul>
+	</div>
+	-->
+
 	<div class="row-main">
 		<hgroup class="twelveColumns">
 			<h1><strong>phi</strong>'s UI & Ix Framework</h1>
@@ -78,35 +94,36 @@
 	</div>
 
 	<div class="rowMain">
-		<div class="twelveColumns">
+		<div class="twelveColumns js_waypoints">
 
 			<h2>Core features:</h2>
-			<ng-include src="'core/type.html'"></ng-include>
+			<ng-include id="type" src="'core/type.html'"></ng-include>
 			<hr/>
-			<ng-include src="'core/forms.html'"></ng-include>
+			<ng-include id="forms" src="'core/forms.html'"></ng-include>
 			<hr/>
 			<ng-include src="'core/buttons.html'"></ng-include>
 
 			<hr class="doubleRule"/>
 
             <h2>Extended features:</h2>
-			<ng-include src="'extensions/grid-system/grid.html'"></ng-include>
+			<ng-include src="'extensions/date-picker/calendar.html'"></ng-include>
 			<hr/>
-			<ng-include src="'extensions/navigation/phi-navigation.html'"></ng-include>
+			<ng-include id="grids" src="'extensions/grid-system/grid.html'"></ng-include>
+			<hr/>
+			<ng-include id="navigation" src="'extensions/navigation/navigation.html'"></ng-include>
+			<!-- Broken
+			<ng-include src="'extensions/wayfinder/waypoints.html'"></ng-include>
+			-->
 			<hr/>
 			<ng-include src="'extensions/tabs/tabs.html'"></ng-include>
 			<hr/>
-			<ng-include src="'extensions/helper-classes/helper-classes.html'"></ng-include>
+			<ng-include id="helpers" src="'extensions/helper-classes/helper-classes.html'"></ng-include>
 			<hr/>
-			<ng-include src="'extensions/modals/reveal.html'"></ng-include>
+			<ng-include id="modals" src="'extensions/modals/reveal.html'"></ng-include>
 			<hr/>
-			<ng-include src="'extensions/wayfinder/waypoints.html'"></ng-include>
+			<ng-include id="alerts" src="'extensions/alerts/alerts.html'"></ng-include>
 			<hr/>
-			<ng-include src="'extensions/alerts/alerts.html'"></ng-include>
-			<hr/>
-			<ng-include src="'extensions/tables/tables.html'"></ng-include>
-			<hr/>
-			<ng-include src="'extensions/date-picker/calendar.html'"></ng-include>
+			<ng-include id="tables" src="'extensions/tables/tables.html'"></ng-include>
 			<hr/>
 
 			<!-- Note done …
