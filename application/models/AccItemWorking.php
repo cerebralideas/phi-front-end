@@ -20,13 +20,13 @@ class Model_AccItemWorking extends Othernet_Model_System_MySQLiAbstract
 
     public function insert(array $data)
     {
-        if ( !isset( $data['accItemAccItemId'] ) )
+        if ( !isset( $data['accItemId'] ) )
         {
-            /* Generate accItemAccItemId */
+            /* Generate accItemId */
             $seqService = new Service_Seq();
             $this->lastInsertId = $seqService->getValue( $this->service );
 
-            $data['accItemAccItemId'] = $this->lastInsertId;
+            $data['accItemId'] = $this->lastInsertId;
         }
 
         /* Override these values */

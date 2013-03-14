@@ -319,6 +319,8 @@ PAS.ctrlr.patient = function ctrlrDotPatient($scope, $http, $q, $filter, $timeou
 
             dataServices.fn.save(type).then(function (returned) {
 
+                var url;
+
                 $rootScope.isSaving = 'false';
                 $rootScope.isSaved = 'true';
 
@@ -337,7 +339,9 @@ PAS.ctrlr.patient = function ctrlrDotPatient($scope, $http, $q, $filter, $timeou
 
                     $scope[type + 'Details'][type + 'Id'] = parseInt(returned.data, 10);
 
-                    var url = '/' + type.toLowerCase() + 'async/get' + type.toLowerCase() +
+                    $scope[type + 'Details'][type + 'Id'] = parseInt(returned.data, 10);
+
+                    url = '/' + type.toLowerCase() + 'async/get' + type.toLowerCase() +
                             's?patientId=' + $scope.pt.uniqueId;
 
                     dataServices.fn.query(url).then(function (returned) {
@@ -353,6 +357,26 @@ PAS.ctrlr.patient = function ctrlrDotPatient($scope, $http, $q, $filter, $timeou
 
                     $scope[type][type + 'Details'][type + 'Id'] = parseInt(returned.data, 10);
 
+                } else if (type === 'accItem') {
+
+                    console.log('Returning id - ' + parseInt(returned.data, 10) + ' - for newly created event.');
+
+                    $scope[type][type + 'Id'] = parseInt(returned.data, 10);
+
+                    $scope[type][type + 'Id'] = parseInt(returned.data, 10);
+
+                    url = '/' + type.toLowerCase() + 'async/get' + type.toLowerCase() +
+                        's?patientId=' + $scope.pt.uniqueId;
+
+                    dataServices.fn.query(url).then(function (returned) {
+
+                        var length = returned.data.length;
+
+                        $scope[type + 's'] = returned.data.accItems;
+                        $scope.accountBalance = returned.data.currentBalance;
+                    });
+
+                    $scope.aptChosen = 'true';
                 }
 
             });
@@ -525,16 +549,51 @@ PAS.ctrlr.patient = function ctrlrDotPatient($scope, $http, $q, $filter, $timeou
 
     $scope.postTypes = ['Bill', 'Payment', 'Adjustment', 'Refund'];
 
-    $scope.accountTotal = '0.00';
+    $scope.accountBalance = '0.00';
 
     $scope.payors = [];
 
-    if (DATA.accList) {
+    $scope.previewBill = function previewBill() {
+
+        dataServices.fn.query('/accitemasync/getopclobjects?opClId=' + this.item.opClId).
+            then(function (returned) {
+
+                $scope.aptDetails = returned.data.apt.aptDetails;
+                $scope.opSb = returned.data.opSb;
+                $scope.opCl = returned.data.opCl;
+            });
+    };
+
+    $scope.selectPostType = function selectPostType() {
+
+        if ($scope.accItem.postType === 'Bill') {
+
+            $scope.billReq = true;
+
+        } else if ($scope.accItem.postType === 'Payment') {
+
+            $scope.payReq = true;
+
+        } else if ($scope.accItem.postType === 'Adjustment') {
+
+            $scope.adjReq = true;
+
+        } else if ($scope.accItem.postType === 'Refund') {
+
+            $scope.refReq = true;
+
+        }
+    };
+
+    if (DATA.accItems) {
 
         dataServices.fn.query('/accitemasync/getaccitems?patientId=' + $scope.pt.uniqueId).
                 then(function (returned) {
 
-                $scope.accItems = returned.data;
+                var length = returned.data.length;
+
+                $scope.accItems = returned.data.accItems;
+                $scope.accountBalance = returned.data.currentBalance;
             });
     }
 
@@ -579,10 +638,10 @@ PAS.ctrlr.patient = function ctrlrDotPatient($scope, $http, $q, $filter, $timeou
         console.log(this);
 
         $scope.accItem.opClId = this.opCl.opClId;
-        $scope.accItem.claimId = '';
-        $scope.accItem.payor = '';
+        $scope.accItem.claimNum = this.opCl.claimNum;
+        $scope.accItem.payor = this.opCl.billTo;
         $scope.accItem.totalProcedures = this.opCl.procCount;
-        $scope.accItem.debit = '';
+        $scope.accItem.debit = this.opCl.totalCharges;
 
         jQuery('.modal').modal('hide');
     };

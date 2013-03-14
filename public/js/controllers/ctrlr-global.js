@@ -348,6 +348,27 @@ PAS.ctrlr.global = function ctrlrDotGlobal($rootScope, dataServices, $scope, dat
             "Category B"
         ];
 
+        $scope.adjustmentTypes = [
+
+            "Administrative Adjustment",
+            "Capitation Adjustment",
+            "Charity Adjustment",
+            "Adjustment Credit",
+            "Adjustment Debit",
+            "Adjustment Insurance",
+            "Primary Billing Ledger Adjustment",
+            "Professional Adjustment",
+            "Self-Pay Discount",
+            "Denied by Payer",
+            "Refund Overpayment"
+        ];
+
+        $scope.refundTypes = [
+
+            "Type One",
+            "Type Two"
+        ];
+
 
     /************************************\
      * This is the global save modal section

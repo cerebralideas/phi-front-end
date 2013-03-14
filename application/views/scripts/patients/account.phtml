@@ -10,7 +10,7 @@ $ptService = new Service_Pt();
     // Load the data into the PAS.data object
     DATA.reg = <?php echo $ptService->getJson($this->patientId); ?>;
     DATA.newPost = {};
-    DATA.accList = [];
+    DATA.accItems = [];
     DATA.accItem = {};
     DATA.query = '<?= $this->searchTerms; ?>';
     DATA.searchTerms = '<?= $this->searchTerms; ?>';
@@ -41,7 +41,7 @@ $ptService = new Service_Pt();
 
                 <fieldset class="row-fluid">
 
-                    <legend>Patient Ledger—Balance: ${{accountTotal}}</legend>
+                    <legend>Patient Ledger—Balance: ${{accountBalance}}</legend>
 
                     <p class="formInstructions span9">
                         To view further details and associated claim, click on the item below.
@@ -58,46 +58,44 @@ $ptService = new Service_Pt();
                                 <tr>
                                     <th>Type</th>
                                     <th>Date</th>
-                                    <th>Claim #</th>
+                                    <th>Cl #</th>
                                     <th>To/From</th>
-                                    <th>Charge</th>
+                                    <th>TXN Amount</th>
                                     <th>Adjustment</th>
-                                    <th>Credit</th>
                                     <th>Balance</th>
                                     <th>Comment</th>
                                 </tr>
                             </thead>
 
                             <tbody>
-                                <tr class="availItem"
-                                    ng-repeat="items in accItems">
+                                <tr class="availItem" ng-repeat="item in accItems | orderBy:'postDate':true">
 
                                     <td>
-                                        <a href="<?= $this->urlAccItemEdit; ?>">{{item.accType}}</a>
+                                        {{item.postType}}
                                     </td>
                                     <td>
-                                        <a href="<?= $this->urlAccItemEdit; ?>">{{item.date}}</a>
+                                        {{item.postDate}}
                                     </td>
                                     <td>
-                                        <a href="<?= $this->urlAccItemEdit; ?>">{{item.claimNum}}</a>
+                                        <a data-toggle="modal" href="#exportedClaimModal"
+                                           ng-click="previewBill()">
+                                            {{item.claimNum}}
+                                        </a>
                                     </td>
                                     <td>
-                                        <a href="<?= $this->urlAccItemEdit; ?>">{{item.toFrom}}</a>
+                                        {{item.payor}}
                                     </td>
                                     <td>
-                                        <a href="<?= $this->urlAccItemEdit; ?>" >{{item.charge}}</a>
+                                        {{item.txnAmount}}
                                     </td>
                                     <td>
-                                        <a href="<?= $this->urlAccItemEdit; ?>">{{item.adj}}</a>
+                                        {{item.adjustment}}
                                     </td>
                                     <td>
-                                        <a href="<?= $this->urlAccItemEdit; ?>">{{item.credit}}</a>
+                                        {{item.accItemBalance}}
                                     </td>
                                     <td>
-                                        <a href="<?= $this->urlAccItemEdit; ?>">{{item.balance}}</a>
-                                    </td>
-                                    <td>
-                                        <a href="<?= $this->urlAccItemEdit; ?>">{{item.comment}}</a>
+                                        {{item.postComment}}
                                     </td>
                                 </tr>
                             </tbody>
@@ -111,5 +109,18 @@ $ptService = new Service_Pt();
 </section> <!-- #mainPanel -->
 
 <?php echo $this->partial('/partials/global/modal_claim_search.html'); ?>
+
+<div id="exportedClaimModal" class="modal modal-large hide fade">
+
+    <div class="modal-header">
+        <a data-dismiss="modal" class="close">&#x2612;</a>
+        <h2>Generated Claim Form: {{pt.firstName}} {{pt.lastName}} for {{aptDetails.startDate}}</h2>
+    </div>
+
+    <form name="exportedOpClaim" class="row-fluid modal-body">
+
+        <ng-include src="'/templates/includes/export-op-claim.html'"></ng-include>
+    </form>
+</div>
 
 </div><!-- end of #sectionContent -->

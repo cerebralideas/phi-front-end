@@ -251,7 +251,7 @@
 
             restrict: 'E',
             replace: true,
-            template:   '<input type="text" ng-model="model" ng-minlength="1">',
+            template:   '<input type="text" ng-model="model" ng-minlength="3">',
             scope: {
 
                 'model': '='
@@ -313,7 +313,7 @@
 
             restrict: 'E',
             replace: true,
-            template:   '<input type="text" ng-model="model" ng-pattern="priceVal" ng-minlength="1">',
+            template:   '<input type="text" ng-model="model" ng-pattern="priceVal" ng-minlength="3">',
             scope: {
 
                 'model': '='

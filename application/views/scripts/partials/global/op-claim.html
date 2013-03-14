@@ -50,13 +50,13 @@
 
     <p class="required span12">Mandatory Fields</p>
 
-    <div class="span4">
+    <div class="span4 required">
         <label for="billTo">Bill to:</label>
 
         <div class="input">
-            <select ng-disabled="disable" ng-model="opCl.opClDetails.payors" name="Bill to"
-                    ng-options="payor for payor in payors" id="billTo">
-                <option value="">Select Payer</option>
+            <select ng-disabled="disable" ng-model="opCl.opClDetails.billTo" name="Bill to"
+                    ng-options="payor for payor in payors" id="billTo" required>
+                <option value="">Select Payor</option>
             </select>
         </div>
     </div>

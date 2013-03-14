@@ -37,7 +37,9 @@ class Service_OpCl
                 "billTo" => null,
                 "refNum" => null,
                 "resubCode" => null,
-                "origRefNum" => null
+                "origRefNum" => null,
+                "totalCharges" => null,
+                "claimNum" => null
             )
 
         );
@@ -246,13 +248,28 @@ class Service_OpCl
     {
         $resp = null;
 
+        // Calculate totalCharges for this claim
+        $totalCharges = 0;
+        foreach ( $data['procCodes'] as $procCode )
+        {
+            if ( is_numeric( $procCode['charge'] ) && is_numeric( $procCode['qty'] ) )
+            {
+                $totalCharges += ( $procCode['qty'] * $procCode['charge'] );
+            }
+        }
+        $totalCharges = round( $totalCharges, 2);
+
+
+
         $header = array(
             'opClDetailsOpClId' => $data['opClDetailsOpClId'],
             'opClDetailsOpSbId' => $data['opClDetailsOpSbId'],
             'opClDetailsBillTo' => $data['opClDetailsBillTo'],
             'opClDetailsRefNum' => $data['opClDetailsRefNum'],
             'opClDetailsResubCode' => $data['opClDetailsResubCode'],
-            'opClDetailsOrigRefNum' => $data['opClDetailsOrigRefNum']
+            'opClDetailsOrigRefNum' => $data['opClDetailsOrigRefNum'],
+            'opClDetailsTotalCharges' => $totalCharges,
+            'opClDetailsClaimNum' => $data['opClDetailsClaimNum']
         );
         $details = array(
             'diagCodes' => $data['diagCodes'],
@@ -476,7 +493,9 @@ class Service_OpCl
             'opClDetailsBillTo' => $dbArray['opClDetailsBillTo'],
             'opClDetailsRefNum' => $dbArray['opClDetailsRefNum'],
             'opClDetailsResubCode' => $dbArray['opClDetailsResubCode'],
-            'opClDetailsOrigRefNum' => $dbArray['opClDetailsOrigRefNum']
+            'opClDetailsOrigRefNum' => $dbArray['opClDetailsOrigRefNum'],
+            'opClDetailsTotalCharges' => $dbArray['opClDetailsTotalCharges'],
+            'opClDetailsClaimNum' => $dbArray['opClDetailsClaimNum']
         );
         $details = array(
             'diagCodes' => $dbArray['diagCodes'],
@@ -656,6 +675,9 @@ class Service_OpCl
                     $item = array(
                         'opClId' => $clDetails['opClDetails']['opClId'],
                         'opSbId' => $clDetails['opClDetails']['opSbId'],
+                        'claimNum' => $clDetails['opClDetails']['claimNum'],
+                        'billTo' => $clDetails['opClDetails']['billTo'],
+                        'totalCharges' => $clDetails['opClDetails']['totalCharges'],
                         'aptId' => $opSb['aptId'],
                         'date' => $apt['aptDetailsStartDate'],
                         'time' => $apt['aptDetailsStartTime'],
@@ -696,7 +718,7 @@ class Service_OpCl
             }
             else
             {
-                return Zend_Json_Encoder::encode(array());;
+                return Zend_Json_Encoder::encode(array());
             }
 
         }
@@ -705,7 +727,7 @@ class Service_OpCl
             /* User is in 'Student' mode */
 
             $query =
-                'SELECT opClDetailsOpClId, opClDetailsOpSbId, opClDetailsBillTo, opClDetailsRefNum, opClDetailsResubCode, opClDetailsOrigRefNum, createdBy, createdDate, modifiedBy, modifiedDate
+                'SELECT opClDetailsOpClId, opClDetailsOpSbId, opClDetailsBillTo, opClDetailsRefNum, opClDetailsResubCode, opClDetailsOrigRefNum, opClDetailsTotalCharges, opClDetailsClaimNum, createdBy, createdDate, modifiedBy, modifiedDate
                 FROM `opCl`
                 WHERE
                     `opClDetailsOpClId` NOT IN
@@ -714,7 +736,7 @@ class Service_OpCl
                             WHERE `createdBy` = ' . $this->opClModel->quote($this->userId) . '
                     ) AND `opClDetailsOpSbId` = ' . $this->opClModel->quote( $uniqueId ) . '
                 UNION
-                SELECT opClDetailsOpClId, opClDetailsOpSbId, opClDetailsBillTo, opClDetailsRefNum, opClDetailsResubCode, opClDetailsOrigRefNum, createdBy, createdDate, modifiedBy, modifiedDate
+                SELECT opClDetailsOpClId, opClDetailsOpSbId, opClDetailsBillTo, opClDetailsRefNum, opClDetailsResubCode, opClDetailsOrigRefNum, opClDetailsTotalCharges, opClDetailsClaimNum, createdBy, createdDate, modifiedBy, modifiedDate
                     FROM `opCl_working`
                 WHERE
                     `createdBy` = ' . $this->opClModel->quote($this->userId) . ' AND
@@ -735,7 +757,7 @@ class Service_OpCl
             }
             else
             {
-                return Zend_Json_Encoder::encode(array());;
+                return Zend_Json_Encoder::encode(array());
             }
 
 

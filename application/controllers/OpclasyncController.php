@@ -39,4 +39,10 @@ class OpclasyncController extends Zend_Controller_Action
         echo $this->opClService->getByPtId($uniqueId);
     }
 
+    public function getopclAction()
+    {
+        $uniquieId = $this->_request->getParam('opClId', '0');
+        echo $this->opClService->getJson($uniquieId);
+    }
+
 }

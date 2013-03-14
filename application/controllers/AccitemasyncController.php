@@ -21,7 +21,6 @@ class AccitemasyncController extends Zend_Controller_Action
         $value = Zend_Json_Decoder::decode(file_get_contents('php://input'));
         if ( $value )
             echo $this->accItemService->updateJson( $value );
-        //Zend_Debug::dump( $value );
     }
 
     public function submitaccitemAction()
@@ -36,4 +35,16 @@ class AccitemasyncController extends Zend_Controller_Action
         $this->accItemService->insertJson( $value );
     }
 
+    public function getaccitemsAction()
+    {
+        $uniqueId = $this->_request->getParam('patientId', '0');
+        echo $this->accItemService->getAccItems( $uniqueId );
+    }
+
+    public function getopclobjectsAction()
+    {
+        $uniqueId = $this->_request->getParam('opClId', '0');
+        $accItemService = new Service_AccItem();
+        echo $accItemService->getAllAssociatedJsonObjects($uniqueId);
+    }
 }

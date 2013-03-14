@@ -19,7 +19,8 @@
     <div class="ng-class:eventFormInputWidth; required">
         <label for="postType">Post Type</label>
         <select ng-disabled="disable" id="postType" name="post type"
-                ng-model="accItem.postType" ng-options="type for type in postTypes" required>
+                ng-model="accItem.postType" ng-options="type for type in postTypes"
+                ng-change="selectPostType()" required>
             <option value="" selected="selected">Select a Type</option>
         </select>
     </div>
@@ -36,23 +37,25 @@
             </div>
         </div>
 
-        <div class="ng-class:eventFormInputWidth; required">
+        <input type="hidden" ng-model="accItem.claimNum" ng-required="billReq">
+
+        <div class="ng-class:eventFormInputWidth; ">
             <label for="claimNum">Claim Number</label>
             <input type="text" id="claimNum" name="Claim Number" value="{{accItem.claimNum}}" disabled="disabled">
         </div>
 
-        <div class="ng-class:eventFormInputWidth; required">
+        <div class="ng-class:eventFormInputWidth; ">
             <label for="billPayor">Billed to</label>
             <input type="text" id="billPayor" name="payor" value="{{accItem.payor}}" disabled="disabled">
         </div>
 
-        <div class="ng-class:eventFormInputWidth; required">
+        <div class="ng-class:eventFormInputWidth; ">
             <label for="totalProcedures">Total Procedures</label>
             <input type="text" id="totalProcedures" name="Total Procedures" value="{{accItem.totalProcedures}}"
                     disabled="disabled">
         </div>
 
-        <div class="ng-class:eventFormInputWidth; required">
+        <div class="ng-class:eventFormInputWidth; ">
             <label for="totalCharges">Total Charges</label>
             <input type="text" id="totalCharges" name="Total Charges" value="{{accItem.debit}}"
                    disabled="disabled">
@@ -64,27 +67,40 @@
         <div class="ng-class:eventFormInputWidth; required">
             <label for="paymentPayor">Payment from</label>
             <select ng-disabled="disable" id="paymentPayor" name="Payment from" ng-model="accItem.payor"
-                    ng-options="payor for payor in payors">
+                    ng-options="payor for payor in payors" ng-required="payReq">
                 <option value="" selected="selected">Select a Payor</option>
             </select>
         </div>
 
         <div class="ng-class:eventFormInputWidth; required">
             <label for="paymentAmount">Payment Amount</label>
-            <input type="number" id="paymentAmount" name="Payment Amount" ng-model="accItem.credit">
+            <input type="number" id="paymentAmount" name="Payment Amount" ng-model="accItem.credit" ng-required="payReq">
         </div>
 
         <div class="ng-class:eventFormInputWidth; required">
             <label for="paymentType">Payment Type</label>
             <select ng-disabled="disable" id="paymentType" name="Payment Type" ng-model="accItem.paymentType"
-                    ng-options="type for type in payMethods">
+                    ng-options="type for type in payMethods" ng-required="payReq">
                 <option value="" selected="selected">Select a Type</option>
             </select>
         </div>
 
-        <div class="ng-class:eventFormInputWidth; required">
+        <div class="ng-class:eventFormInputWidth; ">
             <label for="referenceNumber">Reference Number</label>
             <input type="number" id="referenceNumber" name="Reference Number" ng-model="accItem.referenceNumber">
+        </div>
+
+        <div class="ng-class:eventFormInputWidth; ">
+            <label for="adjustmentAmount">Adjustment Amount</label>
+            <input type="number" id="payAdjAmount" name="Refund Amount" ng-model="accItem.adjustment">
+        </div>
+
+        <div class="ng-class:eventFormInputWidth; ">
+            <label for="adjustmentType">Adjustment Type</label>
+            <select ng-disabled="disable" id="payAdjType" name="Adjustment Type" ng-model="accItem.adjustmentType"
+                    ng-options="type for type in adjustmentTypes">
+                <option value="" selected="selected">Select a Type</option>
+            </select>
         </div>
     </div>
 
@@ -92,13 +108,14 @@
 
         <div class="ng-class:eventFormInputWidth; required">
             <label for="adjustmentAmount">Adjustment Amount</label>
-            <input type="number" id="adjustmentAmount" name="Refund Amount" ng-model="accItem.adjustment">
+            <input type="number" id="adjustmentAmount" name="Refund Amount"
+                   ng-model="accItem.adjustment" ng-required="adjReq">
         </div>
 
         <div class="ng-class:eventFormInputWidth; required">
             <label for="adjustmentType">Adjustment Type</label>
             <select ng-disabled="disable" id="adjustmentType" name="Adjustment Type" ng-model="accItem.adjustmentType"
-                    ng-options="type for type in adjustmentTypes">
+                    ng-options="type for type in adjustmentTypes" ng-required="adjReq">
                 <option value="" selected="selected">Select a Type</option>
             </select>
         </div>
@@ -108,25 +125,27 @@
 
         <div class="ng-class:eventFormInputWidth; required">
             <label for="refundAmount">Refund Amount</label>
-            <input type="number" id="refundAmount" name="Refund Amount" ng-model="accItem.credit">
+            <input type="number" id="refundAmount" name="Refund Amount"
+                   ng-model="accItem.credit" ng-required="refReq">
         </div>
 
-        <div class="ng-class:eventFormInputWidth; required">
+        <!--<div class="ng-class:eventFormInputWidth; required">
             <label for="refundType">Refund Type</label>
             <select ng-disabled="disable" id="refundType" name="Refund Type" ng-model="accItem.refundType"
-                    ng-options="type for type in paymentTypes">
+                    ng-options="type for type in refundTypes">
                 <option value="" selected="selected">Select a Type</option>
             </select>
-        </div>
+        </div>-->
 
         <div class="ng-class:eventFormInputWidth; required">
             <label for="refundRefNumber">Reference Number</label>
-            <input type="number" id="refundRefNumber" name="Reference Number" ng-model="accItem.referenceNumber">
+            <input type="number" id="refundRefNumber" name="Reference Number"
+                   ng-model="accItem.referenceNumber" ng-required="refReq">
         </div>
     </div>
 
-    <div class="ng-class:eventFormInputWidth; required">
+    <div class="ng-class:eventFormInputWidth; ">
         <label for="postComment">Post Comment</label>
-        <textarea id="postComment" name="Post Comment" value="{{accItem.postComment}}"></textarea>
+        <textarea id="postComment" name="Post Comment" ng-model="accItem.postComment"></textarea>
     </div>
 </fieldset>

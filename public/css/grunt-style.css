@@ -801,7 +801,7 @@ select {
   background: #fff;
   border: 1px solid #999;
   border-radius: 3px;
-  background: url(/img/down-arrow.svg) no-repeat right top, linear-gradient(top, #ffffff, #eeeeee);
+  background: url(/img/down-arrow.svg) no-repeat right top, -webkit-linear-gradient(top, #ffffff, #eeeeee);
   width: 100%;
   cursor: pointer;
   line-height: 25.2px;
