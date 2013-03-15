@@ -99,7 +99,7 @@ h6 {
 // ---------
 
 p, ul, ol, dl {
-	margin: $baseLineHeight 0; /* 20 */
+	margin: 0 0 $baseLineHeight 0; /* 20 */
 
 	small {
 		font-size: $smallFontSize;
