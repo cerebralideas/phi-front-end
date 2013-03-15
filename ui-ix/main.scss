@@ -26,18 +26,18 @@
 ******************************************/
 
 // These come from core compass framework, not phi
- // @import "compass/css3";
+@import "compass/css3";
 
 // This is all your settings variables
- // @import 'settings';
+@import 'settings';
 
 // This is your core: normalize and HTML5 Boilerplate CSS
 @import 'core/_globals';
- //@import 'core/_ratios';
- //@import 'core/_typography';
- //@import 'core/_forms';
- //@import 'core/_buttons';
- //@import 'core/_icons';
+@import 'core/_ratios';
+@import 'core/_typography';
+@import 'core/_forms';
+@import 'core/_buttons';
+@import 'core/_icons';
 
 /*******************************************
  * THIS MAKES UP THE COMPONENTS OF PHI     *
@@ -47,31 +47,31 @@
 ********************************************/
 
 // Include Grid System
- //@import 'extensions/grid-system/_f_convert-number-to-word';
- //@import 'extensions/grid-system/_f_grid-calc';
- //@import 'extensions/grid-system/_m_respond-to';
- //@import 'extensions/grid-system/_grid';
+@import 'extensions/grid-system/_f_convert-number-to-word';
+@import 'extensions/grid-system/_f_grid-calc';
+@import 'extensions/grid-system/_m_respond-to';
+@import 'extensions/grid-system/_grid';
 
 // Include Navigation Styles
- //@import 'extensions/navigation/_navigation';
+@import 'extensions/navigation/_navigation';
 
 // Include Tab Styles
- //@import 'extensions/tabs/_tabs';
+@import 'extensions/tabs/_tabs';
 
 // Helper Classes Styles
- //@import 'extensions/helper-classes/_helper-classes';
+@import 'extensions/helper-classes/_helper-classes';
 
 // Modal, "Reveal", Styles
- //@import 'extensions/modals/_reveal';
+@import 'extensions/modals/_reveal';
 
 // Alert Styles
- //@import 'extensions/alerts/_alerts';
+@import 'extensions/alerts/_alerts';
 
 // Table Styles
- //@import 'extensions/tables/_tables';
+@import 'extensions/tables/_tables';
 
 // Date-Picker Styles
- //@import 'extensions/date-picker/_kalendae';
+@import 'extensions/date-picker/_kalendae';
 
 // Prototyping Styles
- //@import 'prototype/prototype';
+@import 'prototype/prototype';
