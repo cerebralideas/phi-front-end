@@ -117,7 +117,7 @@
 
                                     <tbody>
                                         <tr class="availItem"
-                                                ng-repeat="apt in apts | filter:futureApts | orderBy:'date':false">
+                                                ng-repeat="apt in apts | filter:futureApts | orderBy:'dateMil':false">
 
                                             <td>
                                                 <a href="<?= $this->urlEdit; ?>">{{apt.ptStatus}}</a>
@@ -165,7 +165,7 @@
 
                                     <tbody class="availListItems">
                                         <tr class="availItem"
-                                                ng-repeat="apt in apts | filter:pastApts | orderBy:'date':true">
+                                                ng-repeat="apt in apts | filter:pastApts | orderBy:'dateMil':true">
 
                                             <td>
                                                 <a href="<?= $this->urlEdit; ?>">{{apt.ptStatus}}</a>

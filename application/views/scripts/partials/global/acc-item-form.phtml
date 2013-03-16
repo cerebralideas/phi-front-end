@@ -57,7 +57,7 @@
 
         <div class="ng-class:eventFormInputWidth; ">
             <label for="totalCharges">Total Charges</label>
-            <input type="text" id="totalCharges" name="Total Charges" value="{{accItem.debit}}"
+            <input type="text" id="totalCharges" name="Total Charges" value="{{accItem.txnAmount}}"
                    disabled="disabled">
         </div>
     </div>
@@ -74,7 +74,7 @@
 
         <div class="ng-class:eventFormInputWidth; required">
             <label for="paymentAmount">Payment Amount</label>
-            <input type="number" id="paymentAmount" name="Payment Amount" ng-model="accItem.credit" ng-required="payReq">
+            <input type="number" id="paymentAmount" name="Payment Amount" ng-model="accItem.txnAmount" ng-required="payReq">
         </div>
 
         <div class="ng-class:eventFormInputWidth; required">
@@ -126,7 +126,7 @@
         <div class="ng-class:eventFormInputWidth; required">
             <label for="refundAmount">Refund Amount</label>
             <input type="number" id="refundAmount" name="Refund Amount"
-                   ng-model="accItem.credit" ng-required="refReq">
+                   ng-model="accItem.txnAmount" ng-required="refReq">
         </div>
 
         <!--<div class="ng-class:eventFormInputWidth; required">

@@ -29,9 +29,8 @@ class Service_AccItem
                 "postType" => null,
                 "claimNum" => null,
                 "payor" => null,
-                "debit" => null,
+                "txnAmount" => null,
                 "adjustment" => null,
-                "credit" => null,
                 "paymentType" => null,
                 "adjustmentType" => null,
                 "refundType" => null,
@@ -132,20 +131,27 @@ class Service_AccItem
     {
         $resp = null;
 
-        // Get account balance
+        // Get current account balance
         $accCurrentBalance = $this->getCurrentBalance( $data['UniqueId'] );
-        echo 'accCurrentBalance: ' . $accCurrentBalance . '<br />';
 
         if ( !isset( $data['AccItemBalance'] ) )
         {
             if ( strcasecmp($data['PostType'], 'Bill' ) == 0 )
-                $data['AccItemBalance'] = $accCurrentBalance + abs( $data['Debit'] );
+            {
+                $data['AccItemBalance'] = round($accCurrentBalance + abs( floatval($data['TxnAmount']) ), 2);
+            }
             elseif ( strcasecmp($data['PostType'], 'Payment' ) == 0 )
-                $data['AccItemBalance'] = $accCurrentBalance - abs( $data['Credit'] );
+            {
+                $data['AccItemBalance'] = round($accCurrentBalance - abs( floatval($data['TxnAmount']) ) + floatval($data['Adjustment']), 2);
+            }
             elseif ( strcasecmp($data['PostType'], 'Adjustment' ) == 0 )
-                $data['AccItemBalance'] = $accCurrentBalance + abs( $data['Adjustment'] );
+            {
+                $data['AccItemBalance'] = round($accCurrentBalance + floatval($data['Adjustment']), 2);
+            }
             elseif ( strcasecmp($data['PostType'], 'Refund' ) == 0 )
-                $data['AccItemBalance'] = $accCurrentBalance + abs( $data['Credit'] );
+            {
+                $data['AccItemBalance'] = round($accCurrentBalance + abs( floatval($data['TxnAmount']) ), 2);
+            }
         }
 
         /* Determine if user is in 'Instructor' mode */
@@ -228,9 +234,8 @@ class Service_AccItem
                     `postType`,
                     `claimNum`,
                     `payor`,
-                    `debit`,
+                    `txnAmount`,
                     `adjustment`,
-                    `credit`,
                     `paymentType`,
                     `adjustmentType`,
                     `refundType`,
@@ -255,9 +260,8 @@ class Service_AccItem
                     `postType`,
                     `claimNum`,
                     `payor`,
-                    `debit`,
+                    `txnAmount`,
                     `adjustment`,
-                    `credit`,
                     `paymentType`,
                     `adjustmentType`,
                     `refundType`,
@@ -284,9 +288,8 @@ class Service_AccItem
                     `postType`,
                     `claimNum`,
                     `payor`,
-                    `debit`,
+                    `txnAmount`,
                     `adjustment`,
-                    `credit`,
                     `paymentType`,
                     `adjustmentType`,
                     `refundType`,
@@ -319,8 +322,8 @@ class Service_AccItem
         $accItems = Zend_Json_Decoder::decode( $this->getByPtId( $uniqueId ) );
 
         if ( count( $accItems ) )
-            return $accItems[count ( $accItems ) - 1]['accItemBalance'];
+            return round(floatval($accItems[count ( $accItems ) - 1]['accItemBalance']), 2);
         else
-            return 0.00;
+            return round(floatval(0.00), 2);
     }
 }

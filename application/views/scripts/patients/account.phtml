@@ -7,13 +7,14 @@ $ptService = new Service_Pt();
 
 <script type="text/javascript">
 
-    // Load the data into the PAS.data object
-    DATA.reg = <?php echo $ptService->getJson($this->patientId); ?>;
-    DATA.newPost = {};
-    DATA.accItems = [];
-    DATA.accItem = {};
-    DATA.query = '<?= $this->searchTerms; ?>';
-    DATA.searchTerms = '<?= $this->searchTerms; ?>';
+	 // Load the data into the PAS.data object
+	 DATA.reg = <?php echo $ptService->getJson($this->patientId); ?>;
+	 DATA.newPost = {};
+	 DATA.accItems = [];
+	 DATA.bill = DATA.accItems;
+	 DATA.accItem = {};
+	 DATA.query = '<?= $this->searchTerms; ?>';
+	 DATA.searchTerms = '<?= $this->searchTerms; ?>';
 </script>
 
 <!-- AngularJS services for patient file -->
@@ -24,87 +25,112 @@ $ptService = new Service_Pt();
 
 <div id="sectionContent" class="row-fluid tabContainer" role="main" ng-controller="PAS.ctrlr.patient">
 
-    <?= $this->ptsActionsNav(); ?>
+	 <?= $this->ptsActionsNav(); ?>
 
-    <!-- Imports from views > helpers PtsSidebar.php -->
-    <!-- This handles what sidebar to use -->
-    <?= $this->ptsSidebar(); ?>
+	 <!-- Imports from views > helpers PtsSidebar.php -->
+	 <!-- This handles what sidebar to use -->
+	 <?= $this->ptsSidebar(); ?>
 
-    <section id="mainPanel" class="<?= $this->mainPanelWidth; ?> parent">
+	 <section id="mainPanel" class="<?= $this->mainPanelWidth; ?> parent">
 
-        <!-- This imports the header, patient file navigation and the alert elements -->
-        <?= $this->ptsHeader(); ?>
+		  <!-- This imports the header, patient file navigation and the alert elements -->
+		  <?= $this->ptsHeader(); ?>
 
-        <section class="tabContainer">
+		  <section class="tabContainer">
 
-            <form name="aptsListForm">
+				<form name="billForm">
 
-                <fieldset class="row-fluid">
+					 <fieldset class="row-fluid">
 
-                    <legend>Patient Ledger—Balance: ${{accountBalance}}</legend>
+						  <legend>Patient Ledger—Balance: ${{accountBalance}}</legend>
 
-                    <p class="formInstructions span9">
-                        To view further details and associated claim, click on the item below.
-                    </p><!-- Remove whitespace
+						  <p class="formInstructions span9">
+								To view further details and associated claim, click on the item below.
+						  </p><!-- Remove whitespace
 
-                 --><a href="<?= $this->urlAccItemNew; ?>" class="newButton span3 no-padding">
-                        <span class="icon-calendar icon-large"></span>
-                        Post to Account
-                    </a>
+					  --><a href="<?= $this->urlAccItemNew; ?>" class="newButton span3 no-padding">
+								<span class="icon-calendar icon-large"></span>
+								Post to Account
+						  </a>
 
-                    <div class="span12 tableContainer">
-                        <table id="scheduled" class="well data-list">
-                            <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Date</th>
-                                    <th>Cl #</th>
-                                    <th>To/From</th>
-                                    <th>TXN Amount</th>
-                                    <th>Adjustment</th>
-                                    <th>Balance</th>
-                                    <th>Comment</th>
-                                </tr>
-                            </thead>
+						  <div class="span12 tableContainer">
+								<table id="ledger" class="well data-list">
+									 <thead>
+										<tr>
+											<th>Type</th>
+											<th>Date</th>
+											<th>Cl #</th>
+											<th>To/From</th>
+											<th>TXN Amount</th>
+											<th>Adjustment</th>
+											<th>Balance</th>
+											<th>Comment</th>
+										</tr>
+									 </thead>
 
-                            <tbody>
-                                <tr class="availItem" ng-repeat="item in accItems | orderBy:'postDate':true">
+									 <tbody>
+										<tr class="availItem"
+											ng-repeat="item in accItems | orderBy:'postDateMil':true">
 
-                                    <td>
-                                        {{item.postType}}
-                                    </td>
-                                    <td>
-                                        {{item.postDate}}
-                                    </td>
-                                    <td>
-                                        <a data-toggle="modal" href="#exportedClaimModal"
-                                           ng-click="previewBill()">
-                                            {{item.claimNum}}
-                                        </a>
-                                    </td>
-                                    <td>
-                                        {{item.payor}}
-                                    </td>
-                                    <td>
-                                        {{item.txnAmount}}
-                                    </td>
-                                    <td>
-                                        {{item.adjustment}}
-                                    </td>
-                                    <td>
-                                        {{item.accItemBalance}}
-                                    </td>
-                                    <td>
-                                        {{item.postComment}}
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </fieldset>
-            </form>
+											<td>
+												 {{item.postType}}
+											</td>
+											<td>
+												 {{item.postDate}}
+											</td>
+											<td>
+												 <a data-toggle="modal" href="#exportedClaimModal"
+													 ng-click="previewBill()">
+													  {{item.claimNum}}
+												 </a>
+											</td>
+											<td>
+												 {{item.payor}}
+											</td>
+											<td>
+												 {{item.txnAmount}}
+											</td>
+											<td>
+												 {{item.adjustment}}
+											</td>
+											<td>
+												 {{item.accItemBalance}}
+											</td>
+											<td>
+												 {{item.postComment}}
+											</td>
+										</tr>
+									 </tbody>
+								</table>
+						  </div>
+					 </fieldset>
 
-        </section><!-- .tabContainer -->
+					<div class="form-actions <?= $this->mainPanelWidth; ?>">
+
+						<button class="btn btn-large btn-preview" data-toggle="modal"
+						        href="#exportedBillModal">
+							<span class="icon-eye icon-large"></span> <i>Preview Bill</i>
+						</button>
+
+						<button class="btn btn-large btn-inverse" data-toggle="modal" href="#signSubmitModal"
+								  ng-disabled="">
+							<span class="icon-drawer icon-large"></span> <i>Submit</i>
+						</button>
+					</div>
+				</form>
+
+			  <div id="signSubmitModal" class="modal hidden fade">
+
+				  <?php echo $this->partial('/partials/global/modal_submission.html'); ?>
+
+				  <div class="modal-footer">
+
+					  <a class="btn btn-cancel" data-dismiss="modal">Cancel</a>
+					  <a ng-click="submit('bill', 'billForm', 'submitForm')" class="btn btn-success">Submit</a>
+				  </div>
+			  </div>
+
+		  </section><!-- .tabContainer -->
 </div> <!-- .content: it was opened in ActHeader.php -->
 </section> <!-- #mainPanel -->
 
@@ -112,15 +138,28 @@ $ptService = new Service_Pt();
 
 <div id="exportedClaimModal" class="modal modal-large hide fade">
 
-    <div class="modal-header">
-        <a data-dismiss="modal" class="close">&#x2612;</a>
-        <h2>Generated Claim Form: {{pt.firstName}} {{pt.lastName}} for {{aptDetails.startDate}}</h2>
-    </div>
+	 <div class="modal-header">
+		  <a data-dismiss="modal" class="close">&#x2612;</a>
+		  <h2>Generated Claim Form: {{pt.firstName}} {{pt.lastName}} for {{aptDetails.startDate}}</h2>
+	 </div>
 
-    <form name="exportedOpClaim" class="row-fluid modal-body">
+	 <form name="exportedOpClaim" class="row-fluid modal-body">
 
-        <ng-include src="'/templates/includes/export-op-claim.html'"></ng-include>
-    </form>
+		  <ng-include src="'/templates/includes/export-op-claim.html'"></ng-include>
+	 </form>
+</div>
+
+<div id="exportedBillModal" class="modal modal-large hide fade">
+
+	<div class="modal-header">
+		<a data-dismiss="modal" class="close">&#x2612;</a>
+		<h2>Generated Claim Form: {{pt.firstName}} {{pt.lastName}} for {{aptDetails.startDate}}</h2>
+	</div>
+
+	<form name="exportedOpClaim" class="row-fluid modal-body">
+
+		<ng-include src="'/templates/includes/export-bill.html'"></ng-include>
+	</form>
 </div>
 
 </div><!-- end of #sectionContent -->
