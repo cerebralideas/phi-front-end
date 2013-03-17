@@ -3,3 +3,6 @@
 
 # Subversion specific stuff
 .svn
+
+# DS_Store ignore
+.DS_Store
