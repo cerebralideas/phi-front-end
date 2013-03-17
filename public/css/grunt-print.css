@@ -1060,13 +1060,13 @@ select:required:invalid:focus {
   left: -1px;
   text-align: center;
 }
-.form-actions.review-actions  > div {
+.form-actions.review-actions > div {
   vertical-align: bottom;
 }
-.form-actions.review-actions  > div button {
+.form-actions.review-actions > div button {
   margin-bottom: 9px;
 }
-.form-actions.review-actions  > *:last-child {
+.form-actions.review-actions > *:last-child {
   margin: 0;
 }
 .form-actions.review-actions textarea {
@@ -1981,7 +1981,7 @@ icon-unstyled:hover {
 .open {
   *z-index: 1000;
 }
-.open  > .dropdown-menu {
+.open > .dropdown-menu {
   display: block;
 }
 .pull-right > .dropdown-menu {
@@ -2934,7 +2934,6 @@ input[type="submit"].btn.btn-mini {
 .nav-tabs > .reverse > a,
 .nav-tabs > .reverse > a:hover {
   color: #ffffff;
-  border: none;
   background-color: #555555;
   text-transform: capitalize;
   border: none;
@@ -3516,7 +3515,7 @@ input[type="submit"].btn.btn-mini {
   max-height: 400px;
   padding: 15px;
 }
-.modal-body  > ul,
+.modal-body > ul,
 .modal-body ol {
   margin-left: 1.5em;
 }
@@ -4274,10 +4273,10 @@ form {
   max-width: 1200px;
   min-width: 850px;
 }
-.claim-form  > .row {
+.claim-form > .row {
   border-top: 1px solid darkred;
 }
-.claim-form  > .row:last-child {
+.claim-form > .row:last-child {
   border-bottom: 1px solid darkred;
 }
 .claim-form .oneSeamlessColumn,
