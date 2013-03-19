@@ -264,10 +264,10 @@ Support:
 
 			someElements.waypoint(function(event, direction) {
 			   if (direction === 'down') {
-			      // do this on the way down
+				  // do this on the way down
 			   }
 			   else {
-			      // do this on the way back up through the waypoint
+				  // do this on the way back up through the waypoint
 			   }
 			});
 
@@ -634,7 +634,7 @@ Support:
 
 	$('.item').waypoint({
 	   handler: function(event, direction) {
-	      // make things happen
+		  // make things happen
 	   }
 	});
 

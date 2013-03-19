@@ -24,22 +24,22 @@
 })(function(jQuery, undefined){
 	var add = jQuery.event.add,
 
-	    remove = jQuery.event.remove,
+		remove = jQuery.event.remove,
 
-	    // Just sugar, so we can have arguments in the same order as
-	    // add and remove.
-	    trigger = function(node, type, data) {
-	    	jQuery.event.trigger(type, data, node);
-	    },
+		// Just sugar, so we can have arguments in the same order as
+		// add and remove.
+		trigger = function(node, type, data) {
+			jQuery.event.trigger(type, data, node);
+		},
 
-	    settings = {
-	    	// Ratio of distance over target finger must travel to be
-	    	// considered a swipe.
-	    	threshold: 0.4,
-	    	// Faster fingers can travel shorter distances to be considered
-	    	// swipes. 'sensitivity' controls how much. Bigger is shorter.
-	    	sensitivity: 6
-	    };
+		settings = {
+			// Ratio of distance over target finger must travel to be
+			// considered a swipe.
+			threshold: 0.4,
+			// Faster fingers can travel shorter distances to be considered
+			// swipes. 'sensitivity' controls how much. Bigger is shorter.
+			sensitivity: 6
+		};
 
 	function moveend(e) {
 		var w, h, event;
