@@ -1,3 +1,6 @@
+# Ignore RSAKey
+.RSAKey.as
+
 # Ignore Mac OS specific files
 .DS_Store
 
