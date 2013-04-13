@@ -17,11 +17,11 @@ $white:                 #fff !default;
 
 // Accent colors
 // -------------------------
-$blue:                  #1195BE !default;
+$blue:                  #4DA7BF !default;
 $lightBlue:             #17C8FF !default;
-$green:                 #13AA19 !default;
-$red:                   #C9281C !default;
-$yellow:                #ffff99 !default;
+$green:                 #B5CB6D !default;
+$red:                   #9d261d !default;
+$yellow:                #ffc40d !default;
 $orange:                #E38219 !default;
 $pink:                  #c3325f !default;
 $purple:                #913E9C !default;
@@ -109,7 +109,7 @@ $h6Padding: 1.25em 0 !default;
 $mainColor: $darkWhite !default;
 $mainBorderColor: darken(($mainColor), 10%);
 $lightColor: $darkWhite !default;
-$primaryColor: $blue !default;
+$Color: $blue !default;
 $secondaryColor: $lightBlue !default;
 $alertColor: $red !default;
 $successColor: $green !default;
@@ -162,6 +162,15 @@ $btnBase: 10px !default;
 $tinyBtnBase: $btnBase - 5 !default;
 $smallBtnBase: $btnBase - 3 !default;
 $largeBtnBase: $btnBase + 5 !default;
+
+$btnBackground:                     $grayLighter;
+$btnBorder:                         #ddd;
+$btnPrimaryBackground:              $blue;
+$btnInfoBackground:                 $purple;
+$btnSuccessBackground:              $green;
+$btnWarningBackground:              $orange, 5%);
+$btnDangerBackground:               $red;
+$btnInverseBackground:              $gray;
 
 // Form Settings
 
