@@ -77,3 +77,7 @@ if (Modernizr.touch && !window.location.hash) {
 		}, 0);
 	});
 }
+
+// phi's public API's Object
+
+var PHI;
