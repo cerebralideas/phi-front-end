@@ -14,9 +14,10 @@ $(function () {
 			$modalBg = null,
 			$modal = $(modal);
 
-		e = e || {};
+		if (e) {
 
-		e.preventDefault();
+			e.preventDefault();
+		}
 
 		// Check if triggered
 		if (modalTriggered) {
@@ -59,9 +60,10 @@ $(function () {
 
 	function closeModal($modal, e) {
 
-		e = e || {};
+		if (e) {
 
-		e.preventDefault();
+			e.preventDefault();
+		}
 
 		var $modalBg = $('.modalBg');
 
@@ -99,7 +101,7 @@ $(function () {
 	});
 
 	// create global modal property
-	PHI.modal;
+	PHI.modal = {};
 
 	PHI.modal.open = function (modalId) {
 
