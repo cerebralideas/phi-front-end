@@ -35,7 +35,7 @@
 	#{$defaultDirection}: 50%;
 	width: 50%;
 	margin-#{$defaultDirection}: -25%;
-	position: absolute;
+	position: fixed;
 	z-index: 11;
 	@include box-shadow(
 		0 0 10px rgba(#000, .4),
@@ -93,6 +93,10 @@
 	& > ul, ol {
 		margin-left: $baseLineHeight;
 	}
+}
+// Keep parent div from scrolling around while using modal
+.noScroll {
+	overflow: hidden !important;
 }
 
 // Footer (for actions)

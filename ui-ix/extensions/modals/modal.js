@@ -25,10 +25,11 @@ $(function () {
 			// Do nothing as it has already been triggered
 			return false;
 
-		}
+		} else {
 
-		// set to triggered state
-		modalTriggered = true;
+			// set to triggered state
+			modalTriggered = true;
+		}
 
 		if (modalBgPresent) {
 
@@ -42,10 +43,7 @@ $(function () {
 		}
 
 		// Cache the modal bg
-		$modalBg = $('.modalBg');
-
-		// Display modal bg
-		$modalBg.addClass('displayModalBg');
+		$modalBg = $('.modalBg').addClass('displayModalBg');
 
 		// Display modal
 		$modal.addClass('displayModal');
