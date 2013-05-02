@@ -1,7 +1,9 @@
 .kalendae {
-	background: white;
+	background: $white;
+	display: none;
 	border: 2px solid darken($darkWhite, 10%);
 	font-family: $sansFontFamily;
+	font-size: $baseFontSize;
 	color: $baseTextColor;
 	cursor: default;
 	margin: $baseLineHeight 0 0;
@@ -10,7 +12,10 @@
 	position: absolute;
 	text-align: left;
 	z-index: 1001;
-	@include border-radius($cornerRadius);
+	border-radius: $cornerRadius;
+}
+.showCal .kalendae {
+	display: block;
 }
 .kalendae::before {
 	border-left: 1em solid transparent;
