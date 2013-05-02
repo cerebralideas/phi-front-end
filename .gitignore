@@ -9,3 +9,4 @@ RSAKey.as
 
 # Ignore Sass Cache
 .sass-cache
+public/.sass-cache
