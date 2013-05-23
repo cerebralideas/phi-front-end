@@ -1,0 +1,31 @@
+/* Alerts ---------------------- */
+
+.alertBox {
+	padding: 0 $baseLineHeight;
+	margin-bottom: $baseLineHeight;
+	@include border-radius($cornerRadius);
+
+	p, ul, ol, blockquote, pre, code {
+		width: 90%;
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
+/* Very large screens */
+@media only screen and (min-width: $screenXlarge) {}
+
+/* Medium screens */
+@media only screen and (max-width: $screenMedium) and (min-width: $screenSmall) {}
+
+/* Small screens */
+@media only screen and (max-width: $screenSmall) {}
+
+/* Landscape Orientation */
+@media screen and (orientation: landscape) {}
+
+/* Portrait Orientation */
+@media screen and (orientation: portrait) {}
+
+/* Touch Detection */
+.touch .your-class {}

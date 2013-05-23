@@ -1,0 +1,42 @@
+<!-- Test Foundation Components Here -->
+	<div class="row">
+		<div class="twelveColumns">
+			<h3>Reveal &mdash; Simple, Flexible Modal Dialogs</h3>
+			<h4 class="subheader">Modal dialogs, or pop-up windows, are handy for prototyping and production. Foundation includes Reveal our jQuery modal plugin, to make this easy for you.</h4>
+
+			<a href="#" data-reveal-id="exampleModal" class="button default modalTrigger">
+				Example Modal&hellip;
+			</a>
+			<a href="#" data-reveal-id="videoModal" class="button default modalTrigger">
+				Example Modal w/Video&hellip;
+			</a>
+		</div>
+	</div>
+
+	<div id="exampleModal" class="modal">
+			<h2 class="modalHeader">This is a modal.</h2>
+			<a class="js_closeModal close">&#x2613;</a>
+
+		<p>Reveal makes these very easy to summon and dismiss. The close button is simple an anchor with a unicode character icon and a class of <code>close-reveal-modal</code>. Clicking anywhere outside the modal will also dismiss it.</p>
+
+		<p>Finally, if your modal summons another Reveal modal, the plugin will handle that for you gracefully.</p>
+
+		<a href="#" data-reveal-id="secondModal" class="button primary modalTrigger">Second Modal&hellip;</a>
+	</div>
+
+	<div id="secondModal" class="modal">
+		<h2 class="modalHeader">This is a second modal.</h2>
+		<a class="js_closeModal close">&#x2613;</a>
+
+		<p>See? It just slides into place after the other first modal. Very handy when you need subsequent dialogs, or when a modal option impacts or requires another decision.</p>
+	</div>
+
+	<div id="videoModal" class="modal modalLarge">
+		<h2 class="modalHeader">This modal has video</h2>
+		<a class="js_closeModal close">&#x2613;</a>
+
+		<div class="flex-video">
+			<iframe width="800" height="315" src="http://www.youtube.com/embed/IkOQw96cfyE" frameborder="0" allowfullscreen></iframe>
+		</div>
+
+	</div>
