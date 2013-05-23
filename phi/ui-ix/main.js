@@ -35,8 +35,8 @@
 		{
 			load: [
 				// Load AngularJS and dependents
-				'../../vendor/angularjs/angular.js',
-				'../app/app.js'
+				//'/vendor/angularjs/angular.js',
+				'/phi/app/app.js'
 
 				// Load controllers
 
@@ -50,7 +50,7 @@
 			complete: function () {
 
 				// When all the Angular scripts have executed, bootstrap the app
-				angular.bootstrap(document, ['PHI']);
+				//angular.bootstrap(document, ['PHI']);
 			}
 		},
 		{
@@ -58,18 +58,27 @@
 			load: [
 
 				// Load depe../ndents
-				'../../vendor/jquery/full/jquery.js',
+				'/vendor/jquery/full/jquery.js',
 
 				// Load extensions
+<<<<<<< HEAD
 				'extensions/navigation/navigation.js',
 				'extensions/tabs/jquery.foundation.tabs.js',
 				'extensions/modals/jquery.foundation.reveal.js',
 				// Broken 'extensions/wayfinder/jquery.waypoints.js',
 				'extensions/alerts/jquery.foundation.alerts.js',
 				'extensions/date-picker/kalendae.js',
+=======
+				// '/phi/ui-ix/extensions/navigation/navigation.js',
+				// '/phi/ui-ix/extensions/tabs/jquery.foundation.tabs.js',
+				'/phi/ui-ix/extensions/modals/jquery.foundation.reveal.js',
+				// Broken '/phi/ui-ix/extensions/wayfinder/jquery.waypoints.js',
+				'/phi/ui-ix/extensions/alerts/jquery.foundation.alerts.js',
+				// '/phi/ui-ix/extensions/date-picker/kalendae.js',
+>>>>>>> c02e643a868eb7a99f1bb53f70e9803b8e6132a8
 
 				// Load core js
-				'core/core.js'
+				'/phi/ui-ix/core/core.js'
 			]
 		}
 	]);

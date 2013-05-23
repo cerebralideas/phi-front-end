@@ -33,54 +33,54 @@
 })(function(jQuery, undefined){
 
 	var // Number of pixels a pressed pointer travels before movestart
-	    // event is fired.
-	    threshold = 6,
+		// event is fired.
+		threshold = 6,
 
-	    add = jQuery.event.add,
+		add = jQuery.event.add,
 
-	    remove = jQuery.event.remove,
+		remove = jQuery.event.remove,
 
-	    // Just sugar, so we can have arguments in the same order as
-	    // add and remove.
-	    trigger = function(node, type, data) {
-	    	jQuery.event.trigger(type, data, node);
-	    },
+		// Just sugar, so we can have arguments in the same order as
+		// add and remove.
+		trigger = function(node, type, data) {
+			jQuery.event.trigger(type, data, node);
+		},
 
-	    // Shim for requestAnimationFrame, falling back to timer. See:
-	    // see http://paulirish.com/2011/requestanimationframe-for-smart-animating/
-	    requestFrame = (function(){
-	    	return (
-	    		window.requestAnimationFrame ||
-	    		window.webkitRequestAnimationFrame ||
-	    		window.mozRequestAnimationFrame ||
-	    		window.oRequestAnimationFrame ||
-	    		window.msRequestAnimationFrame ||
-	    		function(fn, element){
-	    			return window.setTimeout(function(){
-	    				fn();
-	    			}, 25);
-	    		}
-	    	);
-	    })(),
+		// Shim for requestAnimationFrame, falling back to timer. See:
+		// see http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+		requestFrame = (function(){
+			return (
+				window.requestAnimationFrame ||
+				window.webkitRequestAnimationFrame ||
+				window.mozRequestAnimationFrame ||
+				window.oRequestAnimationFrame ||
+				window.msRequestAnimationFrame ||
+				function(fn, element){
+					return window.setTimeout(function(){
+						fn();
+					}, 25);
+				}
+			);
+		})(),
 
-	    ignoreTags = {
-	    	textarea: true,
-	    	input: true,
-	    	select: true,
-	    	button: true
-	    },
+		ignoreTags = {
+			textarea: true,
+			input: true,
+			select: true,
+			button: true
+		},
 
-	    mouseevents = {
-	    	move: 'mousemove',
-	    	cancel: 'mouseup dragstart',
-	    	end: 'mouseup'
-	    },
+		mouseevents = {
+			move: 'mousemove',
+			cancel: 'mouseup dragstart',
+			end: 'mouseup'
+		},
 
-	    touchevents = {
-	    	move: 'touchmove',
-	    	cancel: 'touchend',
-	    	end: 'touchend'
-	    };
+		touchevents = {
+			move: 'touchmove',
+			cancel: 'touchend',
+			end: 'touchend'
+		};
 
 
 	// Constructors
@@ -253,7 +253,7 @@
 
 	function touchmove(e){
 		var data = e.data,
-		    touch = changedTouch(e, data);
+			touch = changedTouch(e, data);
 
 		if (!touch) { return; }
 
@@ -262,7 +262,7 @@
 
 	function touchend(e) {
 		var template = e.data,
-		    touch = identifiedTouch(e.changedTouches, template.identifier);
+			touch = identifiedTouch(e.changedTouches, template.identifier);
 
 		if (!touch) { return; }
 
@@ -279,7 +279,7 @@
 
 	function checkThreshold(e, template, touch, fn) {
 		var distX = touch.pageX - template.startX,
-		    distY = touch.pageY - template.startY;
+			distY = touch.pageY - template.startY;
 
 		// Do nothing if the threshold has not been crossed.
 		if ((distX * distX) + (distY * distY) < (threshold * threshold)) { return; }
@@ -299,7 +299,7 @@
 
 	function triggerStart(e, template, touch, distX, distY, fn) {
 		var node = template.target,
-		    touches, time;
+			touches, time;
 
 		touches = e.targetTouches;
 		time = e.timeStamp - template.timeStamp;
@@ -342,14 +342,14 @@
 
 	function activeMousemove(e) {
 		var event = e.data.event,
-		    timer = e.data.timer;
+			timer = e.data.timer;
 
 		updateEvent(event, e, e.timeStamp, timer);
 	}
 
 	function activeMouseend(e) {
 		var event = e.data.event,
-		    timer = e.data.timer;
+			timer = e.data.timer;
 
 		removeActiveMouse();
 
@@ -369,8 +369,8 @@
 
 	function activeTouchmove(e) {
 		var event = e.data.event,
-		    timer = e.data.timer,
-		    touch = changedTouch(e, event);
+			timer = e.data.timer,
+			touch = changedTouch(e, event);
 
 		if (!touch) { return; }
 
@@ -383,8 +383,8 @@
 
 	function activeTouchend(e) {
 		var event = e.data.event,
-		    timer = e.data.timer,
-		    touch = identifiedTouch(e.changedTouches, event.identifier);
+			timer = e.data.timer,
+			touch = identifiedTouch(e.changedTouches, event.identifier);
 
 		// This isn't the touch you're looking for.
 		if (!touch) { return; }
@@ -568,7 +568,7 @@
 	if (typeof Array.prototype.indexOf === 'function') {
 		(function(jQuery, undefined){
 			var props = ["changedTouches", "targetTouches"],
-			    l = props.length;
+				l = props.length;
 
 			while (l--) {
 				if (jQuery.event.props.indexOf(props[l]) === -1) {

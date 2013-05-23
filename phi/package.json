@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
 	"name": "phi engine",
 	"version": "0.16.1",
 	"description": "The engine that runs the phi framework",
@@ -34,4 +35,47 @@
 	"keywords": [
 		"UI", "Ix", "JS", "web-app", "website", "framework", "toolkit", "development", "design"
 	]
+=======
+  "name": "phi-engine",
+  "version": "0.16.2",
+  "description": "The engine that runs the phi framework",
+  "author": {
+    "name": "Justin Lowery",
+    "company": "Cerebral Ideas",
+    "url": "http://cerebralideas.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cerebralideas/phi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cerebralideas/phi-framework/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT Open Source License",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "node.js": "~0.8.23",
+    "compass-ruby": "~0.12.2",
+    "grunt": "~0.4.1",
+    "grunt-contrib": "~0.6.1",
+    "grunt-macreload": "~0.1.3",
+    "grunt-markdown": "~0.2.0"
+  },
+  "keywords": [
+    "UI",
+    "Ix",
+    "JS",
+    "web-app",
+    "website",
+    "framework",
+    "toolkit",
+    "development",
+    "design"
+  ]
+>>>>>>> c02e643a868eb7a99f1bb53f70e9803b8e6132a8
 }

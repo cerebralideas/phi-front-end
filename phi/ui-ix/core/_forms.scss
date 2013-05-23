@@ -51,9 +51,6 @@ select {
 		font-size: 1.125;
 		padding: $baseLineHeight ($formSpacing / 2);
 	}
-	&[disabled] {
-		background-color: #ddd;
-	}
 }
 input + small {
 	display: block;

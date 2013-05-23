@@ -6,8 +6,8 @@ PHI.directive('timeInput', function () {
 
 		restrict: 'E',
 		replace: true,
-		template:   '<div class="input"><!--<div class="input-prepend">-->' +
-					'<!--<div class="icon-calendar add-on"></div>-->' +
+		template:   '<div class="input"><!--<div class="inputPrepend">-->' +
+					'<!--<div class="icon-calendar addOn"></div>-->' +
 					'<input name="{{name}}" ' +
 					'ng-disabled="disable" type="text" class="timeInputType" id="{{id}}" ' +
 					'ng-model="model" ng-pattern="timeVal" ng-maxlength="4" required="{{required}}">' +

@@ -7,10 +7,10 @@
 /* Add a little css triangle pip, older browser just miss out on the fanciness of it */
 .joyride-tip-guide {
   span.joyride-nub { display: block; position: absolute; left: 22px; width: 0; height: 0; border: solid $tipNubSize;
-    &.top { border-color: $tipBgIE8; border-color: $tipBg; border-top-color: transparent !important; border-left-color: transparent !important; border-right-color: transparent !important; top: -($tipNubSize*2); bottom: none; }
-    &.bottom { border-color: $tipBgIE8; border-color: $tipBg !important; border-bottom-color: transparent !important; border-left-color: transparent !important; border-right-color: transparent !important; bottom: -($tipNubSize*2); bottom: none; }
-    &.right { border-color: $tipBgIE8; border-color: $tipBg !important; border-top-color: transparent !important; border-right-color: transparent !important; border-bottom-color: transparent !important; top: 22px; bottom: none; left: auto; right: -($tipNubSize*2); }
-    &.left { border-color: $tipBgIE8; border-color: $tipBg !important; border-top-color: transparent !important; border-left-color: transparent !important; border-bottom-color: transparent !important; top: 22px; left: -($tipNubSize*2); right: auto; bottom: none; }
+	&.top { border-color: $tipBgIE8; border-color: $tipBg; border-top-color: transparent !important; border-left-color: transparent !important; border-right-color: transparent !important; top: -($tipNubSize*2); bottom: none; }
+	&.bottom { border-color: $tipBgIE8; border-color: $tipBg !important; border-bottom-color: transparent !important; border-left-color: transparent !important; border-right-color: transparent !important; bottom: -($tipNubSize*2); bottom: none; }
+	&.right { border-color: $tipBgIE8; border-color: $tipBg !important; border-top-color: transparent !important; border-right-color: transparent !important; border-bottom-color: transparent !important; top: 22px; bottom: none; left: auto; right: -($tipNubSize*2); }
+	&.left { border-color: $tipBgIE8; border-color: $tipBg !important; border-top-color: transparent !important; border-left-color: transparent !important; border-bottom-color: transparent !important; top: 22px; left: -($tipNubSize*2); right: auto; bottom: none; }
   }
 }
 
