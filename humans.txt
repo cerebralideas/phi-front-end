@@ -22,5 +22,4 @@
     Compass, Sass
     Node.js, Grunt
     Zurb Foundation
-    AngularJS, jQuery, Modernizr
-    Testacular, Jasmine
+    AngularJS, jQuery, Modernizr, RequireJS

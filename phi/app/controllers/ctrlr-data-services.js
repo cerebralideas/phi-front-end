@@ -1,4 +1,4 @@
-PHI.service('dataServices', function ($http) {
+angular.module('PHI').service('dataServices', function ($http) {
 
 	'use strict';
 

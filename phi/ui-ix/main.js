@@ -3,74 +3,64 @@
 	'use strict';
 
 	/************************************************************
-	 * Ensures console object is usable on non-console browsers *
-	 ************************************************************/
-
-	var method,
-		noop = function noop() {},
-		methods = [
-			'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-			'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-			'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-			'timeStamp', 'trace', 'warn'
-		],
-		length = methods.length,
-		console = (window.console = window.console || {});
-
-	while (length--) {
-		method = methods[length];
-
-		// Only stub undefined methods.
-		if (!console[method]) {
-			console[method] = noop;
-		}
-	}
-
-	/************************************************************
 	 * Load Javascripts Asynchronously **************************
 	 ************************************************************/
 
-	// Load Angular Scripts
-	Modernizr.load([
-		{
-			load: [
-				// Load AngularJS and dependents
-				//'/vendor/angularjs/angular.js',
-				'/phi/app/app.js'
+	// Create global var for attaching PHI modules.
+	window.PHI = {};
 
-				// Load controllers
+	requirejs.config({
 
-				// directives
+		// Map out all "modules" to paths
+		paths: {
 
-				// services
+			// Load Angular
+			'angular': '../../vendor-bower/angular/angular.min',
 
-				// filters
+			// Load app module
+			'app': '../app/app',
 
-			],
-			complete: function () {
+			// Bower dependencies
+			'jquery': '../../vendor-bower/jquery/jquery.min',
 
-				// When all the Angular scripts have executed, bootstrap the app
-				//angular.bootstrap(document, ['PHI']);
-			}
+			// UI/Ix jQuery framework
+			'modal': '/phi/ui-ix/extensions/modals/modal',
+			'tabs': '/phi/ui-ix/extensions/tabs/jquery.foundation.tabs',
+			'alerts': '/phi/ui-ix/extensions/alerts/jquery.foundation.alerts',
+			'core': '/phi/ui-ix/core/core'
 		},
-		{
-			// Load UI and Ix Scripts
-			load: [
 
-				// Load depe../ndents
-				'/vendor/jquery/full/jquery.js',
+		// Declare all dependencies
+		shim: {
 
-				// Load extensions
-				// '/phi/ui-ix/extensions/navigation/navigation.js',
-				// '/phi/ui-ix/extensions/tabs/jquery.foundation.tabs.js',
-				'/phi/ui-ix/extensions/modals/jquery.foundation.reveal.js',
-				// Broken '/phi/ui-ix/extensions/wayfinder/jquery.waypoints.js',
-				'/phi/ui-ix/extensions/alerts/jquery.foundation.alerts.js',
-				// '/phi/ui-ix/extensions/date-picker/kalendae.js',
+			// Angular file dependencies
+			'app': ['angular'],
 
-				// Load core js
-				'/phi/ui-ix/core/core.js'
-			]
+			// Phi UI/Ix dependencies
+			'modal': ['jquery'],
+			'tabs': ['jquery'],
+			'alerts': ['jquery'],
+			'custom': ['jquery'],
+			'core': ['jquery']
 		}
-	]);
+	});
+
+	require(
+			['app'],
+
+			function () {
+
+				angular.bootstrap(document, ['PHI']);
+			}
+	);
+
+	// Load in jQuery plugins
+	require(
+			['modal', 'tabs', 'alerts', 'core'],
+
+			function (modal, tabs, alerts, custom, core) {
+
+				// Do stuff :)
+			}
+	);
 }());

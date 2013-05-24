@@ -3,83 +3,86 @@
 	'use strict';
 
 	/************************************************************
-	 * Ensures console object is usable on non-console browsers *
-	 ************************************************************/
-
-	var method,
-		noop = function noop() {},
-		methods = [
-			'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-			'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-			'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-			'timeStamp', 'trace', 'warn'
-		],
-		length = methods.length,
-		console = (window.console = window.console || {});
-
-	while (length--) {
-		method = methods[length];
-
-		// Only stub undefined methods.
-		if (!console[method]) {
-			console[method] = noop;
-		}
-	}
-
-	/************************************************************
 	 * Load Javascripts Asynchronously **************************
 	 ************************************************************/
 
-	// Load Angular Scripts
-	Modernizr.load([
-		{
-			load: [
-				'../../vendor/angularjs/angular.js',
-				'app.js',
+	// Create global var for attaching PHI modules.
+	window.PHI = {};
 
-				// Load controllers
-				'controllers/ctrl-example.js',
+	requirejs.config({
 
-				// directives
-				'directives/dir-common-warnings.js',
-				'directives/dir-date-input.js',
-				'directives/dir-event-delegation.js',
-				'directives/dir-phone-input.js',
-				'directives/dir-time-input.js',
+		// Map out all "modules" to paths
+		paths: {
 
-				// services
-				'services/srv-data.js'
+			// Load Angular
+			'angular': '../../vendor-bower/angular/angular.min',
 
-				// filters
+			// Load app module
+			'app': 'app',
 
-			],
-			complete: function () {
+			// Load controllers
+			'controller': 'controllers/ctrl-example',
 
-				// When all the Angular scripts have executed, bootstrap the app
+			// directives
+			'dirWarnings': 'directives/dir-common-warnings',
+			'dirDate': 'directives/dir-date-input',
+			'dirEventDel': 'directives/dir-event-delegation',
+			'dirPhone': 'directives/dir-phone-input',
+			'dirTime': 'directives/dir-time-input',
+
+			// services
+			'servData': 'services/srv-data',
+
+			// filters
+
+			// Bower dependencies
+			'jquery': '../../vendor-bower/jquery/jquery.min',
+
+			// UI/Ix jQuery framework
+			'modal': '/phi/ui-ix/extensions/modals/modal',
+			'tabs': '/phi/ui-ix/extensions/tabs/jquery.foundation.tabs',
+			'alerts': '/phi/ui-ix/extensions/alerts/jquery.foundation.alerts',
+			'core': '/phi/ui-ix/core/core'
+		},
+
+		// Declare all dependencies
+		shim: {
+
+			// Angular file dependencies
+			'app': ['angular'],
+			'controller': ['angular'],
+			'dirWarnings': ['angular'],
+			'dirDate': ['angular'],
+			'dirEventDel': ['angular'],
+			'dirPhone': ['angular'],
+			'dirTime': ['angular'],
+			'servData': ['angular'],
+
+			// Phi UI/Ix dependencies
+			'modal': ['jquery'],
+			'tabs': ['jquery'],
+			'alerts': ['jquery'],
+			'custom': ['jquery'],
+			'core': ['jquery']
+		}
+	});
+
+	require(
+			['app', 'controller', 'servData', 'dirWarnings', 'dirDate', 'dirEventDel', 'dirPhone', 'dirTime'],
+
+			function () {
+
 				angular.bootstrap(document, ['PHI']);
 			}
-		}
-	]);
+	);
 
-	// Load UI and Ix Scripts
-	Modernizr.load([
-		{
-			load: [
+	// Load in jQuery plugins
+	require(
+			['modal', 'tabs', 'alerts', 'core'],
 
-				// Load dependents
-				'../../vendor/jquery/full/jquery.js',
+			function (modal, tabs, alerts, custom, core) {
 
-				// Load extensions
-				'../ui-ix/extensions/navigation/navigation.js',
-				'../ui-ix/extensions/tabs/jquery.foundation.tabs.js',
-				'../ui-ix/extensions/modals/jquery.foundation.reveal.js',
-				'../ui-ix/extensions/wayfinder/jquery.waypoints.js',
-				'../ui-ix/extensions/alerts/jquery.foundation.alerts.js',
-				'../ui-ix/extensions/date-picker/kalendae.js',
-
-				// Load core js
-				'../ui-ix/core/core.js'
-			]
-		}
-	]);
+				// Do stuff :)
+			}
+	);
 }());

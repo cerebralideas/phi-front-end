@@ -1,4 +1,4 @@
-PHI.directive('phoneNumber', function () {
+angular.module('PHI').directive('phoneNumber', function () {
 
 	"use strict";
 

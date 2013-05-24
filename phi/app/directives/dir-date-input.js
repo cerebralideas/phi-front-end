@@ -1,4 +1,4 @@
-PHI.directive('dateInput', function ($rootScope, $filter) {
+angular.module('PHI').directive('dateInput', function ($rootScope, $filter) {
 
 	"use strict";
 
