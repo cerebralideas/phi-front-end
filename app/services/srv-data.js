@@ -1,4 +1,4 @@
-PHI.service('dataService', function () {
+angular.module('PHI').service('dataService', function () {
 
 	var data = {};
 
