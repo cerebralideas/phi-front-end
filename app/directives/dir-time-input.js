@@ -1,4 +1,4 @@
-PHI.directive('timeInput', function () {
+angular.module('PHI').directive('timeInput', function () {
 
 	"use strict";
 
