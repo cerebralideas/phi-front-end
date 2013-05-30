@@ -1,6 +1,6 @@
 // Click Event Delegation
 // This has been adapted from https://github.com/nishp1/angular-delegate-event
-PHI.directive('dgClick', function ($parse) {
+angular.module('PHI').directive('dgClick', function ($parse) {
 
 	"use strict";
 

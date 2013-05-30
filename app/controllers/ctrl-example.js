@@ -1,4 +1,4 @@
-PHI.controller('Ctrlr', ['$scope', 'dataService', function ($scope, dataService) {
+angular.module('PHI').controller('Ctrlr', ['$scope', 'dataService', function ($scope, dataService) {
 
 		$scope.sexes = ['Male', 'Female', 'Other'];
 

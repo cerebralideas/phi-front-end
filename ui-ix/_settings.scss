@@ -109,7 +109,7 @@ $h6Padding: 1.25em 0 !default;
 $mainColor: $darkWhite !default;
 $mainBorderColor: darken(($mainColor), 10%);
 $lightColor: $darkWhite !default;
-$Color: $blue !default;
+$primaryColor: $blue !default;
 $secondaryColor: $lightBlue !default;
 $alertColor: $red !default;
 $successColor: $green !default;
@@ -168,7 +168,7 @@ $btnBorder:                         #ddd;
 $btnPrimaryBackground:              $blue;
 $btnInfoBackground:                 $purple;
 $btnSuccessBackground:              $green;
-$btnWarningBackground:              $orange, 5%);
+$btnWarningBackground:              $orange;
 $btnDangerBackground:               $red;
 $btnInverseBackground:              $gray;
 

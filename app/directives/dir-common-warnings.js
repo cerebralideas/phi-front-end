@@ -1,4 +1,4 @@
-PHI.directive('warningRequired', function () {
+angular.module('PHI').directive('warningRequired', function () {
 
 	"use strict";
 
