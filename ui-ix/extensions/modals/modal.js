@@ -2,119 +2,103 @@ $(function () {
 
 	'use strict';
 
-	// If triggered, don't re-trigger
-	var modalTriggered = false,
-		modalBgPresent = false,
-	    $document = $(document);
+	var $body = $('body'),
+		modalOpen = false,
+		modalBackgroundPresent = false,
+		modalBackground = '<div id="modalBackground" class="hidden"></div>';
 
-	// Open function
-	function openModal(modal, e) {
-
-		var modalBg = '<div class="modalBg"></div>',
-			$modalBg = null,
-			$modal = $(modal);
+	// Open modal
+	function openModal (modal, e) {
 
 		if (e) {
 
 			e.preventDefault();
 		}
 
-		// Check if triggered
-		if (modalTriggered) {
+		// Make sure no modals are already open
+		if (!modalOpen) {
 
-			// Do nothing as it has already been triggered
-			return false;
+			// Show the modal
+			$(modal).addClass('active');
+			modalOpen = true;
 
+		// If there is a modal open, close it
 		} else {
 
-			// set to triggered state
-			modalTriggered = true;
+			// Close any open modal
+			closeModal($('.modal'), e);
+			openModal(modal, e);
 		}
 
-		if (modalBgPresent) {
+		// If the background element doesn't exist, append it to the body
+		if (!modalBackgroundPresent) {
 
-			// Do nothing
+			// Append the background element to the body
+			$body.append(modalBackground);
+			modalBackgroundPresent = true;
 
+			// This is required for the CSS animation to trigger the first time
+			window.setTimeout(function () {
+
+				$('#modalBackground').removeClass('hidden');
+			},0);
+
+		// If the background element does exist, show it
 		} else {
 
-			// Append modal background
-			$('body').append(modalBg);
-			modalBgPresent = true;
+			$('#modalBackground').removeClass('hidden');
 		}
-
-		// Cache the modal bg
-		$modalBg = $('.modalBg').addClass('displayModalBg');
-
-		// Display modal
-		$modal.addClass('displayModal');
-
-		// setTimeout to animate modal
-		window.setTimeout(function () {
-				$modalBg.addClass('animateModalBg');
-				$modal.addClass('animateModal');
-			}, 0
-		);
 	}
 
-	function closeModal($modal, e) {
+	// Close modal
+	function closeModal ($modal, e) {
 
 		if (e) {
 
 			e.preventDefault();
 		}
 
-		var $modalBg = $('.modalBg');
+		// Close any open modal
+		$modal.removeClass('active');
+		modalOpen = false
 
-		$modal.removeClass('animateModal');
-		$modalBg.removeClass('animateModalBg');
-
-		window.setTimeout(function () {
-				$modal.removeClass('displayModal');
-				$modalBg.removeClass('displayModalBg');
-
-				modalTriggered = false;
-			}, 450
-		);
+		// Hide the background element
+		$('#modalBackground').addClass('hidden');
 	}
 
-	// Bind click event to .modalTrigger class by delegation
-	$document.on('click', '.modalTrigger', function (e) {
+	// Open a modal when clicking on its trigger
+	$body.on('click', '.js_modalTrigger', function (e) {
 
-		var modalId = $( this ).attr( 'data-modal-id' );
-
-		// Open the modal.
-		openModal('#' + modalId, e);
+		var modalID = e.target.getAttribute('href');
+		openModal(modalID, e);
 	});
 
-	$document.on('click', '.modalBg', function (e) {
+	// Close a modal when clicking on the close button or the background element
+	$body.on('click', '.js_modalClose, #modalBackground', function (e) {
 
-		// Close the modal.
-		closeModal($('.displayModal'), e);
+		closeModal($('.modal'), e);
 	});
 
-	$document.on('click','.js_closeModal', function (e) {
-
-		// close the modal.
-		closeModal($('.displayModal'), e);
-	});
-
-	// create global modal property
+	// Create a global modal property
 	PHI.modal = {};
 
+	// Open
 	PHI.modal.open = function (modalId) {
 
+		// If the octothorpe is missing, add it
 		if (modalId.indexOf('#') === -1) {
 
 			modalId = '#' + modalId;
 		}
 
-		// close the modal.
+		// Open the modal.
 		openModal(modalId);
 	};
 
+	// Close
 	PHI.modal.close = function () {
 
-		// close the modal.
-		closeModal($('.displayModal'));
+		// Close the modal.
+		closeModal($('.modal'));
 	};
 });
