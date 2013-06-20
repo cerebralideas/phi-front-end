@@ -60,7 +60,7 @@ $(function () {
 
 		// Close any open modal
 		$modal.removeClass('active');
-		modalOpen = false
+		modalOpen = false;
 
 		// Hide the background element
 		$('#modalBackground').addClass('hidden');
