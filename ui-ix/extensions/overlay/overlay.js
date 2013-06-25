@@ -172,8 +172,8 @@ $(function () {
 		// Save the kind of overlay as a variable
 		var kind = $(e.target.getAttribute('href')).attr('data-overlay');
 
-		var overlayID = e.target.getAttribute('href');
-		openOverlay(overlayID, kind, e);
+		var overlayId = e.target.getAttribute('href');
+		openOverlay(overlayId, kind, e);
 	});
 
 	// Close any modal overlays when clicking on the modal background element
@@ -205,13 +205,13 @@ $(function () {
 	PHI.overlay.open = function (overlayId, kind) {
 
 		// If the octothorpe is missing, add it
-		if (overlayID.indexOf('#') === -1) {
+		if (overlayId.indexOf('#') === -1) {
 
-			overlayID = '#' + overlayID;
+			overlayId = '#' + overlayId;
 		}
 
 		// Open the overlay
-		openOverlay(overlayID, kind);
+		openOverlay(overlayId, kind);
 	};
 
 	// Close
