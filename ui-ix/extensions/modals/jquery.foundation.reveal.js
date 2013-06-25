@@ -17,7 +17,7 @@
 	var modalQueued = false;
 
 	//
-	// Bind the live 'click' event to all anchor elements with the data-reveal-id attribute.
+	// Bind the live 'click' event to all anchor elements with the data-modal-id attribute.
 	//
 	$(document).on('click', '.modalTrigger', function ( event ) {
 		//
@@ -25,9 +25,9 @@
 		//
 		event.preventDefault();
 		//
-		// Get the clicked anchor data-reveal-id attribute value.
+		// Get the clicked anchor data-modal-id attribute value.
 		//
-		var modalLocation = $( this ).attr( 'data-reveal-id' );
+		var modalLocation = $( this ).attr( 'data-modal-id' );
 		//
 		// Find the element with that modalLocation id and call the reveal plugin.
 		//
