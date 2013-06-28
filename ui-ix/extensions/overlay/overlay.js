@@ -107,6 +107,12 @@ $(function () {
 			// Show the overlay
 			$(overlay).addClass('active');
 
+			// If the overlay is a popover add an active class to the trigger
+			if (kind === 'popover') {
+
+				$(e.target).addClass('active');
+			}
+
 		// Close the current overlay if the trigger is clicked again
 		} else if ($(e.target.getAttribute('href')).hasClass('active')) {
 
@@ -146,6 +152,12 @@ $(function () {
 		if (kind === 'modal') {
 
 			hideModalBackground();
+		}
+
+		// If the overlay is a popover remove the trigger's active class
+		if (kind === 'popover' || kind === undefined) {
+
+			$('.js_overlayTrigger').removeClass('active');
 		}
 
 		// Close the overlay
@@ -191,7 +203,7 @@ $(function () {
 	// Close overlay when clicking away from it
 	$body.on('click', function (e) {
 
-		closeOverlay($('.js_overlay'), e);
+		closeOverlay($('.js_overlay'), undefined, e);
 	});
 
 //------------------------------------//
