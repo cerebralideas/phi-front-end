@@ -24,7 +24,7 @@
 			'jquery': '../../vendor-bower/jquery/jquery.min',
 
 			// UI/Ix jQuery framework
-			'modal': '/phi/ui-ix/extensions/modals/modal',
+			'overlay': '/phi/ui-ix/extensions/overlay/overlay',
 			'tabs': '/phi/ui-ix/extensions/tabs/jquery.foundation.tabs',
 			'alerts': '/phi/ui-ix/extensions/alerts/jquery.foundation.alerts',
 			'core': '/phi/ui-ix/core/core'
@@ -37,7 +37,7 @@
 			'app': ['angular'],
 
 			// Phi UI/Ix dependencies
-			'modal': ['jquery'],
+			'overlay': ['jquery'],
 			'tabs': ['jquery'],
 			'alerts': ['jquery'],
 			'custom': ['jquery'],
@@ -56,9 +56,9 @@
 
 	// Load in jQuery plugins
 	require(
-			['modal', 'tabs', 'alerts', 'core'],
+			['overlay', 'tabs', 'alerts', 'core'],
 
-			function (modal, tabs, alerts, custom, core) {
+			function (overlay, tabs, alerts, custom, core) {
 
 				// Do stuff :)
 			}

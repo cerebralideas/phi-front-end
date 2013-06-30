@@ -1,26 +1,5 @@
 @charset 'UTF-8';
 
-/*******************************************
-* IMPORT FONTS FOR BETTER TYPOGRAPHY      *
-*******************************************/
-
-// Arial and Helvetica have poor glyph specificity (e.g. 1lI), so Verdana is used for sans-serif default/fallback.
-// Source Sans Pro can be used for even better glyph specificity. Uncomment the first @import below
-// use it.
-
-// To use Source Sans from Adobe for the sans-serif and native Georgia for the serifed,
-// Uncomment the below @import. Source Sans is slightly more condensed and better for UI than Verdana.
-// Most performant @import option
-// @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic);
-
-// Use this one if you need a better, more condensed mono-spaced font than the native monospace
-// Moderately performant
-// @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic|Inconsolata);
-
-// Use this if Source Sans and Georgia are not working well. Droid Sans and Droid Serif work very well
-// Least performant option
-// @import url('http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,700,400italic|Inconsolata');
-
 /******************************************
 * THIS MAKES UP THE CORE OF THE FRAMEWORK *
 ******************************************/
@@ -61,8 +40,8 @@
 // Helper Classes Styles
 @import 'extensions/helper-classes/_helper-classes';
 
-// Modal, "Reveal", Styles
-@import 'extensions/modals/_modal';
+// Overlay Styles (dropdown, modal, popover and tooltip)
+@import 'extensions/overlay/_overlay';
 
 // Alert Styles
 @import 'extensions/alerts/_alerts';
