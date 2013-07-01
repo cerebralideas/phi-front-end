@@ -7,14 +7,6 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 
 		pkg: grunt.file.readJSON('package.json'),
-		lint: {
-			files: [
-				'Gruntfile.js',
-				'test/**/*.js',
-				'src/js/*.js',
-				'src/js/**/*.js'
-			]
-		},
 		concat: {
 			main: {
 				src: 'src/js/main.js',
@@ -40,7 +32,7 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			files: [
-				'<%= lint.files %>',
+				'<%= jshint.files %>',
 				'phi/ui-ix/*.scss',
 				'phi/ui-ix/core/**/*.scss',
 				'phi/ui-ix/extensions/**/*.scss',
@@ -49,6 +41,12 @@ module.exports = function(grunt) {
 			tasks: 'default'
 		},
 		jshint: {
+			files: [
+				'Gruntfile.js',
+				'test/**/*.js',
+				'src/js/*.js',
+				'src/js/**/*.js'
+			],
 			options: {
 				curly: true,
 				eqeqeq: true,
@@ -62,16 +60,17 @@ module.exports = function(grunt) {
 				eqnull: true,
 				strict: true,
 				devel: true,
-				browser: true
-			},
-			globals: {
-				jQuery: true,
-				$: true,
-				PHI: true,
-				Modernizr: true,
-				angular: true,
-				require: true,
-				define: true
+				browser: true,
+				globals: {
+					jQuery: true,
+					$: true,
+					PHI: true,
+					Modernizr: true,
+					angular: true,
+					requirejs: true,
+					require: true,
+					define: true
+				}
 			}
 		},
 		uglify: {},
@@ -107,9 +106,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-macreload');
 
 	// Default dev tasks for grunt.
-	grunt.registerTask('default', ['lint', 'concat', 'compass:dev', 'macreload']);
+	grunt.registerTask('default', ['jshint', 'concat', 'compass:dev', 'macreload']);
 
 	// Production build task.
-	grunt.registerTask('build', ['lint', 'concat', 'markdown', 'min', 'compass-clean', 'compass:prod', 'macreload']);
+	grunt.registerTask('build', ['jshint', 'concat', 'markdown', 'min', 'compass-clean', 'compass:prod', 'macreload']);
 
 };
