@@ -1,0 +1,331 @@
+/*******************************************
+* SETTINGS, VARIABLES, DEFAULTS            *
+*******************************************/
+
+// Colors
+
+// Grays
+// -------------------------
+$black:                 #111 !default;
+$grayDarker:            #222 !default;
+$grayDark:              #333 !default;
+$gray:                  #555 !default;
+$grayLight:             #999 !default;
+$grayLighter:           #aaa !default;
+$darkWhite:             #efefef !default;
+$white:                 #fff !default;
+
+// Accent colors
+// -------------------------
+$blue:                  #4DA7BF !default;
+$lightBlue:             #17C8FF !default;
+$green:                 #B5CB6D !default;
+$red:                   #9d261d !default;
+$yellow:                #ffc40d !default;
+$orange:                #E38219 !default;
+$pink:                  #c3325f !default;
+$purple:                #913E9C !default;
+
+// Scaffolding
+// -------------------------
+$bodyBackground: #F5F5F5 url('/img/100-100-3.png') !default;
+$baseTextColor: $grayDark !default;
+
+// Links
+// -------------------------
+$linkColor: darken($blue, 20%) !default;
+$linkColorHover: darken($linkColor, 15%) !default;
+
+// Typography
+// -------------------------
+
+$sansFontFamily: 'Source Sans Pro', Verdana, sans-serif !default;
+$serifFontFamily: Georgia, serif !default;
+$monoFontFamily: monospace !default;
+$iconFontFamily: entypo !default;
+
+$baseFontSize: 1em !default;
+$base-size: $baseFontSize;
+$bodyFontWeight: 400;
+
+$smallFontSize: 0.9em !default;
+$largeFontSize: 1.125em !default;
+$baseFontFamily: $sansFontFamily !default;
+
+/* Set the vertical rhythm */
+/* Round, even numbers are best */
+/* Default is 20px increments */
+$baseLineHeight: 1.25em !default;
+$baseFontWeight: normal;
+$baseFontStyle: normal;
+$altFontFamily: $serifFontFamily !default;
+
+$fontSmoothing: subpixel-antialiased;
+
+/* Header type settings */
+// h1
+$h1FontSize: 400% !default;
+
+// Below should be multiple 0f $baseLineHeight
+$h1LineHeight: 94% !default;
+$h1Padding: 0.3125em 0 !default;
+
+// h2
+$h2FontSize: 200% !default;
+
+// Below should be multiple 0f $baseLineHeight
+$h2LineHeight: 125% !default;
+$h2Padding: 0.625em 0 !default;
+
+// h3 & Legend Title
+$h3FontSize: 150% !default;
+
+// Below should be multiple 0f $baseLineHeight
+$h3LineHeight: 167% !default;
+$h3Padding: 0.833333333em 0 !default;
+
+// h4
+$h4FontSize: 113% !default;
+
+// Below should be multiple 0f $baseLineHeight
+$h4LineHeight: 112% !default;
+$h4Padding: 1.1em 0 0 !default;
+
+// h5
+$h5FontSize: 100% !default;
+
+// Below should be multiple 0f $baseLineHeight
+$h5LineHeight: 125% !default;
+$h5Padding: 1.25em 0 !default;
+
+// h6
+$h6FontSize: 100% !default;
+
+// Below should be multiple 0f $baseLineHeight
+$h6LineHeight: 125% !default;
+$h6Padding: 1.25em 0 !default;
+
+/* Global UI color settings */
+$mainColor: $darkWhite !default;
+$mainBorderColor: darken(($mainColor), 10%);
+$lightColor: $darkWhite !default;
+$primaryColor: $blue !default;
+$secondaryColor: $lightBlue !default;
+$alertColor: $red !default;
+$successColor: $green !default;
+$txtColor: $grayDarker !default;
+$highlightColor: $yellow !default;
+$shinyEdge: rgba($white, .5) !default;
+$darkEdge: rgba($black, .2) !default;
+$inactiveColor: $grayLight !default;
+
+// Global UI design Settings
+$cornerRadius: 3px !default;
+
+// Grid Settings
+$containerWidth: none !default;
+$containerMaxWidth: 960px !default;
+$containerMinWidth: none !default;
+$rowWidth: auto !default;
+$rowMainMaxWidth: none !default;
+$rowMaxWidth: none !default;
+$rowMainMinWidth: none !default;
+$rowMinWidth: none !default;
+$columnGutter: $baseLineHeight !default;
+
+// Maximum of 14
+$totalColumns: 12 !default;
+$mobileTotalColumns: 4 !default;
+$blockGridElements: 12 !default; // Highest number of block grid elements, Maximum of 24 supported
+
+// Text Direction Settings
+// This is not supported at this time.
+$textDirection: ltr !default; // Controls default global text direction, 'rtl' or 'ltr'
+$defaultDirection: left !default; // Change this to 'right' for right-to-left languages
+$defaultOpposite: right !default; // Change this to 'left' for right-to-left languages
+
+@if $textDirection == ltr {
+  $defaultDirection: left;
+  $defaultOpposite: right;
+} @else {
+  $defaultDirection: right;
+  $defaultOpposite: left;
+}
+
+// Button Settings
+
+$buttonFontFamily: $sansFontFamily !default;
+$buttonFontWeight: 400 !default;
+$buttonRadius: $cornerRadius !default;
+$btnBase: 10px !default;
+
+$tinyBtnBase: $btnBase - 5 !default;
+$smallBtnBase: $btnBase - 3 !default;
+$largeBtnBase: $btnBase + 5 !default;
+
+$btnBackground:                     $grayLighter;
+$btnBorder:                         #ddd;
+$btnPrimaryBackground:              $blue;
+$btnInfoBackground:                 $purple;
+$btnSuccessBackground:              $green;
+$btnWarningBackground:              $orange;
+$btnDangerBackground:               $red;
+$btnInverseBackground:              $gray;
+
+// Form Settings
+
+$formSpacing: 1em !default;
+$labelFontWeight: 700 !default;
+$labelFontColor: $gray !default;
+$labelBtmMargin: 3px !default;
+$inputFontColor: rgba(0,0,0,0.75) !default;
+$inputFontSize: 14px !default;
+$inputBgColor: $white !default;
+$inputFocusBgColor: darken(#fff, 2%) !default;
+$inputBorderColor: darken($mainBorderColor, 5%) !default;
+$inputFocusBorderColor: darken($mainBorderColor, 15%) !default;
+$inputBorderStyle: solid !default;
+$inputBorderWidth: 1px !default;
+$inputBorderRadius: $cornerRadius !default;
+$fieldsetBorderRadius: $cornerRadius !default;
+
+// Custom Form Settings
+
+$custFormBorderColor: #ccc !default;
+$custFormBgColor: #fff !default;
+$custCheckColor: #222 !default;
+$custSelectCurrentFontColor: #141414 !default;
+$custSelectBgColor: #fff !default;
+$custSelectBorderColor: #ddd !default;
+$custSelectTriangleColor: #aaa !default;
+$custSelectTriangleColorOpen: #222 !default;
+$custSelectDropHeight: 200px !default;
+$custDropdownBgColor: #fff !default;
+$custDropdownBorderColor: darken(#fff, 20%) !default;
+$custDropdownFontColor: #555 !default;
+$custDropdownSelectedBgColor: lighten(#2ba6cb, 40%) !default;
+$custDropdownSelectedFontColor: #000 !default;
+$custFormDisabledBgColor: #ddd !default;
+
+// Tab Settings
+
+$tabHeight: 40px !default;
+$tabTermFontSize: 12px;
+
+// Nav Bar Settings
+
+$navBarHeight: 40px !default;
+$navFlyoutBaseWidth: 250px !default;
+
+// Top Bar Settings
+
+$topBarBgColor: #222 !default;
+$topBarHeight: 45px !default;
+$topBarHeightMobile: 45px !default;
+$topBarBtmMargin: 30px !default;
+$topBarTitleWeight: bold !default;
+$topBarTitleSize: 17px !default;
+$topBarLinkColor: #fff !default;
+$topBarLinkWeight: bold !default;
+$topBarLinkSize: 13px !default;
+$topBarDropBgColor: #222 !default;
+$topBarDropLinkColor: #fff !default;
+$topBarDropToggleSize: 5px !default;
+$topBarDropToggleColor: #fff !default;
+$topBarDropToggleAlpha: 0.5 !default;
+$topBarSearchWidth: 200px !default;
+$topBarBreakPoint: 940px !default;
+$topBarNavToggleSize: 8px !default;
+
+// UI Settings
+
+$thumbRadius: 3px !default;
+$progBarHeight: 25px !default;
+$progBarBorderColor: darken(#fff, 20%) !default;
+$progBarBorderSize: 1px !default;
+$progBarPad: 2px !default;
+$linkListBottomMargin: 17px -22px !default;
+$tableBorderRadius: $cornerRadius !default;
+
+// Tooltip Settings
+
+$hasTipBorderBottom: dotted 1px #ccc !default;
+$hasTipFontWeight: bold !default;
+$hasTipFontColor: #333 !default;
+$hasTipBorderBottomHover: dotted 1px darken($mainColor, 20%) !default;
+$hasTipFontColorHover: $mainColor !default;
+$tooltipBackgroundColor: #000 !default;
+$tooltipBackgroundOpacity: 0.85 !default;
+$tooltipFontSize: 12px !default;
+$tooltipFontWeight: bold !default;
+$tooltipFontColor: #fff !default;
+$tapToCloseFontSize: 10 !default;
+$tapToCloseFontWeight: normal !default;
+$tapToCloseFontColor: #888 !default;
+$tooltipFontSizeScreenSm: 14 !default;
+$tooltipBgOpacityScreenSm: 0.85 !default;
+$tooltipBorderRadius: $cornerRadius !default;
+
+// Orbit Settings
+
+$orbitCaptionBgColorOldBrowser: #000 !default;
+$orbitCaptionBgColor: rgba(0,0,0,.6) !default;
+$orbitCaptionFontColor: #fff !default;
+$orbitBulletNavColor: #999 !default;
+$orbitBulletNavColorActive: #222 !default;
+$orbitHasThumbBorderColor: #000 !default;
+$orbitHasThumbBorderWidth: 2px !default;
+$orbitHasThumbBorderStyle: solid !default;
+$orbitSlideNumBgColor: rgba(0,0,0,0.7) !default;
+$orbitSlideNumFontColor: #fff !default;
+$orbitSlideNumPadding: 5px !default;
+
+// Clearing Settings
+
+$clearingBg: rgba(0,0,0,0.8) !default;
+$clearingOldBrowserBg: rgb(0,0,0) !default;
+$clearingCaptionBg: rgba(0,0,0,0.7) !default;
+$clearingCaptionOldBrowserBg: rgb(0,0,0) !default;
+$clearingCaptionFontColor: #fff !default;
+$clearingCloseColor: #fff !default;
+$clearingArrowColor: #fff !default;
+$clearingArrowSize: 16px !default;
+$clearingCarouselBg: rgba(0,0,0,0.75) !default;
+$clearingCarouselOldBrowserBg: rgb(0,0,0) !default;
+$clearingCarouselHeight: 150px !default;
+$clearingActiveImgHeight: 75% !default;
+$clearingCarouselThumbWidth: 175px;
+$clearingCarouselThumbActiveBorder: 4px solid rgb(255,255,255) !default;
+$clearingImgBg: rgba(0,0,0,0.75) !default;
+$clearingImgOldBrowserBg: rgb(0,0,0) !default;
+
+// Joyride Settings
+
+$tipBg: rgba(0,0,0,0.8) !default;
+$tipBgIE8: #000 !default;
+$tipFontColor: #fff !default;
+$tipHeaderWeight: bold !default;
+$tipDefaultWidth: 300px !default;
+$tipBorderRadius: 4px !default;
+$tipPadding: 18px 20px 24px !default;
+$tipNubSize: 14px !default;
+$tipFontSize: 14px !default;
+$tipTimerWidth: 50px !default;
+$tipTimerHeight: 3px !default;
+$tipTimerBorder: solid 1px #555 !default;
+$tipTimerColor: #666 !default;
+$tipCloseColor: #777 !default;
+$tipCloseSize: 20px !default;
+$tipCloseWeight: normal !default;
+$tipScreenFill: rgba(0,0,0,0.5) !default;
+
+// Off Canvas Width Settings
+
+$mainWidth: 80% !default;
+$complementaryWidth: 20% !default;
+
+// Media Queries
+
+$screenSmall: 768px !default;
+$screenMedium: 1279px !default;
+$screenXlarge: 1441px !default;

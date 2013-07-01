@@ -1,0 +1,122 @@
+<!-- Test Foundation Components Here -->
+<div class="row">
+	<div class="twelveColumns">
+		<h3>Tabs</h3>
+		<h4 class="subheader">Tabs are very versatile both as organization and navigational constructs. With the base Foundation package, tabs in the markup specified below are already hooked up &mdash; no extra work required.</h4>
+
+		<div class="row">
+			<div class="fourColumns">
+				<a name="simpleTabs"></a>
+				<h4>Simple Tabs</h4>
+				<p>Tabs are made of <strong>two objects:</strong> a <code>dl</code> object containing the tabs themselves, and a <code>ul</code> object containing the tab content.</p>
+			</div>
+
+			<div class="eightColumns">
+				<ul class="tabs">
+					<li class="tab active">
+						<a href="#simple1">Tab 1</a>
+					</li>
+					<li class="tab">
+						<a href="#simple2">Tab 2</a>
+					</li>
+					<li class="tab">
+						<a href="#simple3">Tab 3</a>
+					</li>
+				</ul>
+				<ul class="tabsContent">
+					<li class=" active" id="simple1">This is tab 1's content.</li>
+					<li id="simple2">This is tab 2's content. Now you see it!</li>
+					<li id="simple3">This is tab 3's content. It's only okay.</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="fourColumns">
+				<a name="tabs"></a>
+				<h4>Contained Tabs</h4>
+				<p>Contained tabs have a simple added class of "contained" on the tabs-content element. What that means is the tab content has a border around it tying it to the tabs. You can still use standardColumn sizes inside a tab element.</p>
+			</div>
+
+			<div class="eightColumns">
+				<ul class="tabs mobile">
+					<li class="tab active">
+						<a href="#simpleContained1">Tab 1</a>
+					</li>
+					<li class="tab">
+						<a href="#simpleContained2">Tab 2</a>
+					</li>
+					<li class="tab">
+						<a href="#simpleContained3">Tab 3</a>
+					</li>
+				</ul>
+				<ul class="tabsContent contentContained">
+					<li class="tab active" id="simpleContained1">This is tab 1's content. Pretty neat, huh?</li>
+					<li class="tab" id="simpleContained2">This is tab 2's content. Now you see it!</li>
+					<li class="tab" id="simpleContained3">This is tab 3's content. It's only okay.</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="fourColumns">
+				<a name="pillStyle"></a>
+				<h4>Pill-Style Tabs</h4>
+				<p>If you need an alternate view for tabs (especially for filters, or similar), you can use pill-style tabs. They look like this:</p>
+			</div>
+
+			<div class="eightColumns">
+				<dl class="tabs pillStyle threeUp">
+					<dd class="tab active">
+						<a href="#pillTab1">Pill Tab 1</a>
+					</dd>
+					<dd class="tab">
+						<a href="#pillTab2">Pill Tab 2</a>
+					</dd>
+					<dd class="tab">
+						<a href="#pillTab3">Pill Tab 3</a>
+					</dd>
+				</dl>
+
+				<ul class="tabsContent">
+					<li class="active" id="pillTab1">This is tab 1's content.</li>
+					<li id="pillTab2">This is tab 2's content. Now you see it!</li>
+					<li id="pillTab3">This is tab 3's content. It's only okay.</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="fourColumns">
+				<a name="tabsVertical"></a>
+				<h4>Vertical Tabs</h4>
+				<p>You can also use tabs in a vertical configuration by adding a class of 'vertical' to the <code>dl</code> element. These are great for more scalable nav, and you can see how they work on this page on a tablet or desktop.</p>
+			</div>
+			<div class="eightColumns">
+				<div class="rowSeamless">
+					<dl class="tabs tabsVertical fourSeamlessColumns">
+						<dd class="tab active">
+							<a href="#vertical1">Vertical Tab 1</a>
+						</dd>
+						<dd class="tab">
+							<a href="#vertical2">Vertical Tab 2</a>
+						</dd>
+						<dd class="tab">
+							<a href="#vertical3">Vertical Tab 3</a>
+						</dd>
+					</dl>
+					<ul class="tabsContent eightSeamlessColumns">
+						<li class="tab active" id="vertical1">This is tab 1's content. Pretty neat, huh?</li>
+						<li class="tab" id="vertical2">This is tab 2's content. Now you see it!</li>
+						<li class="tab" id="vertical3">This is tab 3's content. It's only okay.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<a name="mobileTabs"></a>
+		<h4>Mobile Tabs</h4>
+		<p>If you want a standard, horizontal tab group to act vertical on small devices, adding a class of "mobile" to a standard (not vertical) tab group will switch them to full width nav bars on small screens.</p>
+
+	</div>
+</div>
