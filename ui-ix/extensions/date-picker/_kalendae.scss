@@ -1,7 +1,11 @@
 .kalendae {
 	background: $white;
 	display: none;
+<<<<<<< HEAD
 	border: 2px solid darken($darkWhite, 10%);
+=======
+	border: 2px solid darken($whiteDark, 10%);
+>>>>>>> b3fbf73edab74e7421afa01e28e9fb4047f6bba9
 	font-family: $sansFontFamily;
 	font-size: $baseFontSize;
 	color: $baseTextColor;
@@ -20,7 +24,7 @@
 .kalendae::before {
 	border-left: 1em solid transparent;
 	border-right: 1em solid transparent;
-	border-bottom: 1em solid darken($darkWhite, 10%);
+	border-bottom: 1em solid darken($whiteDark, 10%);
 	content: "";
 	height: 0;
 	left: 50%;

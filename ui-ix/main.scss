@@ -16,7 +16,6 @@
 @import 'core/_typography';
 @import 'core/_forms';
 @import 'core/_buttons';
-@import 'core/_icons';
 
 /*******************************************
  * THIS MAKES UP THE COMPONENTS OF PHI     *
@@ -40,8 +39,8 @@
 // Helper Classes Styles
 @import 'extensions/helper-classes/_helper-classes';
 
-// Modal, "Reveal", Styles
-@import 'extensions/modals/_modal';
+// Overlay Styles (dropdown, modal, popover and tooltip)
+@import 'extensions/overlay/_overlay';
 
 // Alert Styles
 @import 'extensions/alerts/_alerts';
@@ -54,3 +53,6 @@
 
 // Prototyping Styles
 @import 'prototype/prototype';
+
+// Icons
+@import 'prototype/_icons';
