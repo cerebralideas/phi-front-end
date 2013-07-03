@@ -16,7 +16,6 @@
 @import 'core/_typography';
 @import 'core/_forms';
 @import 'core/_buttons';
-@import 'core/_icons';
 
 /*******************************************
  * THIS MAKES UP THE COMPONENTS OF PHI     *
@@ -54,3 +53,6 @@
 
 // Prototyping Styles
 @import 'prototype/prototype';
+
+// Icons
+@import 'prototype/_icons';

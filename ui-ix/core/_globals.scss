@@ -662,7 +662,7 @@ textarea {
 		@include box-sizing(border-box);
 	}
 	body {
-		background: $white;
+		background: $bodyBackground;
 		color: $baseTextColor;
 		position: relative;
 		-webkit-font-smoothing: $fontSmoothing;
@@ -740,7 +740,7 @@ textarea {
 	.secondary, .info, .alert, .success, .primary {
 
 		.close {
-			color: $darkWhite;
+			color: $whiteDark;
 
 			&:hover {
 				color: $white;

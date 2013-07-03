@@ -144,8 +144,12 @@ $(function () {
 		// Prevent click events if they are present
 		if (e) {
 
-			preventDefault(e);
 			stopPropagation(e);
+
+			if (kind !== null) {
+
+				preventDefault(e);
+			}
 		}
 
 		// If the overlay is a modal then hide the modal background element
@@ -155,7 +159,7 @@ $(function () {
 		}
 
 		// If the overlay is a popover remove the trigger's active class
-		if (kind === 'popover' || kind === undefined) {
+		if (kind === 'popover' || kind === null) {
 
 			$('.js_overlayTrigger').removeClass('active');
 		}
@@ -168,7 +172,7 @@ $(function () {
 		openOverlays.splice(index, 1);
 
 		// If the body element is clicked, close all overlays
-		if (kind === undefined) {
+		if (kind === null) {
 
 			openOverlays = [];
 		}
@@ -203,7 +207,7 @@ $(function () {
 	// Close overlay when clicking away from it
 	$body.on('click', function (e) {
 
-		closeOverlay($('.js_overlay'), undefined, e);
+		closeOverlay($('.js_overlay'), null, e);
 	});
 
 //------------------------------------//
