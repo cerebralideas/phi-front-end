@@ -6,3 +6,6 @@
 
 # Ignore Sass Cache
 .sass-cache
+
+# Ignore Node Modules
+node_modules
