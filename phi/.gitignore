@@ -9,4 +9,6 @@ RSAKey.as
 
 # Ignore Sass Cache
 .sass-cache
-public/.sass-cache
+
+# Ignore Node Modules
+node_modules

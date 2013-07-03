@@ -1,0 +1,234 @@
+@font-face {
+	font-family: 'entypo';
+	src:url('../../../fonts/entypo-icons/fonts/entypo.eot');
+	src:url('../../../fonts/entypo-icons/fonts/entypo.eot') format('embedded-opentype'),
+		url('../../../fonts/entypo-icons/fonts/entypo.svg#entypo') format('svg'),
+		url('../../../fonts/entypo-icons/fonts/entypo.woff') format('woff'),
+		url('../../../fonts/entypo-icons/fonts/entypo.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following 55CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before, .useCalendar {
+	font-family: 'entypo';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	font-family: 'entypo';
+	font-style: normal;
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-mobile:before {
+	content: "\2395";
+}
+.icon-pencil:before {
+	content: "\270e";
+}
+.icon-paperclip:before {
+	content: "\23cd";
+}
+.icon-drawer:before {
+	content: "\2b13";
+}
+.icon-reply:before {
+	content: "\21b6";
+}
+.icon-forward:before {
+	content: "\21b7";
+}
+.icon-user:before {
+	content: "\265f";
+}
+.icon-star:before {
+	content: "\2605";
+}
+.icon-export:before {
+	content: "\238b";
+}
+.icon-comment:before {
+	content: "\275e";
+}
+.icon-printer:before {
+	content: "\25a9";
+}
+.icon-search:before {
+	content: "\26b2";
+}
+.icon-house:before {
+	content: "\2617";
+}
+.icon-cog:before {
+	content: "\2638";
+}
+.icon-tools:before {
+	content: "\2692";
+}
+.icon-lifebuoy:before {
+	content: "\25cc";
+}
+.icon-eye:before {
+	content: "\233e";
+}
+.icon-clock:before {
+	content: "\233d";
+}
+.icon-calendar:before, .useCalendar:before {
+	content: "\2b12";
+}
+.icon-earth:before {
+	content: "\2689";
+}
+.icon-browser:before {
+	content: "\25a2";
+}
+.icon-code:before {
+	content: "\2390";
+}
+.icon-screen:before {
+	content: "\25a6";
+}
+.icon-login:before {
+	content: "\2348";
+}
+.icon-logout:before {
+	content: "\2347";
+}
+.icon-minus:before {
+	content: "\2d";
+}
+.icon-plus:before {
+	content: "\2b";
+}
+.icon-cross:before {
+	content: "\2613";
+}
+.icon-checkmark:before {
+	content: "\2611";
+}
+.icon-cross-2:before {
+	content: "\2612";
+}
+.icon-info:before {
+	content: "\69";
+}
+.icon-help:before {
+	content: "\3f";
+}
+.icon-warning:before {
+	content: "\21";
+}
+.icon-retweet:before {
+	content: "\21cc";
+}
+.icon-folder:before {
+	content: "\25db";
+}
+.icon-trash:before {
+	content: "\26b0";
+}
+.icon-install:before {
+	content: "\27f1";
+}
+.icon-upload:before {
+	content: "\27f0";
+}
+.icon-arrow-left:before {
+	content: "\25c2";
+}
+.icon-arrow-down:before {
+	content: "\25be";
+}
+.icon-arrow-up:before {
+	content: "\25b4";
+}
+.icon-arrow-right:before {
+	content: "\25b8";
+}
+.icon-menu:before {
+	content: "\2666";
+}
+.icon-resize-enlarge:before {
+	content: "\21f1";
+}
+.icon-resize-shrink:before {
+	content: "\2327";
+}
+.icon-arrow-right-2:before {
+	content: "\2192";
+}
+.icon-arrow-up--upload:before {
+	content: "\2191";
+}
+.icon-arrow-left-2:before {
+	content: "\2190";
+}
+.icon-arrow-down-2:before {
+	content: "\2193";
+}
+.icon-github:before {
+	content: "\67";
+}
+.icon-twitter:before {
+	content: "\74";
+}
+.icon-facebook:before {
+	content: "\66";
+}
+.icon-googleplus:before {
+	content: "\47";
+}
+.icon-dribbble:before {
+	content: "\64";
+}
+.icon-pinterest:before {
+	content: "\70";
+}
+.icon-disk:before {
+	content: "\73";
+}
+.icon-layout:before {
+	content: "\2637";
+}
+.icon-list:before {
+	content: "\2630";
+}
+.icon-document:before {
+	content: "\25af";
+}
+.icon-cart:before {
+	content: "\63";
+}
+.icon-gauge:before {
+	content: "\2365";
+}
+.icon-tag:before {
+	content: "\25b0";
+}
+.icon-mail:before {
+	content: "\2709";
+}
+.icon-location:before {
+	content: "\6c";
+}
+.icon-popup:before {
+	content: "\274f";
+}
+.icon-blocked:before {
+	content: "\2300";
+}
+.icon-bookmark:before {
+	content: "\25ae";
+}
+.icon-archive:before {
+	content: "\2339";
+}
