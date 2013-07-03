@@ -9,3 +9,6 @@
 
 # Ignore Node Modules
 node_modules
+
+# Ignore Managed Packages
+vendor-bower
