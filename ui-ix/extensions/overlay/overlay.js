@@ -201,7 +201,7 @@ $(function () {
 	// Stop overlay from closing when clicking on it
 	$body.on('click', '.js_overlay', function (e) {
 
-		stopPropagation(e);
+		closeOverlay($('.js_overlay[data-overlay="modal"] .js_overlay'), null, e);
 	});
 
 	// Close overlay when clicking away from it
