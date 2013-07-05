@@ -3,6 +3,7 @@
 
 # Ignore IDE meta files
 .idea
+.settings
 
 # Ignore Sass Cache
 .sass-cache

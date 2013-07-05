@@ -7,61 +7,60 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 
 		pkg: grunt.file.readJSON('package.json'),
-		lint: {
-			files: [
-				'grunt.js','ui-ix/core/*.js',
-				'ui-ix/extensions/**/*.js',
-				'app/**/*.js'
-			]
-		},
 		concat: {
-			dist: {
-				src: '',
-				dest: ''
+			options: {
+				banner: '/*! <%= pkg.name %> | Version: <%= pkg.version %> | ' +
+						'Concatenated on <%= grunt.template.today("yyyy-mm-dd") %> */\n\n',
+				separator: '\n\n;// End of file\n\n'
+			},
+			main: {}
+		},
+		markdown: {
+			all: {
+				files: 'docs/md/*',
+				dest: 'docs/html/',
+				template: 'templates/markdown/html-partial-template.html'
 			}
 		},
-		min: {
-			dist: {
-				src: '',
-				dest: ''
-			}
-		},
+		test: {},
 		watch: {
-			files: [
-				'<config:lint.files>',
-				'ui-ix/*.scss',
-				'ui-ix/core/**/*.scss',
-				'ui-ix/extensions/**/*.scss',
-				'ui-ix/prototype/*.scss'
-			],
-			tasks: 'default'
+			js: {
+				files: '<%= jshint.files %>',
+				tasks: ['jshint', 'macreload']
+			},
+			scss: {
+				files: 'ui-ix/**/*.scss',
+				tasks: ['compass:dev', 'macreload']
+			}
 		},
 		jshint: {
+			files: [
+				'Gruntfile.js',
+				'ui-ix/**/*.js'
+			],
 			options: {
-				curly: true,
-				eqeqeq: true,
-				immed: true,
-				latedef: true,
-				newcap: true,
-				noarg: true,
-				sub: true,
-				undef: true,
-				boss: true,
-				eqnull: true,
-				browser: true
-			},
-			globals: {
-				jQuery: true,
-				angular: true,
-				PHI: true
+				jshintrc: '.jshintrc' // Retrieves .jshintrc file from public/ See jshintrcExplained.js for more details
 			}
 		},
-		uglify: {},
+		uglify: {
+			options: {
+				banner: '/*! <%= pkg.name %> | Version: <%= pkg.version %> | ' +
+						'Minified on <%= grunt.template.today("yyyy-mm-dd") %> */\n\n'
+			},
+			build: {
+				expand: true,     // Enable dynamic expansion.
+				cwd: 'dev/',      // Src matches are relative to this path.
+				src: ['**/*.js'], // Actual pattern(s) to match.
+				dest: 'dist/',    // Destination path prefix.
+				ext: '.js',       // Dest filepaths will have this extension.
+				flatten: false    // Remove directory structure in destination
+			}
+		},
 		compass: {
 			dev: {
 				options: {
-					sassDir: 'ui-ix/',
-					cssDir: 'demo-css/'
+					sassDir: 'ui-ix/sass',
+					cssDir: '../demo-css/'
 				}
 			}
 		},
@@ -72,15 +71,24 @@ module.exports = function(grunt) {
 		}
 	});
 
-	// Load in contrib task suite
-	grunt.loadNpmTasks('grunt-contrib');
+	// Load in contrib tasks
+	grunt.loadNpmTasks('grunt-contrib-compass');
+	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	// Load in Markdown task
 	grunt.loadNpmTasks('grunt-markdown');
 
-	// A Live Reload alternative
+	// Load the "Live Reload" alternative
 	grunt.loadNpmTasks('grunt-macreload');
 
-	// Default task.
-	grunt.registerTask('default', ['compass:dev', 'macreload']);
+	// Default dev tasks for grunt.
+	grunt.registerTask('default', ['jshint', 'compass:dev', 'macreload']);
+
 };
