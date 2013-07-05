@@ -216,6 +216,19 @@ $(function () {
 		closeOverlay($('.js_overlay'), null, e);
 	});
 
+//-----------------//
+// Keyboard events //
+//-----------------//
+
+	// Close modal if ESC is pressed
+	$(document).keyup(function(e) {
+
+		if (e.keyCode === 27) {
+
+			closeOverlay($('.js_overlay[data-overlay="modal"]'), 'modal', e);
+		}
+	});
+
 //------------------------------------//
 // Programmatical control of overlays //
 //------------------------------------//
