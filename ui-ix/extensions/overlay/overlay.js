@@ -86,7 +86,7 @@ $(function () {
 //-------------------------------//
 
 	// Open overlay
-	function openOverlay (overlay, kind, e) {
+	function openOverlay (overlay, kind, e, target) {
 
 		// Prevent click events if they are present
 		if (e) {
@@ -107,14 +107,14 @@ $(function () {
 			// Show the overlay
 			$(overlay).addClass('active');
 
-			// If the overlay is a popover add an active class to the trigger
-			if (kind === 'popover') {
+			// If the overlay is a dropdown or a popover add an active class to the trigger
+			if (kind === 'dropdown' || kind == 'popover') {
 
-				$(e.target).addClass('active');
-			}
+				target.addClass('active');
+		}
 
 		// Close the current overlay if the trigger is clicked again
-		} else if ($(e.target.getAttribute('href')).hasClass('active')) {
+		} else if ($(target.attr('href')).hasClass('active')) {
 
 			// Close any open overlay that matched the clicked type
 			closeOverlay($('.js_overlay[data-overlay="' + kind + '"]'), kind, e);
@@ -158,8 +158,8 @@ $(function () {
 			hideModalBackground();
 		}
 
-		// If the overlay is a popover remove the trigger's active class
-		if (kind === 'popover' || kind === null) {
+		// If the overlay is a dropdown or a popover remove the trigger's active class
+		if (kind === 'dropdown' || kind === 'popover' || kind === null) {
 
 			$('.js_overlayTrigger').removeClass('active');
 		}
@@ -185,11 +185,17 @@ $(function () {
 	// Open an overlay when clicking on its trigger
 	$body.on('click', '.js_overlayTrigger', function (e) {
 
-		// Save the kind of overlay as a variable
-		var kind = $(e.target.getAttribute('href')).attr('data-overlay');
+		// Store the target as a variable
+		var target = $(this)
 
-		var overlayId = e.target.getAttribute('href');
-		openOverlay(overlayId, kind, e);
+		// Save the kind of overlay as a variable
+		var kind = $(target.attr('href')).attr('data-overlay');
+
+		var overlayId = this.getAttribute('href');
+		openOverlay(overlayId, kind, e, target);
+
+		// Clear the target variable
+		var target = null;
 	});
 
 	// Close any modal overlays when clicking on the modal background element
@@ -198,16 +204,29 @@ $(function () {
 		closeOverlay($('.js_overlay[data-overlay="modal"]'), 'modal', e);
 	});
 
-	// Stop overlay from closing when clicking on it
+	// Close contained overlays when clicking on a modal
 	$body.on('click', '.js_overlay', function (e) {
 
-		stopPropagation(e);
+	closeOverlay($('.js_overlay[data-overlay="modal"] .js_overlay'), null, e);
 	});
 
 	// Close overlay when clicking away from it
 	$body.on('click', function (e) {
 
 		closeOverlay($('.js_overlay'), null, e);
+	});
+
+//-----------------//
+// Keyboard events //
+//-----------------//
+
+	// Close modal if ESC is pressed
+	$(document).keyup(function(e) {
+
+		if (e.keyCode === 27) {
+
+			closeOverlay($('.js_overlay[data-overlay="modal"]'), 'modal', e);
+		}
 	});
 
 //------------------------------------//
