@@ -12,7 +12,7 @@
 				settings = $.extend({}, options, settings);
 
 				return this.each(function () {
-					if (!settings.init) { methods.events(); };
+					if (!settings.init) { methods.events(); }
 				});
 			},
 
