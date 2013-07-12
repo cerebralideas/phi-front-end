@@ -8,15 +8,18 @@
 
 		methods = {
 			init : function (options) {
+
 				settings = $.extend({}, options, settings);
 
 				return this.each(function () {
-					if (!settings.init) methods.events();
+					if (!settings.init) { methods.events(); };
 				});
 			},
 
 			events : function () {
-				$(document).on('click.fndtn', '.tabs a', function (e) {
+
+				$('body').on('click', '.tabs a', function (e) {
+
 					methods.set_tab($(this).parent('dd, li'), e);
 				});
 
@@ -42,7 +45,7 @@
 
 				settings.callback();
 			}
-		}
+		};
 
 	$.fn.foundationTabs = function (method) {
 		if (methods[method]) {
