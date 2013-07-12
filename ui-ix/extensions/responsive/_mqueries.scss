@@ -136,11 +136,7 @@
 		/* NavBar --- */
 		/*            */
 		.touch .nav-bar li {
-<<<<<<< HEAD
 			a { font-size: $smallFontSize; }
-=======
-			a { font-size: ms(0) - 1; }
->>>>>>> 380867b9bf3383138fea6796d9ae537c4c3912b8
 			&.has-flyout {
 				&>a.flyout-toggle { padding: ($navBarHeight / 2) !important; }
 				&>a { padding-#{$defaultOpposite}: ($navBarHeight - 4) !important; }
@@ -304,11 +300,7 @@
 		/* Clearing --- */
 		/*              */
 		.clearing-container { margin: 0; }
-<<<<<<< HEAD
 		.clearing-close { z-index: 99; font-size: 400%; top: 0px; right: 5px; }
-=======
-		.clearing-close { z-index: 99; font-size: ms(4); top: 0px; right: 5px; }
->>>>>>> 380867b9bf3383138fea6796d9ae537c4c3912b8
 		.clearing-caption { position: fixed; bottom: 0; left: 0; padding: 10px !important; line-height: 1.3; }
 		.clearing-main-right, .clearing-main-left { display: none; }
 		.clearing-blackout.clearing-assembled {
@@ -325,11 +317,7 @@
 		/*          */
 		.tabs.mobile { width: auto; margin: 20px -20px 40px; border-bottom: solid 1px #ccc; height: auto; margin: 20px -15px 0px -15px;
 			dt, li, dd { float: none; height: auto; }
-<<<<<<< HEAD
 			dd a, li a { font-size: $largeFontSize; display: block; width: auto; height: auto; padding: 18px 20px; margin: 0; color: #555; line-height: 1; border: none; border-#{$defaultDirection}: none; border-#{$defaultOpposite}: none; border-top: 1px solid #ccc; background: #fff; }
-=======
-			dd a, li a { font-size: ms(0) + 1; display: block; width: auto; height: auto; padding: 18px 20px; margin: 0; color: #555; line-height: 1; border: none; border-#{$defaultDirection}: none; border-#{$defaultOpposite}: none; border-top: 1px solid #ccc; background: #fff; }
->>>>>>> 380867b9bf3383138fea6796d9ae537c4c3912b8
 			dd a.active, li a.active { border: none; background: $mainColor; color: #fff; margin: 0; position: static; top: 0; height: auto; }
 			dd:first-child, li:first-child { padding-left: 20px !important; }
 			dd:first-child a.active, li:first-child a.active { margin: 0; }
@@ -412,15 +400,9 @@
 						&.moved { position: static;
 							&>.dropdown { top: 0; visibility: visible;
 								li {
-<<<<<<< HEAD
 									label { margin-bottom: 6px; padding-top: 6px !important; $smallFontSize; }
 									&:not(.title) { padding-bottom: 0;
 										a { padding: 8px $topBarHeightMobile / 2; font-size: 100%; }
-=======
-									label { margin-bottom: 6px; padding-top: 6px !important; font-size: ms(0) - 3; }
-									&:not(.title) { padding-bottom: 0;
-										a { padding: 8px $topBarHeightMobile / 2; font-size: ms(0); }
->>>>>>> 380867b9bf3383138fea6796d9ae537c4c3912b8
 									}
 									a, label { padding: 0 $topBarHeight / 2; }
 									a:hover { background: lighten($topBarBgColor, 10%); display: block; }
@@ -430,11 +412,7 @@
 							.back.title { padding-bottom: 0;
 								a:before { position: absolute; top: 50%; left: ($topBarHeight / 2) - $topBarDropToggleSize; margin-top: -$topBarDropToggleSize; width: 0; height: 0; @include cssTriangle($topBarDropToggleSize, $topBarDropToggleColor, right); }
 								h5 { margin: 0; padding-left: $topBarDropToggleSize * 3; position: relative;
-<<<<<<< HEAD
 									a { background: transparent; padding-top: 8px; padding-bottom: 8px; font-size: 200%; font-weight: $topBarTitleWeight; }
-=======
-									a { background: transparent; padding-top: 8px; padding-bottom: 8px; font-size: ms(2); font-weight: $topBarTitleWeight; }
->>>>>>> 380867b9bf3383138fea6796d9ae537c4c3912b8
 								}
 							}
 						}
