@@ -226,7 +226,10 @@ $(function () {
 	// Close contained overlays when clicking on a modal
 	$body.on('click', '.js_overlay', function (e) {
 
-	closeOverlay($('.js_overlay[data-overlay="modal"] .js_overlay'), null, e);
+		closeOverlay($('.js_overlay[data-overlay="modal"] .js_overlay'), null, e);
+
+		// Prevent the page from scrolling when clicking on an overlay
+		preventDefault(e);
 	});
 
 	// Close overlay when clicking away from it
