@@ -126,8 +126,8 @@ $(function () {
 			// Show the overlay
 			$(overlay).addClass('active');
 
-			// If the overlay is a dropdown or a popover add an active class to the trigger
-			if (kind === 'dropdown' || kind == 'popover') {
+			// If the overlay is a dropdown a popover or a tooltip add an active class to the trigger
+			if (kind === 'dropdown' || kind === 'popover' || kind === 'tooltip') {
 
 				target.addClass('active');
 		}
@@ -177,8 +177,8 @@ $(function () {
 			hideModalBackground();
 		}
 
-		// If the overlay is a dropdown or a popover remove the trigger's active class
-		if (kind === 'dropdown' || kind === 'popover' || kind === null) {
+		// If the overlay is a dropdown a popover or a tooltip remove the trigger's active class
+		if (kind === 'dropdown' || kind === 'popover' || kind === 'tooltip' || kind === null) {
 
 			$('.js_overlayTrigger').removeClass('active');
 		}
@@ -205,7 +205,7 @@ $(function () {
 	$body.on('click', '.js_overlayTrigger', function (e) {
 
 		// Store the target as a variable
-		var target = $(this)
+		var target = $(this);
 
 		// Save the kind of overlay as a variable
 		var kind = $(target.attr('href')).attr('data-overlay');
