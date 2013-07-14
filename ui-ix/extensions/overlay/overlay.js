@@ -81,6 +81,22 @@ $(function () {
 		$('#modalBackground').removeClass('active');
 	}
 
+//----------------------------------------------------------//
+// Function to focus the first input of a modal when opened //
+//----------------------------------------------------------//
+
+	// Give focus to the first input element
+	function focusFirstInput(overlay) {
+
+		// Required so that the focus is applied once the element is no longer hidden
+		window.setTimeout(function () {
+
+			// Find the first input that is a child of the opened modal and give it focus
+			$(overlay).find('input').first().focus();
+
+		}, 300);
+	}
+
 //-------------------------------//
 // Functions to control overlays //
 //-------------------------------//
@@ -99,6 +115,9 @@ $(function () {
 		if (kind === 'modal') {
 
 			showModalBackground();
+
+			// If the modal contains inputs give focus to the first
+			focusFirstInput(overlay);
 		}
 
 		// Make sure that no overlay matching the type of the clicked overlay is already open
