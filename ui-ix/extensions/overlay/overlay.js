@@ -155,8 +155,6 @@ $(function () {
 
 			openOverlays.push(kind);
 		}
-
-		console.log($(overlay));
 	}
 
 	// Close overlay
