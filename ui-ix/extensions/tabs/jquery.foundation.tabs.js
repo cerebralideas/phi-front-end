@@ -18,7 +18,7 @@
 
 			events : function () {
 
-				$('body').on('click', '.tabs a', function (e) {
+				$('body').on('click', '.tabs .tab a', function (e) {
 
 					methods.set_tab($(this).parent('dd, li'), e);
 				});

@@ -204,6 +204,8 @@ $(function () {
 	// Open an overlay when clicking on its trigger
 	$body.on('click', '.js_overlayTrigger', function (e) {
 
+		console.log('click overlay');
+
 		// Store the target as a variable
 		var target = $(this);
 
