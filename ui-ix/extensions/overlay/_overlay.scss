@@ -111,7 +111,7 @@ $overlayTransition: .25s;
 }
 .tooltipRight {
 	left: 100%;
-	margin-left: .75em;
+	margin-left: .75em !important;
 }
 [data-overlay="tooltip"]:after {
 	border-left: .5em solid transparent;
