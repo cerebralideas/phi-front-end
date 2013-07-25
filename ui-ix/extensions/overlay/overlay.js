@@ -130,7 +130,7 @@ $(function () {
 			if (kind === 'dropdown' || kind === 'popover' || kind === 'tooltip') {
 
 				target.addClass('active');
-		}
+			}
 
 		// Close the current overlay if the trigger is clicked again
 		} else if ($(target.attr('href')).hasClass('active')) {
