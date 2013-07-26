@@ -231,7 +231,7 @@ $(function () {
 	// Close contained overlays when clicking on a modal
 	$body.on('click', '.js_overlay', function (e) {
 
-		var href = e.target.href || '#';
+		var href = e.target.href || '';
 
 		closeOverlay($('.js_overlay[data-overlay="modal"] .js_overlay'), 'modalChildren', e);
 
