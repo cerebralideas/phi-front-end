@@ -147,7 +147,7 @@ $(function () {
 			closeOverlay($('.js_overlay[data-overlay="' + kind + '"]'), kind, e);
 
 			// Show the overlay
-			openOverlay(overlay, kind, e);
+			openOverlay(overlay, kind, e, target);
 		}
 
 		// If the overlay type isn't already in the open overlays array add it
@@ -195,6 +195,11 @@ $(function () {
 
 			openOverlays = [];
 		}
+
+		if (kind === 'modalChildren') {
+
+			openOverlays = ['modal'];
+		}
 	}
 
 //--------------//
@@ -203,8 +208,6 @@ $(function () {
 
 	// Open an overlay when clicking on its trigger
 	$body.on('click', '.js_overlayTrigger', function (e) {
-
-		console.log('click overlay');
 
 		// Store the target as a variable
 		var target = $(this);
@@ -216,7 +219,7 @@ $(function () {
 		openOverlay(overlayId, kind, e, target);
 
 		// Clear the target variable
-		var target = null;
+		target = null;
 	});
 
 	// Close any modal overlays when clicking on the modal background element
@@ -228,10 +231,15 @@ $(function () {
 	// Close contained overlays when clicking on a modal
 	$body.on('click', '.js_overlay', function (e) {
 
-		closeOverlay($('.js_overlay[data-overlay="modal"] .js_overlay'), null, e);
+		var href = e.target.href || '#';
+
+		closeOverlay($('.js_overlay[data-overlay="modal"] .js_overlay'), 'modalChildren', e);
 
 		// Prevent the page from scrolling when clicking on an overlay
-		preventDefault(e);
+		if (href.indexOf('#') === 0) {
+
+			preventDefault(e);
+		}
 	});
 
 	// Close overlay when clicking away from it
