@@ -165,7 +165,7 @@ $(function () {
 
 			stopPropagation(e);
 
-			if (kind !== null) {
+			if (kind !== null && kind !== 'modalChildren') {
 
 				preventDefault(e);
 			}
