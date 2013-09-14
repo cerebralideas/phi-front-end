@@ -16,7 +16,6 @@ h1, h2, h3, h4, h5, h6 {
 
 	small {
 		font-weight: normal;
-		color: $grayLight;
 		line-height: 1em;
 	}
 }
@@ -26,16 +25,19 @@ hgroup {
 		padding-bottom: 0;
 	}
 }
-h1, h2 {
-	letter-spacing: -0.05em;
-}
 h1 {
 	/* Total Height: 100px */
 	font-size: $h1FontSize; /* 64 */
 
-	/* Below should be multiple 0f 20px */
+	/* Below should be multiple 0f 20px
+	 * and the combined line-height and
+	 * padding (top&botton) should equal
+	 * the Total Height above
+	 */
 	line-height: $h1LineHeight; /* 60 */
 	padding: $h1Padding; /* 20 */
+
+	letter-spacing: $h1LetterSpacing;
 
 	// Still needs work
 	small {
@@ -49,6 +51,8 @@ h2 {
 	/* Below should be multiple 0f 20px */
 	line-height: $h2LineHeight; /* 40 */
 	padding: $h2Padding; /* 20 */
+
+	letter-spacing: $h2LetterSpacing;
 
 	small {
 		font-size: 70%;

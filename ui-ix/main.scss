@@ -52,4 +52,7 @@
 @import 'prototype/prototype';
 
 // Icons
+// This currently uses the whole icon library,
+// which is not recommended. Load only the icons
+// you need.
 @import 'prototype/_icons';
