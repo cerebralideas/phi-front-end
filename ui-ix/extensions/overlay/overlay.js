@@ -81,6 +81,22 @@ $(function () {
 		$('#modalBackground').removeClass('active');
 	}
 
+//----------------------------------------------------------//
+// Function to focus the first input of a modal when opened //
+//----------------------------------------------------------//
+
+	// Give focus to the first input element
+	function focusFirstInput(overlay) {
+
+		// Required so that the focus is applied once the element is no longer hidden
+		window.setTimeout(function () {
+
+			// Find the first input that is a child of the opened modal and give it focus
+			$(overlay).find('input').first().focus();
+
+		}, 300);
+	}
+
 //-------------------------------//
 // Functions to control overlays //
 //-------------------------------//
@@ -99,6 +115,9 @@ $(function () {
 		if (kind === 'modal') {
 
 			showModalBackground();
+
+			// If the modal contains inputs give focus to the first
+			focusFirstInput(overlay);
 		}
 
 		// Make sure that no overlay matching the type of the clicked overlay is already open
@@ -107,11 +126,11 @@ $(function () {
 			// Show the overlay
 			$(overlay).addClass('active');
 
-			// If the overlay is a dropdown or a popover add an active class to the trigger
-			if (kind === 'dropdown' || kind == 'popover') {
+			// If the overlay is a dropdown a popover or a tooltip add an active class to the trigger
+			if (kind === 'dropdown' || kind === 'popover' || kind === 'tooltip') {
 
 				target.addClass('active');
-		}
+			}
 
 		// Close the current overlay if the trigger is clicked again
 		} else if ($(target.attr('href')).hasClass('active')) {
@@ -128,7 +147,7 @@ $(function () {
 			closeOverlay($('.js_overlay[data-overlay="' + kind + '"]'), kind, e);
 
 			// Show the overlay
-			openOverlay(overlay, kind, e);
+			openOverlay(overlay, kind, e, target);
 		}
 
 		// If the overlay type isn't already in the open overlays array add it
@@ -146,7 +165,7 @@ $(function () {
 
 			stopPropagation(e);
 
-			if (kind !== null) {
+			if (kind !== null && kind !== 'modalChildren') {
 
 				preventDefault(e);
 			}
@@ -158,8 +177,8 @@ $(function () {
 			hideModalBackground();
 		}
 
-		// If the overlay is a dropdown or a popover remove the trigger's active class
-		if (kind === 'dropdown' || kind === 'popover' || kind === null) {
+		// If the overlay is a dropdown a popover or a tooltip remove the trigger's active class
+		if (kind === 'dropdown' || kind === 'popover' || kind === 'tooltip' || kind === null) {
 
 			$('.js_overlayTrigger').removeClass('active');
 		}
@@ -176,6 +195,11 @@ $(function () {
 
 			openOverlays = [];
 		}
+
+		if (kind === 'modalChildren') {
+
+			openOverlays = ['modal'];
+		}
 	}
 
 //--------------//
@@ -186,7 +210,7 @@ $(function () {
 	$body.on('click', '.js_overlayTrigger', function (e) {
 
 		// Store the target as a variable
-		var target = $(this)
+		var target = $(this);
 
 		// Save the kind of overlay as a variable
 		var kind = $(target.attr('href')).attr('data-overlay');
@@ -195,7 +219,7 @@ $(function () {
 		openOverlay(overlayId, kind, e, target);
 
 		// Clear the target variable
-		var target = null;
+		target = null;
 	});
 
 	// Close any modal overlays when clicking on the modal background element
@@ -207,7 +231,15 @@ $(function () {
 	// Close contained overlays when clicking on a modal
 	$body.on('click', '.js_overlay', function (e) {
 
-	closeOverlay($('.js_overlay[data-overlay="modal"] .js_overlay'), null, e);
+		var href = e.target.href || '';
+
+		closeOverlay($('.js_overlay[data-overlay="modal"] .js_overlay'), 'modalChildren', e);
+
+		// Prevent the page from scrolling when clicking on an overlay
+		if (href.indexOf('#') === 0) {
+
+			preventDefault(e);
+		}
 	});
 
 	// Close overlay when clicking away from it
