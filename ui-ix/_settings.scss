@@ -12,7 +12,7 @@ $grayDark:              #333 !default;
 $gray:                  #555 !default;
 $grayLight:             #999 !default;
 $grayLighter:           #aaa !default;
-$darkWhite:             #efefef !default;
+$whiteDark:             #efefef !default;
 $white:                 #fff !default;
 
 // Accent colors
@@ -106,9 +106,9 @@ $h6LineHeight: 125% !default;
 $h6Padding: 1.25em 0 !default;
 
 /* Global UI color settings */
-$mainColor: $darkWhite !default;
+$mainColor: $whiteDark !default;
 $mainBorderColor: darken(($mainColor), 10%);
-$lightColor: $darkWhite !default;
+$lightColor: $whiteDark !default;
 $primaryColor: $blue !default;
 $secondaryColor: $lightBlue !default;
 $alertColor: $red !default;

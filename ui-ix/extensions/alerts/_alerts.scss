@@ -6,6 +6,7 @@
 	@include border-radius($cornerRadius);
 
 	p, ul, ol, blockquote, pre, code {
+		padding-top: $baseLineHeight;
 		width: 90%;
 		display: inline-block;
 		vertical-align: top;

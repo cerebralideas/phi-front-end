@@ -1,59 +1,30 @@
-;(function ($, window, document, undefined) {
+(function ($, window, document, undefined) {
+
 	'use strict';
 
-	var settings = {
-			callback: $.noop,
-			init: false
-		},
+	function setTab(href, e) {
 
-		methods = {
-			init : function (options) {
+		console.log(href);
 
-				settings = $.extend({}, options, settings);
+		var newTab = $(e.target).parent(),
+			oldTab = newTab.parents('.tabs').find('.active');
 
-				return this.each(function () {
-					if (!settings.init) { methods.events(); }
-				});
-			},
+		console.log(newTab);
+		console.log(oldTab);
 
-			events : function () {
+		// Show tab content
+		e.preventDefault();
+		$(href).parents('.tabsContent').find('li').removeClass('active').end().
+				find(href).addClass('active');
 
-				$('body').on('click', '.tabs .tab a', function (e) {
+		// Make active tab
+		oldTab.removeClass('active');
+		newTab.addClass('active');
+	}
 
-					methods.set_tab($(this).parent('dd, li'), e);
-				});
+	$('body').on('click', '.tab a', function (e) {
 
-				settings.init = true;
-			},
+		setTab($(e.target).attr('href'), e);
+	});
 
-			set_tab : function ($tab, e) {
-				var $activeTab = $tab.closest('dl, ul').find('.active'),
-						target = $tab.children('a').attr("href"),
-						hasHash = /^#/.test(target),
-						$content = $(target);
-
-				if (hasHash && $content.length > 0) {
-					// Show tab content
-					e.preventDefault();
-					$content.closest('.tabsContent').children('li').removeClass('active').hide();
-					$content.css('display', 'block').addClass('active');
-				}
-
-				// Make active tab
-				$activeTab.removeClass('active');
-				$tab.addClass('active');
-
-				settings.callback();
-			}
-		};
-
-	$.fn.foundationTabs = function (method) {
-		if (methods[method]) {
-			return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
-		} else if (typeof method === 'object' || !method) {
-			return methods.init.apply(this, arguments);
-		} else {
-			$.error('Method ' +	method + ' does not exist on jQuery.foundationTooltips');
-		}
-	};
 }(jQuery, this, this.document));

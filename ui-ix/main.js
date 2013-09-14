@@ -24,10 +24,11 @@
 			'jquery': '../../vendor-bower/jquery/jquery.min',
 
 			// UI/Ix jQuery framework
+			'navigation': '/phi/ui-ix/extensions/navigation/navigation',
 			'overlay': '/phi/ui-ix/extensions/overlay/overlay',
 			'tabs': '/phi/ui-ix/extensions/tabs/jquery.foundation.tabs',
 			'alerts': '/phi/ui-ix/extensions/alerts/jquery.foundation.alerts',
-			'core': '/phi/ui-ix/core/core'
+			'datepicker': '/phi/ui-ix/extensions/date-picker/kalendae'
 		},
 
 		// Declare all dependencies
@@ -37,11 +38,10 @@
 			'app': ['angular'],
 
 			// Phi UI/Ix dependencies
+			'navigation': ['jquery', 'app'],
 			'overlay': ['jquery'],
 			'tabs': ['jquery'],
-			'alerts': ['jquery'],
-			'custom': ['jquery'],
-			'core': ['jquery']
+			'alerts': ['jquery']
 		}
 	});
 
@@ -56,11 +56,32 @@
 
 	// Load in jQuery plugins
 	require(
-			['overlay', 'tabs', 'alerts', 'core'],
+			['navigation', 'overlay', 'tabs', 'alerts', 'datepicker'],
 
-			function (overlay, tabs, alerts, custom, core) {
+			function (navigation, overlay, tabs, alerts, custom) {
 
-				// Do stuff :)
+				// Kalendae plugin initialization
+				$('body').on('click.useCalendar', '.useCalendar', function () {
+
+					console.log('clicked!');
+
+					var parent = this.parentNode,
+						input = parent.getElementsByTagName('input')[0],
+						$input = $(input);
+
+					if (!($input.hasClass('hasCalendar'))) {
+
+						new Kalendae.Input(input, {
+							attachTo: input
+						});
+
+						$input.focus().addClass('hasCalendar');
+
+					} else {
+
+						$input.focus();
+					}
+				});
 			}
 	);
 }());

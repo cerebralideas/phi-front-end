@@ -262,7 +262,7 @@ $(function () {
 	});
 
 //------------------------------------//
-// Programmatical control of overlays //
+// Programmatic control of overlays //
 //------------------------------------//
 
 	// Create a global overlay property
