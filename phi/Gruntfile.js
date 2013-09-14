@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 		watch: {
 			js: {
 				files: '<%= jshint.files %>',
-				tasks: ['jshint', 'macreload']
+				tasks: ['macreload']
 			},
 			scss: {
 				files: 'ui-ix/**/*.scss',
@@ -59,8 +59,8 @@ module.exports = function(grunt) {
 		compass: {
 			dev: {
 				options: {
-					sassDir: 'ui-ix/sass',
-					cssDir: '../demo-css/'
+					sassDir: 'ui-ix/',
+					cssDir: 'demo-css/'
 				}
 			}
 		},
@@ -82,13 +82,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	// Load in Markdown task
-	grunt.loadNpmTasks('grunt-markdown');
-
 	// Load the "Live Reload" alternative
 	grunt.loadNpmTasks('grunt-macreload');
 
 	// Default dev tasks for grunt.
-	grunt.registerTask('default', ['jshint', 'compass:dev', 'macreload']);
+	grunt.registerTask('default', ['compass:dev', 'macreload']);
 
 };

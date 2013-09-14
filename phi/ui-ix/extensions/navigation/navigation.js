@@ -17,6 +17,8 @@ $(function () {
 
 	$nav.removeClass('hasHover'); // Removes fallback CSS dropdown
 
+	console.log('hello');
+
 	if ($navItem.find('ul') || $navItem.find('ol')) {
 
 		$navItem.find('ul').addClass('dropDown').

@@ -1,7 +1,8 @@
 {
-  "name": "phi-framework",
-  "dependencies": {
-    "requirejs": "~2.1.6",
-    "jquery": "1.9.1"
-  }
+	"name": "phi-full-stack",
+	"dependencies": {
+		"angular": "1.2.0-rc.2",
+		"requirejs": "~2.1.6",
+		"jquery": "1.10.2"
+	}
 }

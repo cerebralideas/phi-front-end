@@ -20,25 +20,22 @@
 			// UI/Ix jQuery framework
 			'modal': '/phi/ui-ix/extensions/modals/modal',
 			'tabs': '/phi/ui-ix/extensions/tabs/jquery.foundation.tabs',
-			'alerts': '/phi/ui-ix/extensions/alerts/jquery.foundation.alerts',
-			'core': '/phi/ui-ix/core/core'
+			'alerts': '/phi/ui-ix/extensions/alerts/jquery.foundation.alerts'
 		},
 
 		// Declare all dependencies
 		shim: {
 			'modal': ['jquery'],
 			'tabs': ['jquery'],
-			'alerts': ['jquery'],
-			'custom': ['jquery'],
-			'core': ['jquery']
+			'alerts': ['jquery']
 		}
 	});
 
 	// Load in jQuery plugins
 	require(
-			['modal', 'tabs', 'alerts', 'core'],
+			['modal', 'tabs', 'alerts'],
 
-			function (modal, tabs, alerts, custom, core) {
+			function (modal, tabs, alerts, custom) {
 
 				// Kalendae plugin initialization
 				$doc.on('click.useCalendar', '.useCalendar', function () {
