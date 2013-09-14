@@ -40,7 +40,26 @@
 
 			function (modal, tabs, alerts, custom, core) {
 
-				// Do stuff :)
+				// Kalendae plugin initialization
+				$doc.on('click.useCalendar', '.useCalendar', function () {
+
+					var parent = this.parentNode,
+							input = parent.getElementsByTagName('input')[0],
+							$input = $(input);
+
+					if (!($input.hasClass('hasCalendar'))) {
+
+						new Kalendae.Input(input, {
+							attachTo: input
+						});
+
+						$input.focus().addClass('hasCalendar');
+
+					} else {
+
+						$input.focus();
+					}
+				});
 			}
 	);
 }());

@@ -4,15 +4,15 @@
   "description": "The engine that runs the phi framework",
   "author": {
     "name": "Justin Lowery",
-    "company": "Cerebral Ideas",
-    "url": "http://cerebralideas.com"
+    "company": "Cerebral Interactive",
+    "url": "http://cix.io"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/cerebralideas/phi.git"
   },
   "bugs": {
-    "url": "https://github.com/cerebralideas/phi-framework/issues"
+    "url": "https://github.com/cerebralideas/phi-front-end/issues"
   },
   "licenses": [
     {
