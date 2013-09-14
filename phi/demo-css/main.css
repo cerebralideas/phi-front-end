@@ -5,11 +5,10 @@
 /*******************************************
 * SETTINGS, VARIABLES, DEFAULTS            *
 *******************************************/
-/* Set the vertical rhythm */
-/* Round, even numbers are best */
-/* Default is 20px increments */
-/* Header type settings */
-/* Global UI color settings */
+/* Header type settings:
+ * Use the percent unit for size and line-height
+ * to prevent rounding issues in some browsers.
+ */
 /* normalize.css v1.0.1 | MIT License | git.io/normalize */
 /* ==========================================================================
 	 HTML5 display definitions
@@ -93,7 +92,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Source Sans Pro", Verdana, sans-serif;
+  font-family: Verdana, sans-serif;
 }
 
 /*
@@ -708,7 +707,7 @@ textarea {
 
 /* line 664, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_globals.scss */
 body {
-  background: whitesmoke url("/img/100-100-3.png");
+  background: whitesmoke url("../ui-ix/img/backgrounds/100-70-3.png");
   color: #333333;
   position: relative;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -891,7 +890,7 @@ figure {
 /* line 1, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 body {
   font-family: sans-serif;
-  font-family: "Source Sans Pro", Verdana, sans-serif;
+  font-family: Verdana, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1.25em;
@@ -905,37 +904,36 @@ h1, h2, h3, h4, h5, h6 {
 /* line 17, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-weight: normal;
-  color: #999999;
   line-height: 1em;
 }
 
-/* line 25, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 24, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 hgroup h2:first-child, hgroup h3:first-child, hgroup h4:first-child, hgroup h5:first-child {
   padding-bottom: 0;
 }
 
-/* line 29, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
-h1, h2 {
-  letter-spacing: -0.05em;
-}
-
-/* line 32, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 28, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 h1 {
   /* Total Height: 100px */
   font-size: 400%;
   /* 64 */
-  /* Below should be multiple 0f 20px */
+  /* Below should be multiple 0f 20px
+   * and the combined line-height and
+   * padding (top&botton) should equal
+   * the Total Height above
+   */
   line-height: 94%;
   /* 60 */
   padding: 0.3125em 0;
   /* 20 */
+  letter-spacing: 0em;
 }
-/* line 41, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 43, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 h1 small {
   font-size: 70%;
 }
 
-/* line 45, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 47, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 h2 {
   /* Total Height: 80px */
   font-size: 200%;
@@ -945,13 +943,14 @@ h2 {
   /* 40 */
   padding: 0.625em 0;
   /* 20 */
+  letter-spacing: 0em;
 }
-/* line 53, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 57, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 h2 small {
   font-size: 70%;
 }
 
-/* line 57, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 61, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 h3, legend {
   /* Total Height: 60px */
   font-size: 150%;
@@ -962,12 +961,12 @@ h3, legend {
   padding: 0.83333em 0;
   /* 20 */
 }
-/* line 65, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 69, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 h3 small, legend small {
   font-size: 70%;
 }
 
-/* line 69, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 73, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 h4 {
   /* Total Height: 80px */
   font-size: 113%;
@@ -978,12 +977,12 @@ h4 {
   padding: 1.1em 0 0;
   /* 20 */
 }
-/* line 77, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 81, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 h4 small {
   font-size: 70%;
 }
 
-/* line 81, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 85, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 h5 {
   /* Total Height: 40px */
   font-size: 100%;
@@ -995,7 +994,7 @@ h5 {
   /* 20 */
 }
 
-/* line 89, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 93, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 h6 {
   /* Total Height: 40px */
   font-size: 100%;
@@ -1007,36 +1006,36 @@ h6 {
   /* 20 */
 }
 
-/* line 101, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 105, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 p, ul, ol, dl {
   margin: 0 0 1.25em 0;
   /* 20 */
 }
-/* line 104, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 108, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 p small, ul small, ol small, dl small {
   font-size: 0.9em;
   color: #999999;
   line-height: 1em;
 }
 
-/* line 110, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 114, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 li {
   margin: 0;
 }
 
-/* line 115, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 119, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 .page-header {
   padding-bottom: 1.25em;
   margin: 1.25em 0;
   border-bottom: 1px solid #aaaaaa;
 }
 
-/* line 120, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 124, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 .page-header h1 {
   line-height: 1;
 }
 
-/* line 123, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 127, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 hr {
   border: solid #ddd;
   border-width: 1px 0 0;
@@ -1046,109 +1045,109 @@ hr {
   height: 0;
 }
 
-/* line 131, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 135, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 .doubleRule {
   border-width: 1px 0;
   clear: both;
   margin: 1.25em 0 2px;
 }
 
-/* line 136, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 140, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 .subheader {
   font-weight: 300;
   padding-top: 0;
 }
 
-/* line 140, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 144, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 em {
   font-style: italic;
   line-height: inherit;
 }
 
-/* line 144, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 148, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 strong {
   font-weight: bold;
   line-height: inherit;
 }
 
-/* line 148, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 152, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 small {
   font-size: 0.9em;
   line-height: inherit;
 }
 
-/* line 152, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 156, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 code {
   font-weight: bold;
   background: #ffc40d;
 }
 
 /* Lists ---------------------- */
-/* line 158, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 162, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ul, ol, dl {
   list-style-position: outside;
 }
 
-/* line 164, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 168, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ul li ul, ul li ol {
   margin-left: 1.25em;
 }
-/* line 169, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 173, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ul.square {
   list-style-type: square;
 }
-/* line 172, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 176, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ul.square li ul {
   list-style: inherit;
 }
-/* line 177, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 181, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ul.circle {
   list-style-type: circle;
 }
-/* line 180, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 184, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ul.circle li ul {
   list-style: inherit;
 }
-/* line 185, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 189, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ul.disc {
   list-style-type: disc;
 }
-/* line 188, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 192, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ul.disc li ul {
   list-style: inherit;
 }
-/* line 193, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 197, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ul.no-bullet {
   list-style: none;
 }
-/* line 196, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 200, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ul.large li {
   line-height: 21px;
 }
 
-/* line 200, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 204, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ol {
   margin-left: 1.25em;
 }
-/* line 205, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 209, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ol li ul, ol li ol {
   margin-left: 1.25em;
   margin-bottom: 0;
 }
 
 /* Blockquotes ---------------------- */
-/* line 212, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 216, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 blockquote {
   margin: 0 0 1.25em;
   padding: 1.25em;
 }
-/* line 216, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 220, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 blockquote cite {
   display: block;
   font-size: 0.9em;
 }
 
-/* line 221, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 225, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 abbr {
   text-transform: none;
 }
@@ -1159,14 +1158,14 @@ abbr {
  * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
  * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
 */
-/* line 231, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 235, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 .print-only {
   display: none !important;
 }
 
 @media print {
   /* Black prints faster: h5bp.com/s */
-  /* line 237, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+  /* line 241, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
   * {
     background: transparent !important;
     color: black !important;
@@ -1176,45 +1175,45 @@ abbr {
     -ms-filter: none !important;
   }
 
-  /* line 245, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+  /* line 249, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
   a, a:visited {
     text-decoration: underline;
   }
 
-  /* line 248, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+  /* line 252, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 251, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+  /* line 255, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
   /* Don't show links for images, or javascript/internal links */
-  /* line 255, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+  /* line 259, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
   .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
     content: "";
   }
 
-  /* line 258, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+  /* line 262, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
   /* h5bp.com/t */
-  /* line 263, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+  /* line 267, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 266, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+  /* line 270, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
   tr, img {
     page-break-inside: avoid;
   }
 
-  /* line 269, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+  /* line 273, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
   img {
     max-width: 100% !important;
   }
@@ -1223,33 +1222,33 @@ abbr {
     margin: 0.5cm;
 }
 
-  /* line 275, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+  /* line 279, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
   p, h2, h3 {
     orphans: 3;
     widows: 3;
   }
 
-  /* line 279, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+  /* line 283, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
   h2, h3 {
     page-break-after: avoid;
   }
 
-  /* line 282, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+  /* line 286, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
   .hide-on-print {
     display: none !important;
   }
 
-  /* line 285, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+  /* line 289, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
   .print-only {
     display: block !important;
   }
 
-  /* line 288, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+  /* line 292, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
   .hide-for-print {
     display: none !important;
   }
 
-  /* line 291, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+  /* line 295, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
   .show-for-print {
     display: inherit !important;
   }
@@ -1649,7 +1648,7 @@ textarea.error {
   width: auto;
   cursor: pointer;
   display: inline-block;
-  font-family: "Source Sans Pro", Verdana, sans-serif;
+  font-family: Verdana, sans-serif;
   font-weight: 400;
   line-height: 1.125em;
   margin: 0.625em 0;
@@ -1845,7 +1844,7 @@ div.buttonBar ul.buttonGroup:last-child {
   display: inline-block;
   vertical-align: top;
   padding: 0 1.25em;
-  font-family: "Source Sans Pro", Verdana, sans-serif;
+  font-family: Verdana, sans-serif;
 }
 
 /* NOTE TO USER: Use this row type if the small white-space of the inline-block is unwanted,
@@ -2179,7 +2178,7 @@ that IE7/8 do not support :nth-child.
 .blockGrid > * {
   display: inline-block;
   height: auto;
-  font-family: "Source Sans Pro", Verdana, sans-serif;
+  font-family: Verdana, sans-serif;
 }
 /* line 157, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
 .blockGrid.one-up > li {
@@ -3210,7 +3209,7 @@ div.progress.round .meter {
   background: white;
   display: none;
   border: 2px solid #d5d5d5;
-  font-family: "Source Sans Pro", Verdana, sans-serif;
+  font-family: Verdana, sans-serif;
   font-size: 1em;
   color: #333333;
   cursor: default;
@@ -3446,7 +3445,7 @@ div.progress.round .meter {
  */
 /* line 8, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_prototype.scss */
 h1 {
-  font-family: "Source Sans Pro", Verdana, sans-serif;
+  font-family: Georgia, serif;
   color: #999999;
   font-style: normal;
   font-weight: 100;
@@ -3454,7 +3453,7 @@ h1 {
 
 /* line 14, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_prototype.scss */
 h2 {
-  font-family: "Source Sans Pro", Verdana, sans-serif;
+  font-family: Verdana, sans-serif;
   color: #555555;
   font-style: normal;
   font-weight: 700;
@@ -3462,7 +3461,7 @@ h2 {
 
 /* line 20, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_prototype.scss */
 h3, legend {
-  font-family: "Source Sans Pro", Verdana, sans-serif;
+  font-family: Verdana, sans-serif;
   color: #555555;
   font-style: normal;
   font-weight: 700;
