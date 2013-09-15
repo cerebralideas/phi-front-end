@@ -91,9 +91,9 @@
 	}
 }
 
-// Creating .row .offset-by-# classes
+// Creating .row .offsetBy_# classes
 @for $i from 1 through $totalColumns - 2 {
-	.offset-by-#{convert-number-to-word($i, '')} {
+	.offsetBy_#{convert-number-to-word($i, '')} {
 		margin-#{$defaultDirection}: gridCalc($i, $totalColumns);
 	}
 }
@@ -152,7 +152,7 @@ that IE7/8 do not support :nth-child.
 	}
 
 	@for $i from 1 through $blockGridElements {
-		&.#{convert-number-to-word($i, '')}-up {
+		&.#{convert-number-to-word($i, '')}Up {
 
 			&>li {
 				@if $i == 1 {
@@ -251,9 +251,9 @@ that IE7/8 do not support :nth-child.
 		width: 100%;
 		display: block;
 	}
-	// Creating .row .offset-by-# classes
+	// Creating .row .offsetBy_# classes
 	@for $i from 1 through $totalColumns - 2 {
-		.offset-by-#{convert-number-to-word($i, '')} {
+		.offsetBy_#{convert-number-to-word($i, '')} {
 			margin-#{$defaultDirection}: 0;
 		}
 	}

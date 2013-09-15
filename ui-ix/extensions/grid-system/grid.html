@@ -24,20 +24,19 @@
 				<h4 class="subheader">Create powerful multi-device layouts quickly and easily with the 12Column grid.</h4>
 			</hgroup>
 			<h4>The Basics</h4>
-			<p>The grid is built around two key elements: rows andColumns. Rows create a max-width and contain the-columns;-columns create the actual structure. For layouts to work properly, always put your page content inside a row and a column.</p>
-
-			<p>What you need to know is that <strong>columns don't have a fixed width.</strong> They can vary based on the resolution of the screen, or the size of the window (try scaling down this window to see what we mean). Design with that in mind.</p>
+			<p>The grid is built around two key elements: rows and columns. For layouts to work properly, always put your page content inside a <code>rowMain</code> (no, not the noodle) and a column. Our grid system doesn't rely on fixed widths. They are designed with the "fluid" mindset and are percentages of the window or device width.</p>
 
 			<hr />
 
 			<h4>Technical Details</h4>
-			<p>The Foundation 3 grid, like everything else in Foundation 3, is built with <code>box-sizing: border-box</code>, a powerful CSS property that tells the browser to consider border and padding as part of the width of an object rather than as an addition. That enables us to construct the grid extremely simply, which is good news for anyone who lamented how difficult it was to modify the Foundation 2 grid.</p>
-			<p>Now, gutters are created simply with padding on the-columns. That means-columns have simple widths like 25%, or 50%. Adjusting the padding adjusts the gutters, and this can be controlled either through SCSS variables, the download customizer, or through the CSS itself.</p>
+			<p>Like all things with this framework, grids are built with <code>box-sizing: border-box</code> property. In my opinion, this fixes a long standing BUG in the layout system of older browsers. By using this property, we can make building grids nice and easy.</p>
+			<p>Margins are not used in our grid system. We use <code>padding</code> to create the gutters, and it's all based on the vertical rhythm we discussed above: 20px unit. Grids are created by a parent-child relationship between rows and columns respectively. The parent, or row, should have a class of <code>row</code> (easy enough). Then, you just declare how wide you want your column: <code>fourColumns</code>, <code>sixColumns</code> or how about <code>oneColumn</code>?</p>
+			<p>You will notice that all rows (not the <code>rowMain</code>) actually extend further than it's parent row. That's purposefully designed. Since columns have to have gutters, you need to remove the gutter (using negative margins) when nesting rows or the grid will be misaligned. This is normal behavior for a grid system.</p>
 
 			<div class="row">
 				<div class="fourColumns">
 					<h5>Spaced Grid</h5>
-					<p>The grid uses <code>display: inline-block</code> and has a bit of space between elements. This is good for the inner portions of your app that seamless design is not an issue and more independent blocks, rather than table-cells are needed.</p>
+					<p><strong>Out grid system does not use <code>float</code> at all. Actually, this whole framework doesn't have a single float property in it!</strong> This grid uses <code>display: inline-block</code> and has a very small bit of space between elements. 99% of the time, this should not be an issue if you're designing sites in a modern way (stop slicing in Photoshop and re-piecing in the browser!). If, for some reason, you do need seamless grids, you can try the <code>table-cell</code> based grid system below, but it's not as easy to work with as this one, but still easier than <code>float</code>-based layouts.</p>
 				</div>
 
 				<div class="eightColumns">
@@ -174,8 +173,9 @@
 				<div class="fourColumns">
 					<a name="base-ex"></a>
 
-					<h5>Seamless Grid with Equal HeightColumns</h5>
-					<p>This grid uses <code>display: table-cell</code> to create a seamless grid system and provides equal heightColumns. This grid system is good for laying out the sections of your site.</p>
+					<h5>Seamless Grid with Equal Height Columns</h5>
+					<p>This grid uses <code>display: table-cell</code> to create a seamless grid system and provides equal height columns with hacks or JavaScript. Yay! This grid system is good for laying out the major sections of your site. <strong>Use conservatively though; you've been warned!</strong></p>
+					<p>To use it, rather than using the <code>row</code> class, use the <code>rowSeamless</code> class with one of the <code>fourSeamlessColumns</code>, <code>sixSeamlessColumns</code> … you get the idea.</p>
 				</div>
 
 				<div class="eightColumns">
@@ -312,7 +312,7 @@
 				<div class="fourColumns">
 					<a name="offset"></a>
 					<h4>Offsets</h4>
-					<p>Offsets allow you to create additional space betweenColumns in a row. Like the rest of the grid, they're nestable.</p>
+					<p>Offsets allow you to create additional space betweenColumns in a row. Like the rest of the grid, they're nestable. To do this, just add the class <code>offsetBy_one</code>, <code>offsetBy_two</code> or any other number of offsets.</p>
 				</div>
 				<div class="eightColumns">
 					<div class="row display">
@@ -327,44 +327,44 @@
 						<div class="oneColumns">
 							.one
 						</div>
-						<div class="tenColumns offset-by-one">
-							.tenColumns.offset-by-one
+						<div class="tenColumns offsetBy_one">
+							.tenColumns.offsetBy_one
 						</div>
 					</div>
 					<div class="row display">
 						<div class="oneColumns">
 							.one
 						</div>
-						<div class="nineColumns offset-by-two">
-							.nineColumns.offset-by-two
+						<div class="nineColumns offsetBy_two">
+							.nineColumns.offsetBy_two
 						</div>
 					</div>
 					<div class="row display">
 						<div class="oneColumns">
 							.one
 						</div>
-						<div class="eightColumns offset-by-three">
-							.eightColumns.offset-by-three
+						<div class="eightColumns offsetBy_three">
+							.eightColumns.offsetBy_three
 						</div>
 					</div>
 					<div class="row display">
-						<div class="sevenColumns offset-by-five">
-							.sevenColumns.offset-by-five
+						<div class="sevenColumns offsetBy_five">
+							.sevenColumns.offsetBy_five
 						</div>
 					</div>
 					<div class="row display">
-						<div class="sixColumns offset-by-six">
-							.sixColumns.offset-by-six
+						<div class="sixColumns offsetBy_six">
+							.sixColumns.offsetBy_six
 						</div>
 					</div>
 					<div class="row display">
-						<div class="fiveColumns offset-by-seven">
-							.fiveColumns.offset-by-seven
+						<div class="fiveColumns offsetBy_seven">
+							.fiveColumns.offsetBy_seven
 						</div>
 					</div>
 					<div class="row display">
-						<div class="fourColumns offset-by-eight">
-							.fourColumns.offset-by-eight
+						<div class="fourColumns offsetBy_eight">
+							.fourColumns.offsetBy_eight
 						</div>
 					</div>
 				</div>
@@ -374,67 +374,67 @@
 				<div class="fourColumns">
 					<a name="right"></a>
 					<h4>Right Aligned Columns</h4>
-					<p>Columns are naturally centered, but you can control the alignment by adding an additional left or right class to the row. This does not alter the alignment of their content, but just the grid element itself.</p>
+					<p>You can control the alignment by adding an additional left or right class to the row. This does not alter the alignment of their content, but just the grid element itself.</p>
 				</div>
 				<div class="eightColumns">
 					<div class="row display right">
 						<div class="oneColumns">
-							.oneColumns.right
+							.oneColumns
 						</div>
 					</div>
 					<div class="row display right">
 						<div class="twoColumns">
-							.twoColumns.right
+							.twoColumns
 						</div>
 					</div>
 					<div class="row display right">
 						<div class="threeColumns">
-							.threeColumns.right
+							.threeColumns
 						</div>
 					</div>
 					<div class="row display right">
 						<div class="fourColumns">
-							.fourColumns.right
+							.fourColumns
 						</div>
 					</div>
 					<div class="row display right">
 						<div class="fiveColumns">
-							.fiveColumns.right
+							.fiveColumns
 						</div>
 					</div>
 					<div class="row display right">
 						<div class="sixColumns">
-							.sixColumns.right
+							.sixColumns
 						</div>
 					</div>
 					<div class="row display right">
 						<div class="sevenColumns">
-							.sevenColumns.right
+							.sevenColumns
 						</div>
 					</div>
 					<div class="row display right">
 						<div class="eightColumns">
-							.eightColumns.right
+							.eightColumns
 						</div>
 					</div>
 					<div class="row display right">
 						<div class="nineColumns">
-							.nineColumns.right
+							.nineColumns
 						</div>
 					</div>
 					<div class="row display right">
 						<div class="tenColumns">
-							.tenColumns.right
+							.tenColumns
 						</div>
 					</div>
 					<div class="row display right">
 						<div class="elevenColumns">
-							.elevenColumns.right
+							.elevenColumns
 						</div>
 					</div>
 					<div class="row display right">
 						<div class="twelveColumns">
-							.twelveColumns.right
+							.twelveColumns
 						</div>
 					</div>
 				</div>
@@ -444,133 +444,80 @@
 				<div class="fourColumns">
 					<a name="center"></a>
 					<h4>Center Aligned Columns</h4>
-					<p>Columns are naturally centered, but you can control the alignment by adding an additional left or right class to the row. This does not alter the alignment of their content, but just the grid element itself.</p>
+					<p>You can center columns too. This is really only evident if you have partial columns for a row. Anyway, just add a class of <code>center</code> to the row. That's it!</p>
 				</div>
 				<div class="eightColumns">
 					<div class="row display center">
 						<div class="oneColumns">
-							.oneColumns.center
+							.oneColumns
 						</div>
 					</div>
 					<div class="row display center">
 						<div class="twoColumns">
-							.twoColumns.center
+							.twoColumns
 						</div>
 					</div>
 					<div class="row display center">
 						<div class="threeColumns">
-							.threeColumns.center
+							.threeColumns
 						</div>
 					</div>
 					<div class="row display center">
 						<div class="fourColumns">
-							.fourColumns.center
+							.fourColumns
 						</div>
 					</div>
 					<div class="row display center">
 						<div class="fiveColumns">
-							.fiveColumns.center
+							.fiveColumns
 						</div>
 					</div>
 					<div class="row display center">
 						<div class="sixColumns">
-							.sixColumns.center
+							.sixColumns
 						</div>
 					</div>
 					<div class="row display center">
 						<div class="sevenColumns">
-							.sevenColumns.center
+							.sevenColumns
 						</div>
 					</div>
 					<div class="row display center">
 						<div class="eightColumns">
-							.eightColumns.center
+							.eightColumns
 						</div>
 					</div>
 					<div class="row display center">
 						<div class="nineColumns">
-							.nineColumns.center
+							.nineColumns
 						</div>
 					</div>
 					<div class="row display center">
 						<div class="tenColumns">
-							.tenColumns.center
+							.tenColumns
 						</div>
 					</div>
 					<div class="row display center">
 						<div class="elevenColumns">
-							.elevenColumns.center
+							.elevenColumns
 						</div>
 					</div>
 					<div class="row display center">
 						<div class="twelveColumns">
-							.twelveColumns.center
+							.twelveColumns
 						</div>
 					</div>
 				</div>
 			</div>
-
-			<div class="row">
-				<div class="fourColumns">
-					<a name="mobile"></a>
-					<h4>Mobile Grid</h4>
-					<p>When you're creating your layout you can optionally attach classes that take your existing grid elements and attach them to a phone grid.</p>
-					<h5>Mobile Source Ordering</h5>
-					<p>The syntax includes <code>.pull-one-mobile</code>, <code>.pull-two-mobile</code>, <code>.pull-three-mobile</code>, <code>.push-one-mobile</code>, <code>.push-two-mobile</code>, <code>.push-three-mobile</code>.</p>
-				</div>
-				<div class="eightColumns">
-					<div class="row display">
-						<div class="threeColumns mobile-one">
-							.threeColumns.mobile-one
-						</div>
-						<div class="nineColumns mobile-three">
-							.nineColumns.mobile-three
-						</div>
-					</div>
-					<div class="row display">
-						<div class="sixColumns mobile-two">
-							.sixColumns.mobile-two
-						</div>
-						<div class="sixColumns mobile-two">
-							.sixColumns.mobile-two
-						</div>
-					</div>
-					<div class="row display">
-						<div class="nineColumns mobile-three">
-							.nineColumns.mobile-three
-						</div>
-						<div class="threeColumns mobile-one">
-							.threeColumns.mobile-one
-						</div>
-					</div>
-					<div class="row display">
-						<div class="sixColumns mobile-two">
-							.sixColumns.mobile-two
-						</div>
-						<div class="sixColumns mobile-two">
-							.sixColumns.mobile-two
-						</div>
-					</div>
-					<div class="row display">
-						<div class="nineColumns mobile-three">
-							.nineColumns.mobile-three
-						</div>
-						<div class="threeColumns mobile-one">
-							.threeColumns.mobile-one
-						</div>
-					</div>
-				</div>
-			</div>
-
 			<div class="row">
 				<div class="fourColumns">
 					<a name="block"></a>
 					<h4>Block Grids</h4>
-					<p>Block grids are <code>ul</code> with <code>.two-up</code>, <code>.three-up</code>, <code>.four-up</code> and <code>.five-up</code> styles. These are ideal for blocked-in content generated by an application, as they do not require rows or even numbers of elements to display correctly.</p>
+					<p>Block grids are <code>ul</code> with a <code>twoUp</code>, <code>threeUp</code>, <code>fourUp</code> and <code>fiveUp</code> class. These are ideal for blocked-in content generated by an application, as they do not require rows or even numbers of elements to display correctly.</p>
 				</div>
 				<div class="eightColumns">
 					<h6>Two-up</h6>
-					<ul class="blockGrid two-up">
+					<ul class="blockGrid twoUp">
 						<li>Two-up element</li>
 						<li>Two-up element</li>
 						<li>Two-up element</li>
@@ -579,7 +526,7 @@
 					</ul>
 
 					<h6>Three-up</h6>
-					<ul class="blockGrid three-up">
+					<ul class="blockGrid threeUp">
 						<li>Three-up element</li>
 						<li>Three-up element</li>
 						<li>Three-up element</li>
@@ -587,25 +534,14 @@
 						<li>Three-up element</li>
 					</ul>
 
-					<h6>Four-up (Mobile)</h6>
-					<ul class="blockGrid mobile four-up">
+					<h6>Four-up</h6>
+					<ul class="blockGrid fourUp">
 						<li>Four-up element</li>
 						<li>Four-up element</li>
 						<li>Four-up element</li>
 						<li>Four-up element</li>
 						<li>Four-up element</li>
 						<li>Four-up element</li>
-					</ul>
-
-					<h6>Five-up</h6>
-					<ul class="blockGrid five-up mobile-three-up">
-						<li>Five-up element</li>
-						<li>Five-up element</li>
-						<li>Five-up element</li>
-						<li>Five-up element</li>
-						<li>Five-up element</li>
-						<li>Five-up element</li>
-						<li>Five-up element</li>
 					</ul>
 				</div>
 			</div>

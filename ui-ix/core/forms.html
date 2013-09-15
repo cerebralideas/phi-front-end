@@ -1,4 +1,4 @@
-<!-- Test Foundation Components Here -->
+<!-- Test Framework Components Here -->
 	<div class="row">
 		<div class="twelveColumns">
 			<a name="general"></a>
@@ -12,7 +12,7 @@
 				<div class="fourColumns">
 					<a name="row-layout"></a>
 					<h4>Row Layouts</h4>
-					<p>Here's an example of a form layout controlled with rows and-columns.</p>
+					<p>Here's an example of a default form layout controlled with rows and columns.</p>
 				</div>
 				<div class="eightColumns">
 					<form>
@@ -35,7 +35,7 @@
 						<textarea placeholder="Message"></textarea>
 					</form>
 
-					<p>Sometimes you want a form with labels to the left of your inputs. Piece of cake. You can add a class of <code>.inline-form</code> to the form.</p>
+					<p>Sometimes you want a form with labels to the left of your inputs. Piece of cake. You can add a class of <code>.inlineForm</code> to the <code>form</code> element.</p>
 
 					<br>
 
@@ -72,13 +72,25 @@
 					<form class="custom">
 						<fieldset>
 
-							<legend>Fieldset Name</legend>
+							<legend>Fieldset One</legend>
 
-							<label for="standard_input_2">This is a label.</label>
-							<input type="text" placeholder="Standard Input" id="standard_input_2"/>
+							<label for="standard_input_2">Who are you?</label>
+							<input type="text" placeholder="Full Name" id="standard_input_2"/>
 
 							<label for="address_2">Address</label>
 							<input type="text" id="address_2" />
+							<input type="text" class="six" />
+
+						</fieldset>
+						<fieldset>
+
+							<legend>Fieldset Two</legend>
+
+							<label for="standard_input_3">Significant other?</label>
+							<input type="text" placeholder="Full Name" id="standard_input_3"/>
+
+							<label for="address_4">Address</label>
+							<input type="text" id="address_4" />
 							<input type="text" class="six" />
 
 						</fieldset>
@@ -89,8 +101,8 @@
 			<div class="row">
 				<div class="fourColumns">
 					<a name="collapsed"></a>
-					<h4>Additional Input Identifiers and Attached Buttons</h4>
-					<p>Foundation forms support actions tied to buttons, and prefix / postfix labels. Essentially you can use a 'collapsed' row to create label / action / input combinations. Here are a few examples.</p>
+					<h4>Fancy Inputs</h4>
+					<p>Need decorative/communicative elements tied to inputs? All you need to do is wrap the input element with the prefix/postfix element in a <code>div</code> tag. Then, give the <code>div</code> element a class of either <code>inputPrefix</code> or <code>inputPostfix</code>. Finally, the prefix/postfix element needs a class of <code>addOn</code>. Here are a few examples.</p>
 				</div>
 				<div class="eightColumns">
 					<div class="row">
@@ -121,7 +133,7 @@
 				<div class="fourColumns">
 					<a name="errors"></a>
 					<h4>Help and Error States</h4>
-					<p>Foundation includes error states for labels, inputs and messaging that you can have your app generate programatically.
+					<p>Phi includes error states for labels, inputs and messaging that you can have your app generate programatically. All you need to do is add the "message" in a <code>small</code> element, add an <code>error</code> class to the wrapping element, and if you really want it to stand out, add an <code>alert</code> class to the "message".</p>
 				</div>
 				<div class="eightColumns">
 					<div class="row">
@@ -161,13 +173,13 @@
 
 									<label for="twitter">Twitter</label>
 									<div class="inputPrefix inputPrefixMini">
-										<span class="addOn">@</span><input type="text" placeholder="foundationzurb"
+										<span class="addOn">@</span><input type="text" placeholder="cerebralix"
 												id="twitter"	/>
 									</div>
 
 									<label for="url">URL</label>
 									<div class="inputPostfix">
-										<input type="text" placeholder="foundation.zurb" id="url"/><span class="addOn">.com</span>
+										<input type="text" placeholder="www.google.com" id="url"/><span class="addOn">.com</span>
 									</div>
 								</div>
 
@@ -179,7 +191,7 @@
 
 									<div class="error">
 										<label for="error_4">Birthdate</label>
-										<input type="text" id="error_4" />
+										<input type="text" id="error_4" value="13/29/2013" />
 										<small class="alert">Invalid date entry.</small>
 									</div>
 
@@ -212,8 +224,8 @@
 			<div class="row">
 				<div class="fourColumns">
 					<a name="custom"></a>
-					<h4>Custom Inputs</h4>
-					<p>Custom form input types that are included with Foundation.</p>
+					<h4>More Form Inputs</h4>
+					<p>Default form input types. The only input that has a custom style is the <code>select</code> element, but that custom style is webkit only. It degrades into regular style in other browsers.</p>
 				</div>
 
 				<div class="eightColumns">

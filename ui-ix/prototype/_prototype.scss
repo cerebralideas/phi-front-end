@@ -130,21 +130,6 @@ select {
 
 // Tabs
 
-.pillStyle {
-	margin: 0;
-
-	.tab > a {
-		@include border-radius(1000px);
-		padding: ($baseLineHeight / 2);
-	}
-	.tab.active a {
-		background-color: $primaryColor;
-		color: #fff;
-	}
-	& + .tabsContent {
-		border: none;
-	}
-}
 
 // Helper Classes
 

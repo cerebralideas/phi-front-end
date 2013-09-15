@@ -7,7 +7,7 @@
 				<div class="fourColumns">
 					<a name="breadcrumbs"></a>
 					<h4>Breadcrumbs</h4>
-					<p></p>
+					<p>To use this, just add the class of <code>breadcrumbs</code> to a <code>ul</code> or links.</p>
 				</div>
 
 				<div class="eightColumns">
@@ -24,7 +24,7 @@
 				<div class="fourColumns">
 					<a name="labels"></a>
 					<h4>Labels</h4>
-					<p>Labels are useful inline styles that can be dropped into body copy to call out certain sections or to attach metadata. Examples might be noting when something was updated or that something is new. The syntax is simple, just a <code>span</code> element with a class of .label. The border styling mirrors that of the Foundation buttons.</p>
+					<p>Labels are easy, just a <code>span</code> element with a class of <code>label</code>. Additional styling can be added by using the classes <code>round</code> or color classes like <code>alert</code> or <code>success</code>.</p>
 				</div>
 
 				<div class="eightColumns">
@@ -42,15 +42,15 @@
 							</p>
 						</div>
 					</div>
-					<p><span class="radius label default">Example Label</span> This label could read a date for an update or it could include an author name or anything really. Inline labels are pretty handy when you need to draw attention or visually separate a short piece of content.</p>
+					<p><span class="label default">Example Inline Label</span> <-- this is what a label looks inlined into normal text. Here's <span class="label success">another lanel</span> for good measure.</p>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="fourColumns">
 					<a name="keystrokes"></a>
-				 <h4>Keystrokes</h4>
-					<p>If you have keyboard affordances you might need to explain them, and to that end there's a simple keystroke character affordance in Foundation.</p>
+					<h4>Keystrokes</h4>
+					<p>If you want to differentiate keyboard shortcuts from regular text, you can use the element <code>kbd</code>.</p>
 				</div>
 				<div class="eightColumns">
 					<p>For example, to close your browser hit <kbd>Cmd</kbd> + <kbd>Q</kbd>. Don't actually do it. There's more docs to read.</p>
@@ -59,9 +59,20 @@
 
 			<div class="row">
 				<div class="fourColumns">
+					<a name="keystrokes"></a>
+					<h4>Code</h4>
+					<p>If you want to differentiate code from regular text, you can use the element <code>code</code>.</p>
+				</div>
+				<div class="eightColumns">
+					<p>Here's a shell script for creating a file <code>$ touch new-file.txt</code>.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="fourColumns">
 					<a name="panels"></a>
 					<h4>Panels</h4>
-					<p>A panel is a simple, helpful css class that enables you to outline sections of your page easily. This allows you to view your page sections as you add content to them, or add emphasis to a section. There are two styles built in, and they support a class of <code>.radius</code> to round them off.</p>
+					<p><code>panel</code> is a helper class for defining a special section of a site or app.</p>
 				</div>
 				<div class="eightColumns">
 					<div class="row">
@@ -74,7 +85,7 @@
 						<div class="sixColumns">
 							<div class="panel callout">
 								<h5>This is a callout panel.</h5>
-								<p>It's a little ostentatious, but useful for important content.</p>
+								<p>Just use the class <code>callout</code> to make this happen.</p>
 							</div>
 						</div>
 					</div>
@@ -84,16 +95,16 @@
 			<div class="row">
 				<div class="fourColumns">
 					<a name="inlineList"></a>
-					<h4>Inline Link List</h4>
-					<p>When you just need a horizontal list of links, like in a footer, and you want more control than just spaces between them you can use this simple construct.</p>
+					<h4>Inline List</h4>
+					<p>When you just need a horizontal list of items, <code>inlineList</code> is the class you want.</p>
 				</div>
 				<div class="eightColumns">
-					<ul class="inlineLinkList">
-						<li><a href="#">Link 1</a></li>
-						<li><a href="#">Link 2</a></li>
-						<li><a href="#">Link 3</a></li>
-						<li><a href="#">Link 4</a></li>
-						<li><a href="#">Link 5</a></li>
+					<ul class="inlineList">
+						<li>List Item 1</li>
+						<li>List Item 2</li>
+						<li>List Item 3</li>
+						<li>List Item 4</li>
+						<li>List Item 5</li>
 					</ul>
 				</div>
 			</div>
@@ -102,11 +113,11 @@
 				<div class="fourColumns">
 					<a name="progress-bars"></a>
 					<h4>Progress Bars</h4>
-					<p>A simple way to add a progress bar to your layout. You can edit the border radius by adding a class of <code>.radius</code> or <code>.round</code>. You can change the color by adding the classes <code>.secondary</code>, <code>.success</code>, or <code>.alert</code>. If you want to adjust the length, just use a number class. For example <code>class="progress four"</code> will make the progress bar 33% wide.</p>
+					<p>A simple way to add a progress bar to your layout. You can edit the border radius by adding a class of <code>radius</code> or <code>round</code>. You can change the color by adding the classes <code>secondary</code>, <code>success</code>, or <code>alert</code>. The length of the bar is dependent on it's parent column width.</p>
 				</div>
 				<div class="eightColumns">
 					<br>
-					<div class="progress six">
+					<div class="progress">
 						<span class="meter default" style="width: 20%"></span>
 					</div>
 					<div class="radius progress">
@@ -122,7 +133,7 @@
 				<div class="fourColumns">
 					<a name="thumbs"></a>
 					<h4>Image Thumbnails</h4>
-					<p>When you need an image thumbnail that is slightly more styled than just a plain old image.</p>
+					<p>When you need an image thumbnail that is slightly more styled than just a plain old image, use the <code>th</code> class on the <code>img</code>'s parent element. Below, I use an anchor element.</p>
 				</div>
 				<div class="eightColumns">
 					<a class="th" href="#"><img src="http://placehold.it/350x200" width="350" height="200"></a>

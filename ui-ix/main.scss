@@ -17,6 +17,12 @@
 @import 'core/_forms';
 @import 'core/_buttons';
 
+// Icons
+// This currently uses the whole icon library,
+// which is not recommended. Load only the icons
+// you need.
+@import 'core/_icons';
+
 /*******************************************
  * THIS MAKES UP THE COMPONENTS OF PHI     *
  *******************************************
@@ -50,9 +56,3 @@
 
 // Prototyping Styles
 @import 'prototype/prototype';
-
-// Icons
-// This currently uses the whole icon library,
-// which is not recommended. Load only the icons
-// you need.
-@import 'prototype/_icons';
