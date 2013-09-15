@@ -10,8 +10,8 @@ $(function () {
 
 	var $nav = $('.dropDownMenu'),
 		$navItem = $nav.find('.navItem'),
-		downArrow = '<i>&#x25be;</i>', // creates HTML arrow
-		upArrow = '<i>&#x25b4;</i>', // creates HTML arrow
+		downArrow = '<i>&#xe0ca;</i>', // creates HTML arrow
+		upArrow = '<i>&#xe0cb;</i>', // creates HTML arrow
 		arrow,
 		dropDown;
 

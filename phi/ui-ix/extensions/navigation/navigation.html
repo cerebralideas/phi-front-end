@@ -1,14 +1,14 @@
-<!-- Test Foundation Components Here -->
+<!-- Test Framework Components Here -->
 <div class="row">
 	<div class="twelveColumns">
 		<h3>Navigation</h3>
-		<h4 class="subheader">Direct users around in style. There are navigation options for a number of situations, and everything is designed to work cross-device.</h4>
 
 		<div class="row">
 			<div class="fourColumns">
 				<a name="inlineLinkList"></a>
 				<h4>Inline Navigation w/Dropdowns</h4>
-				<p>The default top nav bar for Foundation includes the main nav options as well as hover dropdowns that support either a list of anchors or arbitrary content (even Grid content).</p>
+				<p>The default navigation includes the option for drop-down sub-menus. The first thing you need to do is declare <code>inlineLinkList</code> class on the <code>ul</code> for horizontal nav or <code>linkList</code> (see below) for a vertical one. Then, each main <code>li</code> gets a class <code>navItem</code>.</p>
+				<p>If you want sub-menus, then just add the class <code>dropDownMenu</code> on the top level <code>ul</code>, and any nested <code>ul</code> will automatically have the necessary functionality generated from the <code>navigation.js</code> plugin. Additionally, you can add <code>hasHover</code> to the top level <code>ul</code> to have a fallback CSS-only sub-menu functionality, if JS fails to load or execute.</p>
 			</div>
 			<div class="eightColumns">
 				<nav>

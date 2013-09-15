@@ -25,22 +25,19 @@
 }
 
 /* Sizes */
-.largeButton {
+.buttonLarge {
 	font-size: $largeFontSize;
 	line-height: 1em;
 	font-weight: 700;
 	padding: 1.1em 1.5em;
 	margin:  0.55em 0;
 }
-.mediumButton {
-	font-size: 1em;
-}
-.smallButton {
+.buttonSmall {
 	font-size: $smallFontSize;
 	padding: 0 ($baseLineHeight / 4);
 	line-height: 1.285714286em;
 }
-.expandedButton {
+.buttonExpanded {
 	width: 100%;
 }
 

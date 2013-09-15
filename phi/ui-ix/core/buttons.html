@@ -3,20 +3,19 @@
 		<div class="twelveColumns">
 
 			<h3>Buttons</h3>
-			<h4 class="subheader">Buttons are a convenient tool when it comes to more traditional actions. To that end, Foundation includes a lot of easy to use button styles that you can customize or override.</h4>
 
 			<div class="row">
 				<div class="fourColumns">
 					<a name="buttons"></a>
 					<h4>Basic Buttons</h4>
-					<p>Foundation buttons have a number of parameters and styles &mdash; you can see a few examples below. The out of the box classes include size, type (color) and style (square, slightly rounded, and completely rounded).</p>
+					<p>Many UI frameworks contain a plethora of button styles. We don't. We just start you off with the basic button. Just add the class <code>button</code> to anything clickable. By default, the button class does nothing more than add the necessary margin and padding (as you can see in the "No Style" example. If you want the default style, add the <code>default</code> class. It's up to you to take it from there.</p>
 				</div>
 
 				<div class="eightColumns">
 					<div class="row">
 						<div class="twelveColumns">
 
-							<p>Buttons come in different colors. Each color usually associates with an action.</p>
+							<p>Buttons come in different colors. Each color usually associates with an action. Use classes like <code>primary</code>, <code>alert</code> and the like to style them up.</p>
 
 							<a href="#" class="button">No Style</a>
 							<a href="#" class="button default">Default</a>
@@ -26,10 +25,11 @@
 
 							<hr/>
 
-							<p>Buttons come in different sizes.</p>
-							<a href="#" class="button smallButton default">Small Button &raquo;</a><br/>
+							<p>Buttons come in different sizes. Use </p>
+							<a href="#" class="button buttonSmall default">Small Button &raquo;</a><br/>
 							<a href="#" class="button default">Regular Button &raquo;</a><br/>
-							<a href="#" class="button largeButton default">Large Button &raquo;</a><br/>
+							<a href="#" class="button buttonLarge default">Large Button &raquo;</a><br/>
+							<a href="#" class="button buttonExpanded default">Expanded Button</a>
 
 							<hr/>
 
@@ -47,7 +47,7 @@
 				<div class="fourColumns">
 					<a name="buttonGroups"></a>
 					<h4>Button Groups</h4>
-					<p>When you need a group of actions, button groups give you some easy-to-use options. These can have a class of <code>.rounded</code> or <code>.even</code>. You can even create button bars by using <code>.button-bar</code>.</p>
+					<p>Button groups or "toolbar" like elements can be created with the <code>buttonGroup</code> class on a parent <code>ul</code> with the class of <code>button</code> on the <code>li</code>s.</p>
 				</div>
 				<div class="eightColumns">
 					<ul class="buttonGroup">

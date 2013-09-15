@@ -1088,51 +1088,46 @@ ul, ol, dl {
   list-style-position: outside;
 }
 
-/* line 168, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 169, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ul li ul, ul li ol {
   margin-left: 1.25em;
 }
-/* line 173, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 174, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ul.square {
   list-style-type: square;
 }
-/* line 176, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 177, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ul.square li ul {
   list-style: inherit;
 }
-/* line 181, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 182, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ul.circle {
   list-style-type: circle;
 }
-/* line 184, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 185, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ul.circle li ul {
   list-style: inherit;
 }
-/* line 189, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 190, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ul.disc {
   list-style-type: disc;
 }
-/* line 192, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 193, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ul.disc li ul {
   list-style: inherit;
 }
-/* line 197, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 198, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ul.no-bullet {
   list-style: none;
 }
-/* line 200, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
+/* line 201, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ul.large li {
   line-height: 21px;
 }
 
-/* line 204, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
-ol {
-  margin-left: 1.25em;
-}
 /* line 209, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_typography.scss */
 ol li ul, ol li ol {
   margin-left: 1.25em;
-  margin-bottom: 0;
 }
 
 /* Blockquotes ---------------------- */
@@ -1258,7 +1253,6 @@ abbr {
 /* Small screens */
 /* Landscape Orientation */
 /* Portrait Orientation */
-/* Touch Detection */
 /* Requires globals.css */
 /* Standard Forms ---------------------- */
 /* line 5, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_forms.scss */
@@ -1676,7 +1670,7 @@ textarea.error {
 
 /* Sizes */
 /* line 28, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
-.largeButton {
+.buttonLarge {
   font-size: 1.125em;
   line-height: 1em;
   font-weight: 700;
@@ -1685,47 +1679,42 @@ textarea.error {
 }
 
 /* line 35, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
-.mediumButton {
-  font-size: 1em;
-}
-
-/* line 38, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
-.smallButton {
+.buttonSmall {
   font-size: 0.9em;
   padding: 0 0.3125em;
   line-height: 1.285714286em;
 }
 
-/* line 43, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
-.expandedButton {
+/* line 40, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
+.buttonExpanded {
   width: 100%;
 }
 
 /* Don't use native buttons on iOS */
-/* line 48, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
+/* line 45, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
 input[type=submit].button, button.button {
   -webkit-appearance: none;
 }
 
 /* Button Groups ---------------------- */
-/* line 54, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
+/* line 51, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
 .buttonGroup {
   list-style: none;
   padding: 0;
   margin: 0 0 12px;
   display: table;
 }
-/* line 60, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
+/* line 57, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
 .buttonGroup li {
   padding: 0;
   margin: 0 0 0 -1px;
   display: table-cell;
 }
-/* line 64, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
+/* line 61, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
 .buttonGroup li:first-child {
   margin-left: 0;
 }
-/* line 69, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
+/* line 66, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
 .buttonGroup li a.button, .buttonGroup li a.button, .buttonGroup li input[type="submit"].button, .buttonGroup li input[type="submit"].button {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -1734,7 +1723,7 @@ input[type=submit].button, button.button {
   border-radius: 0px;
   border-right-width: 0;
 }
-/* line 75, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
+/* line 72, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
 .buttonGroup li:first-child a.button, .buttonGroup li:first-child input[type="submit"].button {
   -moz-border-radius-topleft: 3px;
   -webkit-border-top-left-radius: 3px;
@@ -1743,7 +1732,7 @@ input[type=submit].button, button.button {
   -webkit-border-bottom-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
-/* line 79, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
+/* line 76, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
 .buttonGroup li:first-child a.button.rounded, .buttonGroup li:first-child input[type="submit"].button.rounded {
   -moz-border-radius-topleft: 1000px;
   -webkit-border-top-left-radius: 1000px;
@@ -1752,7 +1741,7 @@ input[type=submit].button, button.button {
   -webkit-border-bottom-left-radius: 1000px;
   border-bottom-left-radius: 1000px;
 }
-/* line 85, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
+/* line 82, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
 .buttonGroup li:last-child a.button, .buttonGroup li:last-child input[type="submit"].button {
   -moz-border-radius-topright: 3px;
   -webkit-border-top-right-radius: 3px;
@@ -1762,7 +1751,7 @@ input[type=submit].button, button.button {
   border-bottom-right-radius: 3px;
   border-right-width: 1px;
 }
-/* line 90, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
+/* line 87, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
 .buttonGroup li:last-child a.button.rounded, .buttonGroup li:last-child input[type="submit"].button.rounded {
   -moz-border-radius-topright: 1000px;
   -webkit-border-top-right-radius: 1000px;
@@ -1773,12 +1762,12 @@ input[type=submit].button, button.button {
   border-right-width: 1px;
 }
 
-/* line 101, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
+/* line 98, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
 div.buttonBar .buttonGroup {
   display: inline-block;
   margin-right: 1.25em;
 }
-/* line 105, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
+/* line 102, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_buttons.scss */
 div.buttonBar ul.buttonGroup:last-child {
   margin-right: 0;
 }
@@ -1789,6 +1778,1446 @@ div.buttonBar ul.buttonGroup:last-child {
 /* Landscape Orientation */
 /* Portrait Orientation */
 /* Touch Detection */
+@font-face {
+  font-family: 'entypo';
+  src: url("../../../fonts/entypo-icons/fonts/entypo.eot");
+  src: url("../../../fonts/entypo-icons/fonts/entypo.eot?#iefix") format("embedded-opentype"), url("../../../fonts/entypo-icons/fonts/entypo.woff") format("woff"), url("../../../fonts/entypo-icons/fonts/entypo.ttf") format("truetype"), url("../../../fonts/entypo-icons/fonts/entypo.dev.svg#entypo") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 12, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.useCalendar, .icon-phone, .icon-mobile, .icon-mouse, .icon-directions, .icon-mail, .icon-paperplane, .icon-pencil, .icon-feather, .icon-paperclip, .icon-drawer, .icon-reply, .icon-reply-all, .icon-forward, .icon-user, .icon-users, .icon-user-add, .icon-vcard, .icon-export, .icon-location, .icon-map, .icon-compass, .icon-location-2, .icon-target, .icon-share, .icon-sharable, .icon-heart, .icon-heart-2, .icon-star, .icon-star-2, .icon-thumbs-up, .icon-thumbs-down, .icon-chat, .icon-comment, .icon-quote, .icon-house, .icon-popup, .icon-search, .icon-flashlight, .icon-printer, .icon-bell, .icon-link, .icon-flag, .icon-cog, .icon-tools, .icon-trophy, .icon-tag, .icon-camera, .icon-megaphone, .icon-moon, .icon-palette, .icon-leaf, .icon-music, .icon-music-2, .icon-new, .icon-graduation, .icon-book, .icon-newspaper, .icon-bag, .icon-airplane, .icon-lifebuoy, .icon-eye, .icon-clock, .icon-microphone, .icon-calendar, .icon-bolt, .icon-thunder, .icon-droplet, .icon-cd, .icon-briefcase, .icon-air, .icon-hourglass, .icon-gauge, .icon-language, .icon-network, .icon-key, .icon-battery, .icon-bucket, .icon-magnet, .icon-drive, .icon-cup, .icon-rocket, .icon-brush, .icon-suitcase, .icon-cone, .icon-earth, .icon-keyboard, .icon-browser, .icon-publish, .icon-progress-3, .icon-progress-2, .icon-brogress-1, .icon-progress-0, .icon-sun, .icon-sun-2, .icon-adjust, .icon-code, .icon-screen, .icon-infinity, .icon-light-bulb, .icon-credit-card, .icon-database, .icon-voicemail, .icon-clipboard, .icon-cart, .icon-box, .icon-ticket, .icon-rss, .icon-signal, .icon-thermometer, .icon-droplets, .icon-untitled, .icon-statistics, .icon-pie, .icon-bars, .icon-graph, .icon-lock, .icon-lock-open, .icon-logout, .icon-login, .icon-checkmark, .icon-cross, .icon-minus, .icon-plus, .icon-cross-2, .icon-minus-2, .icon-plus-2, .icon-cross-3, .icon-minus-3, .icon-plus-3, .icon-erase, .icon-blocked, .icon-info, .icon-info-2, .icon-question, .icon-help, .icon-warning, .icon-cycle, .icon-cw, .icon-ccw, .icon-shuffle, .icon-arrow, .icon-arrow-2, .icon-retweet, .icon-loop, .icon-history, .icon-back, .icon-switch, .icon-list, .icon-add-to-list, .icon-layout, .icon-list-2, .icon-text, .icon-text-2, .icon-document, .icon-docs, .icon-landscape, .icon-pictures, .icon-video, .icon-music-3, .icon-folder, .icon-archive, .icon-trash, .icon-upload, .icon-download, .icon-disk, .icon-install, .icon-cloud, .icon-upload-2, .icon-bookmark, .icon-bookmarks, .icon-book-2, .icon-play, .icon-pause, .icon-record, .icon-stop, .icon-next, .icon-previous, .icon-first, .icon-last, .icon-resize-enlarge, .icon-resize-shrink, .icon-volume, .icon-sound, .icon-mute, .icon-flow-cascade, .icon-flow-branch, .icon-flow-tree, .icon-flow-line, .icon-flow-parallel, .icon-arrow-left, .icon-arrow-down, .icon-arrow-up--upload, .icon-arrow-right, .icon-arrow-left-2, .icon-arrow-down-2, .icon-arrow-up, .icon-arrow-right-2, .icon-arrow-left-3, .icon-arrow-down-3, .icon-arrow-up-2, .icon-arrow-right-3, .icon-arrow-left-4, .icon-arrow-down-4, .icon-arrow-up-3, .icon-arrow-right-4, .icon-arrow-left-5, .icon-arrow-down-5, .icon-arrow-up-4, .icon-arrow-right-5, .icon-arrow-left-6, .icon-arrow-down-6, .icon-arrow-up-5, .icon-arrow-right-6, .icon-arrow-left-7, .icon-arrow-down-7, .icon-arrow-up-6, .icon-untitled-2, .icon-arrow-left-8, .icon-arrow-down-8, .icon-arrow-up-7, .icon-arrow-right-7, .icon-menu, .icon-ellipsis, .icon-dots, .icon-dot, .icon-cc, .icon-cc-by, .icon-cc-nc, .icon-cc-nc-eu, .icon-cc-nc-jp, .icon-cc-sa, .icon-cc-nd, .icon-cc-pd, .icon-cc-zero, .icon-cc-share, .icon-cc-share-2, .icon-daniel-bruce, .icon-daniel-bruce-2, .icon-github, .icon-github-2, .icon-flickr, .icon-flickr-2, .icon-vimeo, .icon-vimeo-2, .icon-twitter, .icon-twitter-2, .icon-facebook, .icon-facebook-2, .icon-facebook-3, .icon-googleplus, .icon-googleplus-2, .icon-pinterest, .icon-pinterest-2, .icon-tumblr, .icon-tumblr-2, .icon-linkedin, .icon-linkedin-2, .icon-dribbble, .icon-dribbble-2, .icon-stumbleupon, .icon-stumbleupon-2, .icon-lastfm, .icon-lastfm-2, .icon-rdio, .icon-rdio-2, .icon-spotify, .icon-spotify-2, .icon-qq, .icon-instagram, .icon-dropbox, .icon-evernote, .icon-flattr, .icon-skype, .icon-skype-2, .icon-renren, .icon-sina-weibo, .icon-paypal, .icon-picasa, .icon-soundcloud, .icon-mixi, .icon-behance, .icon-circles, .icon-vk, .icon-smashing {
+  font-family: 'entypo';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 22, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-phone:before {
+  content: "\e000";
+}
+
+/* line 25, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-mobile:before {
+  content: "\e001";
+}
+
+/* line 28, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-mouse:before {
+  content: "\e002";
+}
+
+/* line 31, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-directions:before {
+  content: "\e003";
+}
+
+/* line 34, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-mail:before {
+  content: "\e004";
+}
+
+/* line 37, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-paperplane:before {
+  content: "\e005";
+}
+
+/* line 40, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-pencil:before {
+  content: "\e006";
+}
+
+/* line 43, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-feather:before {
+  content: "\e007";
+}
+
+/* line 46, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-paperclip:before {
+  content: "\e008";
+}
+
+/* line 49, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-drawer:before {
+  content: "\e009";
+}
+
+/* line 52, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-reply:before {
+  content: "\e00a";
+}
+
+/* line 55, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-reply-all:before {
+  content: "\e00b";
+}
+
+/* line 58, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-forward:before {
+  content: "\e00c";
+}
+
+/* line 61, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-user:before {
+  content: "\e00d";
+}
+
+/* line 64, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-users:before {
+  content: "\e00e";
+}
+
+/* line 67, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-user-add:before {
+  content: "\e00f";
+}
+
+/* line 70, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-vcard:before {
+  content: "\e010";
+}
+
+/* line 73, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-export:before {
+  content: "\e011";
+}
+
+/* line 76, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-location:before {
+  content: "\e012";
+}
+
+/* line 79, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-map:before {
+  content: "\e013";
+}
+
+/* line 82, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-compass:before {
+  content: "\e014";
+}
+
+/* line 85, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-location-2:before {
+  content: "\e015";
+}
+
+/* line 88, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-target:before {
+  content: "\e016";
+}
+
+/* line 91, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-share:before {
+  content: "\e017";
+}
+
+/* line 94, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-sharable:before {
+  content: "\e018";
+}
+
+/* line 97, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-heart:before {
+  content: "\e019";
+}
+
+/* line 100, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-heart-2:before {
+  content: "\e01a";
+}
+
+/* line 103, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-star:before {
+  content: "\e01b";
+}
+
+/* line 106, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-star-2:before {
+  content: "\e01c";
+}
+
+/* line 109, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-thumbs-up:before {
+  content: "\e01d";
+}
+
+/* line 112, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-thumbs-down:before {
+  content: "\e01e";
+}
+
+/* line 115, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-chat:before {
+  content: "\e01f";
+}
+
+/* line 118, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-comment:before {
+  content: "\e020";
+}
+
+/* line 121, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-quote:before {
+  content: "\e021";
+}
+
+/* line 124, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-house:before {
+  content: "\e022";
+}
+
+/* line 127, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-popup:before {
+  content: "\e023";
+}
+
+/* line 130, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-search:before {
+  content: "\e024";
+}
+
+/* line 133, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-flashlight:before {
+  content: "\e025";
+}
+
+/* line 136, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-printer:before {
+  content: "\e026";
+}
+
+/* line 139, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-bell:before {
+  content: "\e027";
+}
+
+/* line 142, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-link:before {
+  content: "\e028";
+}
+
+/* line 145, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-flag:before {
+  content: "\e029";
+}
+
+/* line 148, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cog:before {
+  content: "\e02a";
+}
+
+/* line 151, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-tools:before {
+  content: "\e02b";
+}
+
+/* line 154, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-trophy:before {
+  content: "\e02c";
+}
+
+/* line 157, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-tag:before {
+  content: "\e02d";
+}
+
+/* line 160, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-camera:before {
+  content: "\e02e";
+}
+
+/* line 163, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-megaphone:before {
+  content: "\e02f";
+}
+
+/* line 166, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-moon:before {
+  content: "\e030";
+}
+
+/* line 169, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-palette:before {
+  content: "\e031";
+}
+
+/* line 172, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-leaf:before {
+  content: "\e032";
+}
+
+/* line 175, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-music:before {
+  content: "\e033";
+}
+
+/* line 178, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-music-2:before {
+  content: "\e034";
+}
+
+/* line 181, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-new:before {
+  content: "\e035";
+}
+
+/* line 184, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-graduation:before {
+  content: "\e036";
+}
+
+/* line 187, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-book:before {
+  content: "\e037";
+}
+
+/* line 190, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-newspaper:before {
+  content: "\e038";
+}
+
+/* line 193, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-bag:before {
+  content: "\e039";
+}
+
+/* line 196, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-airplane:before {
+  content: "\e03a";
+}
+
+/* line 199, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-lifebuoy:before {
+  content: "\e03b";
+}
+
+/* line 202, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-eye:before {
+  content: "\e03c";
+}
+
+/* line 205, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-clock:before {
+  content: "\e03d";
+}
+
+/* line 208, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-microphone:before {
+  content: "\e03e";
+}
+
+/* line 211, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-calendar:before, .useCalendar:before {
+  content: "\e03f";
+}
+
+/* line 214, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-bolt:before {
+  content: "\e040";
+}
+
+/* line 217, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-thunder:before {
+  content: "\e041";
+}
+
+/* line 220, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-droplet:before {
+  content: "\e042";
+}
+
+/* line 223, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cd:before {
+  content: "\e043";
+}
+
+/* line 226, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-briefcase:before {
+  content: "\e044";
+}
+
+/* line 229, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-air:before {
+  content: "\e045";
+}
+
+/* line 232, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-hourglass:before {
+  content: "\e046";
+}
+
+/* line 235, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-gauge:before {
+  content: "\e047";
+}
+
+/* line 238, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-language:before {
+  content: "\e048";
+}
+
+/* line 241, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-network:before {
+  content: "\e049";
+}
+
+/* line 244, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-key:before {
+  content: "\e04a";
+}
+
+/* line 247, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-battery:before {
+  content: "\e04b";
+}
+
+/* line 250, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-bucket:before {
+  content: "\e04c";
+}
+
+/* line 253, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-magnet:before {
+  content: "\e04d";
+}
+
+/* line 256, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-drive:before {
+  content: "\e04e";
+}
+
+/* line 259, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cup:before {
+  content: "\e04f";
+}
+
+/* line 262, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-rocket:before {
+  content: "\e050";
+}
+
+/* line 265, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-brush:before {
+  content: "\e051";
+}
+
+/* line 268, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-suitcase:before {
+  content: "\e052";
+}
+
+/* line 271, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cone:before {
+  content: "\e053";
+}
+
+/* line 274, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-earth:before {
+  content: "\e054";
+}
+
+/* line 277, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-keyboard:before {
+  content: "\e055";
+}
+
+/* line 280, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-browser:before {
+  content: "\e056";
+}
+
+/* line 283, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-publish:before {
+  content: "\e057";
+}
+
+/* line 286, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-progress-3:before {
+  content: "\e058";
+}
+
+/* line 289, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-progress-2:before {
+  content: "\e059";
+}
+
+/* line 292, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-brogress-1:before {
+  content: "\e05a";
+}
+
+/* line 295, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-progress-0:before {
+  content: "\e05b";
+}
+
+/* line 298, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-sun:before {
+  content: "\e05c";
+}
+
+/* line 301, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-sun-2:before {
+  content: "\e05d";
+}
+
+/* line 304, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-adjust:before {
+  content: "\e05e";
+}
+
+/* line 307, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-code:before {
+  content: "\e05f";
+}
+
+/* line 310, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-screen:before {
+  content: "\e060";
+}
+
+/* line 313, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-infinity:before {
+  content: "\e061";
+}
+
+/* line 316, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-light-bulb:before {
+  content: "\e062";
+}
+
+/* line 319, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-credit-card:before {
+  content: "\e063";
+}
+
+/* line 322, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-database:before {
+  content: "\e064";
+}
+
+/* line 325, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-voicemail:before {
+  content: "\e065";
+}
+
+/* line 328, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-clipboard:before {
+  content: "\e066";
+}
+
+/* line 331, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cart:before {
+  content: "\e067";
+}
+
+/* line 334, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-box:before {
+  content: "\e068";
+}
+
+/* line 337, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-ticket:before {
+  content: "\e069";
+}
+
+/* line 340, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-rss:before {
+  content: "\e06a";
+}
+
+/* line 343, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-signal:before {
+  content: "\e06b";
+}
+
+/* line 346, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-thermometer:before {
+  content: "\e06c";
+}
+
+/* line 349, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-droplets:before {
+  content: "\e06d";
+}
+
+/* line 352, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-untitled:before {
+  content: "\e06e";
+}
+
+/* line 355, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-statistics:before {
+  content: "\e06f";
+}
+
+/* line 358, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-pie:before {
+  content: "\e070";
+}
+
+/* line 361, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-bars:before {
+  content: "\e071";
+}
+
+/* line 364, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-graph:before {
+  content: "\e072";
+}
+
+/* line 367, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-lock:before {
+  content: "\e073";
+}
+
+/* line 370, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-lock-open:before {
+  content: "\e074";
+}
+
+/* line 373, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-logout:before {
+  content: "\e075";
+}
+
+/* line 376, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-login:before {
+  content: "\e076";
+}
+
+/* line 379, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-checkmark:before {
+  content: "\e077";
+}
+
+/* line 382, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cross:before {
+  content: "\e078";
+}
+
+/* line 385, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-minus:before {
+  content: "\e079";
+}
+
+/* line 388, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-plus:before {
+  content: "\e07a";
+}
+
+/* line 391, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cross-2:before {
+  content: "\e07b";
+}
+
+/* line 394, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-minus-2:before {
+  content: "\e07c";
+}
+
+/* line 397, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-plus-2:before {
+  content: "\e07d";
+}
+
+/* line 400, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cross-3:before {
+  content: "\e07e";
+}
+
+/* line 403, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-minus-3:before {
+  content: "\e07f";
+}
+
+/* line 406, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-plus-3:before {
+  content: "\e080";
+}
+
+/* line 409, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-erase:before {
+  content: "\e081";
+}
+
+/* line 412, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-blocked:before {
+  content: "\e082";
+}
+
+/* line 415, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-info:before {
+  content: "\e083";
+}
+
+/* line 418, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-info-2:before {
+  content: "\e084";
+}
+
+/* line 421, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-question:before {
+  content: "\e085";
+}
+
+/* line 424, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-help:before {
+  content: "\e086";
+}
+
+/* line 427, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-warning:before {
+  content: "\e087";
+}
+
+/* line 430, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cycle:before {
+  content: "\e088";
+}
+
+/* line 433, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cw:before {
+  content: "\e089";
+}
+
+/* line 436, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-ccw:before {
+  content: "\e08a";
+}
+
+/* line 439, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-shuffle:before {
+  content: "\e08b";
+}
+
+/* line 442, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow:before {
+  content: "\e08c";
+}
+
+/* line 445, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-2:before {
+  content: "\e08d";
+}
+
+/* line 448, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-retweet:before {
+  content: "\e08e";
+}
+
+/* line 451, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-loop:before {
+  content: "\e08f";
+}
+
+/* line 454, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-history:before {
+  content: "\e090";
+}
+
+/* line 457, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-back:before {
+  content: "\e091";
+}
+
+/* line 460, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-switch:before {
+  content: "\e092";
+}
+
+/* line 463, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-list:before {
+  content: "\e093";
+}
+
+/* line 466, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-add-to-list:before {
+  content: "\e094";
+}
+
+/* line 469, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-layout:before {
+  content: "\e095";
+}
+
+/* line 472, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-list-2:before {
+  content: "\e096";
+}
+
+/* line 475, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-text:before {
+  content: "\e097";
+}
+
+/* line 478, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-text-2:before {
+  content: "\e098";
+}
+
+/* line 481, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-document:before {
+  content: "\e099";
+}
+
+/* line 484, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-docs:before {
+  content: "\e09a";
+}
+
+/* line 487, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-landscape:before {
+  content: "\e09b";
+}
+
+/* line 490, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-pictures:before {
+  content: "\e09c";
+}
+
+/* line 493, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-video:before {
+  content: "\e09d";
+}
+
+/* line 496, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-music-3:before {
+  content: "\e09e";
+}
+
+/* line 499, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-folder:before {
+  content: "\e09f";
+}
+
+/* line 502, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-archive:before {
+  content: "\e0a0";
+}
+
+/* line 505, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-trash:before {
+  content: "\e0a1";
+}
+
+/* line 508, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-upload:before {
+  content: "\e0a2";
+}
+
+/* line 511, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-download:before {
+  content: "\e0a3";
+}
+
+/* line 514, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-disk:before {
+  content: "\e0a4";
+}
+
+/* line 517, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-install:before {
+  content: "\e0a5";
+}
+
+/* line 520, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cloud:before {
+  content: "\e0a6";
+}
+
+/* line 523, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-upload-2:before {
+  content: "\e0a7";
+}
+
+/* line 526, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-bookmark:before {
+  content: "\e0a8";
+}
+
+/* line 529, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-bookmarks:before {
+  content: "\e0a9";
+}
+
+/* line 532, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-book-2:before {
+  content: "\e0aa";
+}
+
+/* line 535, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-play:before {
+  content: "\e0ab";
+}
+
+/* line 538, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-pause:before {
+  content: "\e0ac";
+}
+
+/* line 541, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-record:before {
+  content: "\e0ad";
+}
+
+/* line 544, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-stop:before {
+  content: "\e0ae";
+}
+
+/* line 547, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-next:before {
+  content: "\e0af";
+}
+
+/* line 550, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-previous:before {
+  content: "\e0b0";
+}
+
+/* line 553, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-first:before {
+  content: "\e0b1";
+}
+
+/* line 556, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-last:before {
+  content: "\e0b2";
+}
+
+/* line 559, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-resize-enlarge:before {
+  content: "\e0b3";
+}
+
+/* line 562, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-resize-shrink:before {
+  content: "\e0b4";
+}
+
+/* line 565, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-volume:before {
+  content: "\e0b5";
+}
+
+/* line 568, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-sound:before {
+  content: "\e0b6";
+}
+
+/* line 571, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-mute:before {
+  content: "\e0b7";
+}
+
+/* line 574, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-flow-cascade:before {
+  content: "\e0b8";
+}
+
+/* line 577, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-flow-branch:before {
+  content: "\e0b9";
+}
+
+/* line 580, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-flow-tree:before {
+  content: "\e0ba";
+}
+
+/* line 583, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-flow-line:before {
+  content: "\e0bb";
+}
+
+/* line 586, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-flow-parallel:before {
+  content: "\e0bc";
+}
+
+/* line 589, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-left:before {
+  content: "\e0bd";
+}
+
+/* line 592, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-down:before {
+  content: "\e0be";
+}
+
+/* line 595, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-up--upload:before {
+  content: "\e0bf";
+}
+
+/* line 598, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-right:before {
+  content: "\e0c0";
+}
+
+/* line 601, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-left-2:before {
+  content: "\e0c1";
+}
+
+/* line 604, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-down-2:before {
+  content: "\e0c2";
+}
+
+/* line 607, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-up:before {
+  content: "\e0c3";
+}
+
+/* line 610, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-right-2:before {
+  content: "\e0c4";
+}
+
+/* line 613, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-left-3:before {
+  content: "\e0c5";
+}
+
+/* line 616, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-down-3:before {
+  content: "\e0c6";
+}
+
+/* line 619, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-up-2:before {
+  content: "\e0c7";
+}
+
+/* line 622, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-right-3:before {
+  content: "\e0c8";
+}
+
+/* line 625, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-left-4:before {
+  content: "\e0c9";
+}
+
+/* line 628, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-down-4:before {
+  content: "\e0ca";
+}
+
+/* line 631, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-up-3:before {
+  content: "\e0cb";
+}
+
+/* line 634, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-right-4:before {
+  content: "\e0cc";
+}
+
+/* line 637, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-left-5:before {
+  content: "\e0cd";
+}
+
+/* line 640, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-down-5:before {
+  content: "\e0ce";
+}
+
+/* line 643, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-up-4:before {
+  content: "\e0cf";
+}
+
+/* line 646, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-right-5:before {
+  content: "\e0d0";
+}
+
+/* line 649, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-left-6:before {
+  content: "\e0d1";
+}
+
+/* line 652, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-down-6:before {
+  content: "\e0d2";
+}
+
+/* line 655, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-up-5:before {
+  content: "\e0d3";
+}
+
+/* line 658, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-right-6:before {
+  content: "\e0d4";
+}
+
+/* line 661, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-left-7:before {
+  content: "\e0d5";
+}
+
+/* line 664, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-down-7:before {
+  content: "\e0d6";
+}
+
+/* line 667, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-up-6:before {
+  content: "\e0d7";
+}
+
+/* line 670, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-untitled-2:before {
+  content: "\e0d8";
+}
+
+/* line 673, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-left-8:before {
+  content: "\e0d9";
+}
+
+/* line 676, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-down-8:before {
+  content: "\e0da";
+}
+
+/* line 679, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-up-7:before {
+  content: "\e0db";
+}
+
+/* line 682, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-arrow-right-7:before {
+  content: "\e0dc";
+}
+
+/* line 685, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-menu:before {
+  content: "\e0dd";
+}
+
+/* line 688, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-ellipsis:before {
+  content: "\e0de";
+}
+
+/* line 691, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-dots:before {
+  content: "\e0df";
+}
+
+/* line 694, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-dot:before {
+  content: "\e0e0";
+}
+
+/* line 697, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cc:before {
+  content: "\e0e1";
+}
+
+/* line 700, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cc-by:before {
+  content: "\e0e2";
+}
+
+/* line 703, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cc-nc:before {
+  content: "\e0e3";
+}
+
+/* line 706, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cc-nc-eu:before {
+  content: "\e0e4";
+}
+
+/* line 709, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cc-nc-jp:before {
+  content: "\e0e5";
+}
+
+/* line 712, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cc-sa:before {
+  content: "\e0e6";
+}
+
+/* line 715, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cc-nd:before {
+  content: "\e0e7";
+}
+
+/* line 718, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cc-pd:before {
+  content: "\e0e8";
+}
+
+/* line 721, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cc-zero:before {
+  content: "\e0e9";
+}
+
+/* line 724, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cc-share:before {
+  content: "\e0ea";
+}
+
+/* line 727, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-cc-share-2:before {
+  content: "\e0eb";
+}
+
+/* line 730, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-daniel-bruce:before {
+  content: "\e0ec";
+}
+
+/* line 733, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-daniel-bruce-2:before {
+  content: "\e0ed";
+}
+
+/* line 736, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-github:before {
+  content: "\e0ee";
+}
+
+/* line 739, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-github-2:before {
+  content: "\e0ef";
+}
+
+/* line 742, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-flickr:before {
+  content: "\e0f0";
+}
+
+/* line 745, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-flickr-2:before {
+  content: "\e0f1";
+}
+
+/* line 748, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-vimeo:before {
+  content: "\e0f2";
+}
+
+/* line 751, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-vimeo-2:before {
+  content: "\e0f3";
+}
+
+/* line 754, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-twitter:before {
+  content: "\e0f4";
+}
+
+/* line 757, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-twitter-2:before {
+  content: "\e0f5";
+}
+
+/* line 760, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-facebook:before {
+  content: "\e0f6";
+}
+
+/* line 763, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-facebook-2:before {
+  content: "\e0f7";
+}
+
+/* line 766, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-facebook-3:before {
+  content: "\e0f8";
+}
+
+/* line 769, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-googleplus:before {
+  content: "\e0f9";
+}
+
+/* line 772, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-googleplus-2:before {
+  content: "\e0fa";
+}
+
+/* line 775, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-pinterest:before {
+  content: "\e0fb";
+}
+
+/* line 778, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-pinterest-2:before {
+  content: "\e0fc";
+}
+
+/* line 781, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-tumblr:before {
+  content: "\e0fd";
+}
+
+/* line 784, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-tumblr-2:before {
+  content: "\e0fe";
+}
+
+/* line 787, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-linkedin:before {
+  content: "\e0ff";
+}
+
+/* line 790, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-linkedin-2:before {
+  content: "\e100";
+}
+
+/* line 793, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-dribbble:before {
+  content: "\e101";
+}
+
+/* line 796, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-dribbble-2:before {
+  content: "\e102";
+}
+
+/* line 799, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-stumbleupon:before {
+  content: "\e103";
+}
+
+/* line 802, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-stumbleupon-2:before {
+  content: "\e104";
+}
+
+/* line 805, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-lastfm:before {
+  content: "\e105";
+}
+
+/* line 808, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-lastfm-2:before {
+  content: "\e106";
+}
+
+/* line 811, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-rdio:before {
+  content: "\e107";
+}
+
+/* line 814, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-rdio-2:before {
+  content: "\e108";
+}
+
+/* line 817, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-spotify:before {
+  content: "\e109";
+}
+
+/* line 820, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-spotify-2:before {
+  content: "\e10a";
+}
+
+/* line 823, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-qq:before {
+  content: "\e10b";
+}
+
+/* line 826, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-instagram:before {
+  content: "\e10c";
+}
+
+/* line 829, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-dropbox:before {
+  content: "\e10d";
+}
+
+/* line 832, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-evernote:before {
+  content: "\e10e";
+}
+
+/* line 835, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-flattr:before {
+  content: "\e10f";
+}
+
+/* line 838, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-skype:before {
+  content: "\e110";
+}
+
+/* line 841, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-skype-2:before {
+  content: "\e111";
+}
+
+/* line 844, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-renren:before {
+  content: "\e112";
+}
+
+/* line 847, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-sina-weibo:before {
+  content: "\e113";
+}
+
+/* line 850, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-paypal:before {
+  content: "\e114";
+}
+
+/* line 853, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-picasa:before {
+  content: "\e115";
+}
+
+/* line 856, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-soundcloud:before {
+  content: "\e116";
+}
+
+/* line 859, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-mixi:before {
+  content: "\e117";
+}
+
+/* line 862, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-behance:before {
+  content: "\e118";
+}
+
+/* line 865, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-circles:before {
+  content: "\e119";
+}
+
+/* line 868, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-vk:before {
+  content: "\e11a";
+}
+
+/* line 871, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/core/_icons.scss */
+.icon-smashing:before {
+  content: "\e11b";
+}
+
 /*******************************************
  * THIS MAKES UP THE COMPONENTS OF PHI     *
  *******************************************
@@ -1996,52 +3425,52 @@ div.buttonBar ul.buttonGroup:last-child {
 }
 
 /* line 96, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-.offset-by-one {
+.offsetBy_one {
   margin-left: 7.83333%;
 }
 
 /* line 96, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-.offset-by-two {
+.offsetBy_two {
   margin-left: 16.16667%;
 }
 
 /* line 96, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-.offset-by-three {
+.offsetBy_three {
   margin-left: 24.5%;
 }
 
 /* line 96, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-.offset-by-four {
+.offsetBy_four {
   margin-left: 32.83333%;
 }
 
 /* line 96, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-.offset-by-five {
+.offsetBy_five {
   margin-left: 41.16667%;
 }
 
 /* line 96, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-.offset-by-six {
+.offsetBy_six {
   margin-left: 49.5%;
 }
 
 /* line 96, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-.offset-by-seven {
+.offsetBy_seven {
   margin-left: 57.83333%;
 }
 
 /* line 96, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-.offset-by-eight {
+.offsetBy_eight {
   margin-left: 66.16667%;
 }
 
 /* line 96, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-.offset-by-nine {
+.offsetBy_nine {
   margin-left: 74.5%;
 }
 
 /* line 96, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-.offset-by-ten {
+.offsetBy_ten {
   margin-left: 82.83333%;
 }
 
@@ -2181,27 +3610,27 @@ that IE7/8 do not support :nth-child.
   font-family: Verdana, sans-serif;
 }
 /* line 157, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-.blockGrid.one-up > li {
+.blockGrid.oneUp > li {
   width: 100%;
   padding: 0 0 15px;
 }
 /* line 157, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-.blockGrid.two-up > li {
+.blockGrid.twoUp > li {
   width: 49.5%;
   padding: 0 15px 15px;
 }
 /* line 157, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-.blockGrid.three-up > li {
+.blockGrid.threeUp > li {
   width: 32.83333%;
   padding: 0 12px 12px;
 }
 /* line 157, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-.blockGrid.four-up > li {
+.blockGrid.fourUp > li {
   width: 24.5%;
   padding: 0 10px 10px;
 }
 /* line 157, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-.blockGrid.five-up > li {
+.blockGrid.fiveUp > li {
   width: 19.5%;
   padding: 0 8px 8px;
 }
@@ -2281,52 +3710,52 @@ that IE7/8 do not support :nth-child.
   }
 
   /* line 256, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-  .offset-by-one {
+  .offsetBy_one {
     margin-left: 0;
   }
 
   /* line 256, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-  .offset-by-two {
+  .offsetBy_two {
     margin-left: 0;
   }
 
   /* line 256, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-  .offset-by-three {
+  .offsetBy_three {
     margin-left: 0;
   }
 
   /* line 256, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-  .offset-by-four {
+  .offsetBy_four {
     margin-left: 0;
   }
 
   /* line 256, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-  .offset-by-five {
+  .offsetBy_five {
     margin-left: 0;
   }
 
   /* line 256, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-  .offset-by-six {
+  .offsetBy_six {
     margin-left: 0;
   }
 
   /* line 256, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-  .offset-by-seven {
+  .offsetBy_seven {
     margin-left: 0;
   }
 
   /* line 256, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-  .offset-by-eight {
+  .offsetBy_eight {
     margin-left: 0;
   }
 
   /* line 256, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-  .offset-by-nine {
+  .offsetBy_nine {
     margin-left: 0;
   }
 
   /* line 256, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/grid-system/_grid.scss */
-  .offset-by-ten {
+  .offsetBy_ten {
     margin-left: 0;
   }
 }
@@ -2687,27 +4116,28 @@ that IE7/8 do not support :nth-child.
   display: block;
   background: #efefef;
   border: 1px solid #d5d5d5;
+  margin-top: 0.625em;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 45, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 46, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .breadcrumbs li {
   display: inline-block;
   margin: 0;
   padding: 0 0.625em 0 0;
   list-style: none;
 }
-/* line 51, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 52, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .breadcrumbs li a, .breadcrumbs li span {
   display: block;
   padding: 0.625em 1.25em;
   position: relative;
   line-height: 1.125em;
 }
-/* line 57, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 58, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .breadcrumbs li a:before, .breadcrumbs li span:before {
   content: "";
   position: absolute;
@@ -2728,31 +4158,31 @@ that IE7/8 do not support :nth-child.
   border-top: 1px solid #d5d5d5;
   border-right: 1px solid #d5d5d5;
 }
-/* line 69, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 70, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .breadcrumbs li a:hover, .breadcrumbs li span:hover {
   text-decoration: none;
 }
-/* line 73, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 74, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .breadcrumbs li span {
   color: #999999;
 }
-/* line 77, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 78, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .breadcrumbs li:first-child a:before {
   content: none;
 }
-/* line 80, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 81, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .breadcrumbs li:hover a, .breadcrumbs li a:focus {
   text-decoration: underline;
 }
-/* line 83, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 84, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .breadcrumbs li.current:hover a, .breadcrumbs li.current a:focus {
   text-decoration: none;
 }
-/* line 87, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 88, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .breadcrumbs li.unavailable a {
   color: #999;
 }
-/* line 90, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 91, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .breadcrumbs li.unavailable:hover a, .breadcrumbs li.unavailable a:focus {
   text-decoration: none;
   color: #999;
@@ -2760,13 +4190,13 @@ that IE7/8 do not support :nth-child.
 }
 
 /* Inline List */
-/* line 99, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 100, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 ul.inlineList {
   margin: 1.25em 0;
   padding: 0;
   list-style: none;
 }
-/* line 104, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 105, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 ul.inlineList > li {
   list-style: none;
   padding-right: 1.25em;
@@ -2774,13 +4204,13 @@ ul.inlineList > li {
 }
 
 /* Reverse Color ---------------------- */
-/* line 113, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 114, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .reverseColor a {
   color: white !important;
 }
 
 /* Keytroke Characters ---------------------- */
-/* line 119, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 120, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .keystroke, kbd {
   font-family: monospace;
   padding: 2px 4px 0px;
@@ -2795,12 +4225,12 @@ ul.inlineList > li {
 }
 
 /* Image Thumbnails ---------------------- */
-/* line 129, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 130, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .th {
   display: inline-block;
   margin: 0 0 1.25em;
 }
-/* line 133, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 134, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .th img {
   display: block;
   border: solid 4px #fff;
@@ -2821,7 +4251,7 @@ ul.inlineList > li {
   -o-transition-duration: 300ms;
   transition-duration: 300ms;
 }
-/* line 142, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 143, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .th:hover img, .th:focus img {
   -webkit-box-shadow: 0 0 6px 1px rgba(239, 239, 239, 0.5);
   -moz-box-shadow: 0 0 6px 1px rgba(239, 239, 239, 0.5);
@@ -2829,7 +4259,7 @@ ul.inlineList > li {
 }
 
 /* Video - Mad props to http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/ ---------------------- */
-/* line 150, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 151, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .flex-video {
   position: relative;
   padding-top: 25px;
@@ -2838,15 +4268,15 @@ ul.inlineList > li {
   margin-bottom: 16px;
   overflow: hidden;
 }
-/* line 158, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 159, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .flex-video.widescreen {
   padding-bottom: 57.25%;
 }
-/* line 161, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 162, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .flex-video.vimeo {
   padding-top: 0;
 }
-/* line 165, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 166, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 .flex-video iframe, .flex-video object, .flex-video embed, .flex-video video {
   position: absolute;
   top: 0;
@@ -2856,29 +4286,29 @@ ul.inlineList > li {
 }
 
 /* Microformats ---------------------- */
-/* line 177, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 178, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 ul.vcard {
   display: inline-block;
   margin: 0 0 12px 0;
   border: 1px solid #ddd;
   padding: 10px;
 }
-/* line 183, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 184, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 ul.vcard li {
   margin: 0;
   display: block;
 }
-/* line 187, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 188, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 ul.vcard li.fn {
   font-weight: bold;
   font-size: 1.125em;
 }
 
-/* line 195, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 196, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 p.vevent span.summary {
   font-weight: bold;
 }
-/* line 198, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 199, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 p.vevent abbr {
   cursor: default;
   text-decoration: none;
@@ -2888,7 +4318,7 @@ p.vevent abbr {
 }
 
 /* Progress Bar ---------------------- */
-/* line 209, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 210, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 div.progress {
   padding: 2px;
   margin-bottom: 10px;
@@ -2897,12 +4327,12 @@ div.progress {
   /* meter */
   /* border radii */
 }
-/* line 216, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 217, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 div.progress .meter {
   display: block;
   height: 100%;
 }
-/* line 222, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 223, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 div.progress.radius {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -2910,7 +4340,7 @@ div.progress.radius {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 224, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 225, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 div.progress.radius .meter {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -2918,7 +4348,7 @@ div.progress.radius .meter {
   -o-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 228, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 229, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 div.progress.round {
   -webkit-border-radius: 1000px;
   -moz-border-radius: 1000px;
@@ -2926,7 +4356,7 @@ div.progress.round {
   -o-border-radius: 1000px;
   border-radius: 1000px;
 }
-/* line 230, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+/* line 231, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
 div.progress.round .meter {
   -webkit-border-radius: 1000px;
   -moz-border-radius: 1000px;
@@ -2939,7 +4369,7 @@ div.progress.round .meter {
 /* Medium screens */
 /* Small screens */
 @media only screen and (max-width: 768px) {
-  /* line 245, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 246, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs {
     display: block;
     background: #efefef;
@@ -2950,21 +4380,21 @@ div.progress.round .meter {
     -o-border-radius: 3px;
     border-radius: 3px;
   }
-  /* line 251, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 252, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li {
     display: inline-block;
     margin: 0;
     padding: 0 0.3125em 0 0;
     list-style: none;
   }
-  /* line 257, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 258, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li a, .breadcrumbs li span {
     display: block;
     padding: 0.625em 0.3125em;
     position: relative;
     line-height: 1.125em;
   }
-  /* line 263, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 264, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li a:before, .breadcrumbs li span:before {
     content: ">";
     position: static;
@@ -2983,31 +4413,31 @@ div.progress.round .meter {
     border-radius: 0;
     border: none;
   }
-  /* line 273, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 274, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li a:hover, .breadcrumbs li span:hover {
     text-decoration: none;
   }
-  /* line 277, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 278, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li span {
     color: #999999;
   }
-  /* line 281, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 282, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li:first-child a:before {
     content: none;
   }
-  /* line 284, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 285, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li:hover a, .breadcrumbs li a:focus {
     text-decoration: underline;
   }
-  /* line 287, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 288, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li.current:hover a, .breadcrumbs li.current a:focus {
     text-decoration: none;
   }
-  /* line 291, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 292, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li.unavailable a {
     color: #999;
   }
-  /* line 294, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
+  /* line 295, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/helper-classes/_helper-classes.scss */
   .breadcrumbs li.unavailable:hover a, .breadcrumbs li.unavailable a:focus {
     text-decoration: none;
     color: #999;
@@ -3613,397 +5043,4 @@ select {
   -moz-border-radius-bottomright: 3px;
   -webkit-border-bottom-right-radius: 3px;
   border-bottom-right-radius: 3px;
-}
-
-/* line 133, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_prototype.scss */
-.pillStyle {
-  margin: 0;
-}
-/* line 136, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_prototype.scss */
-.pillStyle .tab > a {
-  -webkit-border-radius: 1000px;
-  -moz-border-radius: 1000px;
-  -ms-border-radius: 1000px;
-  -o-border-radius: 1000px;
-  border-radius: 1000px;
-  padding: 0.625em;
-}
-/* line 140, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_prototype.scss */
-.pillStyle .tab.active a {
-  background-color: #4da7bf;
-  color: #fff;
-}
-/* line 144, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_prototype.scss */
-.pillStyle + .tabsContent {
-  border: none;
-}
-
-@font-face {
-  font-family: 'entypo';
-  src: url("../../../fonts/entypo-icons/fonts/entypo.eot");
-  src: url("../../../fonts/entypo-icons/fonts/entypo.eot") format("embedded-opentype"), url("../../../fonts/entypo-icons/fonts/entypo.svg#entypo") format("svg"), url("../../../fonts/entypo-icons/fonts/entypo.woff") format("woff"), url("../../../fonts/entypo-icons/fonts/entypo.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Use the following 55CSS code if you want to use data attributes for inserting your icons */
-/* line 13, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-[data-icon]:before, .useCalendar {
-  font-family: 'entypo';
-  content: attr(data-icon);
-  speak: none;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Use the following CSS code if you want to have a class per icon */
-/* line 23, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-[class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: 'entypo';
-  font-style: normal;
-  speak: none;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* line 31, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-mobile:before {
-  content: "\2395";
-}
-
-/* line 34, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-pencil:before {
-  content: "\270e";
-}
-
-/* line 37, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-paperclip:before {
-  content: "\23cd";
-}
-
-/* line 40, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-drawer:before {
-  content: "\2b13";
-}
-
-/* line 43, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-reply:before {
-  content: "\21b6";
-}
-
-/* line 46, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-forward:before {
-  content: "\21b7";
-}
-
-/* line 49, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-user:before {
-  content: "\265f";
-}
-
-/* line 52, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-star:before {
-  content: "\2605";
-}
-
-/* line 55, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-export:before {
-  content: "\238b";
-}
-
-/* line 58, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-comment:before {
-  content: "\275e";
-}
-
-/* line 61, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-printer:before {
-  content: "\25a9";
-}
-
-/* line 64, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-search:before {
-  content: "\26b2";
-}
-
-/* line 67, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-house:before {
-  content: "\2617";
-}
-
-/* line 70, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-cog:before {
-  content: "\2638";
-}
-
-/* line 73, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-tools:before {
-  content: "\2692";
-}
-
-/* line 76, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-lifebuoy:before {
-  content: "\25cc";
-}
-
-/* line 79, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-eye:before {
-  content: "\233e";
-}
-
-/* line 82, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-clock:before {
-  content: "\233d";
-}
-
-/* line 85, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-calendar:before, .useCalendar:before {
-  content: "\2b12";
-}
-
-/* line 88, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-earth:before {
-  content: "\2689";
-}
-
-/* line 91, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-browser:before {
-  content: "\25a2";
-}
-
-/* line 94, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-code:before {
-  content: "\2390";
-}
-
-/* line 97, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-screen:before {
-  content: "\25a6";
-}
-
-/* line 100, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-login:before {
-  content: "\2348";
-}
-
-/* line 103, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-logout:before {
-  content: "\2347";
-}
-
-/* line 106, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-minus:before {
-  content: "\2d";
-}
-
-/* line 109, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-plus:before {
-  content: "\2b";
-}
-
-/* line 112, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-cross:before {
-  content: "\2613";
-}
-
-/* line 115, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-checkmark:before {
-  content: "\2611";
-}
-
-/* line 118, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-cross-2:before {
-  content: "\2612";
-}
-
-/* line 121, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-info:before {
-  content: "\69";
-}
-
-/* line 124, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-help:before {
-  content: "\3f";
-}
-
-/* line 127, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-warning:before {
-  content: "\21";
-}
-
-/* line 130, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-retweet:before {
-  content: "\21cc";
-}
-
-/* line 133, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-folder:before {
-  content: "\25db";
-}
-
-/* line 136, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-trash:before {
-  content: "\26b0";
-}
-
-/* line 139, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-install:before {
-  content: "\27f1";
-}
-
-/* line 142, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-upload:before {
-  content: "\27f0";
-}
-
-/* line 145, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-arrow-left:before {
-  content: "\25c2";
-}
-
-/* line 148, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-arrow-down:before {
-  content: "\25be";
-}
-
-/* line 151, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-arrow-up:before {
-  content: "\25b4";
-}
-
-/* line 154, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-arrow-right:before {
-  content: "\25b8";
-}
-
-/* line 157, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-menu:before {
-  content: "\2666";
-}
-
-/* line 160, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-resize-enlarge:before {
-  content: "\21f1";
-}
-
-/* line 163, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-resize-shrink:before {
-  content: "\2327";
-}
-
-/* line 166, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-arrow-right-2:before {
-  content: "\2192";
-}
-
-/* line 169, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-arrow-up--upload:before {
-  content: "\2191";
-}
-
-/* line 172, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-arrow-left-2:before {
-  content: "\2190";
-}
-
-/* line 175, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-arrow-down-2:before {
-  content: "\2193";
-}
-
-/* line 178, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-github:before {
-  content: "\67";
-}
-
-/* line 181, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-twitter:before {
-  content: "\74";
-}
-
-/* line 184, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-facebook:before {
-  content: "\66";
-}
-
-/* line 187, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-googleplus:before {
-  content: "\47";
-}
-
-/* line 190, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-dribbble:before {
-  content: "\64";
-}
-
-/* line 193, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-pinterest:before {
-  content: "\70";
-}
-
-/* line 196, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-disk:before {
-  content: "\73";
-}
-
-/* line 199, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-layout:before {
-  content: "\2637";
-}
-
-/* line 202, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-list:before {
-  content: "\2630";
-}
-
-/* line 205, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-document:before {
-  content: "\25af";
-}
-
-/* line 208, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-cart:before {
-  content: "\63";
-}
-
-/* line 211, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-gauge:before {
-  content: "\2365";
-}
-
-/* line 214, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-tag:before {
-  content: "\25b0";
-}
-
-/* line 217, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-mail:before {
-  content: "\2709";
-}
-
-/* line 220, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-location:before {
-  content: "\6c";
-}
-
-/* line 223, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-popup:before {
-  content: "\274f";
-}
-
-/* line 226, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-blocked:before {
-  content: "\2300";
-}
-
-/* line 229, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-bookmark:before {
-  content: "\25ae";
-}
-
-/* line 232, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/prototype/_icons.scss */
-.icon-archive:before {
-  content: "\2339";
 }
