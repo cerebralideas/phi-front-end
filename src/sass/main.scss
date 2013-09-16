@@ -32,12 +32,12 @@
 @import 'settings';
 
 // This is your core, normalize and HTML5 Boilerplate CSS
-@import '../../phi/ui-ix/core/_globals';
-@import '../../phi/ui-ix/core/_ratios';
-@import '../../phi/ui-ix/core/_typography';
-@import '../../phi/ui-ix/core/_forms';
-@import '../../phi/ui-ix/core/_buttons';
-@import '../../phi/ui-ix/core/_icons';
+@import '../../phi/framework/core/_globals';
+@import '../../phi/framework/core/_ratios';
+@import '../../phi/framework/core/_typography';
+@import '../../phi/framework/core/_forms';
+@import '../../phi/framework/core/_buttons';
+@import '../../phi/framework/core/_icons';
 
 /*******************************************
  * THESE MAKE UP THE COMPONENTS OF PHI     *
@@ -47,35 +47,35 @@
 ********************************************/
 
 // Include Grid System
-@import '../../phi/ui-ix/extensions/grid-system/_f_convert-number-to-word';
-@import '../../phi/ui-ix/extensions/grid-system/_f_grid-calc';
-@import '../../phi/ui-ix/extensions/grid-system/_m_respond-to';
-@import '../../phi/ui-ix/extensions/grid-system/_grid';
+@import '../../phi/framework/components/grid-system/_f_convert-number-to-word';
+@import '../../phi/framework/components/grid-system/_f_grid-calc';
+@import '../../phi/framework/components/grid-system/_m_respond-to';
+@import '../../phi/framework/components/grid-system/_grid';
 
 // Include Navigation Styles
-@import '../../phi/ui-ix/extensions/navigation/_navigation';
+@import '../../phi/framework/components/navigation/_navigation';
 
 // Include Tab Styles
-@import '../../phi/ui-ix/extensions/tabs/_tabs';
+@import '../../phi/framework/components/tabs/_tabs';
 
 // Helper Classes Styles
-@import '../../phi/ui-ix/extensions/helper-classes/_helper-classes';
+@import '../../phi/framework/components/helper-classes/_helper-classes';
 
 // Overalay Styles
-@import '../../phi/ui-ix/extensions/overlay/_overlay';
+@import '../../phi/framework/components/overlay/_overlay';
 
 // Alert Styles
-@import '../../phi/ui-ix/extensions/alerts/_alerts';
+@import '../../phi/framework/components/alerts/_alerts';
 
 // Table Styles
-@import '../../phi/ui-ix/extensions/tables/_tables';
+@import '../../phi/framework/components/tables/_tables';
 
 // Date-Picker Styles
-@import '../../phi/ui-ix/extensions/date-picker/_kalendae';
+@import '../../phi/framework/components/date-picker/_kalendae';
 
 // Prototyping Styles
 // Comment this out once you start fully developing your site/app
-@import '../../phi/ui-ix/prototype/_prototype';
+@import '../../phi/framework/prototype/_prototype';
 
 // Project Specific Styles
 // Place all project specific styles here
