@@ -4,13 +4,8 @@
 
 	function setTab(href, e) {
 
-		console.log(href);
-
 		var newTab = $(e.target).parent(),
 			oldTab = newTab.parents('.tabs').find('.active');
-
-		console.log(newTab);
-		console.log(oldTab);
 
 		// Show tab content
 		e.preventDefault();

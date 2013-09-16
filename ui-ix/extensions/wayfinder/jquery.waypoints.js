@@ -446,8 +446,6 @@ Support:
 						o.offset = o.element.offset().top - contextOffset
 							+ contextScroll - adjustment;
 
-						console.log(o);
-
 						/*
 						An element offset change across the current scroll point triggers
 						the event, just as if we scrolled past it unless prevented by an

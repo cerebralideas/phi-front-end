@@ -4,8 +4,6 @@
 
 	$('body').on('click.acc', '.accordion > li', function () {
 
-		console.log('click me');
-
 		var that = $(this),
 			parent = that.parent(),
 			panel = that.find('.content');
