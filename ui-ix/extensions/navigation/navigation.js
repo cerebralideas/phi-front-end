@@ -1,4 +1,4 @@
-$(function () {
+$(function ($, undefined) {
 
 	/* GLOBAL DROP-DOWN FUNCTIONALITY: This creates the drop-down functionality
 	 * for hidden sub-menus.
@@ -16,8 +16,6 @@ $(function () {
 		dropDown;
 
 	$nav.removeClass('hasHover'); // Removes fallback CSS dropdown
-
-	console.log('hello');
 
 	if ($navItem.find('ul') || $navItem.find('ol')) {
 
@@ -105,4 +103,4 @@ $(function () {
 			}
 		});
 	}
-}());
+}(jQuery));

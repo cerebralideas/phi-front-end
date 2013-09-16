@@ -4869,6 +4869,65 @@ div.progress.round .meter {
   font-family: entypo;
 }
 
+/* Accordion ---------------------- */
+/* line 3, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/accordion/_accordion.scss */
+ul.accordion {
+  margin: 0 0 22px 0;
+  border-bottom: 1px solid #17c8ff;
+}
+/* line 7, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/accordion/_accordion.scss */
+ul.accordion > li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #17c8ff;
+}
+/* line 13, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/accordion/_accordion.scss */
+ul.accordion > li > div.title {
+  cursor: pointer;
+  background: #31ceff;
+  padding: 15px;
+  margin: 0;
+  position: relative;
+  border-left: 1px solid #17c8ff;
+  border-right: 1px solid #17c8ff;
+  -webkit-transition: 0.15s background linear;
+  -moz-transition: 0.15s background linear;
+  -o-transition: 0.15s background linear;
+  transition: 0.15s background linear;
+}
+/* line 23, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/accordion/_accordion.scss */
+ul.accordion > li > div.title h1, ul.accordion > li > div.title h2, ul.accordion > li > div.title h3, ul.accordion > li > div.title h4, ul.accordion > li > div.title h5 {
+  margin: 0;
+}
+/* line 26, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/accordion/_accordion.scss */
+ul.accordion > li > div.title:after {
+  position: absolute;
+  right: 15px;
+  top: 21px;
+}
+/* line 33, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/accordion/_accordion.scss */
+ul.accordion > li .content {
+  display: none;
+  padding: 15px;
+}
+/* line 38, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/accordion/_accordion.scss */
+ul.accordion > li.active {
+  border-top: 3px solid #efefef;
+}
+/* line 41, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/accordion/_accordion.scss */
+ul.accordion > li.active .title {
+  background: white;
+  padding-top: 13px;
+}
+/* line 48, /Users/macpro/Drive/github/phi-front-end/phi/ui-ix/extensions/accordion/_accordion.scss */
+ul.accordion > li.active .content {
+  background: white;
+  display: block;
+  border-left: 1px solid #17c8ff;
+  border-right: 1px solid #17c8ff;
+}
+
 /* This file contains styles for rapid prototyping
  * Remove this dependency from your main Sass file
  * when you start fully developing your website/app

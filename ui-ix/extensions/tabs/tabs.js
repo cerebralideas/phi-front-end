@@ -1,4 +1,4 @@
-(function ($, window, document, undefined) {
+(function ($, undefined) {
 
 	'use strict';
 
@@ -27,4 +27,4 @@
 		setTab($(e.target).attr('href'), e);
 	});
 
-}(jQuery, this, this.document));
+}(jQuery));
