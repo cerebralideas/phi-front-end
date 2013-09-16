@@ -65,8 +65,6 @@
 				// Kalendae plugin initialization
 				$('body').on('click.useCalendar', '.useCalendar', function () {
 
-					console.log('clicked!');
-
 					var parent = this.parentNode,
 						input = parent.getElementsByTagName('input')[0],
 						$input = $(input);
