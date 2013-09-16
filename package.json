@@ -1,6 +1,6 @@
 {
   "name": "phi-engine",
-  "version": "0.17.0",
+  "version": "1.0.0",
   "description": "The engine that runs the phi framework",
   "author": {
     "name": "Justin Lowery",

@@ -1,0 +1,61 @@
+<div class="row">
+	<div class="twelveColumns">
+		<h3>Tabs</h3>
+
+		<div class="row">
+			<div class="fourColumns">
+				<a name="simpleTabs"></a>
+				<h4>Regular Tabs</h4>
+				<p>Tabs are made of <strong>two objects:</strong> a <code>ul</code> list containing the tabs themselves, and a <code>ul</code> list containing the tab content. To use them, declare a class of <code>tabs</code> on the tab list <code>ul</code> and a class of <code>tab</code> on all contained <code>li</code> elements.</p>
+				<p>Then, you need to add a class of <code>tabsContent</code> to the content list <code>ul</code>. Finally, you need to make sure the href in the tab link matches the <code>id</code> of the tab content <code>li</code>.</p>
+			</div>
+
+			<div class="eightColumns">
+				<ul class="tabs">
+					<li class="tab active">
+						<a href="#simple1">Tab 1</a>
+					</li>
+					<li class="tab">
+						<a href="#simple2">Tab 2</a>
+					</li>
+					<li class="tab">
+						<a href="#simple3">Tab 3</a>
+					</li>
+				</ul>
+				<ul class="tabsContent">
+					<li class=" active" id="simple1">This is tab 1's content.</li>
+					<li id="simple2">This is tab 2's content. Now you see it!</li>
+					<li id="simple3">This is tab 3's content. I'm the end.</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="fourColumns">
+				<a name="tabsVertical"></a>
+				<h4>Vertical Tabs</h4>
+				<p>You can also use tabs in a vertical configuration by adding a class of <code>tabsVertical</code> to the <code>ul.tabs</code> element. These are great for handling an unknown or large number of nav elements.</p>
+			</div>
+			<div class="eightColumns">
+				<div class="rowSeamless">
+					<ul class="tabs tabsVertical fourSeamlessColumns">
+						<li class="tab active">
+							<a href="#vertical1">Vertical Tab 1</a>
+						</li>
+						<li class="tab">
+							<a href="#vertical2">Vertical Tab 2</a>
+						</li>
+						<li class="tab">
+							<a href="#vertical3">Vertical Tab 3</a>
+						</li>
+					</ul>
+					<ul class="tabsContent eightSeamlessColumns">
+						<li class="tab active" id="vertical1">This is tab 1's content. Pretty neat, huh?</li>
+						<li class="tab" id="vertical2">This is tab 2's content. Now you see it!</li>
+						<li class="tab" id="vertical3">This is tab 3's content. I'm the end.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
