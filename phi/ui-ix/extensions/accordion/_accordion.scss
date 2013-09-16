@@ -24,7 +24,6 @@ ul.accordion {
 				margin: 0;
 			}
 			&:after {
-				@include cssTriangle(6px, darken($secondaryColor, 30%), $defaultOpposite);
 				position: absolute;
 				#{$defaultOpposite}: 15px;
 				top: 21px;
@@ -44,7 +43,6 @@ ul.accordion {
 				padding-top: 13px;
 
 				&:after {
-					@include cssTriangle(6px, darken($secondaryColor, 30%), top);
 				}
 			}
 			.content {

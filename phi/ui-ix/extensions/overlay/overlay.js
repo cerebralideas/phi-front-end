@@ -1,4 +1,4 @@
-$(function () {
+$(function ($, undefined) {
 
 	// Invoke strict mode
 	'use strict';
@@ -287,4 +287,4 @@ $(function () {
 		// Close the overlay
 		closeOverlay($('.js_overlay'), kind);
 	};
-});
+}(jQuery));

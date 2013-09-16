@@ -26,9 +26,10 @@
 			// UI/Ix jQuery framework
 			'navigation': '/phi/ui-ix/extensions/navigation/navigation',
 			'overlay': '/phi/ui-ix/extensions/overlay/overlay',
-			'tabs': '/phi/ui-ix/extensions/tabs/jquery.foundation.tabs',
-			'alerts': '/phi/ui-ix/extensions/alerts/jquery.foundation.alerts',
-			'datepicker': '/phi/ui-ix/extensions/date-picker/kalendae'
+			'tabs': '/phi/ui-ix/extensions/tabs/tabs',
+			'alerts': '/phi/ui-ix/extensions/alerts/alerts',
+			'datepicker': '/phi/ui-ix/extensions/date-picker/kalendae',
+			'accordion': '/phi/ui-ix/extensions/accordion/accordion'
 		},
 
 		// Declare all dependencies
@@ -41,7 +42,8 @@
 			'navigation': ['jquery', 'app'],
 			'overlay': ['jquery'],
 			'tabs': ['jquery'],
-			'alerts': ['jquery']
+			'alerts': ['jquery'],
+			'accordion': ['jquery']
 		}
 	});
 
@@ -56,9 +58,9 @@
 
 	// Load in jQuery plugins
 	require(
-			['navigation', 'overlay', 'tabs', 'alerts', 'datepicker'],
+			['navigation', 'overlay', 'tabs', 'alerts', 'datepicker', 'accordion'],
 
-			function (navigation, overlay, tabs, alerts, custom) {
+			function (navigation, overlay, tabs, alerts, datepicker, accordion) {
 
 				// Kalendae plugin initialization
 				$('body').on('click.useCalendar', '.useCalendar', function () {
