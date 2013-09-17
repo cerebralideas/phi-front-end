@@ -42,16 +42,23 @@ $overlayTransition: .25s;
 	z-index: 9999;
 
 	&.active {
-	top: 0;
-	transition: $overlayTransition $overlayTransition;
-	visibility: visible;
+		top: 0;
+		transition: $overlayTransition $overlayTransition;
+		visibility: visible;
 	}
 	.close {
-	color: #444;
-	position: absolute;
-	right: 0;
-	top: 0;
-	text-decoration: none;
+		color: #444;
+		font-size: 1em;
+		padding: 0;
+		position: absolute;
+		right: $baseLineHeight;
+		top: $baseLineHeight;
+		text-decoration: none;
+		width: auto;
+	}
+	.modalHeader,
+	.modalBody {
+		padding: 1em;
 	}
 }
 #modalBackground {
@@ -75,7 +82,16 @@ $overlayTransition: .25s;
 
 // Popover
 
+[data-overlay="popover"] {
 
+	.close {
+		color: #444;
+		font-size: 1em;
+		padding: 0;
+		text-decoration: none;
+		width: auto;
+	}
+}
 
 // Tooltip
 
@@ -91,7 +107,7 @@ $overlayTransition: .25s;
 	text-align: center;
 	padding: .75em 1.5em;
 	position: absolute;
-	width: 9em;
+	width: 12em;
 }
 .tooltipBottom {
 	bottom: auto;
@@ -102,7 +118,7 @@ $overlayTransition: .25s;
 .tooltipRight {
 	bottom: auto;
 	margin-left: 0;
-	top: -.75em;
+	top: -$baseLineHeight;
 }
 .tooltipLeft {
 	left: auto;
