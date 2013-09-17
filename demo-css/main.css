@@ -707,7 +707,7 @@ textarea {
 
 /* line 664, ../framework/core/_globals.scss */
 body {
-  background: whitesmoke url("/img/backgrounds/100-70-3.png");
+  background: whitesmoke url("/phi/framework/img/backgrounds/100-70-3.png");
   color: #333333;
   position: relative;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -1442,7 +1442,7 @@ textarea {
 select {
   -webkit-appearance: none;
   line-height: 1em;
-  background: url("../ui-ix/img/svg-icons/select-arrow.svg") no-repeat right center, #efefef;
+  background: url("../framework/img/svg-icons/select-arrow.svg") no-repeat right center, #efefef;
   cursor: pointer;
 }
 /* line 136, ../framework/core/_forms.scss */
