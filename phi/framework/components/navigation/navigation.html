@@ -1,0 +1,83 @@
+<div class="row">
+	<div class="twelveColumns">
+		<h3>Navigation</h3>
+
+		<div class="row">
+			<div class="fourColumns">
+				<a name="inlineLinkList"></a>
+				<h4>Inline Navigation w/Dropdowns</h4>
+				<p>The default navigation includes the option for drop-down sub-menus. The first thing you need to do is declare <code>inlineLinkList</code> class on the <code>ul</code> for horizontal nav or <code>linkList</code> (see below) for a vertical one. Then, each main <code>li</code> gets a class <code>navItem</code>.</p>
+				<p>If you want sub-menus, then just add the class <code>dropDownMenu</code> on the top level <code>ul</code>, and any nested <code>ul</code> will automatically have the necessary functionality generated from the <code>navigation.js</code> plugin. Additionally, you can add <code>hasHover</code> to the top level <code>ul</code> to have a fallback CSS-only sub-menu functionality, if JS fails to load or execute.</p>
+			</div>
+			<div class="eightColumns">
+				<nav>
+					<ul class="inlineLinkList dropDownMenu hasHover">
+						<li class="navItem">
+							<a href="#">Home</a>
+						</li>
+						<li class="navItem">
+							<a href="#">Services</a>
+						</li>
+						<li class="navItem">
+							<a title="Main Section" href="#">Products</a>
+							<ul>
+								<li><a href="#">Websites</a></li>
+								<li><a href="#">Icon Design</a></li>
+								<li><a href="#">Mobile Apps</a></li>
+							</ul>
+						</li>
+						<li  class="navItem active">
+							<a href="#">About Us</a>
+							<ul>
+								<li><a href="#">Designer</a></li>
+								<li><a href="#">Developer</a></li>
+								<li><a href="#">Marketer</a></li>
+							</ul>
+						</li>
+						<li class="navItem">
+							<a title="Main Section" href="#">Contact Us</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="fourColumns">
+				<a name="linkList"></a>
+				<h4>Stacked Navigation w/Dropdowns</h4>
+				<p>This is akin to sidebar navigations.</p>
+			</div>
+			<div class="eightColumns">
+				<nav>
+					<ul class="linkList dropDownMenu hasHover sixColumns">
+						<li class="navItem">
+							<a href="#">Home</a>
+						</li>
+						<li class="navItem">
+							<a href="#">Services</a>
+						</li>
+						<li class="navItem">
+							<a title="Main Section" href="#">Products</a>
+							<ul>
+								<li><a href="#">Websites</a></li>
+								<li><a href="#">Icon Design</a></li>
+								<li><a href="#">Mobile Apps</a></li>
+							</ul>
+						</li>
+						<li  class="navItem active">
+							<a href="#">About Us</a>
+							<ul>
+								<li><a href="#">Designer</a></li>
+								<li><a href="#">Developer</a></li>
+								<li><a href="#">Marketer</a></li>
+							</ul>
+						</li>
+						<li class="navItem">
+							<a title="Main Section" href="#">Contact Us</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</div>
