@@ -4493,10 +4493,17 @@ div.progress.round .meter {
 /* line 49, ../framework/components/overlay/_overlay.scss */
 [data-overlay="modal"] .close {
   color: #444;
+  font-size: 1em;
+  padding: 0;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 1.25em;
+  top: 1.25em;
   text-decoration: none;
+  width: auto;
+}
+[data-overlay="modal"] .modalHeader,
+[data-overlay="modal"] .modalBody {
+  padding: 1em;
 }
 
 /* line 57, ../framework/components/overlay/_overlay.scss */
@@ -4519,6 +4526,14 @@ div.progress.round .meter {
   visibility: visible;
 }
 
+[data-overlay="popover"] .close {
+  color: #444;
+  font-size: 1em;
+  padding: 0;
+  text-decoration: none;
+  width: auto;
+}
+
 /* line 83, ../framework/components/overlay/_overlay.scss */
 [data-overlay="tooltip"],
 .tooltipTop {
@@ -4532,7 +4547,7 @@ div.progress.round .meter {
   text-align: center;
   padding: .75em 1.5em;
   position: absolute;
-  width: 9em;
+  width: 12em;
 }
 
 /* line 96, ../framework/components/overlay/_overlay.scss */
@@ -4547,7 +4562,7 @@ div.progress.round .meter {
 .tooltipRight {
   bottom: auto;
   margin-left: 0;
-  top: -0.75em;
+  top: -1.25em;
 }
 
 /* line 107, ../framework/components/overlay/_overlay.scss */
