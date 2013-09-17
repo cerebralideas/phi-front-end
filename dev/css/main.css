@@ -1468,7 +1468,7 @@ textarea {
 select {
   -webkit-appearance: none;
   line-height: 1em;
-  background: url("../ui-ix/img/svg-icons/select-arrow.svg") no-repeat right center, #efefef;
+  background: url("../framework/img/svg-icons/select-arrow.svg") no-repeat right center, #efefef;
   cursor: pointer;
 }
 /* line 139, ../../phi/ui-ix/core/_forms.scss */
