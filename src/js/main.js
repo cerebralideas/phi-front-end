@@ -18,14 +18,14 @@
 			'jquery': '/vendor-bower/jquery/jquery.min',
 
 			// UI/Ix jQuery framework
-			'modal': '/phi/ui-ix/extensions/modals/modal',
-			'tabs': '/phi/ui-ix/extensions/tabs/jquery.foundation.tabs',
-			'alerts': '/phi/ui-ix/extensions/alerts/jquery.foundation.alerts'
+			'overlay': '/phi/framework/components/overlay/overlay',
+			'tabs': '/phi/framework/components/tabs/.tabs',
+			'alerts': '/phi/framework/components/alerts/alerts'
 		},
 
 		// Declare all dependencies
 		shim: {
-			'modal': ['jquery'],
+			'overlay': ['jquery'],
 			'tabs': ['jquery'],
 			'alerts': ['jquery']
 		}
@@ -33,9 +33,9 @@
 
 	// Load in jQuery plugins
 	require(
-			['modal', 'tabs', 'alerts'],
+			['overlay', 'tabs', 'alerts'],
 
-			function (modal, tabs, alerts, custom) {
+			function (overlay, tabs, alerts, custom) {
 
 				// Kalendae plugin initialization
 				$doc.on('click.useCalendar', '.useCalendar', function () {
