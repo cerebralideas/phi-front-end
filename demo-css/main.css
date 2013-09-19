@@ -5134,3 +5134,37 @@ select {
 [data-overlay="modal"] .modalBody {
   padding-top: 1.25em;
 }
+
+/* line 152, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/prototype/_prototype.scss */
+.dropdownTrigger {
+  background-color: #555555;
+}
+
+/* line 155, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/prototype/_prototype.scss */
+[data-overlay="dropdown"] {
+  background-color: #3b3b3b;
+}
+
+/* line 159, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/prototype/_prototype.scss */
+.dropdownTrigger,
+[data-overlay="dropdown"] a {
+  color: white;
+  display: inline-block;
+  padding: 0.625em 1.25em;
+  text-decoration: none;
+  vertical-align: top;
+}
+/* line 168, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/prototype/_prototype.scss */
+.dropdownTrigger:hover, .dropdownTrigger:focus, .dropdownTrigger.active,
+[data-overlay="dropdown"] a:hover,
+[data-overlay="dropdown"] a:focus,
+[data-overlay="dropdown"] a.active {
+  color: white;
+  background-color: #3b3b3b;
+}
+
+/* line 176, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/prototype/_prototype.scss */
+[data-overlay="dropdown"] a:hover, [data-overlay="dropdown"] a:focus {
+  color: white;
+  background-color: #222222;
+}
