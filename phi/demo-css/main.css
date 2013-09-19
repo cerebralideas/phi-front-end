@@ -4528,8 +4528,8 @@ div.progress.round .meter {
   font-size: 1em;
   padding: 0;
   position: absolute;
-  right: 1.25em;
-  top: 0.41667em;
+  right: 0.625em;
+  top: 0.20833em;
   text-decoration: none;
   width: auto;
 }
@@ -4885,24 +4885,24 @@ div.progress.round .meter {
 /* line 3, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/accordion/_accordion.scss */
 ul.accordion {
   margin: 0 0 22px 0;
-  border-bottom: 1px solid #17c8ff;
+  border-bottom: 1px solid #d5d5d5;
 }
 /* line 7, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/accordion/_accordion.scss */
 ul.accordion > li {
   list-style: none;
   margin: 0;
   padding: 0;
-  border-top: 1px solid #17c8ff;
+  border-top: 1px solid #d5d5d5;
 }
 /* line 13, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/accordion/_accordion.scss */
 ul.accordion > li > div.title {
   cursor: pointer;
-  background: #31ceff;
+  background: #e2e2e2;
   padding: 15px;
   margin: 0;
   position: relative;
-  border-left: 1px solid #17c8ff;
-  border-right: 1px solid #17c8ff;
+  border-left: 1px solid #d5d5d5;
+  border-right: 1px solid #d5d5d5;
   -webkit-transition: 0.15s background linear;
   -moz-transition: 0.15s background linear;
   -o-transition: 0.15s background linear;
@@ -4936,8 +4936,8 @@ ul.accordion > li.active .title {
 ul.accordion > li.active .content {
   background: white;
   display: block;
-  border-left: 1px solid #17c8ff;
-  border-right: 1px solid #17c8ff;
+  border-left: 1px solid #d5d5d5;
+  border-right: 1px solid #d5d5d5;
 }
 
 /*******************************************

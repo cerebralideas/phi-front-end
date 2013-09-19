@@ -85,8 +85,8 @@ $overlayTransition: .25s;
 		font-size: 1em;
 		padding: 0;
 		position: absolute;
-		right: $baseLineHeight;
-		top: ($baseLineHeight/3);
+		right: ($baseLineHeight/2);
+		top: ($baseLineHeight/6);
 		text-decoration: none;
 		width: auto;
 	}
