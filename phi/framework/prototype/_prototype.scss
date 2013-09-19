@@ -161,6 +161,7 @@ select {
 	display: inline-block;
 	padding: ($baseLineHeight/2) $baseLineHeight;
 	text-decoration: none;
+	transition: .1s;
 	vertical-align: top;
 
 	&:hover,
@@ -176,6 +177,32 @@ select {
 	&:focus {
 		color: $white;
 		background-color: darken($gray, 20%);
+	}
+}
+[data-overlay="popover"] {
+	background-color: darken($whiteDark, 5%);
+	border: 1px solid darken($whiteDark, 15%);
+	border-radius: 3px;
+	padding: ($baseLineHeight/2) ($baseLineHeight*2.5) ($baseLineHeight/2) ($baseLineHeight/1.5);
+
+	h4 {
+		padding-top: 0;
+		margin-bottom: ($baseLineHeight/2);
+	}
+	p {
+		margin-bottom: 0;
+	}
+	&:after {
+		border-bottom: .5em solid darken($whiteDark, 15%);
+		border-left: .5em solid transparent;
+		border-right: .5em solid transparent;
+		bottom: 100%;
+		content: '';
+		height: 0;
+		left: 50%;
+		margin-left: -.5em;
+		position: absolute;
+		width: 0;
 	}
 }
 
