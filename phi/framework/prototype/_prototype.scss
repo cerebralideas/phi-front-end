@@ -134,8 +134,14 @@ select {
 // Helper Classes
 
 
-// Modal (Reveal)
+// Overlay
+[data-overlay="modal"] {
 
+	.modalHeader,
+	.modalBody {
+		padding: 1em;
+	}
+}
 
 // Alerts
 
