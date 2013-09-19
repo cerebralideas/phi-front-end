@@ -4527,11 +4527,14 @@ div.progress.round .meter {
   color: #444;
   font-size: 1em;
   padding: 0;
+  position: absolute;
+  right: 1.25em;
+  top: 0.41667em;
   text-decoration: none;
   width: auto;
 }
 
-/* line 95, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/overlay/_overlay.scss */
+/* line 98, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/overlay/_overlay.scss */
 [data-overlay="tooltip"],
 .tooltipTop {
   background-color: rgba(0, 0, 0, 0.9);
@@ -4547,14 +4550,14 @@ div.progress.round .meter {
   width: 12em;
 }
 
-/* line 108, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/overlay/_overlay.scss */
+/* line 111, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/overlay/_overlay.scss */
 .tooltipBottom {
   bottom: auto;
   margin-top: .75em;
   top: 100%;
 }
 
-/* line 114, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/overlay/_overlay.scss */
+/* line 117, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/overlay/_overlay.scss */
 .tooltipLeft,
 .tooltipRight {
   bottom: auto;
@@ -4562,20 +4565,20 @@ div.progress.round .meter {
   top: -1.25em;
 }
 
-/* line 119, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/overlay/_overlay.scss */
+/* line 122, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/overlay/_overlay.scss */
 .tooltipLeft {
   left: auto;
   margin-right: .75em;
   right: 100%;
 }
 
-/* line 124, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/overlay/_overlay.scss */
+/* line 127, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/overlay/_overlay.scss */
 .tooltipRight {
   left: 100%;
   margin-left: .75em !important;
 }
 
-/* line 128, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/overlay/_overlay.scss */
+/* line 131, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/overlay/_overlay.scss */
 [data-overlay="tooltip"]:after {
   border-left: .5em solid transparent;
   border-right: .5em solid transparent;
@@ -4587,7 +4590,7 @@ div.progress.round .meter {
   top: 100%;
 }
 
-/* line 138, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/overlay/_overlay.scss */
+/* line 141, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/overlay/_overlay.scss */
 .tooltipBottom:after {
   border-bottom: 0.5em solid rgba(0, 0, 0, 0.9);
   border-top: 0;
@@ -4595,7 +4598,7 @@ div.progress.round .meter {
   top: auto;
 }
 
-/* line 145, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/overlay/_overlay.scss */
+/* line 148, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/overlay/_overlay.scss */
 .tooltipLeft:after,
 .tooltipRight:after {
   border-bottom: .5em solid transparent;
@@ -4605,13 +4608,13 @@ div.progress.round .meter {
   top: 50%;
 }
 
-/* line 152, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/overlay/_overlay.scss */
+/* line 155, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/overlay/_overlay.scss */
 .tooltipLeft:after {
   border-left: 0.5em solid rgba(0, 0, 0, 0.9);
   left: 100%;
 }
 
-/* line 156, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/overlay/_overlay.scss */
+/* line 159, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/overlay/_overlay.scss */
 .tooltipRight:after {
   border-right: 0.5em solid rgba(0, 0, 0, 0.9);
   left: auto;
@@ -5152,9 +5155,10 @@ select {
   display: inline-block;
   padding: 0.625em 1.25em;
   text-decoration: none;
+  transition: .1s;
   vertical-align: top;
 }
-/* line 168, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/prototype/_prototype.scss */
+/* line 169, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/prototype/_prototype.scss */
 .dropdownTrigger:hover, .dropdownTrigger:focus, .dropdownTrigger.active,
 [data-overlay="dropdown"] a:hover,
 [data-overlay="dropdown"] a:focus,
@@ -5163,8 +5167,38 @@ select {
   background-color: #3b3b3b;
 }
 
-/* line 176, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/prototype/_prototype.scss */
+/* line 177, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/prototype/_prototype.scss */
 [data-overlay="dropdown"] a:hover, [data-overlay="dropdown"] a:focus {
   color: white;
   background-color: #222222;
+}
+
+/* line 182, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/prototype/_prototype.scss */
+[data-overlay="popover"] {
+  background-color: #e2e2e2;
+  border: 1px solid #c9c9c9;
+  border-radius: 3px;
+  padding: 0.625em 3.125em 0.625em 0.83333em;
+}
+/* line 188, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/prototype/_prototype.scss */
+[data-overlay="popover"] h4 {
+  padding-top: 0;
+  margin-bottom: 0.625em;
+}
+/* line 192, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/prototype/_prototype.scss */
+[data-overlay="popover"] p {
+  margin-bottom: 0;
+}
+/* line 195, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/prototype/_prototype.scss */
+[data-overlay="popover"]:after {
+  border-bottom: 0.5em solid #c9c9c9;
+  border-left: .5em solid transparent;
+  border-right: .5em solid transparent;
+  bottom: 100%;
+  content: '';
+  height: 0;
+  left: 50%;
+  margin-left: -0.5em;
+  position: absolute;
+  width: 0;
 }
