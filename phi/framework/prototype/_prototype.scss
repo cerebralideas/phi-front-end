@@ -149,6 +149,35 @@ select {
 		padding-top: $baseLineHeight;
 	}
 }
+.dropdownTrigger {
+	background-color: $gray;
+}
+[data-overlay="dropdown"] {
+	background-color: darken($gray, 10%);
+}
+.dropdownTrigger,
+[data-overlay="dropdown"] a {
+	color: $white;
+	display: inline-block;
+	padding: ($baseLineHeight/2) $baseLineHeight;
+	text-decoration: none;
+	vertical-align: top;
+
+	&:hover,
+	&:focus,
+	&.active {
+		color: $white;
+		background-color: darken($gray, 10%);
+	}
+}
+[data-overlay="dropdown"] a {
+
+	&:hover,
+	&:focus {
+		color: $white;
+		background-color: darken($gray, 20%);
+	}
+}
 
 // Alerts
 
