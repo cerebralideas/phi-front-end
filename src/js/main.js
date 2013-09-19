@@ -19,44 +19,28 @@
 
 			// UI/Ix jQuery framework
 			'overlay': '/phi/framework/components/overlay/overlay',
-			'tabs': '/phi/framework/components/tabs/.tabs',
-			'alerts': '/phi/framework/components/alerts/alerts'
+			'tabs': '/phi/framework/components/tabs/tabs',
+			'alerts': '/phi/framework/components/alerts/alerts',
+			'core': '/phi/framework/core/core'
 		},
 
 		// Declare all dependencies
 		shim: {
 			'overlay': ['jquery'],
 			'tabs': ['jquery'],
-			'alerts': ['jquery']
+			'alerts': ['jquery'],
+			'custom': ['jquery'],
+			'core': ['jquery']
 		}
 	});
 
 	// Load in jQuery plugins
 	require(
-			['overlay', 'tabs', 'alerts'],
+			['overlay', 'tabs', 'alerts', 'core'],
 
-			function (overlay, tabs, alerts, custom) {
+			function (overlay, tabs, alerts, custom, core) {
 
-				// Kalendae plugin initialization
-				/*$doc.on('click.useCalendar', '.useCalendar', function () {
-
-					var parent = this.parentNode,
-							input = parent.getElementsByTagName('input')[0],
-							$input = $(input);
-
-					if (!($input.hasClass('hasCalendar'))) {
-
-						new Kalendae.Input(input, {
-							attachTo: input
-						});
-
-						$input.focus().addClass('hasCalendar');
-
-					} else {
-
-						$input.focus();
-					}
-				});*/
+				// Do stuff :)
 			}
 	);
 }());
