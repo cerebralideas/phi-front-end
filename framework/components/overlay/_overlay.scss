@@ -52,7 +52,7 @@ $overlayTransition: .25s;
 		padding: 0;
 		position: absolute;
 		right: $baseLineHeight;
-		top: $baseLineHeight;
+		top: ($baseLineHeight/2);
 		text-decoration: none;
 		width: auto;
 	}

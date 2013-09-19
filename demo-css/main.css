@@ -4497,7 +4497,7 @@ div.progress.round .meter {
   padding: 0;
   position: absolute;
   right: 1.25em;
-  top: 1.25em;
+  top: 0.625em;
   text-decoration: none;
   width: auto;
 }
@@ -5123,5 +5123,14 @@ select {
 /* line 141, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/prototype/_prototype.scss */
 [data-overlay="modal"] .modalHeader,
 [data-overlay="modal"] .modalBody {
-  padding: 1em;
+  padding: 0 1.25em;
+}
+/* line 144, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/prototype/_prototype.scss */
+[data-overlay="modal"] .modalHeader {
+  background-color: #efefef;
+  border-bottom: 1px solid #d5d5d5;
+}
+/* line 148, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/prototype/_prototype.scss */
+[data-overlay="modal"] .modalBody {
+  padding-top: 1.25em;
 }
