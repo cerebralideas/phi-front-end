@@ -4884,7 +4884,7 @@ div.progress.round .meter {
 /* Accordion ---------------------- */
 /* line 3, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/accordion/_accordion.scss */
 ul.accordion {
-  margin: 0 0 22px 0;
+  margin: 0 0 1.25em 0;
   border-bottom: 1px solid #d5d5d5;
 }
 /* line 7, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/accordion/_accordion.scss */
@@ -4892,50 +4892,44 @@ ul.accordion > li {
   list-style: none;
   margin: 0;
   padding: 0;
+  overflow: hidden;
   border-top: 1px solid #d5d5d5;
 }
-/* line 13, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/accordion/_accordion.scss */
+/* line 14, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/accordion/_accordion.scss */
 ul.accordion > li > div.title {
   cursor: pointer;
   background: #e2e2e2;
-  padding: 15px;
+  padding: 0.625em 1.25em;
   margin: 0;
   position: relative;
   border-left: 1px solid #d5d5d5;
   border-right: 1px solid #d5d5d5;
-  -webkit-transition: 0.15s background linear;
-  -moz-transition: 0.15s background linear;
-  -o-transition: 0.15s background linear;
-  transition: 0.15s background linear;
+  transition: .1s;
 }
-/* line 23, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/accordion/_accordion.scss */
+/* line 24, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/accordion/_accordion.scss */
 ul.accordion > li > div.title h1, ul.accordion > li > div.title h2, ul.accordion > li > div.title h3, ul.accordion > li > div.title h4, ul.accordion > li > div.title h5 {
   margin: 0;
 }
-/* line 26, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/accordion/_accordion.scss */
+/* line 27, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/accordion/_accordion.scss */
 ul.accordion > li > div.title:after {
   position: absolute;
-  right: 15px;
+  right: 1.25em;
   top: 21px;
 }
-/* line 33, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/accordion/_accordion.scss */
+/* line 34, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/accordion/_accordion.scss */
 ul.accordion > li .content {
+  border-top: 1px solid #d5d5d5;
   display: none;
-  padding: 15px;
+  max-height: 0;
+  padding: 0 15px;
+  transition: .1s;
 }
-/* line 38, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/accordion/_accordion.scss */
-ul.accordion > li.active {
-  border-top: 3px solid #efefef;
-}
-/* line 41, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/accordion/_accordion.scss */
-ul.accordion > li.active .title {
-  background: white;
-  padding-top: 13px;
-}
-/* line 48, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/accordion/_accordion.scss */
+/* line 44, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/accordion/_accordion.scss */
 ul.accordion > li.active .content {
   background: white;
   display: block;
+  max-height: 9999em;
+  padding: 15px;
   border-left: 1px solid #d5d5d5;
   border-right: 1px solid #d5d5d5;
 }
