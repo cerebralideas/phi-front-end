@@ -38,7 +38,7 @@
 			function (overlay, tabs, alerts, custom) {
 
 				// Kalendae plugin initialization
-				$doc.on('click.useCalendar', '.useCalendar', function () {
+				/*$doc.on('click.useCalendar', '.useCalendar', function () {
 
 					var parent = this.parentNode,
 							input = parent.getElementsByTagName('input')[0],
@@ -56,7 +56,7 @@
 
 						$input.focus();
 					}
-				});
+				});*/
 			}
 	);
 }());
