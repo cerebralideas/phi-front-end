@@ -2,22 +2,22 @@
 
 ul.accordion {
 	margin: 0 0 22px 0;
-	border-bottom: 1px solid $secondaryColor;
+	border-bottom: 1px solid darken($whiteDark, 10%);
 
 	&>li {
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		border-top: 1px solid $secondaryColor;
+		border-top: 1px solid darken($whiteDark, 10%);
 
 		& > div.title {
 			cursor: pointer;
-			background: lighten($secondaryColor, 5%);
+			background: lighten(darken($whiteDark, 10%), 5%);
 			padding: 15px;
 			margin: 0;
 			position: relative;
-			border-#{$defaultDirection}: 1px solid $secondaryColor;
-			border-#{$defaultOpposite}: 1px solid $secondaryColor;
+			border-#{$defaultDirection}: 1px solid darken($whiteDark, 10%);
+			border-#{$defaultOpposite}: 1px solid darken($whiteDark, 10%);
 			@include single-transition(0.15s, background, linear);
 
 			h1, h2, h3, h4, h5 {
@@ -48,8 +48,8 @@ ul.accordion {
 			.content {
 				background: $white;
 				display: block;
-				border-#{$defaultDirection}: 1px solid $secondaryColor;
-				border-#{$defaultOpposite}: 1px solid $secondaryColor;
+				border-#{$defaultDirection}: 1px solid darken($whiteDark, 10%);
+				border-#{$defaultOpposite}: 1px solid darken($whiteDark, 10%);
 			}
 		}
 	}
