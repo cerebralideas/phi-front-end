@@ -139,7 +139,14 @@ select {
 
 	.modalHeader,
 	.modalBody {
-		padding: 1em;
+		padding: 0 $baseLineHeight;
+	}
+	.modalHeader {
+		background-color: $whiteDark;
+		border-bottom: 1px solid darken($whiteDark, 10%);
+	}
+	.modalBody {
+		padding-top: $baseLineHeight;
 	}
 }
 
