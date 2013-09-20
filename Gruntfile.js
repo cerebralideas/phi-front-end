@@ -14,21 +14,14 @@ module.exports = function(grunt) {
 				separator: '\n\n;// End of file\n\n'
 			},
 			main: {
-				src: 'src/*.js',
-				dest: 'dev/main.js'
+				src: 'src/js/*.js',
+				dest: 'dev/js/main.js'
 			}
 		},
 		min: {
 			dist: {
 				src: '',
 				dest: ''
-			}
-		},
-		markdown: {
-			all: {
-				files: 'docs/md/*',
-				dest: 'docs/html/',
-				template: 'templates/markdown/html-partial-template.html'
 			}
 		},
 		test: {},
@@ -76,7 +69,7 @@ module.exports = function(grunt) {
 			dev: {
 				options: {
 					sassDir: 'src/sass',
-					cssDir: 'dev/'
+					cssDir: 'dev/css/'
 				}
 			}
 		},
@@ -98,9 +91,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	// Load in Markdown task
-	grunt.loadNpmTasks('grunt-markdown');
-
 	// Load the "Live Reload" alternative
 	grunt.loadNpmTasks('grunt-macreload');
 
@@ -108,6 +98,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', ['jshint', 'concat', 'compass:dev', 'macreload']);
 
 	// Production build task.
-	grunt.registerTask('build', ['lint', 'concat', 'uglify', 'markdown', 'compass-clean', 'compass:prod', 'macreload']);
+	grunt.registerTask('build', ['lint', 'concat', 'uglify', 'compass-clean', 'compass:prod', 'macreload']);
 
 };
