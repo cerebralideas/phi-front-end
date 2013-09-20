@@ -34,14 +34,14 @@ ul.accordion {
 			max-height: 0;
 			overflow: hidden;
 			padding: 0 15px;
-			transition: .25s;
+			transition: .5s;
 		}
 
 		&.active {
 
 			.content {
 				border-bottom: 1px solid darken($whiteDark, 10%);
-				max-height: 25em;
+				max-height: 100em;
 				padding: 15px;
 			}
 		}
