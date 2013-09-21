@@ -4641,6 +4641,7 @@ div.progress.round .meter {
 /* Alerts ---------------------- */
 /* line 3, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/alerts/_alerts.scss */
 .alertBox {
+  transition: .25s;
   padding: 0 1.25em;
   margin-bottom: 1.25em;
   -webkit-border-radius: 3px;
@@ -4649,12 +4650,20 @@ div.progress.round .meter {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 8, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/alerts/_alerts.scss */
+/* line 9, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/alerts/_alerts.scss */
 .alertBox p, .alertBox ul, .alertBox ol, .alertBox blockquote, .alertBox pre, .alertBox code {
   padding-top: 1.25em;
   width: 90%;
   display: inline-block;
   vertical-align: top;
+}
+/* line 15, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/alerts/_alerts.scss */
+.alertBox.fadeOut {
+  opacity: 0;
+}
+/* line 18, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/alerts/_alerts.scss */
+.alertBox.hide {
+  display: none;
 }
 
 /* Very large screens */

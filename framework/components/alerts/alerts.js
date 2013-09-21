@@ -5,7 +5,13 @@
 
 		e.preventDefault();
 
-		$(e.target).parents(".alertBox").fadeOut();
+		$(e.target).parents(".alertBox").addClass('fadeOut');
+
+		setTimeout(function () {
+
+				$(e.target).parents(".alertBox").addClass('hide').removeClass('fadeOut');
+
+			}, 250);
 	});
 
 }(jQuery));
