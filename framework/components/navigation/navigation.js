@@ -8,6 +8,8 @@ $(function ($, undefined) {
 	 * creates the drop-down functionality for hidden sub-menus using jQuery.
 	 */
 
+	'use strict';
+
 	var $nav = $('.dropDownMenu'),
 		$navItem = $nav.find('.navItem'),
 		downArrow = '<i>&#xe0ca;</i>', // creates HTML arrow
@@ -43,7 +45,6 @@ $(function ($, undefined) {
 
 			if (dropDown.is(':visible')) {
 
-				dropDown.slideUp(100);
 				dropDown.parent().find(arrow).html(downArrow).removeClass('open');
 			}
 
@@ -51,12 +52,10 @@ $(function ($, undefined) {
 
 			if ( subMenu.is(':hidden')) {
 
-				subMenu.slideDown(200);
 				subMenu.parent().find(arrow).html(upArrow).addClass('open');
 
 			} else {
 
-				subMenu.slideUp(100);
 				subMenu.parent().find(arrow).html(downArrow).removeClass('open');
 
 			}
@@ -75,7 +74,6 @@ $(function ($, undefined) {
 		$nav.find('a').focus(function () {
 
 			var subMenu = $(this).parent('li').find('.dropDown');
-			subMenu.slideDown(400);
 			subMenu.parent().find(arrow).html(upArrow).addClass('open');
 
 		});
@@ -86,7 +84,6 @@ $(function ($, undefined) {
 		$nav.find('a').parent().delegate(".dropDown li:last-child a", "blur", function () {
 
 			var subMenu = $(this).parent().parent(dropDown);
-			subMenu.slideUp(100);
 			subMenu.parent().find(arrow).html(downArrow).removeClass('open');
 
 		});
@@ -97,7 +94,6 @@ $(function ($, undefined) {
 
 			if (dropDown.is(':visible')) {
 
-				dropDown.slideUp(100);
 				dropDown.parent().find(arrow).html(downArrow).removeClass('open');
 
 			}

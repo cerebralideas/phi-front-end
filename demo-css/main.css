@@ -3776,23 +3776,42 @@ that IE7/8 do not support :nth-child.
   padding: 0.625em 1.25em;
 }
 
-/* line 16, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
+/* line 21, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
+.dropDownMenu li ul,
+.dropDownMenu li ol {
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: .1s;
+  white-space: nowrap;
+  visibility: hidden;
+}
+/* line 30, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
+.dropDownMenu li ul a,
+.dropDownMenu li ol a {
+  display: block;
+}
+
+/* line 36, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
 .inlineLinkList {
   margin: 1.25em 0;
   padding: 0;
   list-style: none;
 }
-/* line 21, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
+/* line 41, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
 .inlineLinkList > li {
   list-style: none;
   display: inline-block;
+  position: relative;
+  vertical-align: top;
 }
-/* line 25, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
+/* line 47, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
 .inlineLinkList > li > a {
   display: block;
   padding: 0.625em 1.25em;
 }
-/* line 30, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
+/* line 52, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
 .inlineLinkList .dropDown {
   position: absolute;
   right: 0;
@@ -3800,81 +3819,79 @@ that IE7/8 do not support :nth-child.
   min-width: 10em;
   max-width: 20em;
 }
-/* line 37, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
+/* line 59, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
 .inlineLinkList .dropDown > li > a {
   text-align: center;
   padding: 0.625em 1.25em;
 }
 
-/* line 43, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
+/* line 65, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
 .navItem {
   position: relative;
 }
-/* line 46, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
+/* line 68, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
 .navItem a {
   color: #333333;
   line-height: 100%;
   text-decoration: none;
   padding: 0.6em 1.25em;
 }
-/* line 52, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
+/* line 74, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
 .navItem.hasDropdown > a {
   display: inline-block;
   padding-right: 0.3125em;
 }
-/* line 56, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
+/* line 78, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
 .navItem .disclosureArrow {
   display: inline-block;
   text-decoration: none;
   padding-left: 0.3125em;
 }
-/* line 61, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
+/* line 83, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
 .navItem .disclosureArrow:hover i {
   background: #efefef;
 }
-/* line 64, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
+/* line 86, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
 .navItem .disclosureArrow.open {
   background: #efefef;
 }
-/* line 68, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
-.navItem > ul {
-  display: none;
-}
-/* line 73, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
+/* line 95, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
 .navItem.active > a {
   cursor: default;
 }
-/* line 76, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
+/* line 98, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
 .navItem.active > a:hover {
   cursor: default;
 }
-/* line 82, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
+/* line 104, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
 .navItem.active .dropDownTrigger > a:hover {
   cursor: pointer;
 }
 
 /* This is the hidden dropdown menu */
-/* line 89, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
+/* line 111, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
 .dropDown {
   display: none;
   margin: 0;
 }
-/* line 93, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
+/* line 115, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
 .dropDown > li > a {
   display: block;
   padding: 0.625em 1.25em;
 }
 
 /* This is the fallback Superfish hover menu */
-/* line 100, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
-.hasHover > ul > li:hover > ul, .hasHover > ul > li > ul.hovering {
-  display: block !important;
+/* line 122, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
+.hasHover > li:hover > ul, .hasHover > li > ul.hovering {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
 }
 
 /* Very large screens */
 /* Medium screens */
 @media only screen and (max-width: 1279px) and (min-width: 768px) {
-  /* line 112, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
+  /* line 137, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/navigation/_navigation.scss */
   .navItem a {
     line-height: 1.25em;
     padding-top: 0.625em;
@@ -4920,12 +4937,12 @@ ul.accordion > li .content {
   max-height: 0;
   overflow: hidden;
   padding: 0 15px;
-  transition: .25s;
+  transition: .5s;
 }
 /* line 42, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/components/accordion/_accordion.scss */
 ul.accordion > li.active .content {
   border-bottom: 1px solid #d5d5d5;
-  max-height: 25em;
+  max-height: 100em;
   padding: 15px;
 }
 
