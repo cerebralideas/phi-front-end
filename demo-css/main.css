@@ -1442,7 +1442,7 @@ textarea {
 select {
   -webkit-appearance: none;
   line-height: 1em;
-  background: url("../framework/img/svg-icons/select-arrow.svg") no-repeat right center, #efefef;
+  background: url("../../phi/framework/img/svg-icons/select-arrow.svg") no-repeat right center, #efefef;
   cursor: pointer;
 }
 /* line 136, /Users/joshuanhibbert/GitHub/phi-front-end/phi/framework/core/_forms.scss */
