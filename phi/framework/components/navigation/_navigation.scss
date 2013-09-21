@@ -13,6 +13,26 @@
 		}
 	}
 }
+.dropDownMenu {
+
+	li {
+
+		ul,
+		ol {
+			margin: 0;
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			transition: .1s;
+			white-space: nowrap;
+			visibility: hidden;
+
+			a {
+				display: block;
+			}
+		}
+	}
+}
 .inlineLinkList {
 	margin: $baseLineHeight 0;
 	padding: 0;
@@ -21,6 +41,8 @@
 	& > li {
 		list-style: none;
 		display: inline-block;
+		position: relative;
+		vertical-align: top;
 
 		& > a {
 			display: block;
@@ -66,7 +88,7 @@
 		}
 	}
 	& > ul {
-		display: none;
+		//display: none;
 	}
 	&.active {
 
@@ -97,8 +119,11 @@
 }
 
 /* This is the fallback Superfish hover menu */
-.hasHover > ul > li:hover > ul, .hasHover > ul > li > ul.hovering {
-	 display: block !important;
+.hasHover > li:hover > ul, .hasHover > li > ul.hovering {
+	 //display: block !important;
+	 opacity: 1;
+	 top: 100%;
+	 visibility: visible;
  }
 
 /* Very large screens */
